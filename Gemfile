@@ -17,7 +17,9 @@ group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
+  gem 'erb_lint', require: false
   gem 'guard-rspec', '~> 4.7.3', require: false
+  gem 'reek'
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 4.0.0'
   gem 'rubocop'
