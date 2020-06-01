@@ -1,0 +1,36 @@
+{
+  "name": "resource_repository",
+  "scripts": {
+    "postdeploy": "bin/rails db:migrate && bin/rails db:seed"
+  },
+  "env": {
+    "RAILS_ENV": {
+      "required": true
+    },
+    "STATIC_FILE_PATH": {
+      "required": true
+    },
+    "SENTRY_DSN": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-basic"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/DataDog/heroku-buildpack-datadog"
+    },
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
