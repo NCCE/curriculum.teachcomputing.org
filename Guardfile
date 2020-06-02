@@ -72,11 +72,11 @@ guard :rspec, cmd: "bundle exec rspec" do
   # end
 
    # FactoryBot factories
-  # begin
-  #   require 'active_support/inflector'
-  #   watch(%r{^spec/factories/(.+)\.rb$}) do |m|
-  #     ["app/models/#{m[1].singularize}.rb", "spec/models/#{m[1].singularize}_spec.rb"]
-  #   end
-  # rescue LoadError # rubocop:disable Lint/HandleExceptions
-  # end
+  begin
+    require 'active_support/inflector'
+    watch(%r{^spec/factories/(.+)\.rb$}) do |m|
+      ["app/models/#{m[1].singularize}.rb", "spec/models/#{m[1].singularize}_spec.rb"]
+    end
+  rescue LoadError # rubocop:disable Lint/HandleExceptions
+  end
 end
