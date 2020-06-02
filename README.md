@@ -36,7 +36,7 @@ Or (to also gracefully close the tunnel)
 npm stop
 ```
 
-###
+The app is available at: https://resources.teachcomputing.dev
 
 ### View logs
 
@@ -48,8 +48,6 @@ For example
 ```
 docker-compose -f logs web
 ```
-
-Visit https://resources.teachcomputing.dev
 
 ### Database
 
