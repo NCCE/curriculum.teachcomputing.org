@@ -40,9 +40,13 @@ npm stop
 
 ### View logs
 
-View logs (add -f to tail, or append a container name such as 'web' to tail only that container):
+View logs (add -f to tail, and/or append a container name such as 'web' to tail only that container):
 ```
 docker-compose logs
+```
+For example
+```
+docker-compose -f logs web
 ```
 
 Visit https://resources.teachcomputing.dev
