@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Lesson, type: :model do
-  let(:lesson) { Lesson.create(title: 'Lesson 1', description: 'Lesson description') }
+  let(:lesson) { create(:lesson) }
 
   describe 'associations' do
     it 'belongs to a Unit' do

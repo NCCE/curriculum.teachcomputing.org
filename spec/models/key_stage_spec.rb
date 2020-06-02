@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe KeyStage, type: :model do
-  let(:key_stage_one) { KeyStage.create(title: 'Key Stage 1', description: 'Key Stage 1 Description') }
+  let(:key_stage_one) { create(:key_stage) }
 
   describe 'associations' do
     it 'has_many year_groups' do

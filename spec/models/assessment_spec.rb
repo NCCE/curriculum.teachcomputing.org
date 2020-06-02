@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Assessment, type: :model do
-  let(:assessment) { Assessment.create(title: 'Assessment 1', description: 'Assessment description') }
+  let(:assessment) { create(:assessment) }
 
   describe 'associations' do
     it 'belongs to a Unit' do

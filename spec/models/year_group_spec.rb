@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe YearGroup, type: :model do
-  let(:year_group) { YearGroup.create(title: 'Year Group 1', description: 'Year group description') }
+  let(:year_group) { create(:year_group) }
 
   describe 'associations' do
     it 'belongs to Key Stage' do
