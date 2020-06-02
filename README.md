@@ -4,50 +4,78 @@
 
 ### Dependencies:
 
+- [Homebrew](https://brew.sh/)
 - Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox)
 
 ### Setup
+
+Builds the docker image, sets up environment variables, and adds nicer a local hostname:
 ```
-cp .env-example .env
+npm setup
 ```
 
-Set a default password for postgres by adding `DEV_PASS=changeme` to your `.env` file.
+Optionally set a default password for postgres by adding `DEV_PASS=changeme` to your `.env` file.
 
-Build the containers:
-```
-docker-compose build
-```
+### Starting and stopping the stack
 
 Start the stack:
 ```
 docker-compose up -d
 ```
+Or (to also connect an ssh tunnel and poll for the env to start):
+```
+npm start
+```
 
-View logs (add -f to tail):
+Stop the stack:
+```
+docker-compose down
+```
+Or (to also gracefully close the tunnel)
+```
+npm stop
+```
+
+###
+
+### View logs
+
+View logs (add -f to tail, or append a container name such as 'web' to tail only that container):
 ```
 docker-compose logs
 ```
 
-Visit http://localhost:3000
+Visit https://resources.teachcomputing.dev
 
-If it's your first time running you'll need to create the database first before use. You'll also need to do this if you've removed your database volume.
+### Database
 
-### Create Database
+The database is automatically setup the first time the container is run, and a migration is performed on each subsequent run.
+
+#### Reset the database
+
+Since the setup is run via rails it's easiest to bring the entire stack down.
 ```
-docker-compose run --rm web bin/rails db:create
+docker-compose down -v
+docker-compose up -d
 ```
 
-### Run migrations
+You can also target the db volume with the following, however you'll need to bring the web container down and up again too.
+```
+docker-compose rm -sv db
+docker-compose down
+docker-compose up -d
+```
 
-After adding any new migrations they need to be run inside docker:
+#### Run migrations
+
+To perform migrations manually (without restarting the container) run:
 ```
 docker-compose run --rm web bin/rails db:migrate
 ```
 
-### Seeding the database
+#### Seeding the database
 
-Once your database is setup and the migrations have been run, you will want to ensure it is populated with the data you need to run the application. You can do this by running the following command:
-
+To seed manually run:
 ```
 docker-compose run web bin/rails db:seed
 ```
@@ -66,10 +94,18 @@ Uses [rspec](https://github.com/rspec/rspec)
 ```
 docker-compose run --rm web bin/rspec
 ```
+Or
+```
+npm test
+```
 
 To use [guard](https://github.com/guard/guard) to watch the tests:
 ```
 docker-compose run --rm web bin/guard
+```
+Or
+```
+npm run guard
 ```
 
 ## Tooling
