@@ -61,5 +61,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Allow nicer hostname
-  config.hosts << "resources.teachcomputing.dev"
+  config.hosts << "local.resources.teachcomputing.org"
 end

@@ -1,5 +1,6 @@
-name: resources
-domain-root: teachcomputing.dev
+name: resources.teachcomputing.org
+domain-root: resources.teachcomputing.org
 mappings:
-  - port: 3000
-    prefix: resources
+  - port: 3001
+    prefix: local
+

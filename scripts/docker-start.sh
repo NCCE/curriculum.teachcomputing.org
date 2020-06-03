@@ -1,7 +1,8 @@
 #!/bin/bash
-
-URL_TO_POLL=http://localhost:3000
-URL=http://resources.teachcomputing.dev
+source ./scripts/yaml-parser.sh
+create_variables ./nginx-mapping.yml 'y_'
+URL="http://${y_mappings__prefix[0]}.${y_domain_root}"
+URL_TO_POLL=http://localhost:3001
 
 # Brings the stack up and polls for availability
 echo "- Bringing up the stack:"

@@ -6,15 +6,16 @@
 
 - [Homebrew](https://brew.sh/)
 - Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox)
+- Node & NPM
 
 ### Setup
 
 Builds the docker image, sets up environment variables, and adds nicer a local hostname:
 ```
-npm setup
+yarn run setup
 ```
 
-Optionally set a default password for postgres by adding `DEV_PASS=changeme` to your `.env` file.
+Optionally set a password for postgres by updating the value for `DEV_PASS` in your `.env` file.
 
 ### Starting and stopping the stack
 
@@ -22,9 +23,9 @@ Start the stack:
 ```
 docker-compose up -d
 ```
-Or (to also connect an ssh tunnel and poll for the env to start):
+Or (to poll for the env to start and open a new tab):
 ```
-npm start
+yarn start
 ```
 
 Stop the stack:
@@ -33,10 +34,10 @@ docker-compose down
 ```
 Or (to also gracefully close the tunnel)
 ```
-npm stop
+yarn stop
 ```
 
-The app is available at: https://resources.teachcomputing.dev
+The app is available at: https://local.resources.teachcomputing.org
 
 ### View logs
 
@@ -98,7 +99,7 @@ docker-compose run --rm web bin/rspec
 ```
 Or
 ```
-npm test
+yarn test
 ```
 
 To use [guard](https://github.com/guard/guard) to watch the tests:
@@ -107,7 +108,7 @@ docker-compose run --rm web bin/guard
 ```
 Or
 ```
-npm run guard
+yarn run guard
 ```
 
 ## Tooling
