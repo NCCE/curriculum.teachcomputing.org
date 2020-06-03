@@ -18,6 +18,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
+  gem 'factory_bot_rails', '~> 5.2.0'
   gem 'guard-rspec', '~> 4.7.3', require: false
   gem 'reek'
   gem 'rspec-mocks'
