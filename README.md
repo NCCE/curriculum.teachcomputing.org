@@ -6,9 +6,14 @@
 
 - [Homebrew](https://brew.sh/)
 - Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox)
-- Node & NPM
+- Yarn
 
 ### Setup
+
+Setup yarn
+```
+yarn install
+```
 
 Builds the docker image, sets up environment variables, and adds nicer a local hostname:
 ```
