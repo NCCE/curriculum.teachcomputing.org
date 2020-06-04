@@ -8,6 +8,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6'
+gem 'sentry-raven', '~> 3.0.0'
 gem 'webpacker', '~> 4.0'
 
 # Use Active Storage variant
