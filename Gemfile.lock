@@ -305,7 +305,7 @@ DEPENDENCIES
   erb_lint
   factory_bot_rails (~> 5.2.0)
   graphiql-rails (= 1.7.0)
-  graphql
+  graphql (~> 1.10.10)
   guard-rspec (~> 4.7.3)
   listen (~> 3.2)
   pg (~> 1.1)
