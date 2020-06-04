@@ -4,13 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'graphiql-rails', '1.7.0'
+gem 'graphql', '~> 1.10.10'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
-gem 'graphql', '~> 1.10.10'
-gem 'graphiql-rails', '1.7.0'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
