@@ -40,4 +40,3 @@ yarn-debug.log*
 
 .env
 .vscode
-*.bak
