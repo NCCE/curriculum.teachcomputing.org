@@ -42,7 +42,7 @@ Or (to also gracefully close the tunnel)
 yarn stop
 ```
 
-The app is available at: https://local.resources.teachcomputing.org
+The app is available at: https://resources.teachcomputing.rpfdev.com
 
 ### View logs
 

@@ -1,8 +1,8 @@
 #!/bin/bash
 source ./scripts/yaml-parser.sh
-create_variables ./nginx-mapping.yml 'y_'
-URL="http://${y_mappings__prefix[0]}.${y_domain_root}"
-URL_TO_POLL=http://localhost:3001
+create_variables ./nginx-mapping.yml 'nginx_'
+URL="http://${nginx_mappings__prefix[0]}.${nginx_domain_root}"
+URL_TO_POLL=http://localhost:${nginx_mappings__port[0]}
 
 # Brings the stack up and polls for availability
 echo "- Bringing up the stack:"
