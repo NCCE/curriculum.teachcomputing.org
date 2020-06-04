@@ -10,6 +10,7 @@ gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'graphql', '~> 1.10.10'
+gem 'graphiql-rails', '1.7.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -34,7 +35,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-	gem 'graphiql-rails', '1.7.0'
 end
 
 group :test do
