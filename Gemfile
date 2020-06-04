@@ -9,7 +9,7 @@ gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
-gem 'graphql'
+gem 'graphql', '~> 1.10.10'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -34,6 +34,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+	gem 'graphiql-rails', '1.7.0'
 end
 
 group :test do
@@ -47,5 +48,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-gem 'graphiql-rails', '1.7.0', group: :development
