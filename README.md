@@ -7,6 +7,7 @@
 - [Homebrew](https://brew.sh/)
 - Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox)
 - Yarn
+  - `brew install yarn`
 
 ### Setup
 
