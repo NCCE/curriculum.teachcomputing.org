@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace 'admin' do
+    resources :key_stages do
+      resources :year_groups do
+        resources :unit do
+          resources :lessons
+          resources :assessment
+        end
+      end
+    end
+  end
 end
