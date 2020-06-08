@@ -1,18 +1,19 @@
 module Mutations
-  class CreateKeyStage < BaseMutation
+  class CreateYearGroup < BaseMutation
     # arguments passed to the `resolve` method
     argument :description, String, required: true
     argument :title, String, required: true
 
-		field :key_stage, Types::KeyStageType, null: false
+		field :year_group, Types::YearGroupType, null: false
 
     # return type from the mutation
-    type Types::KeyStageType
+    type Types::YearGroupType
 
-    def resolve(description: nil, title: nil)
-      KeyStage.create!(
+    def resolve(description: nil, title: nil, key_stage: nil)
+      YearGroup.create!(
         description: description,
         title: title,
+				key_stage: key_stage
       )
     end
   end
