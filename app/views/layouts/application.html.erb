@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="govuk-template">
   <head>
     <title>Resource Repository</title>
     <%= csrf_meta_tags %>
@@ -9,7 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="govuk-template__body">
+    <div class="govuk-width-container">
+      <main id="main-content">
+        <%= yield :content %>
+      </main>
+    </div>
   </body>
 </html>
