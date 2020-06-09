@@ -5,5 +5,6 @@ class Admin::KeyStagesController < ApplicationController
 
   def show
     @key_stage = KeyStage.find_by!(id: params[:id])
+    @year_groups = @key_stage.year_groups
   end
 end
