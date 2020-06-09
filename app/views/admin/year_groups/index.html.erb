@@ -1,0 +1,22 @@
+<div class="govuk-width-container app-width-container">
+  <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h1 class="govuk-heading-l"><%= @key_stage.title %>: Year Groups</h1>
+      </div>
+      <div class="govuk-grid-column-full">
+        <dl class="govuk-summary-list">
+          <% @year_groups.each do |year_group| %>
+            <div class="govuk-summary-list__row">
+              <dd class="govuk-summary-list__value"><%= year_group.title %></dd>
+              <dd class="govuk-summary-list__actions">
+                <%= link_to 'View', admin_key_stage_year_group_path(id: year_group.id), class: 'govuk-link' %>
+              </dd>
+            </div>
+          <% end %>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </main>
+</div>
