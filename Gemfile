@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
+gem 'administrate', '~> 0.13.0'
+gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.1'
