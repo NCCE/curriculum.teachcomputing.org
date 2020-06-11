@@ -1,6 +1,5 @@
-name: resources.teachcomputing.org
+name: curriculum.teachcomputing.org
 domain-root: rpfdev.com
 mappings:
   - port: 3020
-    prefix: resources.teachcomputing
-
+    prefix: curriculum.teachcomputing
