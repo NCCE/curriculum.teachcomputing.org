@@ -6,6 +6,7 @@ ruby '2.6.1'
 gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'ddtrace', '~> 0.18.2'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3'
