@@ -1,6 +1,8 @@
 class CreateKeyStages < ActiveRecord::Migration[6.0]
   def change
-    create_table :key_stages do |t|
+    enable_extension 'pgcrypto'
+
+    create_table :key_stages, id: :uuid do |t|
       t.string :title
       t.text :description
 
