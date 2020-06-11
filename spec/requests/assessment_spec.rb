@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Assessment, type: :request  do
+	let(:assessment) { create(:assessment) }
 	before do
-  	create(:assessment, id: 'b9592bb3-cdde-4023-be9e-a56ef088971f', title: 'Title of the Assessment', description: 'Desc of the Assessment')
+  	assessment
   end
 
   describe 'list Assessments' do
@@ -10,7 +11,8 @@ RSpec.describe Assessment, type: :request  do
 			post '/graphql', params: { query: <<~GQL
 																							{
 																								assessments
-																									{id
+																									{
+																									id
 																									title
 																									description
 																									}
@@ -18,7 +20,7 @@ RSpec.describe Assessment, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"assessments\":[{\"id\":\"b9592bb3-cdde-4023-be9e-a56ef088971f\",\"title\":\"Title of the Assessment\",\"description\":\"Desc of the Assessment\"}]}}"
+			expected_response = "{\"data\":{\"assessments\":[{\"id\":\"#{assessment.id}\",\"title\":\"#{assessment.title}\",\"description\":\"#{assessment.description}\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end

@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Lesson, type: :request  do
+	let(:lesson) { create(:lesson) }
 	before do
-  	create(:lesson, id: '089c9c39-6f45-424f-9893-4eb030b1cf82', title: 'Title of the Lesson', description: 'Desc of the Lesson')
+  	lesson
   end
 
   describe 'list Lessons' do
@@ -10,7 +11,8 @@ RSpec.describe Lesson, type: :request  do
 			post '/graphql', params: { query: <<~GQL
 																							{
 																								lessons
-																									{id
+																									{
+																									id
 																									title
 																									description
 																									}
@@ -18,7 +20,7 @@ RSpec.describe Lesson, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"lessons\":[{\"id\":\"089c9c39-6f45-424f-9893-4eb030b1cf82\",\"title\":\"Title of the Lesson\",\"description\":\"Desc of the Lesson\"}]}}"
+			expected_response = "{\"data\":{\"lessons\":[{\"id\":\"#{lesson.id}\",\"title\":\"#{lesson.title}\",\"description\":\"#{lesson.description}\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end

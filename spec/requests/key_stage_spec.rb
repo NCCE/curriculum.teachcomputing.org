@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe KeyStage, type: :request  do
+	let(:key_stage) { create(:key_stage) }
 	before do
-  	create(:key_stage, id: '83525b9c-b75e-4bb3-ad56-90591c475b1f', title: 'Title of the Key Stage', description: 'Desc of the Key Stage')
+  	key_stage
   end
 
   describe 'list Key Stages' do
@@ -10,7 +11,8 @@ RSpec.describe KeyStage, type: :request  do
 			post '/graphql', params: { query: <<~GQL
 																							{
 																								keyStages
-																									{id
+																									{
+																									id
 																									title
 																									description
 																									}
@@ -18,7 +20,7 @@ RSpec.describe KeyStage, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"keyStages\":[{\"id\":\"83525b9c-b75e-4bb3-ad56-90591c475b1f\",\"title\":\"Title of the Key Stage\",\"description\":\"Desc of the Key Stage\"}]}}"
+			expected_response = "{\"data\":{\"keyStages\":[{\"id\":\"#{key_stage.id}\",\"title\":\"#{key_stage.title}\",\"description\":\"#{key_stage.description}\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end

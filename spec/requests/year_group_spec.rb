@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe YearGroup, type: :request  do
+	let(:year_group) { create(:year_group) }
 	before do
-  	create(:year_group, id: '40abc994-3bd5-49c7-87c1-7b8af860cf06', title: 'Title of the Year Group', description: 'Desc of the Year Group')
+  	year_group
   end
 
   describe 'list Year Groupes' do
@@ -10,7 +11,8 @@ RSpec.describe YearGroup, type: :request  do
 			post '/graphql', params: { query: <<~GQL
 																							{
 																								yearGroups
-																									{id
+																									{
+																									id
 																									title
 																									description
 																									}
@@ -18,7 +20,7 @@ RSpec.describe YearGroup, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"yearGroups\":[{\"id\":\"40abc994-3bd5-49c7-87c1-7b8af860cf06\",\"title\":\"Title of the Year Group\",\"description\":\"Desc of the Year Group\"}]}}"
+			expected_response = "{\"data\":{\"yearGroups\":[{\"id\":\"#{year_group.id}\",\"title\":\"#{year_group.title}\",\"description\":\"#{year_group.description}\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end
