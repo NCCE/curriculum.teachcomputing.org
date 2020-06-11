@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe KeyStage, type: :request  do
 	before do
-  	create(:key_stage, id: 1, title: 'Title of the Key Stage', description: 'Desc of the Key Stage')
+  	create(:key_stage, id: id, title: 'Title of the Key Stage', description: 'Desc of the Key Stage')
   end
 
   describe 'list Key Stages' do
