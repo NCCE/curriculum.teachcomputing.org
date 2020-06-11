@@ -15,5 +15,4 @@ Rails.application.routes.draw do
     resources :assessments
     root to: 'units#index'
   end
-
 end

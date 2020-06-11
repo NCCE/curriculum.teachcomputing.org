@@ -70,6 +70,5 @@ module Types
     def unit(id:)
       Unit.find(id)
     end
-
   end
 end
