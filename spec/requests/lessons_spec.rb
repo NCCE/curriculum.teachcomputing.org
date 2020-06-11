@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Lesson, type: :request  do
 	before do
-  	create(:lesson, id: id, title: 'Title of the Lesson', description: 'Desc of the Lesson')
+  	create(:lesson, id: '089c9c39-6f45-424f-9893-4eb030b1cf82', title: 'Title of the Lesson', description: 'Desc of the Lesson')
   end
 
   describe 'list Lessons' do
@@ -18,7 +18,7 @@ RSpec.describe Lesson, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"lessons\":[{\"id\":\"id\",\"title\":\"Title of the Lesson\",\"description\":\"Desc of the Lesson\"}]}}"
+			expected_response = "{\"data\":{\"lessons\":[{\"id\":\"089c9c39-6f45-424f-9893-4eb030b1cf82\",\"title\":\"Title of the Lesson\",\"description\":\"Desc of the Lesson\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Assessment, type: :request  do
 	before do
-  	create(:assessment, id: 1, title: 'Title of the Assessment', description: 'Desc of the Assessment')
+  	create(:assessment, id: 'b9592bb3-cdde-4023-be9e-a56ef088971f', title: 'Title of the Assessment', description: 'Desc of the Assessment')
   end
 
   describe 'list Assessments' do
@@ -18,7 +18,7 @@ RSpec.describe Assessment, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"assessments\":[{\"id\":\"1\",\"title\":\"Title of the Assessment\",\"description\":\"Desc of the Assessment\"}]}}"
+			expected_response = "{\"data\":{\"assessments\":[{\"id\":\"b9592bb3-cdde-4023-be9e-a56ef088971f\",\"title\":\"Title of the Assessment\",\"description\":\"Desc of the Assessment\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end

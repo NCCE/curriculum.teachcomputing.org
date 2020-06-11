@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe YearGroup, type: :request  do
 	before do
-  	create(:year_group, id: 1, title: 'Title of the Year Group', description: 'Desc of the Year Group')
+  	create(:year_group, id: '40abc994-3bd5-49c7-87c1-7b8af860cf06', title: 'Title of the Year Group', description: 'Desc of the Year Group')
   end
 
   describe 'list Year Groupes' do
@@ -18,7 +18,7 @@ RSpec.describe YearGroup, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"yearGroups\":[{\"id\":\"1\",\"title\":\"Title of the Year Group\",\"description\":\"Desc of the Year Group\"}]}}"
+			expected_response = "{\"data\":{\"yearGroups\":[{\"id\":\"40abc994-3bd5-49c7-87c1-7b8af860cf06\",\"title\":\"Title of the Year Group\",\"description\":\"Desc of the Year Group\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end
