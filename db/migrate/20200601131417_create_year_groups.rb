@@ -1,9 +1,9 @@
 class CreateYearGroups < ActiveRecord::Migration[6.0]
   def change
-    create_table :year_groups do |t|
+    create_table :year_groups, id: :uuid do |t|
       t.string :title
       t.text :description
-      t.references :key_stage, null: false, foreign_key: true
+      t.belongs_to :key_stage, type: :uuid, null: false, index: true
 
       t.timestamps
     end

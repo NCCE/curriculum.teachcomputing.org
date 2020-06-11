@@ -3,13 +3,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
+gem 'administrate', '~> 0.13.0'
+gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'ddtrace', '~> 0.18.2'
 gem 'graphiql-rails', '1.7.0'
 gem 'graphql', '~> 1.10.10'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6'
+gem 'sentry-raven', '~> 3.0.0'
 gem 'webpacker', '~> 4.0'
 
 # Use Active Storage variant
@@ -36,6 +40,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  gem 'ruby-debug-ide'
+  gem 'debase'
 end
 
 group :test do
