@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe KeyStage, type: :request  do
+RSpec.describe Lesson, type: :request  do
 	before do
-  	create(:key_stage, id: 1, title: 'Title of the Key Stage', description: 'Desc of the Key Stage')
+  	create(:lesson, id: 1, title: 'Title of the Lesson', description: 'Desc of the Lesson')
   end
 
-  describe 'list Key Stages' do
-    it 'returns key stages' do
+  describe 'list Lessons' do
+    it 'returns lessons' do
 			post '/graphql', params: { query: <<~GQL
 																							{
-																								keyStages
+																								lessons
 																									{id
 																									title
 																									description
@@ -18,7 +18,7 @@ RSpec.describe KeyStage, type: :request  do
 																				GQL
 															}
 			expect(response).to be_successful
-			expected_response = "{\"data\":{\"keyStages\":[{\"id\":\"1\",\"title\":\"Title of the Key Stage\",\"description\":\"Desc of the Key Stage\"}]}}"
+			expected_response = "{\"data\":{\"lessons\":[{\"id\":\"1\",\"title\":\"Title of the Lesson\",\"description\":\"Desc of the Lesson\"}]}}"
 			expect(response.body).to eq(expected_response)
     end
   end
