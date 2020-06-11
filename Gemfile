@@ -12,7 +12,6 @@ gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -23,6 +22,7 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'factory_bot_rails', '~> 5.2.0'
   gem 'guard-rspec', '~> 4.7.3', require: false
+	gem 'simplecov'
   gem 'reek'
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 4.0.0'
