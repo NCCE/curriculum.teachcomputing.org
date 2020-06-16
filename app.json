@@ -21,6 +21,9 @@
     },
     "AWS_S3_BUCKET": {
       "required": true
+    },
+    "AWS_S3_REGION": {
+      "required": true
     }
   },
   "formation": {
