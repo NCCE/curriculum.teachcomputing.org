@@ -3,5 +3,6 @@ FactoryBot.define do
     title { '9' }
     description { 'Year 9 covers age 13.' }
     key_stage
+    state
   end
 end

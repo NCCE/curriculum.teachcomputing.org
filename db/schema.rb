@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_103032) do
+ActiveRecord::Schema.define(version: 2020_06_18_154650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_103032) do
     t.uuid "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["unit_id"], name: "index_assessments_on_unit_id"
   end
 
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_103032) do
     t.uuid "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
 
@@ -74,6 +76,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_103032) do
     t.uuid "year_group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
@@ -83,8 +86,13 @@ ActiveRecord::Schema.define(version: 2020_06_18_103032) do
     t.uuid "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
   end
 
+  add_foreign_key "assessments", "states"
   add_foreign_key "key_stages", "states"
+  add_foreign_key "lessons", "states"
+  add_foreign_key "units", "states"
+  add_foreign_key "year_groups", "states"
 end

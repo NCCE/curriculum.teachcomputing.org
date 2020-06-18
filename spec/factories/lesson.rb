@@ -3,5 +3,6 @@ FactoryBot.define do
     title { 'Lesson 1' }
     description { 'In this lesson you will learn X and Y' }
     unit
+    state
   end
 end

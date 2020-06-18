@@ -3,5 +3,6 @@ FactoryBot.define do
     title { 'Asessment 101' }
     description { 'In this assessment you will be tested on X and Y' }
     unit
+    state
   end
 end
