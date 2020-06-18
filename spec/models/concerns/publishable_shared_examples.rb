@@ -6,7 +6,8 @@ shared_examples_for 'publishable' do
   describe '#published?' do
     context 'when published' do
       it 'responds correctly' do
-        instance = build("published_#{model.to_s.underscore}".to_sym)
+        published_state = create(:published_state)
+        instance = build(model.to_s.underscore.to_sym, state: published_state)
         expect(instance.published?).to eq(true)
       end
     end
@@ -20,8 +21,10 @@ shared_examples_for 'publishable' do
   end
 
   it 'has published scope' do
-    published1 = create("published_#{model.to_s.underscore}".to_sym)
-    published2 = create("published_#{model.to_s.underscore}".to_sym)
+    published_state1 = create(:published_state)
+    published1 = create(model.to_s.underscore.to_sym, state: published_state1)
+    published_state2 = create(:published_state)
+    published2 = create(model.to_s.underscore.to_sym, state: published_state2)
     create(model.to_s.underscore.to_sym)
     expect(model.published).to match_array([published1, published2])
   end
