@@ -3,6 +3,10 @@ require 'spec_helper'
 shared_examples_for 'publishable' do
   let(:model) { described_class }
 
+  describe 'associations' do
+    it { is_expected.to belong_to(:state) }
+  end
+
   describe '#published?' do
     context 'when published' do
       it 'responds correctly' do
