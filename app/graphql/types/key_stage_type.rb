@@ -3,6 +3,6 @@ module Types
     field :id, ID, null: false
     field :title, String, null: false
     field :description, String, null: false
-		field :year_groups, [Types::YearGroupType], null: true
+    field :year_groups, [Types::YearGroupType], null: true
   end
 end

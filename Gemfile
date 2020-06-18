@@ -27,32 +27,31 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'factory_bot_rails', '~> 5.2.0'
   gem 'guard-rspec', '~> 4.7.3', require: false
-	gem 'simplecov'
+  gem 'pry-byebug'
   gem 'reek'
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 4.0.0'
   gem 'rubocop'
   gem 'rubocop-rspec'
+  gem 'simplecov'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'debase'
   gem 'listen', '~> 3.2'
+  gem 'ruby-debug-ide'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-  gem 'ruby-debug-ide'
-  gem 'debase'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'rspec-graphql_matchers'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 3.1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

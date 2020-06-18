@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_141720) do
+ActiveRecord::Schema.define(version: 2020_06_18_103032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
   end
 
   create_table "lessons", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -59,6 +60,12 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
+  end
+
+  create_table "states", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "state", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -79,4 +86,5 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
   end
 
+  add_foreign_key "key_stages", "states"
 end

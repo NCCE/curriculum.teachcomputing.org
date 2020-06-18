@@ -1,6 +1,8 @@
 require 'rails_helper'
+require Rails.root.join "spec/models/concerns/publishable_spec.rb"
 
 RSpec.describe KeyStage, type: :model do
+  it_behaves_like "publishable"
   let(:key_stage_one) { create(:key_stage) }
 
   describe 'associations' do

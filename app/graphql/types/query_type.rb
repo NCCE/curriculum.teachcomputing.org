@@ -2,11 +2,11 @@ module Types
   class QueryType < BaseObject
     field :year_groups, [Types::YearGroupType], null: false
     field :key_stages, [Types::KeyStageType], null: false
-		field :assessments, [Types::AssessmentType], null: false
-		field :lessons, [Types::LessonType], null: false
-		field :units, [Types::UnitType], null: false
+    field :assessments, [Types::AssessmentType], null: false
+    field :lessons, [Types::LessonType], null: false
+    field :units, [Types::UnitType], null: false
 
-		#year groups
+    #year groups
     def year_groups
       YearGroup.all
     end
@@ -19,9 +19,9 @@ module Types
       YearGroup.find(id)
     end
 
-		#key stages
+    #key stages
     def key_stages
-      KeyStage.all
+      KeyStage.published
     end
 
     field :key_stage, Types::KeyStageType, null: false do
@@ -32,8 +32,8 @@ module Types
       KeyStage.find(id)
     end
 
-		#assessment
-		def assessments
+    #assessment
+    def assessments
       Assessment.all
     end
 
@@ -45,8 +45,8 @@ module Types
       Assessment.find(id)
     end
 
-		#lesson
-		def lessons
+    #lesson
+    def lessons
       Lesson.all
     end
 
@@ -58,7 +58,7 @@ module Types
       Lesson.find(id)
     end
 
-		#unit
+    #unit
     def units
       Unit.all
     end
