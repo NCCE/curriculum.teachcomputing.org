@@ -5,7 +5,7 @@ ruby '2.6.1'
 
 gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
-gem "aws-sdk-s3", require: false
+gem 'aws-sdk', '~> 3'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'ddtrace', '~> 0.18.2'
 gem 'graphiql-rails', '1.7.0'
