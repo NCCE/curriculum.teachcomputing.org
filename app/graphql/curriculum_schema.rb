@@ -1,4 +1,4 @@
-class ResourceRepositorySchema < GraphQL::Schema
+class CurriculumSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 

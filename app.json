@@ -1,5 +1,5 @@
 {
-  "name": "resource_repository",
+  "name": "ncce_curriculum",
   "scripts": {
     "postdeploy": "bin/rails db:migrate && bin/rails db:seed"
   },
