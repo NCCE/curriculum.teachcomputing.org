@@ -24,6 +24,7 @@ default: &default
 development:
   <<: *default
   host: <%= ENV.fetch("DB_HOST", 'db') %>
+  port: <%= ENV.fetch("DB_PORT", '5432') %>
   username: postgres
   password: <%= ENV.fetch("RAILS_DEV_DB_PASS", '') %>
   database: ncce_development
@@ -61,6 +62,7 @@ development:
 test:
   <<: *default
   host: <%= ENV.fetch("DB_HOST", 'db') %>
+  port: <%= ENV.fetch("DB_PORT", '5432') %>
   username: postgres
   password: <%= ENV.fetch("RAILS_DEV_DB_PASS", '') %>
   database: ncce_test
