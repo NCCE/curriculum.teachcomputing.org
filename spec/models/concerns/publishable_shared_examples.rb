@@ -22,7 +22,7 @@ shared_examples_for 'publishable' do
   it 'has published scope' do
     published1 = create("published_#{model.to_s.underscore}".to_sym)
     published2 = create("published_#{model.to_s.underscore}".to_sym)
-    unpublished = create(model.to_s.underscore.to_sym)
+    create(model.to_s.underscore.to_sym)
     expect(model.published).to match_array([published1, published2])
   end
 end
