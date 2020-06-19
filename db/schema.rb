@@ -13,19 +13,19 @@
 ActiveRecord::Schema.define(version: 2020_06_01_141720) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
-  create_table "active_storage_attachments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
-    t.uuid "record_id", null: false
     t.string "record_type", null: false
-    t.uuid "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -36,47 +36,52 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "assessments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "assessments", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.uuid "unit_id", null: false
+    t.bigint "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["unit_id"], name: "index_assessments_on_unit_id"
   end
 
-  create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "key_stages", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "lessons", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "lessons", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.uuid "unit_id", null: false
+    t.bigint "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
 
-  create_table "units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "units", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.uuid "year_group_id", null: false
+    t.bigint "year_group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
-  create_table "year_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "year_groups", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.uuid "key_stage_id", null: false
+    t.bigint "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "assessments", "units"
+  add_foreign_key "lessons", "units"
+  add_foreign_key "units", "year_groups"
+  add_foreign_key "year_groups", "key_stages"
 end
