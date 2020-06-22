@@ -5,13 +5,32 @@
   },
   "env": {
     "RAILS_ENV": {
-      "required": true
+      "required": true,
+      "value": "staging"
     },
     "STATIC_FILE_PATH": {
-      "required": true
+      "required": true,
+      "value": "nil"
     },
     "SENTRY_DSN": {
-      "required": true
+      "required": true,
+      "value": "nil"
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "required": true,
+      "value": "nil"
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true,
+      "value": "nil"
+    },
+    "AWS_S3_BUCKET": {
+      "required": true,
+      "value": "nil"
+    },
+    "AWS_S3_REGION": {
+      "required": true,
+      "value": "nil"
     }
   },
   "formation": {
