@@ -3,23 +3,21 @@
   "scripts": {
     "postdeploy": "bin/rails db:migrate && bin/rails db:seed"
   },
-  "env": {
-    "RAILS_ENV": {
-      "required": true,
-      "value": "staging"
-    },
-    "STATIC_FILE_PATH": {
-      "required": true,
-      "value": "nil"
-    },
-    "SENTRY_DSN": {
-      "required": true,
-      "value": "nil"
-    }
-  },
   "environments": {
     "review": {
       "env": {
+        "RAILS_ENV": {
+          "required": true,
+          "value": "staging"
+        },
+        "STATIC_FILE_PATH": {
+          "required": true,
+          "value": "nil"
+        },
+        "SENTRY_DSN": {
+          "required": true,
+          "value": "nil"
+        },
         "AWS_ACCESS_KEY_ID": {
           "required": true,
           "value": "nil"
