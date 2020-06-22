@@ -30,6 +30,7 @@
     },
     "AWS_S3_REGION": {
       "required": true,
+      "value": "eu-west-1"
     }
   },
   "formation": {
@@ -51,13 +52,4 @@
       "url": "heroku/ruby"
     }
   ]
-  "environments": {
-    "review" : {
-      "env" : {
-        "AWS_S3_REGION": {
-          "value": "eu-west-1"
-        }
-      }
-    }
-  }
 }
