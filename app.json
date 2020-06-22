@@ -6,7 +6,7 @@
   "env": {
     "RAILS_ENV": {
       "required": true,
-      "value": "production"
+      "value": "staging"
     },
     "STATIC_FILE_PATH": {
       "required": true,
