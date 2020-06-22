@@ -30,7 +30,7 @@
     },
     "AWS_S3_REGION": {
       "required": true,
-      "value": "nil"
+      "value": "eu-west-1"
     }
   },
   "formation": {

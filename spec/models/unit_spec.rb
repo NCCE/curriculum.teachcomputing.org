@@ -1,12 +1,13 @@
 require 'rails_helper'
+require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 
 RSpec.describe Unit, type: :model do
-  let(:unit) { create(:unit) }
+  it_behaves_like 'publishable'
 
   describe 'associations' do
-    it 'belongs_to a year_group' do
-      expect(unit).to belong_to(:year_group)
-    end
+    it { is_expected.to belong_to(:year_group) }
+    it { is_expected.to have_many(:assessments) }
+    it { is_expected.to have_many(:lessons) }
   end
 
   describe 'validations' do

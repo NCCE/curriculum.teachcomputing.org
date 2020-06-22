@@ -1,7 +1,12 @@
 FactoryBot.define do
   factory :year_group do
-    title { '9' }
-    description { 'Year 9 covers age 13.' }
+    sequence(:title, &:to_s)
+    sequence(:description) { |n| "Year #{n} covers age #{n + 4}." }
     key_stage
+    state
+
+    factory :published_year_group do
+      state factory: :published_state
+    end
   end
 end
