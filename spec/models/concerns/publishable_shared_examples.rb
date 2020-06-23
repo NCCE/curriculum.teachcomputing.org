@@ -7,6 +7,12 @@ shared_examples_for 'publishable' do
     it { is_expected.to belong_to(:state) }
   end
 
+  describe 'delegates' do
+    it { is_expected.to delegate_method(:published?).to(:state) }
+    it { is_expected.to delegate_method(:published!).to(:state) }
+    it { is_expected.to delegate_method(:unpublished!).to(:state) }
+  end
+
   describe '#published?' do
     context 'when published' do
       it 'responds correctly' do
@@ -31,5 +37,11 @@ shared_examples_for 'publishable' do
     published2 = create(model.to_s.underscore.to_sym, state: published_state2)
     create(model.to_s.underscore.to_sym)
     expect(model.published).to match_array([published1, published2])
+  end
+
+  it 'creates state when initialized ' do
+    instance = model.new
+    expect(instance.state).not_to be(nil)
+    expect(instance.state).to be_a(State)
   end
 end
