@@ -1,4 +1,6 @@
 class Unit < ApplicationRecord
+  include Publishable
+
   has_many :assessments, dependent: :destroy
   has_many :lessons, dependent: :destroy
   belongs_to :year_group, dependent: :destroy

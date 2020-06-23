@@ -1,12 +1,12 @@
 require 'rails_helper'
+require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 
 RSpec.describe YearGroup, type: :model do
-  let(:year_group) { create(:year_group) }
+  it_behaves_like 'publishable'
 
   describe 'associations' do
-    it 'belongs to Key Stage' do
-      expect(year_group).to belong_to(:key_stage)
-    end
+    it { is_expected.to belong_to(:key_stage) }
+    it { is_expected.to have_many(:units) }
   end
 
   describe 'validations' do

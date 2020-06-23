@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_141720) do
+ActiveRecord::Schema.define(version: 2020_06_18_154650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.bigint "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["unit_id"], name: "index_assessments_on_unit_id"
   end
 
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -58,15 +60,23 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.bigint "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
 
-  create_table "units", force: :cascade do |t|
+  create_table "states", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "state", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.bigint "year_group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
@@ -76,12 +86,13 @@ ActiveRecord::Schema.define(version: 2020_06_01_141720) do
     t.bigint "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "state_id"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "assessments", "units"
-  add_foreign_key "lessons", "units"
-  add_foreign_key "units", "year_groups"
-  add_foreign_key "year_groups", "key_stages"
+  add_foreign_key "assessments", "states"
+  add_foreign_key "key_stages", "states"
+  add_foreign_key "lessons", "states"
+  add_foreign_key "units", "states"
+  add_foreign_key "year_groups", "states"
 end

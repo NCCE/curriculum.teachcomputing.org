@@ -1,4 +1,6 @@
 class Lesson < ApplicationRecord
+  include Publishable
+
   belongs_to :unit, dependent: :destroy
 
   has_one_attached :lesson_plan
