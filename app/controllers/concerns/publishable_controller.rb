@@ -2,7 +2,7 @@ module PublishableController
   extend ActiveSupport::Concern
 
   included do
-    before_action :publish_after_update, only: %i[update]
+    before_action :set_publish_prop, only: %i[update]
     before_action :generate_id, only: %i[create]
     after_action :publish_after_create, only: %i[create]
   end
@@ -15,7 +15,7 @@ module PublishableController
 
   private
 
-    def publish_after_update
+    def set_publish_prop
       published_param = params.require(resource_class.model_name.param_key)['published']
       requested_resource.publish = ActiveRecord::Type::Boolean.new.cast(published_param)
     end
