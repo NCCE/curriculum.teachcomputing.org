@@ -51,7 +51,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
     teacher_guide
     title
     description
-    published?
   ].freeze
 
   # COLLECTION_FILTERS
