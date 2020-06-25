@@ -69,7 +69,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how key stages are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(key_stage)
-  #   "KeyStage ##{key_stage.id}"
-  # end
+  def display_resource(key_stage)
+    "KeyStage #{key_stage.title}"
+  end
 end
