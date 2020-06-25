@@ -15,7 +15,7 @@ RSpec.describe 'YearGroup', type: :request do
             yearGroups
               {
                 id
-                year_number
+                yearNumber
                 description
               }
           }
@@ -27,7 +27,7 @@ RSpec.describe 'YearGroup', type: :request do
         data: {
           yearGroups: [{
             id: published_year_group.id,
-            year_number: published_year_group.year_number,
+            yearNumber: published_year_group.year_number,
             description: published_year_group.description
           }]
         }
