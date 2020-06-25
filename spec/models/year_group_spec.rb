@@ -10,7 +10,7 @@ RSpec.describe YearGroup, type: :model do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:year_number) }
     it { is_expected.to validate_presence_of(:description) }
   end
 end
