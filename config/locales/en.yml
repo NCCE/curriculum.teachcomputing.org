@@ -28,6 +28,10 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  administrate:
+    controller:
+      publish:
+        success: "%{resource} was successfully published."
+      unpublish:
+        success: "%{resource} was successfully unpublished."

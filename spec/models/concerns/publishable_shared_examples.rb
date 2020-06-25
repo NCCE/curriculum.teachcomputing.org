@@ -7,6 +7,12 @@ shared_examples_for 'publishable' do
     it { is_expected.to belong_to(:state) }
   end
 
+  describe 'delegates' do
+    it { is_expected.to delegate_method(:published?).to(:state) }
+    it { is_expected.to delegate_method(:published!).to(:state) }
+    it { is_expected.to delegate_method(:unpublished!).to(:state) }
+  end
+
   describe '#published?' do
     context 'when published' do
       it 'responds correctly' do

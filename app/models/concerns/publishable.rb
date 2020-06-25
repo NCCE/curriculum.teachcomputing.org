@@ -7,10 +7,8 @@ module Publishable
     after_initialize :create_state
 
     scope :published, -> { joins(:state).where('states.state = ?', State.states[:published]) }
-  end
 
-  def published?
-    state.published?
+    delegate :published?, :published!, :unpublished!, to: :state
   end
 
   private
