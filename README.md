@@ -177,6 +177,6 @@ If you prefer to use `byebug` you'll _first_ need to attach to the container whi
 
 The script doesn't time out so this indicates that it can't resolve to `localhost:3020` and there was a problem bringing up the web container. Run `docker-compose logs web` to investigate the cause.
 
-> I can access the site at `localhost:3020` but not at `resources.teachcomputing.rpfdev.com`
+> I can access the site at `localhost:3020` but not at `curriculum.teachcomputing.rpfdev.com`
 
 In some circumstances the nginx instance used by dev-nginx may go down, just run `dev-nginx restart-nginx` to bring it up again.
