@@ -27,7 +27,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
     description
     units
     key_stage
-    title
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
