@@ -51,7 +51,7 @@ Or (to also gracefully close the tunnel)
 yarn stop
 ```
 
-The app is available at: https://resources.teachcomputing.rpfdev.com
+The app is available at: https://curriculum.teachcomputing.rpfdev.com
 
 ### View logs
 
