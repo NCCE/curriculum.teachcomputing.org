@@ -32,4 +32,10 @@ shared_examples_for 'publishable' do
     create(model.to_s.underscore.to_sym)
     expect(model.published).to match_array([published1, published2])
   end
+
+  it 'creates state when initialized ' do
+    instance = model.new
+    expect(instance.state).not_to be(nil)
+    expect(instance.state).to be_a(State)
+  end
 end
