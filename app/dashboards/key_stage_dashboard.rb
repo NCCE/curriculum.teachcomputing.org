@@ -44,10 +44,10 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  year_groups
-  teacher_guide
   title
   description
+  teacher_guide
+  year_groups
   ].freeze
 
   # COLLECTION_FILTERS
@@ -65,7 +65,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how key stages are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(key_stage)
-  #   "KeyStage ##{key_stage.id}"
-  # end
+  def display_resource(key_stage)
+    key_stage.title
+  end
 end
