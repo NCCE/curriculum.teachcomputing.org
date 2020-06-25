@@ -70,7 +70,7 @@ class AssessmentDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how assessments are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(assessment)
-  #   "Assessment ##{assessment.id}"
-  # end
+  def display_resource(assessment)
+    assessment.title
+  end
 end

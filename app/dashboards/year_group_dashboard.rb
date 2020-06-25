@@ -27,7 +27,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
     description
     units
     key_stage
-    title
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -45,10 +44,10 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  units
-  key_stage
   title
   description
+  units
+  key_stage
   ].freeze
 
   # COLLECTION_FILTERS
@@ -66,7 +65,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how year groups are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(year_group)
-  #   "YearGroup ##{year_group.id}"
-  # end
+  def display_resource(year_group)
+    year_group.title
+  end
 end
