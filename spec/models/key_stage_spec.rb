@@ -11,8 +11,13 @@ RSpec.describe KeyStage, type: :model do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:ks_number) }
+    before do
+      key_stage
+    end
+
     it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:ks_number) }
+    it { is_expected.to validate_uniqueness_of(:ks_number) }
   end
 
   describe 'methods' do
