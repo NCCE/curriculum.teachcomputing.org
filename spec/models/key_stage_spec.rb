@@ -9,7 +9,7 @@ RSpec.describe KeyStage, type: :model do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:ks_number) }
     it { is_expected.to validate_presence_of(:description) }
   end
 end

@@ -5,5 +5,6 @@ class KeyStage < ApplicationRecord
 
   has_one_attached :teacher_guide
 
-  validates :title, :description, presence: true
+  validates :description, :ks_number, presence: true
+  validates :ks_number, uniqueness: true
 end

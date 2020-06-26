@@ -11,7 +11,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     year_groups: Field::HasMany,
     teacher_guide: Field::ActiveStorage,
     id: Field::String.with_options(searchable: false),
-    title: Field::String,
+    ks_number: Field::Number,
     description: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -24,7 +24,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    title
+    ks_number
     description
     year_groups
     published?
@@ -34,7 +34,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     teacher_guide
-    title
+    ks_number
     description
     teacher_guide
     published?
@@ -47,7 +47,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    title
+    ks_number
     description
     teacher_guide
     year_groups
@@ -69,6 +69,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(key_stage)
-    key_stage.title
+    "KS#{key_stage.ks_number}"
   end
 end

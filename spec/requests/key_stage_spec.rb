@@ -15,7 +15,7 @@ RSpec.describe 'KeyStage', type: :request do
             keyStages
               {
                 id
-                title
+                ksNumber
                 description
               }
           }
@@ -27,7 +27,7 @@ RSpec.describe 'KeyStage', type: :request do
         data: {
           keyStages: [{
             id: published_key_stage.id,
-            title: published_key_stage.title,
+            ksNumber: published_key_stage.ks_number,
             description: published_key_stage.description
           }]
         }
