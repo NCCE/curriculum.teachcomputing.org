@@ -7,4 +7,12 @@ class KeyStage < ApplicationRecord
 
   validates :description, :ks_number, presence: true
   validates :ks_number, uniqueness: true
+
+  def short_title
+    "KS#{ks_number}"
+  end
+
+  def title
+    "Key Stage #{ks_number}"
+  end
 end
