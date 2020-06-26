@@ -69,6 +69,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(key_stage)
-    "KS#{key_stage.ks_number}"
+    key_stage.title
   end
 end
