@@ -20,8 +20,6 @@ RSpec.describe KeyStage, type: :model do
     it { is_expected.to validate_uniqueness_of(:ks_number).case_insensitive }
 
     it 'does restricts the format for the ages field' do
-      key_stage = build(:key_stage, ages: '1-2')
-
       expect(key_stage.valid?).to eq true
 
       key_stage.ages = '1-B'
