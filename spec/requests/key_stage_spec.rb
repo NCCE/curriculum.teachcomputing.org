@@ -17,7 +17,7 @@ RSpec.describe 'KeyStage', type: :request do
                 id
                 title
                 shortTitle
-                ksNumber
+                level
                 ages
                 description
               }
@@ -32,7 +32,7 @@ RSpec.describe 'KeyStage', type: :request do
             id: published_key_stage.id,
             title: published_key_stage.title,
             shortTitle: published_key_stage.short_title,
-            ksNumber: published_key_stage.ks_number,
+            level: published_key_stage.level,
             ages: published_key_stage.ages,
             description: published_key_stage.description
           }]

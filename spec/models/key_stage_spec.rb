@@ -16,8 +16,8 @@ RSpec.describe KeyStage, type: :model do
     end
 
     it { is_expected.to validate_presence_of(:description) }
-    it { is_expected.to validate_presence_of(:ks_number) }
-    it { is_expected.to validate_uniqueness_of(:ks_number).case_insensitive }
+    it { is_expected.to validate_presence_of(:level) }
+    it { is_expected.to validate_uniqueness_of(:levelse_insensitive }
 
     it 'does restricts the format for the ages field' do
       expect(key_stage.valid?).to eq true
@@ -32,13 +32,13 @@ RSpec.describe KeyStage, type: :model do
   describe 'methods' do
     describe '#title' do
       it 'returns Key Stage and the ks number' do
-        expect(key_stage.title).to eq "Key Stage #{key_stage.ks_number}"
+        expect(key_stage.title).to eq "Key Stage #{key_stage.level}"
       end
     end
 
     describe '#short_title' do
       it 'returns KS and the ks number' do
-        expect(key_stage.short_title).to eq "KS#{key_stage.ks_number}"
+        expect(key_stage.short_title).to eq "KS#{key_stage.level}"
       end
     end
   end

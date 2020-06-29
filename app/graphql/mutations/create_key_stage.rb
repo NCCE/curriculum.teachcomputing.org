@@ -3,7 +3,7 @@ module Mutations
     # arguments passed to the `resolve` method
     argument :description, String, required: true
     argument :title, String, required: true
-    argument :ks_number, String, required: true
+    argument :level, String, required: true
     argument :ages, String, required: true
 
 		field :key_stage, Types::KeyStageType, null: false
@@ -15,7 +15,7 @@ module Mutations
       KeyStage.create!(
         description: description,
         title: title,
-        ks_number: ks_number,
+        level: level,
         ages: ages,
       )
     end

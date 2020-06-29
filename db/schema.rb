@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_134350) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
-    t.string "ks_number"
+    t.string "level"
     t.string "ages"
   end
 
