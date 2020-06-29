@@ -82,12 +82,12 @@ ActiveRecord::Schema.define(version: 2020_06_26_134350) do
   end
 
   create_table "year_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "title"
     t.text "description"
     t.uuid "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
+    t.string "year_number"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
   end
 

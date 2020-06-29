@@ -11,7 +11,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
     units: Field::HasMany,
     key_stage: Field::BelongsTo,
     id: Field::String.with_options(searchable: false),
-    title: Field::String,
+    year_number: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -23,7 +23,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    title
+    year_number
     description
     units
     key_stage
@@ -34,7 +34,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     units
     key_stage
-    title
+    year_number
     description
     created_at
     updated_at
@@ -44,7 +44,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  title
+  year_number
   description
   units
   key_stage
@@ -66,6 +66,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(year_group)
-    year_group.title
+    "#{year_group.year_number}"
   end
 end
