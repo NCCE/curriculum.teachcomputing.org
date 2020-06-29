@@ -13,6 +13,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     ks_number: Field::Number,
     description: Field::Text,
+    ages: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     'published?': Field::Boolean
@@ -28,6 +29,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     description
     year_groups
     published?
+    ages
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -37,6 +39,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     ks_number
     description
     teacher_guide
+    ages
     published?
     created_at
     updated_at
@@ -47,6 +50,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    ages
     ks_number
     description
     teacher_guide
