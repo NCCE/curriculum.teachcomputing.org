@@ -7,15 +7,15 @@ RSpec.describe 'YearGroup', type: :request do
     create(:year_group)
   end
 
-  describe 'list Key Stages' do
-    it 'returns published key stages' do
+  describe 'list Year Groups' do
+    it 'returns published year groups' do
       post '/graphql', params: {
         query: <<~GQL
           {
             yearGroups
               {
                 id
-                title
+                yearNumber
                 description
               }
           }
@@ -27,7 +27,7 @@ RSpec.describe 'YearGroup', type: :request do
         data: {
           yearGroups: [{
             id: published_year_group.id,
-            title: published_year_group.title,
+            yearNumber: published_year_group.year_number,
             description: published_year_group.description
           }]
         }
