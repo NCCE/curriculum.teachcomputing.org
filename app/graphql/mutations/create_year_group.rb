@@ -2,7 +2,7 @@ module Mutations
   class CreateYearGroup < BaseMutation
     # arguments passed to the `resolve` method
     argument :description, String, required: true
-    argument :year_number, Integer, required: true
+    argument :year_number, String, required: true
 
 		field :year_group, Types::YearGroupType, null: false
 
