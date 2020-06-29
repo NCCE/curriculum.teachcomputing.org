@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 2020_06_25_131914) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
-    t.integer "year_number"
+    t.string "year_number"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
   end
 
