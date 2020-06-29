@@ -18,6 +18,7 @@ RSpec.describe 'KeyStage', type: :request do
                 title
                 shortTitle
                 ksNumber
+                ages
                 description
               }
           }
@@ -32,6 +33,7 @@ RSpec.describe 'KeyStage', type: :request do
             title: published_key_stage.title,
             shortTitle: published_key_stage.short_title,
             ksNumber: published_key_stage.ks_number,
+            ages: published_key_stage.ages,
             description: published_key_stage.description
           }]
         }
