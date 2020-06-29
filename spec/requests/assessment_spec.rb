@@ -7,8 +7,8 @@ RSpec.describe 'Assessment', type: :request do
     create(:assessment)
   end
 
-  describe 'list Key Stages' do
-    it 'returns published key stages' do
+  describe 'list Assessments' do
+    it 'returns published assessments' do
       post '/graphql', params: {
         query: <<~GQL
           {
