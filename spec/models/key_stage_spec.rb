@@ -17,7 +17,7 @@ RSpec.describe KeyStage, type: :model do
 
     it { is_expected.to validate_presence_of(:description) }
     it { is_expected.to validate_presence_of(:level) }
-    it { is_expected.to validate_uniqueness_of(:levelse_insensitive }
+    it { is_expected.to validate_uniqueness_of(:level).case_insensitive }
 
     it 'does restricts the format for the ages field' do
       expect(key_stage.valid?).to eq true
