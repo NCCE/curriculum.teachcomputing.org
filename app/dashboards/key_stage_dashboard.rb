@@ -13,7 +13,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     ks_number: Field::String,
     description: Field::Text,
-    ages: Field::Text,
+    ages: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     'published?': Field::Boolean
