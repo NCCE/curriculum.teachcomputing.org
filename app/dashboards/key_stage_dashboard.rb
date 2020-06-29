@@ -11,7 +11,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     year_groups: Field::HasMany,
     teacher_guide: Field::ActiveStorage,
     id: Field::String.with_options(searchable: false),
-    ks_number: Field::Text,
+    ks_number: Field::String,
     description: Field::Text,
     ages: Field::Text,
     created_at: Field::DateTime,
