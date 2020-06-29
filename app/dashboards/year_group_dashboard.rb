@@ -11,7 +11,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
     units: Field::HasMany,
     key_stage: Field::BelongsTo,
     id: Field::String.with_options(searchable: false),
-    year_number: Field::Text,
+    year_number: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
