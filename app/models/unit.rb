@@ -1,5 +1,6 @@
 class Unit < ApplicationRecord
   include Publishable
+  include Rateable
 
   has_many :assessments, dependent: :destroy
   has_many :lessons, dependent: :destroy

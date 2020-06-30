@@ -6,7 +6,11 @@ module Rateable
 
     after_initialize :create_aggregate_rating
 
-    delegate :total_positive, :total_negative, to: :aggregate_rating
+    delegate :total_positive,
+             :total_negative,
+             :add_positive_rating,
+             :add_negative_rating,
+             to: :aggregate_rating
   end
 
   private
