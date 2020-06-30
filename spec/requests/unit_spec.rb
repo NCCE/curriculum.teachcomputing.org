@@ -30,7 +30,7 @@ RSpec.describe Unit, type: :request do
             id: published_unit.id,
             title: published_unit.title,
             description: published_unit.description,
-            unitOverview: :null
+            unitOverview: nil
           }]
         }
       }.to_json
