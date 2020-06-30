@@ -5,5 +5,18 @@ class KeyStage < ApplicationRecord
 
   has_one_attached :teacher_guide
 
-  validates :title, :description, presence: true
+  validates :description, :level, presence: true
+  validates :ages, :level, uniqueness: true
+  validates :ages, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
+                             multiline: true,
+                             message: 'Please use the following format: 3-5'
+                           }
+
+  def short_title
+    "KS#{level}"
+  end
+
+  def title
+    "Key Stage #{level}"
+  end
 end
