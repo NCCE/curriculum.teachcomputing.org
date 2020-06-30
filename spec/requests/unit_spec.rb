@@ -18,6 +18,8 @@ RSpec.describe Unit, type: :request do
               title
               description
               unitOverview
+              totalPositive
+              totalNegative
               }
           }
         GQL
@@ -30,7 +32,9 @@ RSpec.describe Unit, type: :request do
             id: published_unit.id,
             title: published_unit.title,
             description: published_unit.description,
-            unitOverview: nil
+            unitOverview: nil,
+            totalPositive: 0,
+            totalNegative: 0
           }]
         }
       }.to_json

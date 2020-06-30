@@ -6,7 +6,7 @@ module Mutations
     argument :level, String, required: true
     argument :ages, String, required: true
 
-		field :key_stage, Types::KeyStageType, null: false
+    field :key_stage, Types::KeyStageType, null: false
 
     # return type from the mutation
     type Types::KeyStageType
@@ -16,7 +16,7 @@ module Mutations
         description: description,
         title: title,
         level: level,
-        ages: ages,
+        ages: ages
       )
     end
   end
