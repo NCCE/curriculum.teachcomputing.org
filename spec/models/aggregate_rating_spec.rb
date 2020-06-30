@@ -6,8 +6,9 @@ RSpec.describe AggregateRating, type: :model do
   it { is_expected.to have_many(:ratings) }
 
   describe '#add_positive_rating' do
-    it 'adds a new rating' do
+    it 'adds a new positive rating' do
       expect { new_aggregate.add_positive_rating }.to change(Rating, :count).by(1)
+      expect(Rating.last.positive).to eq(true)
     end
 
     it 'increases total_positive count by 1' do
@@ -17,8 +18,9 @@ RSpec.describe AggregateRating, type: :model do
   end
 
   describe '#add_negative_rating' do
-    it 'adds a new rating' do
+    it 'adds a new negative rating' do
       expect { new_aggregate.add_negative_rating }.to change(Rating, :count).by(1)
+      expect(Rating.last.positive).to eq(false)
     end
 
     it 'increases total_positive count by 1' do
