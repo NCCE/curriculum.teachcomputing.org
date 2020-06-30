@@ -4,6 +4,7 @@ FactoryBot.define do
     description { 'In this lesson you will learn X and Y' }
     unit
     state
+    aggregate_rating
 
     factory :published_lesson do
       state factory: :published_state
