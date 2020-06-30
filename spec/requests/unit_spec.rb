@@ -17,6 +17,7 @@ RSpec.describe Unit, type: :request do
               id
               title
               description
+              unitOverview
               }
           }
         GQL
@@ -28,7 +29,8 @@ RSpec.describe Unit, type: :request do
           units: [{
             id: published_unit.id,
             title: published_unit.title,
-            description: published_unit.description
+            description: published_unit.description,
+            unitOverview: :null
           }]
         }
       }.to_json
