@@ -1,5 +1,6 @@
 class Lesson < ApplicationRecord
   include Publishable
+  include Rateable
 
   belongs_to :unit, dependent: :destroy
 

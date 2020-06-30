@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_134350) do
+ActiveRecord::Schema.define(version: 2020_06_30_075010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 2020_06_26_134350) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "aggregate_ratings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "total_positive", default: 0, null: false
+    t.integer "total_negative", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "assessments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -62,7 +69,16 @@ ActiveRecord::Schema.define(version: 2020_06_26_134350) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
+    t.uuid "aggregate_rating_id"
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
+  end
+
+  create_table "ratings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "aggregate_rating_id", null: false
+    t.boolean "positive", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aggregate_rating_id"], name: "index_ratings_on_aggregate_rating_id"
   end
 
   create_table "states", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -78,6 +94,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_134350) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
+    t.uuid "aggregate_rating_id"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
@@ -93,7 +110,10 @@ ActiveRecord::Schema.define(version: 2020_06_26_134350) do
 
   add_foreign_key "assessments", "states"
   add_foreign_key "key_stages", "states"
+  add_foreign_key "lessons", "aggregate_ratings"
   add_foreign_key "lessons", "states"
+  add_foreign_key "ratings", "aggregate_ratings"
+  add_foreign_key "units", "aggregate_ratings"
   add_foreign_key "units", "states"
   add_foreign_key "year_groups", "states"
 end
