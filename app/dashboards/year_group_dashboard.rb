@@ -69,6 +69,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(year_group)
-    "#{year_group.year_number}"
+    "Year: #{year_group.year_number}"
   end
 end
