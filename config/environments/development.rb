@@ -1,5 +1,6 @@
 dev_nginx = YAML::load_file(Rails.root.join('nginx-mapping.yml'))
 
+Rails.application.routes.default_url_options[:host] = 'curriculum.teachcomputing.rpfdev.com'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -37,6 +38,8 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.default_url_options = { host: 'curriculum.teachcomputing.rpfdev.com' }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
