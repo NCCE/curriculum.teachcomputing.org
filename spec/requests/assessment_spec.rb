@@ -17,6 +17,9 @@ RSpec.describe 'Assessment', type: :request do
                 id
                 title
                 description
+                rubric
+                sheets
+                summativeAssessment
               }
           }
         GQL
@@ -28,7 +31,10 @@ RSpec.describe 'Assessment', type: :request do
           assessments: [{
             id: published_assessment.id,
             title: published_assessment.title,
-            description: published_assessment.description
+            description: published_assessment.description,
+            rubric: nil,
+            sheets: [],
+            summativeAssessment: nil
           }]
         }
       }.to_json
