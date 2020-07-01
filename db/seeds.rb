@@ -8,10 +8,15 @@
 
 if Rails.env.development? || Rails.env.staging?
   4.times { |i|
-    keyStage = KeyStage.create({description: "This is a KeyStage", ages: "#{i}-#{i+2}", level: "#{i}"})
-    yearGroup = keyStage.year_groups.create({year_number: "#{i}", description: "This is a YearGroup"})
-    unit = yearGroup.units.create({title: "Unit #{i}", description: "This is a Unit"})
-    unit.lessons.create({title: "Lesson #{i}", description: "This is a Lesson"})
-    unit.assessments.create({title: "Lesson #{i}", description: "This is an Assessment"})
+    keyStage = KeyStage.find_or_create_by({description: "This is a KeyStage", ages: "#{i}-#{i+2}", level: "#{i}"})
+    keyStage.published!
+    yearGroup = keyStage.year_groups.find_or_create_by({year_number: "#{i}", description: "This is a YearGroup"})
+    yearGroup.published!
+    unit = yearGroup.units.find_or_create_by({title: "Unit #{i}", description: "This is a Unit"})
+    unit.published!
+    lessons = unit.lessons.find_or_create_by({title: "Lesson #{i}", description: "This is a Lesson"})
+    lessons.published!
+    assessments = unit.assessments.find_or_create_by({title: "Lesson #{i}", description: "This is an Assessment"})
+    assessments.published!
   }
 end
