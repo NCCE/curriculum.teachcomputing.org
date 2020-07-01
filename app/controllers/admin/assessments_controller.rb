@@ -1,6 +1,26 @@
 module Admin
   class AssessmentsController < Admin::ApplicationController
     include ::PublishableController
+
+    def destroy_rubric
+      assessment = Assessment.find(params[:assessment_id])
+      assessment.rubric.purge
+      redirect_back(fallback_location: assessment)
+    end
+
+    def destroy_summative_assessment
+      assessment = Assessment.find(params[:assessment_id])
+      assessment.summative_assessment.purge
+      redirect_back(fallback_location: assessment)
+    end
+
+    def destroy_sheet
+      assessment = Assessment.find(params[:assessment_id])
+      sheet = assessment.sheets.find(params[:attachment_id])
+      sheet.purge
+      redirect_back(fallback_location: assessment)
+    end
+
     # Overwrite any of the RESTful controller actions to implement custom behavior
     # For example, you may want to send an email after a foo is updated.
     #

@@ -9,9 +9,24 @@ class AssessmentDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo,
-    rubric: Field::ActiveStorage,
-    summative_assessment: Field::ActiveStorage,
-    sheets: Field::ActiveStorage,
+    rubric: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_assessment_rubric, { attachment_id: attachment.id,
+                                     assessment_id: resource.id }]
+      end
+    ),
+    summative_assessment: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_assessment_summative_assessment, { attachment_id: attachment.id,
+                                                   assessment_id: resource.id }]
+      end
+    ),
+    sheets: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_assessment_sheets, { attachment_id: attachment.id,
+                                     assessment_id: resource.id }]
+      end
+    ),
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,

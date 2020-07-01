@@ -32,6 +32,9 @@ Rails.application.routes.draw do
     resources :assessments do
       post '/publish', to: 'assessments#publish'
       post '/unpublish', to: 'assessments#unpublish'
+      delete :rubric, action: :destroy_rubric
+      delete :sheets, action: :destroy_sheet
+      delete :summative_assessment, action: :destroy_summative_assessment
     end
     root to: 'units#index'
   end
