@@ -73,4 +73,8 @@ class AssessmentDashboard < Administrate::BaseDashboard
   def display_resource(assessment)
     assessment.title
   end
+
+  def permitted_attributes
+    super + [:sheets => []]
+  end
 end

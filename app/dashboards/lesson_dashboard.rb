@@ -73,4 +73,8 @@ class LessonDashboard < Administrate::BaseDashboard
   def display_resource(lesson)
     lesson.title
   end
+
+  def permitted_attributes
+    super + [:activities => [], :slides => []]
+  end
 end
