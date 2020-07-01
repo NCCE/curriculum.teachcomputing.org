@@ -15,6 +15,9 @@ RSpec.describe 'Assessment', type: :request do
             assessments
               {
                 id
+                unit {
+                  id
+                }
                 title
                 description
                 rubric
@@ -30,6 +33,9 @@ RSpec.describe 'Assessment', type: :request do
         data: {
           assessments: [{
             id: published_assessment.id,
+            unit: {
+              id: published_assessment.unit.id
+            },
             title: published_assessment.title,
             description: published_assessment.description,
             rubric: nil,
