@@ -14,12 +14,15 @@ RSpec.describe 'Lesson', type: :request do
           {
             lessons
               {
-              id
-              title
-              description
-              lessonPlan
-              activities
-              slides
+                id
+                unit {
+                  id
+                }
+                title
+                description
+                lessonPlan
+                activities
+                slides
               }
           }
         GQL
@@ -30,6 +33,9 @@ RSpec.describe 'Lesson', type: :request do
         data: {
           lessons: [{
             id: published_lesson.id,
+            unit: {
+              id: published_lesson.unit.id
+            },
             title: published_lesson.title,
             description: published_lesson.description,
             lessonPlan: nil,
