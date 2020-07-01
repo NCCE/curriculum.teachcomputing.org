@@ -9,7 +9,12 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     year_groups: Field::HasMany,
-    teacher_guide: Field::ActiveStorage,
+    teacher_guide: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_key_stage_teacher_guide, { attachment_id: attachment.id,
+                                           key_stage_id: resource.id }]
+      end
+    ),
     id: Field::String.with_options(searchable: false),
     level: Field::String,
     description: Field::Text,
