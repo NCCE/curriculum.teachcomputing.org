@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :units do
       post '/publish', to: 'units#publish'
       post '/unpublish', to: 'units#unpublish'
+      delete :unit_overview, action: :destroy_unit_overview
     end
     resources :lessons do
       post '/publish', to: 'lessons#publish'
