@@ -17,7 +17,7 @@ module Types
     end
 
     def summative_assessment
-      rl_for(object.summative_assessment) if object.summative_assessment.attachment
+      url_for(object.summative_assessment) if object.summative_assessment.attachment
     end
   end
 end
