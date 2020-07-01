@@ -17,6 +17,9 @@ RSpec.describe 'Lesson', type: :request do
               id
               title
               description
+              lessonPlan
+              activities
+              slides
               }
           }
         GQL
@@ -28,7 +31,10 @@ RSpec.describe 'Lesson', type: :request do
           lessons: [{
             id: published_lesson.id,
             title: published_lesson.title,
-            description: published_lesson.description
+            description: published_lesson.description,
+            lessonPlan: nil,
+            activities: [],
+            slides: []
           }]
         }
       }.to_json
