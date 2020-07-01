@@ -11,7 +11,7 @@ module Admin
 
     def destroy_lesson_plan
       requested_resource = Lesson.find(params[:lesson_id])
-      lesson_plan = requested_resource.lesson_plan.find(params[:attachment_id])
+      lesson_plan = requested_resource.lesson_plan
       lesson_plan.purge
       redirect_back(fallback_location: requested_resource)
     end
