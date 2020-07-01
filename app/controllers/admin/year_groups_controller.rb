@@ -4,8 +4,7 @@ module Admin
 
     def destroy_learning_graph
       requested_resource = YearGroup.find(params[:year_group_id])
-      learning_graph = requested_resource.learning_graph
-      learning_graph.purge
+      requested_resource.learning_graph.purge
       redirect_back(fallback_location: requested_resource)
     end
 

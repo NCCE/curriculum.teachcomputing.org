@@ -4,8 +4,7 @@ module Admin
 
     def destroy_unit_overview
       requested_resource = Unit.find(params[:unit_id])
-      unit_overview = requested_resource.unit_overview
-      unit_overview.purge
+      equested_resource.unit_overview.purge
       redirect_back(fallback_location: requested_resource)
     end
 

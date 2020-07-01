@@ -4,8 +4,7 @@ module Admin
 
     def destroy_teacher_guide
       requested_resource = KeyStage.find(params[:key_stage_id])
-      teacher_guide = requested_resource.teacher_guide
-      teacher_guide.purge
+      requested_resource.teacher_guide.purge
       redirect_back(fallback_location: requested_resource)
     end
 
