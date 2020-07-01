@@ -9,9 +9,24 @@ class LessonDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo,
-    lesson_plan: Field::ActiveStorage,
-    activities: Field::ActiveStorage,
-    slides: Field::ActiveStorage,
+    lesson_plan: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_lesson_lesson_plan, { attachment_id: attachment.id,
+                                      lesson_id: resource.id }]
+      end
+    ),
+    activities: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_lesson_activities, { attachment_id: attachment.id,
+                                     lesson_id: resource.id }]
+      end
+    ),
+    slides: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_lesson_slides, { attachment_id: attachment.id,
+                                 lesson_id: resource.id }]
+      end
+    ),
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
