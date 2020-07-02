@@ -43,5 +43,59 @@ RSpec.describe 'KeyStage', type: :request do
 
       expect(response.body).to eq(expected_response)
     end
+
+    it 'only returns published year groups' do
+      published_year_group = create(
+        :published_year_group,
+        key_stage: published_key_stage,
+        description: 'Published Year Group',
+        year_number: '999'
+      )
+      create(:year_group, key_stage: published_key_stage)
+
+      post '/graphql', params: {
+        query: <<~GQL
+          {
+            keyStages
+              {
+                id
+                title
+                shortTitle
+                level
+                ages
+                teacherGuide
+                description
+                yearGroups {
+                  id
+                  description
+                  yearNumber
+                }
+              }
+          }
+        GQL
+      }
+      expect(response).to be_successful
+
+      expected_response = {
+        data: {
+          keyStages: [{
+            id: published_key_stage.id,
+            title: published_key_stage.title,
+            shortTitle: published_key_stage.short_title,
+            level: published_key_stage.level,
+            ages: published_key_stage.ages,
+            teacherGuide: nil,
+            description: published_key_stage.description,
+            yearGroups: [{
+              id: published_year_group.id,
+              description: published_year_group.description,
+              yearNumber: published_year_group.year_number
+            }]
+          }]
+        }
+      }.to_json
+
+      expect(response.body).to eq(expected_response)
+    end
   end
 end
