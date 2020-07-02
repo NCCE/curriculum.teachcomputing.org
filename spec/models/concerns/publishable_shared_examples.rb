@@ -1,6 +1,7 @@
 require 'spec_helper'
+include ActiveSupport::Inflector
 
-RSpec.shared_examples_for 'publishable' do
+RSpec.shared_examples_for 'publishable' do |associated = []|
   let(:model) { described_class }
 
   describe 'associations' do
@@ -43,5 +44,25 @@ RSpec.shared_examples_for 'publishable' do
     instance = model.new
     expect(instance.state).not_to be(nil)
     expect(instance.state).to be_a(State)
+  end
+
+  describe 'published children' do
+    associated.each do |assoc|
+      it "responds to published_#{assoc}" do
+        instance = model.new
+        expect(instance.respond_to?("published_#{assoc}")).to eq(true)
+      end
+
+      it "returns published_#{assoc}" do
+        model_name = model.name.underscore
+        instance = create(model_name)
+        singular_assoc_name = singularize(assoc)
+        published_assoc = create("published_#{singular_assoc_name}",
+                                 "#{model_name}": instance)
+        create(singular_assoc_name, "#{model_name}": instance)
+
+        expect(instance.send("published_#{assoc}")).to match_array([published_assoc])
+      end
+    end
   end
 end

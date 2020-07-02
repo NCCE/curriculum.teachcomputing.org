@@ -4,7 +4,7 @@ require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 RSpec.describe KeyStage, type: :model do
   let(:key_stage) { create(:key_stage) }
 
-  it_behaves_like 'publishable'
+  it_behaves_like 'publishable', [:year_groups]
 
   describe 'associations' do
     it { is_expected.to have_many(:year_groups) }
