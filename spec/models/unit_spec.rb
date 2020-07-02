@@ -3,7 +3,7 @@ require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 require Rails.root.join 'spec/models/concerns/rateable_shared_examples.rb'
 
 RSpec.describe Unit, type: :model do
-  it_behaves_like 'publishable'
+  it_behaves_like 'publishable', %i[assessments lessons]
   it_behaves_like 'rateable'
 
   describe 'associations' do
