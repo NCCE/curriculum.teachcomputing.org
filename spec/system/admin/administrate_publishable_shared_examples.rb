@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-shared_examples_for 'administrate publishable' do |model|
+RSpec.shared_examples_for 'administrate publishable' do |model|
   it 'allows publishing of unpublished key stage' do
     instance = create(model)
     expect(instance.published?).to eq(false)
