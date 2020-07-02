@@ -15,8 +15,12 @@ RSpec.describe 'YearGroup', type: :request do
             yearGroups
               {
                 id
+                keyStage {
+                  id
+                }
                 yearNumber
                 description
+                learningGraph
               }
           }
         GQL
@@ -27,8 +31,12 @@ RSpec.describe 'YearGroup', type: :request do
         data: {
           yearGroups: [{
             id: published_year_group.id,
+            keyStage: {
+              id: published_year_group.key_stage.id
+            },
             yearNumber: published_year_group.year_number,
-            description: published_year_group.description
+            description: published_year_group.description,
+            learningGraph: nil
           }]
         }
       }.to_json
