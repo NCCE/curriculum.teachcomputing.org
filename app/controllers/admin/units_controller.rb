@@ -1,6 +1,13 @@
 module Admin
   class UnitsController < Admin::ApplicationController
     include ::PublishableController
+
+    def destroy_unit_overview
+      requested_resource = Unit.find(params[:unit_id])
+      equested_resource.unit_overview.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
     # Overwrite any of the RESTful controller actions to implement custom behavior
     # For example, you may want to send an email after a foo is updated.
     #

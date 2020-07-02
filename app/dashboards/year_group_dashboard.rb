@@ -11,7 +11,12 @@ class YearGroupDashboard < Administrate::BaseDashboard
     units: Field::HasMany,
     key_stage: Field::BelongsTo,
     id: Field::String.with_options(searchable: false),
-    learning_graph: Field::ActiveStorage,
+    learning_graph: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_year_group_learning_graph, { attachment_id: attachment.id,
+                                             year_group_id: resource.id }]
+      end
+    ),
     year_number: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,

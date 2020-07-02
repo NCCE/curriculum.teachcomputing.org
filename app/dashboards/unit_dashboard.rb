@@ -11,7 +11,12 @@ class UnitDashboard < Administrate::BaseDashboard
     assessments: Field::HasMany,
     lessons: Field::HasMany,
     year_group: Field::BelongsTo,
-    unit_overview: Field::ActiveStorage,
+    unit_overview: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_unit_unit_overview, { attachment_id: attachment.id,
+                                      unit_id: resource.id }]
+      end
+    ),
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,

@@ -1,6 +1,27 @@
 module Admin
   class LessonsController < Admin::ApplicationController
     include ::PublishableController
+
+    def destroy_activity
+      requested_resource = Lesson.find(params[:lesson_id])
+      activity = requested_resource.activities.find(params[:attachment_id])
+      activity.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
+    def destroy_lesson_plan
+      requested_resource = Lesson.find(params[:lesson_id])
+      requested_resource.lesson_plan.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
+    def destroy_slides
+      requested_resource = Lesson.find(params[:lesson_id])
+      slide = requested_resource.slides.find(params[:attachment_id])
+      slide.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
     # Overwrite any of the RESTful controller actions to implement custom behavior
     # For example, you may want to send an email after a foo is updated.
     #
