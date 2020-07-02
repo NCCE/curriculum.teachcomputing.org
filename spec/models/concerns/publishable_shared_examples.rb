@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-shared_examples_for 'publishable' do
+RSpec.shared_examples_for 'publishable' do
   let(:model) { described_class }
 
   describe 'associations' do

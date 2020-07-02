@@ -10,4 +10,6 @@ RSpec.describe Types::UnitType do
   it { is_expected.to have_field(:unit_overview).of_type('String') }
   it { is_expected.to have_field(:assessments).of_type('[Assessment!]') }
   it { is_expected.to have_field(:lessons).of_type('[Lesson!]') }
+  it { is_expected.to have_field(:total_positive).of_type('Int') }
+  it { is_expected.to have_field(:total_negative).of_type('Int') }
 end

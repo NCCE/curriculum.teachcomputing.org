@@ -4,6 +4,8 @@ module Types
     field :unit, Types::UnitType, null: false
     field :title, String, null: false
     field :description, String, null: false
+    field :total_positive, Integer, null: true
+    field :total_negative, Integer, null: true
     field :lesson_plan, String, null: true
     field :activities, [String], null: true
     field :slides, [String], null: true

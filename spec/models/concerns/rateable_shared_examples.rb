@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-shared_examples_for 'rateable' do
+RSpec.shared_examples_for 'rateable' do
   let(:model) { described_class }
 
   describe 'associations' do
