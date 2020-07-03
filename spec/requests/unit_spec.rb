@@ -20,6 +20,7 @@ RSpec.describe Unit, type: :request do
                 }
                 title
                 description
+                learningGraph
                 unitOverview
                 totalPositive
                 totalNegative
@@ -38,6 +39,7 @@ RSpec.describe Unit, type: :request do
             },
             title: published_unit.title,
             description: published_unit.description,
+            learningGraph: nil,
             unitOverview: nil,
             totalPositive: 0,
             totalNegative: 0

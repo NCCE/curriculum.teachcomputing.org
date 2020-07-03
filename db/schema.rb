@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_075010) do
+ActiveRecord::Schema.define(version: 2020_07_03_082601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -51,6 +51,22 @@ ActiveRecord::Schema.define(version: 2020_06_30_075010) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
     t.index ["unit_id"], name: "index_assessments_on_unit_id"
+  end
+
+  create_table "attachments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "type"
+    t.uuid "lesson_id"
+    t.uuid "unit_id"
+    t.uuid "year_id"
+    t.uuid "key_stage_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["key_stage_id"], name: "index_attachments_on_key_stage_id"
+    t.index ["lesson_id"], name: "index_attachments_on_lesson_id"
+    t.index ["unit_id"], name: "index_attachments_on_unit_id"
+    t.index ["year_id"], name: "index_attachments_on_year_id"
   end
 
   create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

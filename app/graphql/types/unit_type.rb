@@ -5,10 +5,15 @@ module Types
     field :title, String, null: false
     field :description, String, null: false
     field :assessments, [Types::AssessmentType], null: true
+    field :learning_graph, String, null: true
     field :unit_overview, String, null: true
     field :lessons, [Types::LessonType], null: true
     field :total_positive, Integer, null: true
     field :total_negative, Integer, null: true
+
+    def learning_graph
+      url_for(object.learning_graph) if object.learning_graph.attachment
+    end
 
     def unit_overview
       url_for(object.unit_overview) if object.unit_overview.attachment

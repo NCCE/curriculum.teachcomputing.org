@@ -11,6 +11,12 @@ class UnitDashboard < Administrate::BaseDashboard
     assessments: Field::HasMany,
     lessons: Field::HasMany,
     year_group: Field::BelongsTo,
+    learning_graph: Field::ActiveStorage.with_options(
+      destroy_url: proc do |namespace, resource, attachment|
+        [:admin_year_group_learning_graph, { attachment_id: attachment.id,
+                                             year_group_id: resource.id }]
+      end
+    ),
     unit_overview: Field::ActiveStorage.with_options(
       destroy_url: proc do |namespace, resource, attachment|
         [:admin_unit_unit_overview, { attachment_id: attachment.id,
@@ -55,6 +61,7 @@ class UnitDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
+    learning_graph
     unit_overview
     assessments
     lessons

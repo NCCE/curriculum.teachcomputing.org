@@ -2,6 +2,12 @@ module Admin
   class UnitsController < Admin::ApplicationController
     include ::PublishableController
 
+    def destroy_learning_graph
+      requested_resource = YearGroup.find(params[:year_group_id])
+      requested_resource.learning_graph.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
     def destroy_unit_overview
       requested_resource = Unit.find(params[:unit_id])
       equested_resource.unit_overview.purge

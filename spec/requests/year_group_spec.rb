@@ -20,7 +20,6 @@ RSpec.describe 'YearGroup', type: :request do
                 }
                 yearNumber
                 description
-                learningGraph
               }
           }
         GQL
@@ -35,8 +34,7 @@ RSpec.describe 'YearGroup', type: :request do
               id: published_year_group.key_stage.id
             },
             yearNumber: published_year_group.year_number,
-            description: published_year_group.description,
-            learningGraph: nil
+            description: published_year_group.description
           }]
         }
       }.to_json
