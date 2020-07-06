@@ -4,7 +4,7 @@ require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 RSpec.describe YearGroup, type: :model do
   let(:year_group) { create(:year_group) }
 
-  it_behaves_like 'publishable'
+  it_behaves_like 'publishable', [:units]
 
   describe 'associations' do
     it { is_expected.to belong_to(:key_stage) }

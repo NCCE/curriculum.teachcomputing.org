@@ -7,7 +7,7 @@ module Types
     field :ages, String, null: false
     field :teacher_guide, String, null: true
     field :description, String, null: false
-    field :year_groups, [Types::YearGroupType], null: true
+    field :year_groups, [Types::YearGroupType], null: true, method: :published_year_groups
 
     def teacher_guide
       url_for(object.teacher_guide) if object.teacher_guide.attachment
