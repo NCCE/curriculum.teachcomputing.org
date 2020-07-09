@@ -17,22 +17,22 @@ module Admin
 
     def destroy_rubric
       requested_resource = Unit.find(params[:unit_id])
-      learning_graph = requested_resource.rubrics.find(params[:attachment_id])
-      learning_graph.purge
+      rubric = requested_resource.rubrics.find(params[:attachment_id])
+      rubric.purge
       redirect_back(fallback_location: requested_resource)
     end
 
     def destroy_summative_assessment
       requested_resource = Unit.find(params[:unit_id])
-      learning_graph = requested_resource.summative_assessments.find(params[:attachment_id])
-      learning_graph.purge
+      summative_assessment = requested_resource.summative_assessments.find(params[:attachment_id])
+      summative_assessment.purge
       redirect_back(fallback_location: requested_resource)
     end
 
     def destroy_summative_answer
       requested_resource = Unit.find(params[:unit_id])
-      learning_graph = requested_resource.summative_answers.find(params[:attachment_id])
-      learning_graph.purge
+      summative_answer = requested_resource.summative_answers.find(params[:attachment_id])
+      summative_answer.purge
       redirect_back(fallback_location: requested_resource)
     end
 
