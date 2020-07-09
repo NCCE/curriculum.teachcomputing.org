@@ -37,7 +37,7 @@ module Types
 
     # key stages
     def key_stages
-      KeyStage.published
+      KeyStage.published.ordered
     end
 
     def key_stage(id:)
