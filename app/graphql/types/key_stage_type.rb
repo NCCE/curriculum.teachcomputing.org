@@ -5,6 +5,7 @@ module Types
     field :short_title, String, null: false
     field :level, String, null: false
     field :ages, String, null: false
+    field :years, String, null: false
     field :teacher_guide, String, null: true
     field :description, String, null: false
     field :year_groups, [Types::YearGroupType], null: true, method: :published_year_groups

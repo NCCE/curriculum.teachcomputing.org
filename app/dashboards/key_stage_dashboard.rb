@@ -10,7 +10,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     year_groups: Field::HasMany,
     teacher_guide: Field::ActiveStorage.with_options(
-      destroy_url: proc do |namespace, resource, attachment|
+      destroy_url: proc do |_namespace, resource, attachment|
         [:admin_key_stage_teacher_guide, { attachment_id: attachment.id,
                                            key_stage_id: resource.id }]
       end
@@ -19,6 +19,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     level: Field::String,
     description: Field::Text,
     ages: Field::String,
+    years: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     'published?': Field::Boolean
@@ -44,6 +45,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     description
     teacher_guide
     ages
+    years
     published?
     created_at
     updated_at
@@ -55,6 +57,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     ages
+    years
     level
     description
     teacher_guide
