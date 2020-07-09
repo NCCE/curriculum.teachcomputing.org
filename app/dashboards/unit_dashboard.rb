@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class UnitDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -11,17 +11,17 @@ class UnitDashboard < Administrate::BaseDashboard
     assessments: Field::HasMany,
     lessons: Field::HasMany,
     year_group: Field::BelongsTo,
-    unit_overview: Field::ActiveStorage.with_options(
-      destroy_url: proc do |namespace, resource, attachment|
-        [:admin_unit_unit_overview, { attachment_id: attachment.id,
-                                      unit_id: resource.id }]
+    unit_guide: Field::ActiveStorage.with_options(
+      destroy_url: proc do |_namespace, resource, attachment|
+        [:admin_unit_unit_guide, { attachment_id: attachment.id,
+                                   unit_id: resource.id }]
       end
     ),
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -30,9 +30,9 @@ class UnitDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-  title
-  description
-  year_group
+    title
+    description
+    year_group
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -41,7 +41,7 @@ class UnitDashboard < Administrate::BaseDashboard
     assessments
     lessons
     year_group
-    unit_overview
+    unit_guide
     id
     title
     description
@@ -55,7 +55,7 @@ class UnitDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
-    unit_overview
+    unit_guide
     assessments
     lessons
     year_group
