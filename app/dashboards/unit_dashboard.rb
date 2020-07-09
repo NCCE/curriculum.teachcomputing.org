@@ -17,6 +17,30 @@ class UnitDashboard < Administrate::BaseDashboard
                                    unit_id: resource.id }]
       end
     ),
+    learning_graphs: Field::ActiveStorage.with_options(
+      destroy_url: proc do |_namespace, resource, attachment|
+        [:admin_unit_learning_graphs, { attachment_id: attachment.id,
+                                        unit_id: resource.id }]
+      end
+    ),
+    rubrics: Field::ActiveStorage.with_options(
+      destroy_url: proc do |_namespace, resource, attachment|
+        [:admin_unit_rubrics, { attachment_id: attachment.id,
+                                unit_id: resource.id }]
+      end
+    ),
+    summative_assessments: Field::ActiveStorage.with_options(
+      destroy_url: proc do |_namespace, resource, attachment|
+        [:admin_unit_summative_assessments, { attachment_id: attachment.id,
+                                              unit_id: resource.id }]
+      end
+    ),
+    summative_answers: Field::ActiveStorage.with_options(
+      destroy_url: proc do |_namespace, resource, attachment|
+        [:admin_unit_summative_answers, { attachment_id: attachment.id,
+                                          unit_id: resource.id }]
+      end
+    ),
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
@@ -45,6 +69,10 @@ class UnitDashboard < Administrate::BaseDashboard
     id
     title
     description
+    learning_graphs
+    rubrics
+    summative_assessments
+    summative_answers
     created_at
     updated_at
   ].freeze
@@ -59,6 +87,10 @@ class UnitDashboard < Administrate::BaseDashboard
     assessments
     lessons
     year_group
+    learning_graphs
+    rubrics
+    summative_assessments
+    summative_answers
   ].freeze
 
   # COLLECTION_FILTERS
@@ -78,5 +110,12 @@ class UnitDashboard < Administrate::BaseDashboard
   #
   def display_resource(unit)
     unit.title
+  end
+
+  def permitted_attributes
+    super + [learning_graphs: [],
+             rubrics: [],
+             summative_assessments: [],
+             summative_answers: []]
   end
 end
