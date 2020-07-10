@@ -50,6 +50,7 @@ class LessonDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     title
     description
+    slug
     unit
     lesson_plan
     activities

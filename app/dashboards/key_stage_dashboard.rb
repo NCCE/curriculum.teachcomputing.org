@@ -44,6 +44,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     description
     teacher_guide
     ages
+    slug
     published?
     created_at
     updated_at
