@@ -12,7 +12,7 @@ class YearGroup < ApplicationRecord
   before_save :set_slug
 
   def set_slug
-    self.slug = parameterize(title, preserve_case: true)
+    self.slug = title.parameterize
   end
 
   def title

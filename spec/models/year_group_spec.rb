@@ -26,7 +26,7 @@ RSpec.describe YearGroup, type: :model do
       it 'sets the slug once saved' do
         year_group = build(:year_group)
         year_group.run_callbacks :save
-        expect(year_group.slug).to eq parameterize(year_group.title, preserve_case: true)
+        expect(year_group.slug).to eq year_group.title.parameterize
       end
     end
   end
