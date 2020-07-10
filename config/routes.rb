@@ -20,7 +20,11 @@ Rails.application.routes.draw do
     resources :units do
       post '/publish', to: 'units#publish'
       post '/unpublish', to: 'units#unpublish'
-      delete :unit_overview, action: :destroy_unit_overview
+      delete :unit_guide, action: :destroy_unit_guide
+      delete :learning_graphs, action: :destroy_learning_graph
+      delete :rubrics, action: :destroy_rubric
+      delete :summative_assessments, action: :destroy_summative_assessment
+      delete :summative_answers, action: :destroy_summative_answer
     end
     resources :lessons do
       post '/publish', to: 'lessons#publish'

@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class LessonDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -13,13 +13,12 @@ class LessonDashboard < Administrate::BaseDashboard
       destroy_url: proc do |namespace, resource, attachment|
         [:admin_lesson_zipped_contents, { attachment_id: attachment.id,
                                           lesson_id: resource.id }]
-      end
     ),
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
