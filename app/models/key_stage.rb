@@ -10,6 +10,13 @@ class KeyStage < ApplicationRecord
   validates :ages, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
                              multiline: true,
                              message: 'Please use the following format: 3-5' }
+  validates :slug, uniqueness: true
+
+  before_save :set_slug
+
+  def set_slug
+    self.slug = title.parameterize
+  end
 
   def short_title
     "KS#{level}"

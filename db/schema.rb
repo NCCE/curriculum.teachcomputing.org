@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_075010) do
+ActiveRecord::Schema.define(version: 2020_07_10_073601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_075010) do
     t.uuid "state_id"
     t.string "level"
     t.string "ages"
+    t.string "slug"
+    t.index ["slug"], name: "index_key_stages_on_slug", unique: true
   end
 
   create_table "lessons", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -70,6 +72,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_075010) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
     t.uuid "aggregate_rating_id"
+    t.string "slug"
+    t.index ["slug"], name: "index_lessons_on_slug", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
 
@@ -95,6 +99,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_075010) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
     t.uuid "aggregate_rating_id"
+    t.string "slug"
+    t.index ["slug"], name: "index_units_on_slug", unique: true
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
@@ -105,7 +111,9 @@ ActiveRecord::Schema.define(version: 2020_06_30_075010) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
     t.string "year_number"
+    t.string "slug"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
+    t.index ["slug"], name: "index_year_groups_on_slug", unique: true
   end
 
   add_foreign_key "assessments", "states"
