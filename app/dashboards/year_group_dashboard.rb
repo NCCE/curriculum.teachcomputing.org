@@ -17,6 +17,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
                                              year_group_id: resource.id }]
       end
     ),
+    slug: Field::String,
     year_number: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
@@ -38,6 +39,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
+    slug
     units
     key_stage
     year_number

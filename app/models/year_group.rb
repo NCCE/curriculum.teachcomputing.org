@@ -6,6 +6,16 @@ class YearGroup < ApplicationRecord
 
   has_one_attached :learning_graph
 
+  validates :slug, :year_number, uniqueness: true
   validates :year_number, :description, presence: true
-  validates :year_number, uniqueness: true
+
+  before_save :set_slug
+
+  def set_slug
+    self.slug = title.parameterize
+  end
+
+  def title
+    "Y#{year_number}"
+  end
 end

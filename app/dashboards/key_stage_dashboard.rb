@@ -15,6 +15,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
                                            key_stage_id: resource.id }]
       end
     ),
+    slug: Field::String,
     id: Field::String.with_options(searchable: false),
     level: Field::String,
     description: Field::Text,
@@ -43,6 +44,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     level
     description
+    slug
     teacher_guide
     ages
     years

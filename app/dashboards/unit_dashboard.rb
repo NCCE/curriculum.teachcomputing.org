@@ -41,6 +41,7 @@ class UnitDashboard < Administrate::BaseDashboard
                                           unit_id: resource.id }]
       end
     ),
+    slug: Field::String,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
@@ -62,6 +63,7 @@ class UnitDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
+    slug
     assessments
     lessons
     year_group

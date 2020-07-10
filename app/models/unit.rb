@@ -15,6 +15,13 @@ class Unit < ApplicationRecord
   has_many_attached :summative_answers
 
   validates :title, :description, presence: true
+  validates :slug, uniqueness: true
+
+  before_save :set_slug
+
+  def set_slug
+    self.slug = title.parameterize
+  end
 
   def unit_guide_url
     url_for(unit_guide) if unit_guide.attachment

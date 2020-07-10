@@ -27,6 +27,7 @@ class LessonDashboard < Administrate::BaseDashboard
                                  lesson_id: resource.id }]
       end
     ),
+    slug: Field::String,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
@@ -50,6 +51,7 @@ class LessonDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     title
     description
+    slug
     unit
     lesson_plan
     activities
