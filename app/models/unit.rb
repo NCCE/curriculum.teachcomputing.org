@@ -21,6 +21,7 @@ class Unit < ApplicationRecord
 
   def set_slug
     self.slug = title.parameterize
+  end
 
   def unit_guide_url
     url_for(unit_guide) if unit_guide.attachment
