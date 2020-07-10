@@ -6,20 +6,10 @@ module Types
     field :description, String, null: false
     field :total_positive, Integer, null: true
     field :total_negative, Integer, null: true
-    field :lesson_plan, String, null: true
-    field :activities, [String], null: true
-    field :slides, [String], null: true
+    field :zipped_contents, String, null: true
 
-    def lesson_plan
-      url_for(object.lesson_plan) if object.lesson_plan.attachment
-    end
-
-    def activities
-      object.activities.map { |record| url_for(record) } if object.activities.attachments
-    end
-
-    def slides
-      object.slides.map { |record| url_for(record) } if object.slides.attachments
+    def zipped_contents
+      url_for(object.zipped_contents) if object.zipped_contents.attachment
     end
   end
 end

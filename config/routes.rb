@@ -25,9 +25,7 @@ Rails.application.routes.draw do
     resources :lessons do
       post '/publish', to: 'lessons#publish'
       post '/unpublish', to: 'lessons#unpublish'
-      delete :activities, action: :destroy_activity
-      delete :lesson_plan, action: :destroy_lesson_plan
-      delete :slides, action: :destroy_slides
+      delete :zipped_contents, action: :destroy_zipped_contents
     end
     resources :assessments do
       post '/publish', to: 'assessments#publish'

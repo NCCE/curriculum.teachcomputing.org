@@ -2,23 +2,9 @@ module Admin
   class LessonsController < Admin::ApplicationController
     include ::PublishableController
 
-    def destroy_activity
+    def destroy_zipped_contents
       requested_resource = Lesson.find(params[:lesson_id])
-      activity = requested_resource.activities.find(params[:attachment_id])
-      activity.purge
-      redirect_back(fallback_location: requested_resource)
-    end
-
-    def destroy_lesson_plan
-      requested_resource = Lesson.find(params[:lesson_id])
-      requested_resource.lesson_plan.purge
-      redirect_back(fallback_location: requested_resource)
-    end
-
-    def destroy_slides
-      requested_resource = Lesson.find(params[:lesson_id])
-      slide = requested_resource.slides.find(params[:attachment_id])
-      slide.purge
+      requested_resource.zipped_contents.purge
       redirect_back(fallback_location: requested_resource)
     end
 
