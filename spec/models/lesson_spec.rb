@@ -14,4 +14,14 @@ RSpec.describe Lesson, type: :model do
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
   end
+
+  describe 'callbacks' do
+    describe '#set_slug' do
+      it 'sets the slug once saved' do
+        lesson = build(:lesson)
+        lesson.run_callbacks :save
+        expect(lesson.slug).to eq lesson.title.parameterize
+      end
+    end
+  end
 end

@@ -16,4 +16,14 @@ RSpec.describe Unit, type: :model do
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
   end
+
+  describe 'callbacks' do
+    describe '#set_slug' do
+      it 'sets the slug once saved' do
+        unit = build(:unit)
+        unit.run_callbacks :save
+        expect(unit.slug).to eq unit.title.parameterize
+      end
+    end
+  end
 end

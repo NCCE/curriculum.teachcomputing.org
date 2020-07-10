@@ -20,4 +20,14 @@ RSpec.describe YearGroup, type: :model do
     it { is_expected.to validate_uniqueness_of(:year_number).case_insensitive }
     it { is_expected.to validate_presence_of(:description) }
   end
+
+  describe 'callbacks' do
+    describe '#set_slug' do
+      it 'sets the slug once saved' do
+        year_group = build(:year_group)
+        year_group.run_callbacks :save
+        expect(year_group.slug).to eq parameterize(year_group.title, preserve_case: true)
+      end
+    end
+  end
 end

@@ -29,6 +29,16 @@ RSpec.describe KeyStage, type: :model do
     end
   end
 
+  describe 'callbacks' do
+    describe '#set_slug' do
+      it 'sets the slug once saved' do
+        key_stage = build(:key_stage)
+        key_stage.run_callbacks :save
+        expect(key_stage.slug).to eq key_stage.title.parameterize
+      end
+    end
+  end
+
   describe 'methods' do
     describe '#title' do
       it 'returns Key Stage and the ks number' do
