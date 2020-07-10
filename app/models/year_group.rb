@@ -6,9 +6,8 @@ class YearGroup < ApplicationRecord
 
   has_one_attached :learning_graph
 
-  validates :slug, uniqueness: true
+  validates :slug, :year_number, uniqueness: true
   validates :year_number, :description, presence: true
-  validates :year_number, uniqueness: true
 
   before_save :set_slug
 
