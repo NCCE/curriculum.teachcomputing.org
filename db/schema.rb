@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2020_07_10_073601) do
     t.uuid "state_id"
     t.string "level"
     t.string "ages"
-    t.string "slug"
     t.string "years"
+    t.string "slug"
     t.index ["slug"], name: "index_key_stages_on_slug", unique: true
   end
 
