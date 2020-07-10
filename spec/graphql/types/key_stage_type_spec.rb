@@ -5,6 +5,7 @@ RSpec.describe Types::KeyStageType do
 
   it { is_expected.to have_field(:id).of_type('ID!') }
   it { is_expected.to have_field(:title).of_type('String!') }
+  it { is_expected.to have_field(:slug).of_type('String!') }
   it { is_expected.to have_field(:short_title).of_type('String!') }
   it { is_expected.to have_field(:level).of_type('String!') }
   it { is_expected.to have_field(:ages).of_type('String!') }

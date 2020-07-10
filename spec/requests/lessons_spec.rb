@@ -19,6 +19,7 @@ RSpec.describe 'Lesson', type: :request do
                   id
                 }
                 title
+                slug
                 description
                 lessonPlan
                 activities
@@ -37,6 +38,7 @@ RSpec.describe 'Lesson', type: :request do
               id: published_lesson.unit.id
             },
             title: published_lesson.title,
+            slug: published_lesson.slug,
             description: published_lesson.description,
             lessonPlan: nil,
             activities: [],

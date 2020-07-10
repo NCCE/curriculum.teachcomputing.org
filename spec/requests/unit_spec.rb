@@ -19,6 +19,7 @@ RSpec.describe Unit, type: :request do
                   id
                 }
                 title
+                slug
                 description
                 unitOverview
                 totalPositive
@@ -37,6 +38,7 @@ RSpec.describe Unit, type: :request do
               id: published_unit.year_group.id
             },
             title: published_unit.title,
+            slug: published_unit.slug,
             description: published_unit.description,
             unitOverview: nil,
             totalPositive: 0,

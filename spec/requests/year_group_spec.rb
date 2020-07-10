@@ -59,6 +59,7 @@ RSpec.describe 'YearGroup', type: :request do
             yearGroups
               {
                 id
+                slug
                 keyStage {
                   id
                 }
@@ -79,6 +80,7 @@ RSpec.describe 'YearGroup', type: :request do
         data: {
           yearGroups: [{
             id: published_year_group.id,
+            slug: published_year_group.slug,
             keyStage: {
               id: published_year_group.key_stage.id
             },
