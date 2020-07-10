@@ -6,13 +6,13 @@ class KeyStage < ApplicationRecord
   has_one_attached :teacher_guide
 
   validates :description, :level, presence: true
-  validates :ages, :level, uniqueness: true
-  validates :ages, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
-                             multiline: true,
-                             message: 'Please use the following format: 3-5' }
-  validates :slug, uniqueness: true
-
+  validates :ages, :level, :years, :slug, uniqueness: true
+  validates :ages, :years, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
+                                     multiline: true,
+                                     message: 'Please use the following format: 3-5' }
   before_save :set_slug
+
+  scope :ordered, -> { order(:level) }
 
   def set_slug
     self.slug = title.parameterize

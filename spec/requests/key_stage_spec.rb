@@ -19,6 +19,7 @@ RSpec.describe 'KeyStage', type: :request do
                 shortTitle
                 level
                 ages
+                years
                 teacherGuide
                 description
               }
@@ -35,6 +36,7 @@ RSpec.describe 'KeyStage', type: :request do
             shortTitle: published_key_stage.short_title,
             level: published_key_stage.level,
             ages: published_key_stage.ages,
+            years: published_key_stage.years,
             teacherGuide: nil,
             description: published_key_stage.description
           }]

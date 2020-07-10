@@ -19,13 +19,22 @@ RSpec.describe KeyStage, type: :model do
     it { is_expected.to validate_presence_of(:level) }
     it { is_expected.to validate_uniqueness_of(:level).case_insensitive }
 
-    it 'does restricts the format for the ages field' do
+    it 'restricts the format for the ages field' do
       expect(key_stage.valid?).to eq true
 
       key_stage.ages = '1-B'
       key_stage.valid?
 
       expect(key_stage.errors[:ages]).to include('Please use the following format: 3-5')
+    end
+
+    it 'restricts the format for the years field' do
+      expect(key_stage.valid?).to eq true
+
+      key_stage.years = '1-B'
+      key_stage.valid?
+
+      expect(key_stage.errors[:years]).to include('Please use the following format: 3-5')
     end
   end
 
