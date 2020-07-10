@@ -2,9 +2,37 @@ module Admin
   class UnitsController < Admin::ApplicationController
     include ::PublishableController
 
-    def destroy_unit_overview
+    def destroy_unit_guide
       requested_resource = Unit.find(params[:unit_id])
-      equested_resource.unit_overview.purge
+      requested_resource.unit_guide.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
+    def destroy_learning_graph
+      requested_resource = Unit.find(params[:unit_id])
+      learning_graph = requested_resource.learning_graphs.find(params[:attachment_id])
+      learning_graph.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
+    def destroy_rubric
+      requested_resource = Unit.find(params[:unit_id])
+      rubric = requested_resource.rubrics.find(params[:attachment_id])
+      rubric.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
+    def destroy_summative_assessment
+      requested_resource = Unit.find(params[:unit_id])
+      summative_assessment = requested_resource.summative_assessments.find(params[:attachment_id])
+      summative_assessment.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
+    def destroy_summative_answer
+      requested_resource = Unit.find(params[:unit_id])
+      summative_answer = requested_resource.summative_answers.find(params[:attachment_id])
+      summative_answer.purge
       redirect_back(fallback_location: requested_resource)
     end
 

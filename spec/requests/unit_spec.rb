@@ -20,9 +20,13 @@ RSpec.describe Unit, type: :request do
                 }
                 title
                 description
-                unitOverview
+                unitGuide
                 totalPositive
                 totalNegative
+                learningGraphs
+                rubrics
+                summativeAssessments
+                summativeAnswers
               }
           }
         GQL
@@ -38,9 +42,13 @@ RSpec.describe Unit, type: :request do
             },
             title: published_unit.title,
             description: published_unit.description,
-            unitOverview: nil,
+            unitGuide: nil,
             totalPositive: 0,
-            totalNegative: 0
+            totalNegative: 0,
+            learningGraphs: [],
+            rubrics: [],
+            summativeAssessments: [],
+            summativeAnswers: []
           }]
         }
       }.to_json
