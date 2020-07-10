@@ -9,13 +9,13 @@ module Types
           [Types::AssessmentType],
           null: true,
           method: :published_assessments
-    field :unit_overview, String, null: true
+    field :unit_guide, String, null: true, method: :unit_guide_url
     field :lessons, [Types::LessonType], null: true, method: :published_lessons
     field :total_positive, Integer, null: true
     field :total_negative, Integer, null: true
-
-    def unit_overview
-      url_for(object.unit_overview) if object.unit_overview.attachment
-    end
+    field :learning_graphs, [String], null: true, method: :learning_graphs_urls
+    field :rubrics, [String], null: true, method: :rubrics_urls
+    field :summative_assessments, [String], null: true, method: :summative_assessments_urls
+    field :summative_answers, [String], null: true, method: :summative_answers_urls
   end
 end

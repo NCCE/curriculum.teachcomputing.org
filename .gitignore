@@ -42,5 +42,5 @@ yarn-debug.log*
 .vscode
 
 /coverage/*
-
+/spec/examples.txt
 schema.json

@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class LessonDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -10,19 +10,19 @@ class LessonDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo,
     lesson_plan: Field::ActiveStorage.with_options(
-      destroy_url: proc do |namespace, resource, attachment|
+      destroy_url: proc do |_namespace, resource, attachment|
         [:admin_lesson_lesson_plan, { attachment_id: attachment.id,
                                       lesson_id: resource.id }]
       end
     ),
     activities: Field::ActiveStorage.with_options(
-      destroy_url: proc do |namespace, resource, attachment|
+      destroy_url: proc do |_namespace, resource, attachment|
         [:admin_lesson_activities, { attachment_id: attachment.id,
                                      lesson_id: resource.id }]
       end
     ),
     slides: Field::ActiveStorage.with_options(
-      destroy_url: proc do |namespace, resource, attachment|
+      destroy_url: proc do |_namespace, resource, attachment|
         [:admin_lesson_slides, { attachment_id: attachment.id,
                                  lesson_id: resource.id }]
       end
@@ -32,7 +32,7 @@ class LessonDashboard < Administrate::BaseDashboard
     title: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -92,6 +92,6 @@ class LessonDashboard < Administrate::BaseDashboard
   end
 
   def permitted_attributes
-    super + [:activities => [], :slides => []]
+    super + [activities: [], slides: []]
   end
 end
