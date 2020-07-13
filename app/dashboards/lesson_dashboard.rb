@@ -9,22 +9,10 @@ class LessonDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo,
-    lesson_plan: Field::ActiveStorage.with_options(
+    zipped_contents: Field::ActiveStorage.with_options(
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_lesson_lesson_plan, { attachment_id: attachment.id,
-                                      lesson_id: resource.id }]
-      end
-    ),
-    activities: Field::ActiveStorage.with_options(
-      destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_lesson_activities, { attachment_id: attachment.id,
-                                     lesson_id: resource.id }]
-      end
-    ),
-    slides: Field::ActiveStorage.with_options(
-      destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_lesson_slides, { attachment_id: attachment.id,
-                                 lesson_id: resource.id }]
+        [:admin_lesson_zipped_contents, { attachment_id: attachment.id,
+                                          lesson_id: resource.id }]
       end
     ),
     slug: Field::String,
@@ -53,9 +41,7 @@ class LessonDashboard < Administrate::BaseDashboard
     description
     slug
     unit
-    lesson_plan
-    activities
-    slides
+    zipped_contents
     created_at
     updated_at
   ].freeze
@@ -67,9 +53,7 @@ class LessonDashboard < Administrate::BaseDashboard
     title
     description
     unit
-    lesson_plan
-    activities
-    slides
+    zipped_contents
   ].freeze
 
   # COLLECTION_FILTERS
@@ -89,9 +73,5 @@ class LessonDashboard < Administrate::BaseDashboard
   #
   def display_resource(lesson)
     lesson.title
-  end
-
-  def permitted_attributes
-    super + [activities: [], slides: []]
   end
 end
