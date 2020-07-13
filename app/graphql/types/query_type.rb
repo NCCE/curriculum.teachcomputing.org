@@ -7,23 +7,28 @@ module Types
     field :units, [Types::UnitType], null: false
 
     field :year_group, Types::YearGroupType, null: false do
-      argument :id, ID, required: true
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     field :key_stage, Types::KeyStageType, null: false do
-      argument :id, ID, required: true
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     field :assessment, Types::AssessmentType, null: false do
-      argument :id, ID, required: true
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     field :lesson, Types::LessonType, null: false do
-      argument :id, ID, required: true
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     field :unit, Types::UnitType, null: false do
-      argument :id, ID, required: true
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     # year groups
@@ -31,17 +36,17 @@ module Types
       YearGroup.published
     end
 
-    def year_group(id:)
-      YearGroup.find(id)
+    def year_group(**args)
+      find_record_by_shared_args(YearGroup, args)
     end
 
     # key stages
     def key_stages
-      KeyStage.published.ordered
+      KeyStage.published
     end
 
-    def key_stage(id:)
-      KeyStage.find(id)
+    def key_stage(**args)
+      find_record_by_shared_args(KeyStage, args)
     end
 
     # assessment
@@ -49,8 +54,8 @@ module Types
       Assessment.published
     end
 
-    def assessment(id:)
-      Assessment.find(id)
+    def assessment(**args)
+      find_record_by_shared_args(Assessment, args)
     end
 
     # lesson
@@ -58,8 +63,8 @@ module Types
       Lesson.published
     end
 
-    def lesson(id:)
-      Lesson.find(id)
+    def lesson(**args)
+      find_record_by_shared_args(Lesson, args)
     end
 
     # unit
@@ -67,8 +72,18 @@ module Types
       Unit.published
     end
 
-    def unit(id:)
-      Unit.find(id)
+    def unit(**args)
+      find_record_by_shared_args(Unit, args)
+    end
+
+    def find_record_by_shared_args(model, args)
+      if args[:id]
+        model.find(args[:id])
+      elsif args[:slug]
+        model.find_by!(slug: args[:slug])
+      else
+        raise GraphQL::ExecutionError, "Missing arguments"
+      end
     end
   end
 end
