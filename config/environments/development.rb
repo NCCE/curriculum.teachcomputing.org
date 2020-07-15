@@ -67,4 +67,5 @@ Rails.application.configure do
 
   # Allow nicer hostname
   config.hosts << /([a-z0-9\.])+\.rpfdev\.com/
+  config.hosts << 'curriculum'
 end

@@ -11,6 +11,12 @@ printf %s "- Waiting for the stack to become available (ctrl+c to cancel): "
 while ! curl -sSf $URL_TO_POLL &> /dev/null ; do sleep 1; done
 echo "done"
 
+# Workaround for nginx failing to come up properly in some scenarios
+# TODO: Poll curriculum.teachcomputing.rpfdev.com and restart if unavailable
+echo "- Restarting dev-nginx:"
+dev-nginx restart-nginx
+echo "done"
+
 # Conditionally open a browser window
 printf %s "- Open ${URL} in your default browser (y/n)? "
 read RESP
