@@ -21,6 +21,7 @@ RSpec.describe 'Lesson', type: :request do
                 title
                 slug
                 description
+                objectives
                 zippedContents
               }
           }
@@ -38,6 +39,7 @@ RSpec.describe 'Lesson', type: :request do
             title: published_lesson.title,
             slug: published_lesson.slug,
             description: published_lesson.description,
+            objectives: published_lesson.objectives,
             zippedContents: nil
           }]
         }

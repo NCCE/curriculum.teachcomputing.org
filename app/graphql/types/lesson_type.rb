@@ -5,6 +5,7 @@ module Types
     field :title, String, null: false
     field :slug, String, null: false
     field :description, String, null: false
+    field :objectives, String, null: true
     field :total_positive, Integer, null: true
     field :total_negative, Integer, null: true
     field :zipped_contents, String, null: true
