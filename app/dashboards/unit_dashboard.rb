@@ -63,7 +63,6 @@ class UnitDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     slug
-    assessments
     lessons
     year_group
     unit_guide
@@ -85,7 +84,6 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     unit_guide
-    assessments
     lessons
     year_group
     learning_graphs
