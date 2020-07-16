@@ -3,7 +3,6 @@ class Unit < ApplicationRecord
   include Rateable
   include Rails.application.routes.url_helpers
 
-  has_many :assessments, dependent: :destroy
   has_many :lessons, dependent: :destroy
   belongs_to :year_group, dependent: :destroy
 

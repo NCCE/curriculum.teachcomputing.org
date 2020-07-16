@@ -30,13 +30,6 @@ Rails.application.routes.draw do
       post '/unpublish', to: 'lessons#unpublish'
       delete :zipped_contents, action: :destroy_zipped_contents
     end
-    resources :assessments do
-      post '/publish', to: 'assessments#publish'
-      post '/unpublish', to: 'assessments#unpublish'
-      delete :rubric, action: :destroy_rubric
-      delete :sheets, action: :destroy_sheet
-      delete :summative_assessment, action: :destroy_summative_assessment
-    end
     root to: 'units#index'
   end
 end

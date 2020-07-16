@@ -8,7 +8,6 @@ class UnitDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    assessments: Field::HasMany,
     lessons: Field::HasMany,
     year_group: Field::BelongsTo,
     unit_guide: Field::ActiveStorage.with_options(
@@ -64,7 +63,6 @@ class UnitDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     slug
-    assessments
     lessons
     year_group
     unit_guide
@@ -86,7 +84,6 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     unit_guide
-    assessments
     lessons
     year_group
     learning_graphs

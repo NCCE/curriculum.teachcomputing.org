@@ -2,7 +2,6 @@ module Types
   class QueryType < BaseObject
     field :year_groups, [Types::YearGroupType], null: false
     field :key_stages, [Types::KeyStageType], null: false
-    field :assessments, [Types::AssessmentType], null: false
     field :lessons, [Types::LessonType], null: false
     field :units, [Types::UnitType], null: false
 
@@ -12,11 +11,6 @@ module Types
     end
 
     field :key_stage, Types::KeyStageType, null: false do
-      argument :id, ID, required: false
-      argument :slug, String, required: false
-    end
-
-    field :assessment, Types::AssessmentType, null: false do
       argument :id, ID, required: false
       argument :slug, String, required: false
     end
@@ -47,15 +41,6 @@ module Types
 
     def key_stage(**args)
       find_record_by_shared_args(KeyStage, args)
-    end
-
-    # assessment
-    def assessments
-      Assessment.published
-    end
-
-    def assessment(**args)
-      find_record_by_shared_args(Assessment, args)
     end
 
     # lesson
