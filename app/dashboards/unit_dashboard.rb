@@ -8,7 +8,6 @@ class UnitDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    assessments: Field::HasMany,
     lessons: Field::HasMany,
     year_group: Field::BelongsTo,
     unit_guide: Field::ActiveStorage.with_options(
