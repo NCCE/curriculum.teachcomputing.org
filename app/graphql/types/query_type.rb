@@ -2,7 +2,6 @@ module Types
   class QueryType < BaseObject
     field :year_groups, [Types::YearGroupType], null: false
     field :key_stages, [Types::KeyStageType], null: false
-    field :assessments, [Types::AssessmentType], null: false
     field :lessons, [Types::LessonType], null: false
     field :units, [Types::UnitType], null: false
 
