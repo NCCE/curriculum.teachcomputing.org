@@ -5,7 +5,6 @@ module Types
     field :key_stage, Types::KeyStageType, null: false
     field :year_number, String, null: false
     field :description, String, null: false
-    field :learning_graph, String, null: true
     field :units, [Types::UnitType], null: true, method: :published_units
 
     def learning_graph

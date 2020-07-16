@@ -80,7 +80,7 @@ module Types
       if args[:id]
         model.find(args[:id])
       elsif args[:slug]
-        model.find_by!(slug: args[:slug])
+        model.find_by(slug: args[:slug])
       else
         raise GraphQL::ExecutionError, "Missing arguments"
       end

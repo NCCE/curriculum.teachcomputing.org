@@ -15,7 +15,6 @@ Rails.application.routes.draw do
     resources :year_groups do
       post '/publish', to: 'year_groups#publish'
       post '/unpublish', to: 'year_groups#unpublish'
-      delete :learning_graph, action: :destroy_learning_graph
     end
     resources :units do
       post '/publish', to: 'units#publish'
