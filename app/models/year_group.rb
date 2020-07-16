@@ -4,8 +4,6 @@ class YearGroup < ApplicationRecord
   has_many :units, dependent: :destroy
   belongs_to :key_stage, dependent: :destroy
 
-  has_one_attached :learning_graph
-
   validates :slug, :year_number, uniqueness: true
   validates :year_number, :description, presence: true
 

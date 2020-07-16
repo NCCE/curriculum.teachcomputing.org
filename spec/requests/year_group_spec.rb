@@ -65,7 +65,6 @@ RSpec.describe 'YearGroup', type: :request do
                 }
                 yearNumber
                 description
-                learningGraph
                 units {
                   id
                   title
@@ -86,7 +85,6 @@ RSpec.describe 'YearGroup', type: :request do
             },
             yearNumber: published_year_group.year_number,
             description: published_year_group.description,
-            learningGraph: nil,
             units: [{
               id: published_unit.id,
               title: published_unit.title
