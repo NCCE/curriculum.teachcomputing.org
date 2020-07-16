@@ -45,7 +45,7 @@ module Types
 
     # lesson
     def lessons
-      Lesson.published
+      Lesson.published.ordered
     end
 
     def lesson(**args)

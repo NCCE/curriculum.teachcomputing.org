@@ -11,6 +11,8 @@ class Lesson < ApplicationRecord
 
   before_save :set_slug
 
+  scope :ordered, -> { order(:slug) }
+
   def set_slug
     self.slug = title.parameterize
   end
