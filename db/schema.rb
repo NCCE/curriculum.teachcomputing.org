@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_081349) do
+ActiveRecord::Schema.define(version: 2020_07_16_090905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -41,16 +41,6 @@ ActiveRecord::Schema.define(version: 2020_07_15_081349) do
     t.integer "total_negative", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "assessments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.uuid "unit_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.uuid "state_id"
-    t.index ["unit_id"], name: "index_assessments_on_unit_id"
   end
 
   create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -118,7 +108,6 @@ ActiveRecord::Schema.define(version: 2020_07_15_081349) do
     t.index ["slug"], name: "index_year_groups_on_slug", unique: true
   end
 
-  add_foreign_key "assessments", "states"
   add_foreign_key "key_stages", "states"
   add_foreign_key "lessons", "aggregate_ratings"
   add_foreign_key "lessons", "states"

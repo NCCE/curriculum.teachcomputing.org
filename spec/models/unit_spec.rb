@@ -5,12 +5,11 @@ require Rails.root.join 'spec/models/concerns/rateable_shared_examples.rb'
 RSpec.describe Unit, type: :model do
   include Rails.application.routes.url_helpers
 
-  it_behaves_like 'publishable', %i[assessments lessons]
+  it_behaves_like 'publishable', %i[lessons]
   it_behaves_like 'rateable'
 
   describe 'associations' do
     it { is_expected.to belong_to(:year_group) }
-    it { is_expected.to have_many(:assessments) }
     it { is_expected.to have_many(:lessons) }
   end
 
@@ -25,10 +24,10 @@ RSpec.describe Unit, type: :model do
         unit = build(:unit)
         unit.run_callbacks :save
         expect(unit.slug).to eq unit.title.parameterize
-      end 
+      end
     end
   end
-  
+
   describe '#unit_guide_url' do
     let(:unit) { create(:unit) }
 

@@ -5,10 +5,6 @@ module Types
     field :year_group, Types::YearGroupType, null: false
     field :title, String, null: false
     field :description, String, null: false
-    field :assessments,
-          [Types::AssessmentType],
-          null: true,
-          method: :published_assessments
     field :unit_guide, String, null: true, method: :unit_guide_url
     field :lessons, [Types::LessonType], null: true, method: :published_lessons
     field :total_positive, Integer, null: true
