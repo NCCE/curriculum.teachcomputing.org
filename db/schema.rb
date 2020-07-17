@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2020_07_17_103920) do
     t.uuid "aggregate_rating_id"
     t.string "slug"
     t.text "objectives"
+    t.boolean "zip_synced", default: false
+    t.datetime "zip_synced_at"
     t.index ["slug"], name: "index_lessons_on_slug", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
@@ -92,6 +94,8 @@ ActiveRecord::Schema.define(version: 2020_07_17_103920) do
     t.uuid "state_id"
     t.uuid "aggregate_rating_id"
     t.string "slug"
+    t.boolean "unit_documents_synced", default: false
+    t.datetime "unit_documents_synced_at"
     t.index ["slug"], name: "index_units_on_slug", unique: true
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
