@@ -15,7 +15,6 @@ Rails.application.routes.draw do
     resources :year_groups do
       post '/publish', to: 'year_groups#publish'
       post '/unpublish', to: 'year_groups#unpublish'
-      delete :learning_graph, action: :destroy_learning_graph
     end
     resources :units do
       post '/publish', to: 'units#publish'
@@ -30,13 +29,6 @@ Rails.application.routes.draw do
       post '/publish', to: 'lessons#publish'
       post '/unpublish', to: 'lessons#unpublish'
       delete :zipped_contents, action: :destroy_zipped_contents
-    end
-    resources :assessments do
-      post '/publish', to: 'assessments#publish'
-      post '/unpublish', to: 'assessments#unpublish'
-      delete :rubric, action: :destroy_rubric
-      delete :sheets, action: :destroy_sheet
-      delete :summative_assessment, action: :destroy_summative_assessment
     end
     root to: 'units#index'
   end

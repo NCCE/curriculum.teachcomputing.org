@@ -55,7 +55,7 @@ The app is available at: https://curriculum.teachcomputing.rpfdev.com
 
 ### View logs
 
-View logs (add -f to tail, and/or append a container name such as 'web' to tail only that container):
+View logs (add -f to tail, and/or append a container name such as 'curriculum' to tail only that container):
 
 ```
 docker-compose logs
@@ -64,7 +64,7 @@ docker-compose logs
 For example
 
 ```
-docker-compose -f logs web
+docker-compose -f logs curriculum
 ```
 
 ### Database
@@ -80,7 +80,7 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-You can also target the db volume with the following, however you'll need to bring the web container down and up again too.
+You can also target the db volume with the following, however you'll need to bring the curriculum container down and up again too.
 
 ```
 docker-compose rm -sv db
@@ -93,7 +93,7 @@ docker-compose up -d
 To perform migrations manually (without restarting the container) run:
 
 ```
-docker-compose run --rm web bin/rails db:migrate
+docker-compose run --rm curriculum bin/rails db:migrate
 ```
 
 #### Seeding the database
@@ -101,7 +101,7 @@ docker-compose run --rm web bin/rails db:migrate
 To seed manually run:
 
 ```
-docker-compose run web bin/rails db:seed
+docker-compose run curriculum bin/rails db:seed
 ```
 
 ### Install new Dependencies
@@ -118,7 +118,7 @@ docker-compose build
 Uses [rspec](https://github.com/rspec/rspec)
 
 ```
-docker-compose run --rm web bin/rspec
+docker-compose run --rm curriculum bin/rspec
 ```
 
 Or
@@ -130,7 +130,7 @@ yarn test
 To use [guard](https://github.com/guard/guard) to watch the tests:
 
 ```
-docker-compose run --rm web bin/guard
+docker-compose run --rm curriculum bin/guard
 ```
 
 Or
@@ -169,13 +169,13 @@ Run `brakeman -i config/brakeman.ignore .` in the project root and follow the on
 
 `ruby-debug-ide` is enabled and waiting for connections by default on port `1235`. There is a `launch.json` in the repo and if you're using vscode it should be as easy as going to the 'Run' view, selecting 'Debug Attach' and clicking the green Run button. It's important to note that if you attempt to restart or stop the debug process, this will effectively kill the container, and a `docker-compose up -d` will be necessary to continue - however this is rarely necessary in general use since you'll be debugging individual requests.
 
-If you prefer to use `byebug` you'll _first_ need to attach to the container which can be done with the command: `docker attach teachcomputingorg_web_1` (the container name can be checked with `docker-compose ps`, but mostly it'll be the one here), then add your breakpoint and trigger your request. Again ending the session by quitting byebug or hitting `ctrl+c` will kill the container, so you'll need to run `docker-compose up -d` again.
+If you prefer to use `byebug` you'll _first_ need to attach to the container which can be done with the command: `docker attach curriculumteachcomputingorg_curriculum_1` (the container name can be checked with `docker-compose ps`, but mostly it'll be the one here), then add your breakpoint and trigger your request. Again ending the session by quitting byebug or hitting `ctrl+c` will kill the container, so you'll need to run `docker-compose up -d` again.
 
 ### Troubleshooting
 
 > I've run `npm start` and it's hanging whilst 'Waiting for the stack to become available'
 
-The script doesn't time out so this indicates that it can't resolve to `localhost:3020` and there was a problem bringing up the web container. Run `docker-compose logs web` to investigate the cause.
+The script doesn't time out so this indicates that it can't resolve to `localhost:3020` and there was a problem bringing up the `curriculum` container. Run `docker-compose logs curriculum` to investigate the cause.
 
 > I can access the site at `localhost:3020` but not at `curriculum.teachcomputing.rpfdev.com`
 

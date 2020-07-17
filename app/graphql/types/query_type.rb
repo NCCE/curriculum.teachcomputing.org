@@ -1,32 +1,26 @@
 module Types
   class QueryType < BaseObject
-    field :year_groups, [Types::YearGroupType], null: false
-    field :key_stages, [Types::KeyStageType], null: false
-    field :assessments, [Types::AssessmentType], null: false
-    field :lessons, [Types::LessonType], null: false
-    field :units, [Types::UnitType], null: false
+    field :year_groups, [Types::YearGroupType], null: true
+    field :key_stages, [Types::KeyStageType], null: true
+    field :lessons, [Types::LessonType], null: true
+    field :units, [Types::UnitType], null: true
 
-    field :year_group, Types::YearGroupType, null: false do
+    field :year_group, Types::YearGroupType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
     end
 
-    field :key_stage, Types::KeyStageType, null: false do
+    field :key_stage, Types::KeyStageType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
     end
 
-    field :assessment, Types::AssessmentType, null: false do
+    field :lesson, Types::LessonType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
     end
 
-    field :lesson, Types::LessonType, null: false do
-      argument :id, ID, required: false
-      argument :slug, String, required: false
-    end
-
-    field :unit, Types::UnitType, null: false do
+    field :unit, Types::UnitType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
     end
@@ -49,18 +43,9 @@ module Types
       find_record_by_shared_args(KeyStage, args)
     end
 
-    # assessment
-    def assessments
-      Assessment.published
-    end
-
-    def assessment(**args)
-      find_record_by_shared_args(Assessment, args)
-    end
-
     # lesson
     def lessons
-      Lesson.published
+      Lesson.published.ordered
     end
 
     def lesson(**args)
@@ -78,9 +63,9 @@ module Types
 
     def find_record_by_shared_args(model, args)
       if args[:id]
-        model.find(args[:id])
+        model.find_by(id: args[:id])
       elsif args[:slug]
-        model.find_by!(slug: args[:slug])
+        model.find_by(slug: args[:slug])
       else
         raise GraphQL::ExecutionError, "Missing arguments"
       end

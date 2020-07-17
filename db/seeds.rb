@@ -20,8 +20,5 @@ if Rails.env.development? || Rails.env.staging?
     lessons = unit.lessons.find_or_create_by({title: "Lesson #{i}", description: "This is a Lesson"})
     lessons.save!
     lessons.published!
-    assessments = unit.assessments.find_or_create_by({title: "Lesson #{i}", description: "This is an Assessment"})
-    assessments.save!
-    assessments.published!
   }
 end
