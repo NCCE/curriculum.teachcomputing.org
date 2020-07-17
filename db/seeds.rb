@@ -11,7 +11,7 @@ if Rails.env.development? || Rails.env.staging?
     keyStage = KeyStage.find_or_create_by({description: "This is a KeyStage", ages: "#{i}-#{i+2}", years: "#{i}-#{i+2}", level: "#{i}"})
     keyStage.save!
     keyStage.published!
-    yearGroup = keyStage.year_groups.find_or_create_by({year_number: "#{i}", description: "This is a YearGroup"})
+    yearGroup = keyStage.year_groups.find_or_create_by({year_number: "#{i}"})
     yearGroup.save!
     yearGroup.published!
     unit = yearGroup.units.find_or_create_by({title: "Unit #{i}", description: "This is a Unit"})
