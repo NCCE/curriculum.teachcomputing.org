@@ -70,7 +70,6 @@ RSpec.describe 'KeyStage', type: :request do
                 description
                 yearGroups {
                   id
-                  description
                   yearNumber
                 }
               }
@@ -92,7 +91,6 @@ RSpec.describe 'KeyStage', type: :request do
             description: published_key_stage.description,
             yearGroups: [{
               id: published_year_group.id,
-              description: published_year_group.description,
               yearNumber: published_year_group.year_number
             }]
           }]
