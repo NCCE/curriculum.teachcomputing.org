@@ -36,7 +36,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
     description
     year_groups
     published?
-    ages
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -44,7 +43,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     level
     description
-    slug
     teacher_guide
     ages
     years

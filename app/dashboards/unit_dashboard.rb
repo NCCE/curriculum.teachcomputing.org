@@ -62,13 +62,11 @@ class UnitDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    slug
+    title
+    description
     lessons
     year_group
     unit_guide
-    id
-    title
-    description
     learning_graphs
     rubrics
     summative_assessments
@@ -84,8 +82,6 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     unit_guide
-    lessons
-    year_group
     learning_graphs
     rubrics
     summative_assessments
