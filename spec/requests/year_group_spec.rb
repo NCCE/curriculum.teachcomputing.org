@@ -19,7 +19,6 @@ RSpec.describe 'YearGroup', type: :request do
                   id
                 }
                 yearNumber
-                description
                 units {
                   id
                   title
@@ -38,7 +37,6 @@ RSpec.describe 'YearGroup', type: :request do
               id: published_year_group.key_stage.id
             },
             yearNumber: published_year_group.year_number,
-            description: published_year_group.description,
             units: []
           }]
         }
@@ -62,7 +60,6 @@ RSpec.describe 'YearGroup', type: :request do
                   id
                 }
                 yearNumber
-                description
                 units {
                   id
                   title
@@ -82,7 +79,6 @@ RSpec.describe 'YearGroup', type: :request do
               id: published_year_group.key_stage.id
             },
             yearNumber: published_year_group.year_number,
-            description: published_year_group.description,
             units: [{
               id: published_unit.id,
               title: published_unit.title
