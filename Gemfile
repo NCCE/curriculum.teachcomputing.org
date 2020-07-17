@@ -40,11 +40,13 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'debase'
+  gem 'fuzzy-string-match'
   gem 'listen', '~> 3.2'
   gem 'ruby-debug-ide'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  gem 'rubyzip'
 end
 
 group :test do
