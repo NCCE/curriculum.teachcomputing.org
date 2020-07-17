@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: redirect('/admin')
 
   namespace :admin do
-    resources :key_stages, only: %i[show index] do
+    resources :key_stages, only: %i[show edit index] do
       post '/publish', to: 'key_stages#publish'
       post '/unpublish', to: 'key_stages#unpublish'
       delete :teacher_guide, action: :destroy_teacher_guide
