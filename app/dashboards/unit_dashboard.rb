@@ -81,6 +81,7 @@ class UnitDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
+    year_group
     unit_guide
     learning_graphs
     rubrics

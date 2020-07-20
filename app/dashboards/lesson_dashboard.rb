@@ -53,6 +53,7 @@ class LessonDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
+    unit
     objectives
     zipped_contents
   ].freeze
