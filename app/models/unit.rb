@@ -16,6 +16,8 @@ class Unit < ApplicationRecord
   validates :title, :description, presence: true
   validates :slug, uniqueness: true
 
+  scope :ordered, -> { order(:slug) }
+
   before_save :set_slug
 
   def set_slug
