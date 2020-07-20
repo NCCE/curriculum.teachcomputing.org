@@ -57,6 +57,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     description
+    teacher_guide
   ].freeze
 
   # COLLECTION_FILTERS
