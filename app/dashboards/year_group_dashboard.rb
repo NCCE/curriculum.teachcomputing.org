@@ -13,7 +13,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     slug: Field::String,
     year_number: Field::String,
-    description: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -25,7 +24,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     year_number
-    description
     units
     key_stage
   ].freeze
@@ -37,9 +35,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
     units
     key_stage
     year_number
-    description
-    created_at
-    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -47,7 +42,6 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   year_number
-  description
   units
   key_stage
   ].freeze

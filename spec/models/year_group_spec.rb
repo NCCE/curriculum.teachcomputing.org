@@ -18,7 +18,6 @@ RSpec.describe YearGroup, type: :model do
 
     it { is_expected.to validate_presence_of(:year_number) }
     it { is_expected.to validate_uniqueness_of(:year_number).case_insensitive }
-    it { is_expected.to validate_presence_of(:description) }
   end
 
   describe 'callbacks' do
