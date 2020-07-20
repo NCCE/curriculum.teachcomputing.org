@@ -54,7 +54,7 @@ module Types
 
     # unit
     def units
-      Unit.published
+      Unit.published.ordered
     end
 
     def unit(**args)
