@@ -5,7 +5,7 @@ class YearGroup < ApplicationRecord
   belongs_to :key_stage, dependent: :destroy
 
   validates :slug, :year_number, uniqueness: true
-  validates :year_number, :description, presence: true
+  validates :year_number, presence: true
 
   before_save :set_slug
 

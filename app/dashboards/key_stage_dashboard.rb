@@ -36,7 +36,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
     description
     year_groups
     published?
-    ages
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -44,7 +43,6 @@ class KeyStageDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     level
     description
-    slug
     teacher_guide
     ages
     years
@@ -58,12 +56,8 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    ages
-    years
-    level
     description
     teacher_guide
-    year_groups
   ].freeze
 
   # COLLECTION_FILTERS

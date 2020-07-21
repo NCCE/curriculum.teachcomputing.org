@@ -41,7 +41,6 @@ class LessonDashboard < Administrate::BaseDashboard
     title
     description
     objectives
-    slug
     unit
     zipped_contents
     created_at
@@ -54,8 +53,8 @@ class LessonDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
-    objectives
     unit
+    objectives
     zipped_contents
   ].freeze
 
