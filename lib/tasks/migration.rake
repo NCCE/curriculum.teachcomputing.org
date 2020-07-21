@@ -84,7 +84,7 @@ namespace :migration do
 end
 
 class ContentMigration
-  UNIT_FILE_TYPES = ['Learning graph –', 'Unit overview –', 'Summative assessment answers –', 'Summative assessment questions –', 'Summative assessment –', 'Unit assessment rubric –'].freeze
+  UNIT_FILE_TYPES = ['Learning graph –', 'Unit overview –', 'Summative assessment answers –', 'Assessment – ', 'Assessment answers –', 'Assessment questions –', 'Summative assessment questions –', 'Summative assessment –', 'Unit assessment rubric –'].freeze
   def initialize
     @lesson_count = 0
     @lessons_created_count = 0
@@ -159,10 +159,22 @@ class ContentMigration
               when 'Unit overview –'
                 unit.unit_guide.attach(io: File.open(file), filename: file)
                 puts "attaching #{field_type}"
+              when 'Assessment answers –'
+                unit.summative_answers.attach(io: File.open(file), filename: file)
+                puts "attaching #{field_type}"
               when 'Summative assessment answers –'
                 unit.summative_answers.attach(io: File.open(file), filename: file)
                 puts "attaching #{field_type}"
-              when 'Summative assessment questions –' || 'Summative assessment –'
+              when 'Summative assessment questions –'
+                unit.summative_assessments.attach(io: File.open(file), filename: file)
+                puts "attaching #{field_type}"
+              when 'Assessment questions –'
+                unit.summative_assessments.attach(io: File.open(file), filename: file)
+                puts "attaching #{field_type}"
+              when 'Assessment – '
+                unit.summative_assessments.attach(io: File.open(file), filename: file)
+                puts "attaching #{field_type}"
+              when 'Summative assessment –'
                 unit.summative_assessments.attach(io: File.open(file), filename: file)
                 puts "attaching #{field_type}"
               when 'Unit assessment rubric –'
