@@ -241,7 +241,7 @@ class ContentMigration
                   puts "Skipping #{lesson.title} as zip is already attached"
                   next
                 end
-                lesson.zipped_contents.attach(io: File.open("#{Dir.getwd}/#{lesson_directory}.zip"), filename: "#{Dir.getwd}/#{lesson_directory}.zip")
+                lesson.zipped_contents.attach(io: File.open("#{Dir.getwd}/#{lesson_directory}.zip"), filename: "#{lesson_directory}.zip")
                 puts "Attached zip"
                 attached_count += 1
                 lesson.update(zip_synced: true, zip_synced_at: DateTime.now)
