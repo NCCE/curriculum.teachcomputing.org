@@ -9,11 +9,17 @@ class Lesson < ApplicationRecord
   validates :title, :description, presence: true
   validates :slug, uniqueness: true
 
-  before_save :set_slug
+  before_save :set_slug, :set_lesson_no
 
-  scope :ordered, -> { order(:slug) }
+  scope :ordered, -> { order(:lesson_no) }
 
   def set_slug
     self.slug = title.parameterize
+  end
+
+  def set_lesson_no
+    lesson_no = slug[/\d+/].to_i
+    return 0 if lesson_no.nil?
+    self.lesson_no = lesson_no
   end
 end
