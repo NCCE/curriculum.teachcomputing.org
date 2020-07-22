@@ -6,6 +6,8 @@ URL_TO_POLL=http://localhost:${nginx_mappings__port[0]}
 
 # Brings the stack up and polls for availability
 echo "- Bringing up the stack:"
+# Create the network, allowing the stack to come up independently
+docker network create teachcomputingorg_main &> /dev/null
 docker-compose up -d
 printf %s "- Waiting for the stack to become available (ctrl+c to cancel): "
 while ! curl -sSf $URL_TO_POLL &> /dev/null ; do sleep 1; done
