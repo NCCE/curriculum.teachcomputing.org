@@ -305,8 +305,11 @@ class ZipFileGenerator
   end
 
   def write
+    Zip.setup do |c|
+      c.unicode_names = true
+      c.default_compression = Zlib::BEST_COMPRESSION
+    end
     entries = Dir.entries(@input_dir) - %w(. ..)
-
     ::Zip::File.open(@output_file, ::Zip::File::CREATE) do |io|
       write_entries entries, '', io
     end
@@ -334,8 +337,6 @@ class ZipFileGenerator
   end
 
   def put_into_archive(disk_file_path, io, zip_file_path)
-    io.get_output_stream(zip_file_path) do |f|
-      f.puts(File.open(disk_file_path, 'rb').read)
-    end
+    io.add(zip_file_path, disk_file_path)
   end
 end
