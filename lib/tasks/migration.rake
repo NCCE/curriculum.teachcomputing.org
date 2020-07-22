@@ -208,7 +208,7 @@ class ContentMigration
                 next
               end
               puts "Zipping step for #{lesson.id}: #{lesson.title}"
-              unless File.exist?("#{Dir.getwd}/#{lesson_directory}.zip")
+              unless File.exist?("#{lesson_directory}.zip")
                 puts "zipping #{lesson_directory}"
                 zf = ZipFileGenerator.new(lesson_directory, "#{Dir.getwd}/#{lesson_directory}.zip")
                 zf.write()
@@ -271,11 +271,14 @@ class ContentMigration
   end
 
   def determine_lesson_name(dir)
-    lesson_number = dir[1].to_i
+    lesson_number = dir[1..2].to_i
+    amended_dir = dir.tr('_', '')
     if dir.include?('–')
-      "Lesson #{lesson_number} #{ dir.delete_prefix("L#{lesson_number} – ")}".tr('_', '')
+      "Lesson #{lesson_number} #{ amended_dir.delete_prefix("L#{lesson_number} – ")}"
+    elsif dir.include?('-')
+      "Lesson #{lesson_number} #{ amended_dir.delete_prefix("L#{lesson_number} - ")}"
     else
-      "Lesson #{lesson_number} #{ dir.delete_prefix("L#{lesson_number} - ")}".tr('_', '')
+      "Lesson #{lesson_number} #{ amended_dir.delete_prefix("L#{lesson_number} ")}"
     end
   end
 
