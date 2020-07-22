@@ -26,9 +26,9 @@ RSpec.describe Lesson, type: :model do
 
     describe '#set_slug' do
       it 'sets the slug once saved' do
-        lesson = build(:lesson)
+        lesson = build(:lesson, title: 'Lesson 1')
         lesson.run_callbacks :save
-        expect(lesson.lesson_no).to eq 0
+        expect(lesson.lesson_no).to eq 1
       end
     end
   end
