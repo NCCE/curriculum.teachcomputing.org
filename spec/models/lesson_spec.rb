@@ -23,5 +23,13 @@ RSpec.describe Lesson, type: :model do
         expect(lesson.slug).to eq lesson.title.parameterize
       end
     end
+
+    describe '#set_slug' do
+      it 'sets the slug once saved' do
+        lesson = build(:lesson)
+        lesson.run_callbacks :save
+        expect(lesson.lesson_no).to eq 0
+      end
+    end
   end
 end
