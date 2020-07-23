@@ -10,6 +10,7 @@ class LessonDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo,
     zipped_contents: Field::ActiveStorage.with_options(
+      direct_upload: true,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_lesson_zipped_contents, { attachment_id: attachment.id,
                                           lesson_id: resource.id }]
