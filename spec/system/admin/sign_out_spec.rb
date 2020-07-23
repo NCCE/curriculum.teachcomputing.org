@@ -8,7 +8,7 @@ RSpec.describe 'Sign out of admin dasboard', :type => :system do
       sign_in user
     end
 
-    it 'goes to the admin dashboard' do
+    xit 'goes to the admin dashboard' do
       visit '/admin'
       click_link 'Sign out'
       expect(page).to have_text('Log in')
