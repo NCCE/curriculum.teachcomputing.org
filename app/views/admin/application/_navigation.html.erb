@@ -8,7 +8,7 @@ as defined by the routes in the `admin/` namespace
 %>
 
 <nav class="navigation" role="navigation">
-  <%= link_to_if admin_user_signed_in?, 'Sign out', destroy_admin_user_session_path, method: :delete, class: "button button--alt" %>
+  <%= link_to_if user_signed_in?, 'Sign out', destroy_user_session_path, method: :delete, class: "button button--alt" %>
   <%= link_to "Back to app", root_url, class: "button button--alt" %>
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
     <%= link_to(

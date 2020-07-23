@@ -3,13 +3,9 @@ Rails.application.routes.draw do
 
   post '/graphql', to: 'graphql#execute'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
   root to: redirect('/admin')
 
   namespace :admin do
-    devise_for :users, controllers: {
-      sessions: 'admin/users/sessions'
-    }
     resources :key_stages, only: %i[show edit index] do
       post '/publish', to: 'key_stages#publish'
       post '/unpublish', to: 'key_stages#unpublish'
@@ -35,4 +31,6 @@ Rails.application.routes.draw do
     end
     root to: 'units#index'
   end
+
+  devise_for :users
 end
