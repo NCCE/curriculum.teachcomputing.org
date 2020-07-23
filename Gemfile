@@ -8,6 +8,7 @@ gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'aws-sdk', '~> 3'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'ddtrace', '~> 0.18.2'
+gem 'devise', '~> 4.7.2'
 gem 'graphiql-rails', '1.7.0'
 gem 'graphql', '~> 1.10.10'
 gem 'lograge', '~> 0.11.2'
