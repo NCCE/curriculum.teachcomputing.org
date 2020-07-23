@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 RSpec.shared_examples_for 'administrate publishable' do |model|
+  let(:user) { create(:user) }
+
+  before do
+    sign_in user
+  end
+
   it 'allows publishing of unpublished key stage' do
     instance = create(model)
     expect(instance.published?).to eq(false)
