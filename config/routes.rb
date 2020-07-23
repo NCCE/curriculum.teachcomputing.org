@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   root to: redirect('/admin')
 
   namespace :admin do
+    devise_for :users, controllers: {
+      sessions: 'admin/users/sessions'
+    }
     resources :key_stages, only: %i[show edit index] do
       post '/publish', to: 'key_stages#publish'
       post '/unpublish', to: 'key_stages#unpublish'
