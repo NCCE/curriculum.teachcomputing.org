@@ -23,5 +23,23 @@ RSpec.describe Lesson, type: :model do
         expect(lesson.slug).to eq lesson.title.parameterize
       end
     end
+
+    describe '#set_slug' do
+      context 'when the lesson slug contains a number' do
+        it 'sets the lesson_no once saved' do
+          lesson = build(:lesson, title: 'Lesson 1')
+          lesson.run_callbacks :save
+          expect(lesson.lesson_no).to eq 1
+        end
+      end
+
+      context 'when it does not include a number' do
+        it 'sets the lesson_no once saved' do
+          lesson = build(:lesson, title: 'Lesson example name')
+          lesson.run_callbacks :save
+          expect(lesson.lesson_no).to eq 0
+        end
+      end
+    end
   end
 end
