@@ -147,9 +147,9 @@ class ContentMigration
           unit = Unit.find_by(slug: unit_name.parameterize)
 
           Dir.chdir(unit_directory) do
-            puts "Attaching unit content for for #{unit.id}: #{unit.title}"
             files = get_files(Dir.getwd)
             next if unit.unit_documents_synced
+            puts "Attaching unit content for for #{unit.id}: #{unit.title}"
             files.each do |file|
               field_type = determine_unit_file_type(file)
               case field_type
