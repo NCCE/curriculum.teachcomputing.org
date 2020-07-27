@@ -39,6 +39,12 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :amazon
 
+  # Active storage proxy delivery
+  config.active_storage.resolve_model_to_route = :cdn_proxy
+
+  # Active storage URL expiration
+  config.active_storage.proxy_urls_expire_in  = 1.minute
+
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
