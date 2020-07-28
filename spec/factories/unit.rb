@@ -15,11 +15,11 @@ FactoryBot.define do
         unit.unit_guide.attach(
           io: File.open(
             Rails.root.join(
-              'spec', 'support', 'test.zip'
+              'spec', 'support', 'test.txt'
             )
           ),
-          filename: 'test.zip',
-          content_type: 'application/zip'
+          filename: 'test.txt',
+          content_type: 'text/plain'
         )
       end
     end
