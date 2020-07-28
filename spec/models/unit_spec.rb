@@ -11,6 +11,7 @@ RSpec.describe Unit, type: :model do
   describe 'associations' do
     it { is_expected.to belong_to(:year_group) }
     it { is_expected.to have_many(:lessons) }
+    it { is_expected.to have_many(:aggregate_downloads) }
   end
 
   describe 'validations' do

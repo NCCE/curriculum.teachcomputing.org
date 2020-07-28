@@ -9,5 +9,8 @@ class ActiveStorage::BlobsController < ActiveStorage::BaseController
 
   private
 
-    def track_download; end
+    def track_download
+      attachment = @blob.attachments.first
+      AggregateDownload.increment_attachment_download(attachment)
+    end
 end
