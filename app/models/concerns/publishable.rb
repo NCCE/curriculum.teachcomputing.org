@@ -4,7 +4,7 @@ module Publishable
   included do
     belongs_to :state, dependent: :destroy
 
-    after_initialize :create_state
+    before_create :create_state
 
     scope :published, -> { joins(:state).where('states.state = ?', State.states[:published]) }
 

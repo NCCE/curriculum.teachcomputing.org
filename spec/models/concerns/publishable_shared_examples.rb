@@ -40,12 +40,6 @@ RSpec.shared_examples_for 'publishable' do |associated = []|
     expect(model.published).to match_array([published1, published2])
   end
 
-  it 'creates state when initialized ' do
-    instance = model.new
-    expect(instance.state).not_to be(nil)
-    expect(instance.state).to be_a(State)
-  end
-
   describe 'published children' do
     associated.each do |assoc|
       it "responds to published_#{assoc}" do
