@@ -11,6 +11,6 @@ class ActiveStorage::BlobsController < ActiveStorage::BaseController
 
     def track_download
       attachment = @blob.attachments.first
-      AggregateDownload.increment_attachment_download(attachment) if attachment
+      AggregateDownload.increment_attachment_download(attachment)
     end
 end
