@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_22_092757) do
+ActiveRecord::Schema.define(version: 2020_07_27_144032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -36,11 +36,27 @@ ActiveRecord::Schema.define(version: 2020_07_22_092757) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "aggregate_downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "downloadable_id", null: false
+    t.string "downloadable_type", null: false
+    t.integer "count", default: 0, null: false
+    t.string "attachment_type", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "aggregate_ratings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.integer "total_positive", default: 0, null: false
     t.integer "total_negative", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "aggregate_download_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aggregate_download_id"], name: "index_downloads_on_aggregate_download_id"
   end
 
   create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -112,6 +128,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_092757) do
     t.index ["slug"], name: "index_year_groups_on_slug", unique: true
   end
 
+  add_foreign_key "downloads", "aggregate_downloads"
   add_foreign_key "key_stages", "states"
   add_foreign_key "lessons", "aggregate_ratings"
   add_foreign_key "lessons", "states"
