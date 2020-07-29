@@ -62,13 +62,17 @@ module Types
     end
 
     def find_record_by_shared_args(model, args)
-      if args[:id]
-        model.find_by(id: args[:id])
-      elsif args[:slug]
-        model.find_by(slug: args[:slug])
-      else
-        raise GraphQL::ExecutionError, "Missing arguments"
+      id, slug = args.values_at(:id, :slug)
+
+      if id
+        record = model.find_by(id: id)
+      elsif slug
+        record = model.find_by(slug: slug)
       end
+
+      raise GraphQL::ExecutionError.new("'#{id || slug}' not found", extensions: { 'code' => :not_found }) if record.nil?
+
+      record
     end
   end
 end
