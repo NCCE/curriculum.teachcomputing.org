@@ -35,8 +35,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-rspec'
   gem 'simplecov'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :development do
@@ -44,6 +42,9 @@ group :development do
   gem 'debase'
   gem 'listen', '~> 3.2'
   gem 'ruby-debug-ide'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
 end
 

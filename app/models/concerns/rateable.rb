@@ -4,7 +4,7 @@ module Rateable
   included do
     belongs_to :aggregate_rating, dependent: :destroy
 
-    after_initialize :create_aggregate_rating
+    before_validation :create_aggregate_rating, on: :create
 
     delegate :total_positive,
              :total_negative,
