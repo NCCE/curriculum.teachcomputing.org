@@ -39,7 +39,7 @@ fi
 if [ -f $CONFIG_FILE ] && ! grep -q 'X-Forwarded-Proto' $CONFIG_FILE
 then
   sed -i '' '/proxy_buffering off\;/a\
-  proxy_set_header  -Forwarded-Proto https\;' $CONFIG_FILE
+  proxy_set_header  X-Forwarded-Proto https\;' $CONFIG_FILE
 fi
 
 dev-nginx restart-nginx
