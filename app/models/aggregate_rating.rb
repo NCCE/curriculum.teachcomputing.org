@@ -1,4 +1,5 @@
 class AggregateRating < ApplicationRecord
+  belongs_to :rateable, polymorphic: true
   has_many :ratings
 
   def add_positive_rating

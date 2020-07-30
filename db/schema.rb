@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_27_144032) do
+ActiveRecord::Schema.define(version: 2020_07_30_082524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 2020_07_27_144032) do
     t.integer "total_negative", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "rateable_id"
+    t.string "rateable_type"
   end
 
   create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -78,7 +80,6 @@ ActiveRecord::Schema.define(version: 2020_07_27_144032) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
-    t.uuid "aggregate_rating_id"
     t.string "slug"
     t.text "objectives"
     t.boolean "zip_synced", default: false
@@ -109,7 +110,6 @@ ActiveRecord::Schema.define(version: 2020_07_27_144032) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "state_id"
-    t.uuid "aggregate_rating_id"
     t.string "slug"
     t.boolean "unit_documents_synced", default: false
     t.datetime "unit_documents_synced_at"
@@ -130,10 +130,8 @@ ActiveRecord::Schema.define(version: 2020_07_27_144032) do
 
   add_foreign_key "downloads", "aggregate_downloads"
   add_foreign_key "key_stages", "states"
-  add_foreign_key "lessons", "aggregate_ratings"
   add_foreign_key "lessons", "states"
   add_foreign_key "ratings", "aggregate_ratings"
-  add_foreign_key "units", "aggregate_ratings"
   add_foreign_key "units", "states"
   add_foreign_key "year_groups", "states"
 end

@@ -5,7 +5,6 @@ FactoryBot.define do
     objectives { 'Objectives for this lesson' }
     unit
     state
-    aggregate_rating
 
     factory :published_lesson do
       state factory: :published_state

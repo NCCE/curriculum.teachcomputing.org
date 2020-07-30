@@ -2,7 +2,7 @@ module Rateable
   extend ActiveSupport::Concern
 
   included do
-    belongs_to :aggregate_rating, dependent: :destroy
+    has_one :aggregate_rating, as: :rateable, dependent: :destroy
 
     before_validation :create_aggregate_rating, on: :create
 
