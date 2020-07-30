@@ -11,30 +11,35 @@ class UnitDashboard < Administrate::BaseDashboard
     lessons: Field::HasMany,
     year_group: Field::BelongsTo,
     unit_guide: Field::ActiveStorage.with_options(
+      show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_unit_unit_guide, { attachment_id: attachment.id,
                                    unit_id: resource.id }]
       end
     ),
     learning_graphs: Field::ActiveStorage.with_options(
+      show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_unit_learning_graphs, { attachment_id: attachment.id,
                                         unit_id: resource.id }]
       end
     ),
     rubrics: Field::ActiveStorage.with_options(
+      show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_unit_rubrics, { attachment_id: attachment.id,
                                 unit_id: resource.id }]
       end
     ),
     summative_assessments: Field::ActiveStorage.with_options(
+      show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_unit_summative_assessments, { attachment_id: attachment.id,
                                               unit_id: resource.id }]
       end
     ),
     summative_answers: Field::ActiveStorage.with_options(
+      show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_unit_summative_answers, { attachment_id: attachment.id,
                                           unit_id: resource.id }]

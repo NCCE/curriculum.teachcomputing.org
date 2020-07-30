@@ -8,6 +8,7 @@ RSpec.describe KeyStage, type: :model do
 
   describe 'associations' do
     it { is_expected.to have_many(:year_groups) }
+    it { is_expected.to have_many(:aggregate_downloads) }
   end
 
   describe 'validations' do

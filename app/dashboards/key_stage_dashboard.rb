@@ -10,6 +10,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     year_groups: Field::HasMany,
     teacher_guide: Field::ActiveStorage.with_options(
+      show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_key_stage_teacher_guide, { attachment_id: attachment.id,
                                            key_stage_id: resource.id }]

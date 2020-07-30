@@ -1,4 +1,4 @@
-dev_nginx = YAML::load_file(Rails.root.join('nginx-mapping.yml'))
+dev_nginx = YAML.load_file(Rails.root.join('nginx-mapping.yml'))
 
 Rails.application.routes.default_url_options[:host] = 'curriculum.teachcomputing.rpfdev.com'
 Rails.application.configure do

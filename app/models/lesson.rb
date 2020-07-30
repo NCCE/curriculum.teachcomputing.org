@@ -3,11 +3,12 @@ class Lesson < ApplicationRecord
   include Rateable
 
   belongs_to :unit, dependent: :destroy
+  has_many :aggregate_downloads, as: :downloadable
 
   has_one_attached :zipped_contents
 
   validates :title, :description, presence: true
-  validates :slug, uniqueness: true
+  validates :slug, uniqueness: { scope: [:unit_id] }
 
   before_save :set_slug, :set_lesson_no
 
