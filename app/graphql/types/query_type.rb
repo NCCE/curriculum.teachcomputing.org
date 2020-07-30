@@ -65,14 +65,10 @@ module Types
       id, slug = args.values_at(:id, :slug)
 
       if id
-        record = model.find_by(id: id)
+        model.find(id: id)
       elsif slug
-        record = model.find_by(slug: slug)
+        model.find_by!(slug: slug)
       end
-
-      raise GraphQL::ExecutionError.new("'#{id || slug}' not found", extensions: { 'code' => :not_found }) if record.nil?
-
-      record
     end
   end
 end
