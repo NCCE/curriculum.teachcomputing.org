@@ -54,7 +54,7 @@ RSpec.describe 'Query', type: :request do
           },
           errors: [
             {
-                message: "'nonsense' not found",
+                message: "KeyStage not found",
                 locations: [
                     {
                         line: 2,
