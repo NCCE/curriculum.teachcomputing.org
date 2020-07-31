@@ -31,9 +31,11 @@
     "stop": "npx ./scripts/docker-stop.sh",
     "setup": "npx ./scripts/setup.sh",
     "logs": "docker-compose logs -f curriculum",
+    "drun": "docker-compose run --no-deps --rm curriculum bin/rails",
     "console": "docker-compose run --no-deps --rm curriculum bin/rails console",
     "test": "docker-compose run --no-deps --rm curriculum rspec",
-    "guard": "docker-compose run --no-deps --rm curriculum bin/guard"
+    "guard": "docker-compose run --no-deps --rm curriculum bin/guard",
+    "rebuild": "bundle install && docker-compose build && yarn start"
   },
   "lint-staged": {
     "*.js": [
