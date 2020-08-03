@@ -39,7 +39,6 @@ class MakeAggregateRatingsPolymorphic < ActiveRecord::Migration[6.0]
   end
 
   def down
-    remove_column :aggregate_ratings, :rateable_id
-    remove_column :aggregate_ratings, :rateable_type
+    raise ActiveRecord::IrreversibleMigration
   end
 end
