@@ -1,6 +1,6 @@
 class AggregateDownload < ApplicationRecord
   belongs_to :downloadable, polymorphic: true
-  has_many :downloads
+  has_many :downloads, dependent: :destroy
 
   validates :count, :attachment_type, presence: true
 
