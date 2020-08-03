@@ -2,7 +2,7 @@ class KeyStage < ApplicationRecord
   include Publishable
 
   has_many :year_groups, dependent: :destroy
-  has_many :aggregate_downloads, as: :downloadable
+  has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
 
   has_one_attached :teacher_guide
 

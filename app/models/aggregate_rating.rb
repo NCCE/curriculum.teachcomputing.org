@@ -1,6 +1,6 @@
 class AggregateRating < ApplicationRecord
   belongs_to :rateable, polymorphic: true
-  has_many :ratings
+  has_many :ratings, dependent: :destroy
 
   def add_positive_rating
     ratings.create(positive: true)

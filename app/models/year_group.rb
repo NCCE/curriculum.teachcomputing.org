@@ -2,7 +2,7 @@ class YearGroup < ApplicationRecord
   include Publishable
 
   has_many :units, dependent: :destroy
-  belongs_to :key_stage, dependent: :destroy
+  belongs_to :key_stage
 
   validates :slug, :year_number, uniqueness: true
   validates :year_number, presence: true

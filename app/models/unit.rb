@@ -5,7 +5,7 @@ class Unit < ApplicationRecord
 
   has_many :lessons, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable
-  belongs_to :year_group, dependent: :destroy
+  belongs_to :year_group
 
   has_one_attached :unit_guide
 

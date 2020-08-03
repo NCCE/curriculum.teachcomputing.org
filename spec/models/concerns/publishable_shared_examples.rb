@@ -5,7 +5,7 @@ RSpec.shared_examples_for 'publishable' do |associated = []|
   let(:model) { described_class }
 
   describe 'associations' do
-    it { is_expected.to belong_to(:state) }
+    it { is_expected.to have_one(:state) }
   end
 
   describe 'delegates' do
@@ -25,7 +25,7 @@ RSpec.shared_examples_for 'publishable' do |associated = []|
 
     context 'when not published' do
       it 'responds correctly' do
-        instance = build(model.to_s.underscore.to_sym)
+        instance = create(model.to_s.underscore.to_sym)
         expect(instance.published?).to eq(false)
       end
     end
