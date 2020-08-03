@@ -3,6 +3,8 @@ require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 require Rails.root.join 'spec/models/concerns/rateable_shared_examples.rb'
 
 RSpec.describe Lesson, type: :model do
+  let(:lesson) { create(:lesson) }
+
   it_behaves_like 'publishable'
   it_behaves_like 'rateable'
 
@@ -12,8 +14,13 @@ RSpec.describe Lesson, type: :model do
   end
 
   describe 'validations' do
+    before do
+      lesson
+    end
+
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_uniqueness_of(:slug).scoped_to(:unit_id) }
   end
 
   describe 'callbacks' do

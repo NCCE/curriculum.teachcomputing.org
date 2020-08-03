@@ -29,9 +29,17 @@ brew install guardian/devtools/dev-nginx
 
 echo "- Setup mapping"
 dev-nginx setup-app nginx-mapping.yml
+
 if [ -f $CONFIG_FILE ] && ! grep -q 'X-Forwarded-Ssl' $CONFIG_FILE
 then
   sed -i '' '/proxy_buffering off\;/a\
   proxy_set_header  X-Forwarded-Ssl on\;' $CONFIG_FILE
-  dev-nginx restart-nginx
 fi
+
+if [ -f $CONFIG_FILE ] && ! grep -q 'X-Forwarded-Proto' $CONFIG_FILE
+then
+  sed -i '' '/proxy_buffering off\;/a\
+  proxy_set_header  X-Forwarded-Proto https\;' $CONFIG_FILE
+fi
+
+dev-nginx restart-nginx
