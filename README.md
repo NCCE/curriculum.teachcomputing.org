@@ -180,3 +180,13 @@ The script doesn't time out so this indicates that it can't resolve to `localhos
 > I can access the site at `localhost:3020` but not at `curriculum.teachcomputing.rpfdev.com`
 
 In some circumstances the nginx instance used by dev-nginx may go down, just run `dev-nginx restart-nginx` to bring it up again.
+
+### Syncing Prod DB to Staging
+
+- You must have access to the Heroku apps for staging and production.
+
+To copy the production database into the staging database run:
+
+```
+./bin/sync-db/production-to-staging.sh
+```
