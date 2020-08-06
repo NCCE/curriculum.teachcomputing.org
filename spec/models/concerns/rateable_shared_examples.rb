@@ -4,7 +4,7 @@ RSpec.shared_examples_for 'rateable' do
   let(:model) { described_class }
 
   describe 'associations' do
-    it { is_expected.to belong_to(:aggregate_rating) }
+    it { is_expected.to have_one(:aggregate_rating) }
   end
 
   describe 'delegates' do

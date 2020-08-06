@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_072346) do
+ActiveRecord::Schema.define(version: 2020_08_03_081814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
     t.integer "total_negative", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "rateable_id"
+    t.string "rateable_type"
   end
 
   create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -63,7 +65,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.uuid "state_id"
     t.string "level"
     t.string "ages"
     t.string "years"
@@ -77,8 +78,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
     t.uuid "unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.uuid "state_id"
-    t.uuid "aggregate_rating_id"
     t.string "slug"
     t.text "objectives"
     t.boolean "zip_synced", default: false
@@ -100,6 +99,8 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
     t.integer "state", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "stateable_id"
+    t.string "stateable_type"
   end
 
   create_table "units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -108,8 +109,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
     t.uuid "year_group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.uuid "state_id"
-    t.uuid "aggregate_rating_id"
     t.string "slug"
     t.boolean "unit_documents_synced", default: false
     t.datetime "unit_documents_synced_at"
@@ -121,7 +120,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
     t.uuid "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.uuid "state_id"
     t.string "year_number"
     t.string "slug"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
@@ -129,11 +127,5 @@ ActiveRecord::Schema.define(version: 2020_07_30_072346) do
   end
 
   add_foreign_key "downloads", "aggregate_downloads"
-  add_foreign_key "key_stages", "states"
-  add_foreign_key "lessons", "aggregate_ratings"
-  add_foreign_key "lessons", "states"
   add_foreign_key "ratings", "aggregate_ratings"
-  add_foreign_key "units", "aggregate_ratings"
-  add_foreign_key "units", "states"
-  add_foreign_key "year_groups", "states"
 end

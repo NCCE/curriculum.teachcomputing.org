@@ -2,8 +2,8 @@ class Lesson < ApplicationRecord
   include Publishable
   include Rateable
 
-  belongs_to :unit, dependent: :destroy
-  has_many :aggregate_downloads, as: :downloadable
+  belongs_to :unit
+  has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
 
   has_one_attached :zipped_contents
 

@@ -4,11 +4,11 @@ FactoryBot.define do
     description { 'In this lesson you will learn X and Y' }
     objectives { 'Objectives for this lesson' }
     unit
-    state
-    aggregate_rating
 
     factory :published_lesson do
-      state factory: :published_state
+      before(:create) do |lesson|
+        create(:published_state, stateable: lesson)
+      end
     end
   end
 end

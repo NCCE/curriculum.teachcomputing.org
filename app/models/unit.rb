@@ -4,8 +4,9 @@ class Unit < ApplicationRecord
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy
-  has_many :aggregate_downloads, as: :downloadable
-  belongs_to :year_group, dependent: :destroy
+  has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
+
+  belongs_to :year_group
 
   has_one_attached :unit_guide
 

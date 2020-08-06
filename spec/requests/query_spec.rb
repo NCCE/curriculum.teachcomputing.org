@@ -26,7 +26,7 @@ RSpec.describe 'Query', type: :request do
           data: {
             keyStage: {
               id: published_key_stage.id,
-              slug: published_key_stage.slug,
+              slug: published_key_stage.slug
             }
           }
         }.to_json
@@ -54,19 +54,19 @@ RSpec.describe 'Query', type: :request do
           },
           errors: [
             {
-                message: "KeyStage not found",
-                locations: [
-                    {
-                        line: 2,
-                        column: 3
-                    }
-                ],
-                path: [
-                    "keyStage"
-                ],
-                extensions: {
-                    code: :not_found
+              message: 'KeyStage not found',
+              locations: [
+                {
+                  line: 2,
+                  column: 3
                 }
+              ],
+              path: [
+                'keyStage'
+              ],
+              extensions: {
+                code: :not_found
+              }
             }
           ]
         }.to_json

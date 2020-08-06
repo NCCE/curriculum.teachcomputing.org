@@ -2,7 +2,7 @@ module Publishable
   extend ActiveSupport::Concern
 
   included do
-    belongs_to :state, dependent: :destroy
+    has_one :state, as: :stateable, dependent: :destroy
 
     before_validation :create_state, on: :create
 
