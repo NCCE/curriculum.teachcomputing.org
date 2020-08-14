@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_03_081814) do
+ActiveRecord::Schema.define(version: 2020_08_14_085446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -58,7 +58,9 @@ ActiveRecord::Schema.define(version: 2020_08_03_081814) do
     t.uuid "aggregate_download_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "user_stem_achiever_contact_no"
     t.index ["aggregate_download_id"], name: "index_downloads_on_aggregate_download_id"
+    t.index ["user_stem_achiever_contact_no"], name: "index_downloads_on_user_stem_achiever_contact_no"
   end
 
   create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
