@@ -70,5 +70,20 @@ RSpec.describe AggregateDownload, type: :model do
           .to change(Download, :count).by(1)
       end
     end
+
+    context 'when user_stem_achiever_contact_no is passed down' do
+      it 'has user_stem_achiever_contact_no set' do
+        uuid = SecureRandom.uuid
+        described_class.increment_attachment_download(unit.unit_guide, uuid.to_s)
+        expect(Download.first.user_stem_achiever_contact_no).to eq uuid
+      end
+    end
+
+    context 'when user_stem_achiever_contact_no is not passed down' do
+      it 'has user_stem_achiever_contact_no set' do
+        described_class.increment_attachment_download(unit.unit_guide)
+        expect(Download.first.user_stem_achiever_contact_no).to eq nil
+      end
+    end
   end
 end
