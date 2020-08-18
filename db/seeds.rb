@@ -6,6 +6,41 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+def add_year_group(key_stage, year_number, i)
+  year_group = key_stage.year_groups.create({ year_number: year_number.to_s })
+  year_group.published!
+
+  unit = year_group.units.create({ title: "Unit #{year_number}", description: 'This is a Unit' })
+  unit.published!
+
+  download_record = AggregateDownload.create(
+    count: i,
+    downloadable: unit,
+    attachment_type: 'zipped_contents'
+  )
+
+  i.times do
+    download_record.downloads.create
+    unit.add_positive_rating
+    unit.add_negative_rating
+  end
+
+  lesson = unit.lessons.create({ title: "Lesson #{i}", description: 'This is a Lesson' })
+  lesson.published!
+
+  download_record = AggregateDownload.create(
+    count: i,
+    downloadable: lesson,
+    attachment_type: 'zipped_contents'
+  )
+
+  i.times do
+    download_record.downloads.create
+    lesson.add_positive_rating
+    lesson.add_negative_rating
+  end
+end
+
 if Rails.env.development? || Rails.env.staging?
   puts 'Clearing existing records'
   Rating.delete_all
@@ -21,7 +56,8 @@ if Rails.env.development? || Rails.env.staging?
   YearGroup.delete_all
   KeyStage.delete_all
 
-  4.times do |i|
+  4.times do |j|
+    i = j + 1
     puts '*' * 50
     puts "Creating KeyStage #{i}"
     key_stage = KeyStage.create(
@@ -44,38 +80,23 @@ if Rails.env.development? || Rails.env.staging?
     end
 
     puts 'Adding YearGroup'
-    year_group = key_stage.year_groups.create({ year_number: i.to_s })
-    year_group.published!
-
-    puts 'Adding Unit'
-    unit = year_group.units.create({ title: "Unit #{i}", description: 'This is a Unit' })
-    unit.published!
-
-    download_record = AggregateDownload.create(
-      count: i,
-      downloadable: unit,
-      attachment_type: 'zipped_contents'
-    )
-    i.times do
-      download_record.downloads.create
-      unit.add_positive_rating
-      unit.add_negative_rating
-    end
-
-    puts 'Adding Lesson'
-    lesson = unit.lessons.create({ title: "Lesson #{i}", description: 'This is a Lesson' })
-    lesson.published!
-
-    download_record = AggregateDownload.create(
-      count: i,
-      downloadable: lesson,
-      attachment_type: 'zipped_contents'
-    )
-
-    i.times do
-      download_record.downloads.create
-      lesson.add_positive_rating
-      lesson.add_negative_rating
+    case i
+    when 1
+      (1..2).each do |yn|
+        add_year_group(key_stage, yn, i)
+      end
+    when 2
+      (3..6).each do |yn|
+        add_year_group(key_stage, yn, i)
+      end
+    when 3
+      (7..9).each do |yn|
+        add_year_group(key_stage, yn, i)
+      end
+    when 4
+      %w[Non-GCSE GCSE].each do |yn|
+        add_year_group(key_stage, yn, i)
+      end
     end
   end
 end
