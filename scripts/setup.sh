@@ -12,13 +12,13 @@ brew install yarn
 yarn install
 
 printf %s "- Copy .env-example? WARNING this will overwrite any existing environment variables (y/n)? "
-read RESP
+read -r RESP
 if [ "$RESP" != "${RESP#[Yy]}" ]; then
   cp .env-example .env
 fi
 
 printf %s "- Build the docker image (y/n)? "
-read RESP
+read -r RESP
 if [ "$RESP" != "${RESP#[Yy]}" ]; then
   docker-compose build
 fi
@@ -30,16 +30,16 @@ brew install guardian/devtools/dev-nginx
 echo "- Setup mapping"
 dev-nginx setup-app nginx-mapping.yml
 
-if [ -f $CONFIG_FILE ] && ! grep -q 'X-Forwarded-Ssl' $CONFIG_FILE
+if [ -f "$CONFIG_FILE" ] && ! grep -q 'X-Forwarded-Ssl' "$CONFIG_FILE"
 then
   sed -i '' '/proxy_buffering off\;/a\
-  proxy_set_header  X-Forwarded-Ssl on\;' $CONFIG_FILE
+  proxy_set_header  X-Forwarded-Ssl on\;' "$CONFIG_FILE"
 fi
 
-if [ -f $CONFIG_FILE ] && ! grep -q 'X-Forwarded-Proto' $CONFIG_FILE
+if [ -f "$CONFIG_FILE" ] && ! grep -q 'X-Forwarded-Proto' "$CONFIG_FILE"
 then
   sed -i '' '/proxy_buffering off\;/a\
-  proxy_set_header  X-Forwarded-Proto https\;' $CONFIG_FILE
+  proxy_set_header  X-Forwarded-Proto https\;' "$CONFIG_FILE"
 fi
 
 dev-nginx restart-nginx
