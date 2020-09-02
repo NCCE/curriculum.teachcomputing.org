@@ -17,6 +17,7 @@ gem 'rails', '~> 6.0.3.2'
 gem 'sass-rails', '>= 6'
 gem 'sentry-raven', '~> 3.0.0'
 gem 'webpacker', '~> 4.0'
+gem "barnes", "~> 0.0.8"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

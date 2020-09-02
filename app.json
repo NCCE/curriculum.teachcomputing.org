@@ -54,6 +54,9 @@
     },
     {
       "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/metrics"
     }
   ]
 }
