@@ -8,7 +8,9 @@ class LessonDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    unit: Field::BelongsTo,
+    unit: Field::BelongsTo.with_options(
+      order: 'title ASC'
+    ),
     zipped_contents: Field::ActiveStorage.with_options(
       show_display_preview: false,
       direct_upload: true,

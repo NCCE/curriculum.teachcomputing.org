@@ -9,7 +9,9 @@ class UnitDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     lessons: Field::HasMany,
-    year_group: Field::BelongsTo,
+    year_group: Field::BelongsTo.with_options(
+      order: 'year_number ASC'
+    ),
     unit_guide: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
