@@ -25,8 +25,8 @@ RSpec.describe 'Add Lesson Rating', type: :request do
       post '/graphql', params: query
       expect(response).to be_successful
       rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveLessonRating
+      expect(rating.id).to be_truthy
       expect(rating.comment).to be_nil
-      expect(Rating.find(rating.id)).to be_a(Rating)
     end
 
     it 'calls add_positive_rating method with the stem achiever number' do
@@ -54,7 +54,7 @@ RSpec.describe 'Add Lesson Rating', type: :request do
         post '/graphql', params: query
         expect(response).to be_successful
         rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveLessonRating
-        expect(Rating.find(rating.id)).to be_a(Rating)
+        expect(rating.id).to be_truthy
       end
     end
   end
@@ -81,8 +81,8 @@ RSpec.describe 'Add Lesson Rating', type: :request do
       post '/graphql', params: query
       expect(response).to be_successful
       rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeLessonRating
+      expect(rating.id).to be_truthy
       expect(rating.comment).to be_nil
-      expect(Rating.find(rating.id)).to be_a(Rating)
     end
 
     it 'calls add_negative_rating method with the stem achiever number' do
@@ -111,7 +111,7 @@ RSpec.describe 'Add Lesson Rating', type: :request do
         post '/graphql', params: query
         expect(response).to be_successful
         rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeLessonRating
-        expect(Rating.find(rating.id)).to be_a(Rating)
+        expect(rating.id).to be_truthy
       end
     end
   end

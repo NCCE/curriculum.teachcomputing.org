@@ -22,12 +22,12 @@ RSpec.describe 'Add Unit Rating', type: :request do
       }
     end
 
-    it 'returns the unit information' do
+    it 'returns a rating' do
       post '/graphql', params: query
       expect(response).to be_successful
       rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveUnitRating
+      expect(rating.id).to be_truthy
       expect(rating.comment).to be_nil
-      expect(Rating.find(rating.id)).to be_a(Rating)
     end
 
     it 'calls add_positive_rating method with the stem achiever number' do
@@ -52,11 +52,11 @@ RSpec.describe 'Add Unit Rating', type: :request do
         }
       end
 
-      it 'returns the unit information' do
+      it 'returns a rating' do
         post '/graphql', params: query
         expect(response).to be_successful
         rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveUnitRating
-        expect(Rating.find(rating.id)).to be_a(Rating)
+        expect(rating.id).to be_truthy
       end
     end
   end
@@ -79,12 +79,12 @@ RSpec.describe 'Add Unit Rating', type: :request do
       }
     end
 
-    it 'returns the unit information' do
+    it 'returns a rating' do
       post '/graphql', params: query
       expect(response).to be_successful
       rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeUnitRating
+      expect(rating.id).to be_truthy
       expect(rating.comment).to be_nil
-      expect(Rating.find(rating.id)).to be_a(Rating)
     end
 
     it 'calls add_negative_rating method with the stem achiever number' do
@@ -109,11 +109,11 @@ RSpec.describe 'Add Unit Rating', type: :request do
         }
       end
 
-      it 'returns the unit information' do
+      it 'returns a rating' do
         post '/graphql', params: query
         expect(response).to be_successful
         rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeUnitRating
-        expect(Rating.find(rating.id)).to be_a(Rating)
+        expect(rating.id).to be_truthy
       end
     end
   end
