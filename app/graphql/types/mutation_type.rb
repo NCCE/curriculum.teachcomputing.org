@@ -6,5 +6,6 @@ module Types
     field :add_negative_unit_rating, mutation: Mutations::AddNegativeUnitRating
     field :add_positive_lesson_rating, mutation: Mutations::AddPositiveLessonRating
     field :add_negative_lesson_rating, mutation: Mutations::AddNegativeLessonRating
+    field :update_rating, mutation: Mutations::UpdateRating
   end
 end

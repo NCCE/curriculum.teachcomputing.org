@@ -14,33 +14,19 @@ RSpec.describe 'Add Lesson Rating', type: :request do
           )
           {
             id
-            title
-            description
-            totalPositive
-            totalNegative
+            comment
           }
         }
       GQL
       }
     end
 
-    it 'returns the lesson information' do
+    it 'returns a rating' do
       post '/graphql', params: query
       expect(response).to be_successful
-
-      expected_response = {
-        data: {
-          addPositiveLessonRating: {
-            id: published_lesson.id,
-            title: published_lesson.title,
-            description: published_lesson.description,
-            totalPositive: 1,
-            totalNegative: 0
-          }
-        }
-      }.to_json
-
-      expect(response.body).to eq(expected_response)
+      rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveLessonRating
+      expect(rating.comment).to be_nil
+      expect(Rating.find(rating.id)).to be_a(Rating)
     end
 
     it 'calls add_positive_rating method with the stem achiever number' do
@@ -58,33 +44,17 @@ RSpec.describe 'Add Lesson Rating', type: :request do
             )
             {
               id
-              title
-              description
-              totalPositive
-              totalNegative
             }
           }
         GQL
         }
       end
 
-      it 'returns the lesson information' do
+      it 'returns a rating' do
         post '/graphql', params: query
         expect(response).to be_successful
-
-        expected_response = {
-          data: {
-            addPositiveLessonRating: {
-              id: published_lesson.id,
-              title: published_lesson.title,
-              description: published_lesson.description,
-              totalPositive: 1,
-              totalNegative: 0
-            }
-          }
-        }.to_json
-
-        expect(response.body).to eq(expected_response)
+        rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveLessonRating
+        expect(Rating.find(rating.id)).to be_a(Rating)
       end
     end
   end
@@ -100,33 +70,19 @@ RSpec.describe 'Add Lesson Rating', type: :request do
             )
             {
               id
-              title
-              description
-              totalPositive
-              totalNegative
+              comment
             }
           }
         GQL
       }
     end
 
-    it 'returns the lesson information' do
+    it 'returns a rating' do
       post '/graphql', params: query
       expect(response).to be_successful
-
-      expected_response = {
-        data: {
-          addNegativeLessonRating: {
-            id: published_lesson.id,
-            title: published_lesson.title,
-            description: published_lesson.description,
-            totalPositive: 0,
-            totalNegative: 1
-          }
-        }
-      }.to_json
-
-      expect(response.body).to eq(expected_response)
+      rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeLessonRating
+      expect(rating.comment).to be_nil
+      expect(Rating.find(rating.id)).to be_a(Rating)
     end
 
     it 'calls add_negative_rating method with the stem achiever number' do
@@ -145,33 +101,17 @@ RSpec.describe 'Add Lesson Rating', type: :request do
               )
               {
                 id
-                title
-                description
-                totalPositive
-                totalNegative
               }
             }
           GQL
         }
       end
 
-      it 'returns the lesson information' do
+      it 'returns a rating' do
         post '/graphql', params: query
         expect(response).to be_successful
-
-        expected_response = {
-          data: {
-            addNegativeLessonRating: {
-              id: published_lesson.id,
-              title: published_lesson.title,
-              description: published_lesson.description,
-              totalPositive: 0,
-              totalNegative: 1
-            }
-          }
-        }.to_json
-
-        expect(response.body).to eq(expected_response)
+        rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeLessonRating
+        expect(Rating.find(rating.id)).to be_a(Rating)
       end
     end
   end
