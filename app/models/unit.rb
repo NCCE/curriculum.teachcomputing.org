@@ -22,6 +22,8 @@ class Unit < ApplicationRecord
 
   before_save :set_slug
 
+  after_update_commit :notify_update
+
   def set_slug
     self.slug = title.parameterize
   end
@@ -45,4 +47,10 @@ class Unit < ApplicationRecord
   def summative_answers_urls
     summative_answers.map { |record| url_for(record) } if summative_answers.attachments
   end
+
+  private
+
+    def notify_update
+      UpdateNotifier.new(self).run
+    end
 end
