@@ -34,6 +34,7 @@
     "console": "docker-compose run --no-deps --rm curriculum bin/rails console",
     "test": "docker-compose run --no-deps --rm curriculum rspec",
     "guard": "docker-compose run --no-deps --rm curriculum bin/guard",
+    "rails": "docker-compose run --rm --no-deps curriculum bin/rails",
     "rebuild": "bundle install && docker-compose build && yarn start"
   },
   "lint-staged": {
