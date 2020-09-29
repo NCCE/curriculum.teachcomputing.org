@@ -1303,6 +1303,7 @@ DEPENDENCIES
   dotenv-rails
   erb_lint
   factory_bot_rails (~> 5.2.0)
+  faraday (~> 1.0, >= 1.0.1)
   graphiql-rails (= 1.7.0)
   graphql (~> 1.10.10)
   guard-rspec (~> 4.7.3)
