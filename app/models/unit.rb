@@ -1,6 +1,7 @@
 class Unit < ApplicationRecord
   include Publishable
   include Rateable
+  include UpdateNotifiable
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy
@@ -21,8 +22,6 @@ class Unit < ApplicationRecord
   scope :ordered, -> { order(:slug) }
 
   before_save :set_slug
-
-  after_update_commit :notify_update
 
   def set_slug
     self.slug = title.parameterize
@@ -47,10 +46,4 @@ class Unit < ApplicationRecord
   def summative_answers_urls
     summative_answers.map { |record| url_for(record) } if summative_answers.attachments
   end
-
-  private
-
-    def notify_update
-      UpdateNotifier.new(self).run
-    end
 end

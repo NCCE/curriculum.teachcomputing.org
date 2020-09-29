@@ -1,10 +1,12 @@
 require 'rails_helper'
 require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
+require Rails.root.join 'spec/models/concerns/update_notifiable_shared_examples.rb'
 
 RSpec.describe KeyStage, type: :model do
   let(:key_stage) { create(:key_stage) }
 
   it_behaves_like 'publishable', [:year_groups]
+  it_behaves_like 'update_notifiable', :key_stage
 
   describe 'associations' do
     it { is_expected.to have_many(:year_groups) }

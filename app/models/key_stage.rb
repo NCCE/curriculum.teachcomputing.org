@@ -1,5 +1,6 @@
 class KeyStage < ApplicationRecord
   include Publishable
+  include UpdateNotifiable
 
   has_many :year_groups, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
