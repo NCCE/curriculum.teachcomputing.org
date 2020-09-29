@@ -65,7 +65,7 @@ module Types
       id, slug = args.values_at(:id, :slug)
 
       if id
-        model.find(id: id)
+        model.find(id)
       elsif slug
         model.find_by!(slug: slug)
       end

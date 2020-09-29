@@ -15,35 +15,19 @@ RSpec.describe 'Add Unit Rating', type: :request do
             )
             {
               id
-              title
-              description
-              unitGuide
-              totalPositive
-              totalNegative
+              comment
             }
           }
         GQL
       }
     end
 
-    it 'returns the unit information' do
+    it 'returns a rating' do
       post '/graphql', params: query
       expect(response).to be_successful
-
-      expected_response = {
-        data: {
-          addPositiveUnitRating: {
-            id: published_unit.id,
-            title: published_unit.title,
-            description: published_unit.description,
-            unitGuide: nil,
-            totalPositive: 1,
-            totalNegative: 0
-          }
-        }
-      }.to_json
-
-      expect(response.body).to eq(expected_response)
+      rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveUnitRating
+      expect(rating.id).to be_truthy
+      expect(rating.comment).to be_nil
     end
 
     it 'calls add_positive_rating method with the stem achiever number' do
@@ -62,35 +46,17 @@ RSpec.describe 'Add Unit Rating', type: :request do
               )
               {
                 id
-                title
-                description
-                unitGuide
-                totalPositive
-                totalNegative
               }
             }
           GQL
         }
       end
 
-      it 'returns the unit information' do
+      it 'returns a rating' do
         post '/graphql', params: query
         expect(response).to be_successful
-
-        expected_response = {
-          data: {
-            addPositiveUnitRating: {
-              id: published_unit.id,
-              title: published_unit.title,
-              description: published_unit.description,
-              unitGuide: nil,
-              totalPositive: 1,
-              totalNegative: 0
-            }
-          }
-        }.to_json
-
-        expect(response.body).to eq(expected_response)
+        rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveUnitRating
+        expect(rating.id).to be_truthy
       end
     end
   end
@@ -106,35 +72,19 @@ RSpec.describe 'Add Unit Rating', type: :request do
             )
             {
               id
-              title
-              description
-              unitGuide
-              totalPositive
-              totalNegative
+              comment
             }
           }
         GQL
       }
     end
 
-    it 'returns the unit information' do
+    it 'returns a rating' do
       post '/graphql', params: query
       expect(response).to be_successful
-
-      expected_response = {
-        data: {
-          addNegativeUnitRating: {
-            id: published_unit.id,
-            title: published_unit.title,
-            description: published_unit.description,
-            unitGuide: nil,
-            totalPositive: 0,
-            totalNegative: 1
-          }
-        }
-      }.to_json
-
-      expect(response.body).to eq(expected_response)
+      rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeUnitRating
+      expect(rating.id).to be_truthy
+      expect(rating.comment).to be_nil
     end
 
     it 'calls add_negative_rating method with the stem achiever number' do
@@ -153,35 +103,17 @@ RSpec.describe 'Add Unit Rating', type: :request do
               )
               {
                 id
-                title
-                description
-                unitGuide
-                totalPositive
-                totalNegative
               }
             }
           GQL
         }
       end
 
-      it 'returns the unit information' do
+      it 'returns a rating' do
         post '/graphql', params: query
         expect(response).to be_successful
-
-        expected_response = {
-          data: {
-            addNegativeUnitRating: {
-              id: published_unit.id,
-              title: published_unit.title,
-              description: published_unit.description,
-              unitGuide: nil,
-              totalPositive: 0,
-              totalNegative: 1
-            }
-          }
-        }.to_json
-
-        expect(response.body).to eq(expected_response)
+        rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeUnitRating
+        expect(rating.id).to be_truthy
       end
     end
   end
