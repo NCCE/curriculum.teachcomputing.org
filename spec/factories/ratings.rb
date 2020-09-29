@@ -6,8 +6,8 @@ FactoryBot.define do
     comment { nil }
 
     factory :rating_with_comment do
-      after(:build) do |unit|
-        unit.comment = 'This is a comment'
+      after(:build) do |rating|
+        rating.comment = 'This is a comment'
       end
     end
   end
