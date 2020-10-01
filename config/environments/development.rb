@@ -1,6 +1,7 @@
 dev_nginx = YAML.load_file(Rails.root.join('nginx-mapping.yml'))
 
 Rails.application.routes.default_url_options[:host] = 'curriculum.teachcomputing.rpfdev.com'
+Rails.application.routes.default_url_options[:protocol] = 'https'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
