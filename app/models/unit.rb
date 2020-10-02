@@ -1,6 +1,7 @@
 class Unit < ApplicationRecord
   include Publishable
   include Rateable
+  include UpdateNotifiable
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy

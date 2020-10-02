@@ -21,6 +21,7 @@ services:
       - "3020:3000"
     depends_on:
       - db
+      - redis
     environment:
       - PROXY_URL=http://host.docker.internal:8888
       - RAILS_DEV_DB_PASS=${DEV_PASS}
@@ -31,6 +32,19 @@ services:
     tty: true # Allow interactive byebug sessions.
     networks:
       - teachcomputingorg_main
+      - backend
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+  sidekiq:
+    build: .
+    command: bundle exec sidekiq
+    depends_on:
+      - redis
+    networks:
       - backend
 volumes:
   pg-data:
