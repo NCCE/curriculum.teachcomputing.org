@@ -9,6 +9,7 @@ module Mutations
       rating = Rating.find(id)
       rating.comment = comment
       rating.save
+      rating
     end
   end
 end
