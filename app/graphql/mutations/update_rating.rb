@@ -8,7 +8,7 @@ module Mutations
     def resolve(id:, comment: nil)
       rating = Rating.find(id)
       rating.comment = comment
-      rating
+      rating.save
     end
   end
 end
