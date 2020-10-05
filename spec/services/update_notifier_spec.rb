@@ -2,31 +2,14 @@ require 'rails_helper'
 
 RSpec.describe UpdateNotifier do
   describe '#run' do
-    context 'when resource is a Unit' do
-      it 'queues InvalidateCacheWorker' do
-        unit = create(:unit)
-        expect { described_class.new(unit).run }.to change(InvalidateCacheWorker.jobs, :size).by(2)
-      end
+    let(:key_stage) { build(:key_stage, slug: 'ks-slug') }
+    let(:unit) { build(:unit, slug: 'unit-slug') }
+    let(:lesson) { build(:lesson, slug: 'lesson-slug') }
 
-      it 'passes correct details to InvalidateCacheWorker' do
-        unit = create(:unit)
-        key_stage = unit.year_group.key_stage
-        allow(InvalidateCacheWorker).to receive(:perform_async)
-        described_class.new(unit).run
-        expect(InvalidateCacheWorker)
-          .to have_received(:perform_async)
-          .with({ type: 'unit', identifier: unit.slug }).once
-        expect(InvalidateCacheWorker)
-          .to have_received(:perform_async)
-          .with({ type: 'key_stage', identifier: key_stage.slug }).once
-      end
-    end
+    context 'when one resource passed' do
+      let(:notifier) { described_class.new([unit]) }
 
-    context 'when resource is a KeyStage' do
-      let(:key_stage) { build(:key_stage, slug: 'test-slug') }
-      let(:notifier) { described_class.new(key_stage) }
-
-      it 'queues InvalidateCacheWorker' do
+      it 'queues InvalidateCacheWorker for each resource' do
         expect { notifier.run }.to change(InvalidateCacheWorker.jobs, :size).by(1)
       end
 
@@ -35,7 +18,29 @@ RSpec.describe UpdateNotifier do
         notifier.run
         expect(InvalidateCacheWorker)
           .to have_received(:perform_async)
-          .with({ type: 'key_stage', identifier: 'test-slug' }).once
+          .with({ type: 'unit', identifier: 'unit-slug' }).once
+      end
+    end
+
+    context 'when multiple resources passed' do
+      let(:notifier) { described_class.new([key_stage, unit, lesson]) }
+
+      it 'queues InvalidateCacheWorker for each resource' do
+        expect { notifier.run }.to change(InvalidateCacheWorker.jobs, :size).by(3)
+      end
+
+      it 'passes correct details to InvalidateCacheWorker' do
+        allow(InvalidateCacheWorker).to receive(:perform_async)
+        notifier.run
+        expect(InvalidateCacheWorker)
+          .to have_received(:perform_async)
+          .with({ type: 'key_stage', identifier: 'ks-slug' }).once
+        expect(InvalidateCacheWorker)
+          .to have_received(:perform_async)
+          .with({ type: 'unit', identifier: 'unit-slug' }).once
+        expect(InvalidateCacheWorker)
+          .to have_received(:perform_async)
+          .with({ type: 'lesson', identifier: 'lesson-slug' }).once
       end
     end
   end

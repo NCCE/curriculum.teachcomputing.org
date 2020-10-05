@@ -1,14 +1,12 @@
 require 'rails_helper'
 require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 require Rails.root.join 'spec/models/concerns/rateable_shared_examples.rb'
-require Rails.root.join 'spec/models/concerns/update_notifiable_shared_examples.rb'
 
 RSpec.describe Unit, type: :model do
   include Rails.application.routes.url_helpers
 
   it_behaves_like 'publishable', %i[lessons]
   it_behaves_like 'rateable'
-  it_behaves_like 'update_notifiable', :unit
 
   describe 'associations' do
     it { is_expected.to belong_to(:year_group) }
@@ -27,6 +25,21 @@ RSpec.describe Unit, type: :model do
         unit = build(:unit)
         unit.run_callbacks :save
         expect(unit.slug).to eq unit.title.parameterize
+      end
+    end
+
+    describe '#notify_update' do
+      it 'runs the UpdateNotifier' do
+        notifier_double = instance_double(UpdateNotifier)
+        allow(notifier_double).to receive(:run)
+        allow(UpdateNotifier).to receive(:new) { notifier_double }
+        instance = build(:unit)
+        instance.run_callbacks :commit
+        expect(UpdateNotifier)
+          .to have_received(:new)
+          .once
+          .with([instance, instance.year_group.key_stage])
+        expect(notifier_double).to have_received(:run).once
       end
     end
   end

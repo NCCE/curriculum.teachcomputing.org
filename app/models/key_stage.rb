@@ -1,6 +1,5 @@
 class KeyStage < ApplicationRecord
   include Publishable
-  include UpdateNotifiable
 
   has_many :year_groups, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
@@ -16,6 +15,8 @@ class KeyStage < ApplicationRecord
 
   scope :ordered, -> { order(:level) }
 
+  after_commit :notify_update
+
   def set_slug
     self.slug = title.parameterize
   end
@@ -27,4 +28,10 @@ class KeyStage < ApplicationRecord
   def title
     "Key Stage #{level}"
   end
+
+  private
+
+    def notify_update
+      UpdateNotifier.new([self]).run
+    end
 end

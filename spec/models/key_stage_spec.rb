@@ -1,12 +1,10 @@
 require 'rails_helper'
 require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
-require Rails.root.join 'spec/models/concerns/update_notifiable_shared_examples.rb'
 
 RSpec.describe KeyStage, type: :model do
   let(:key_stage) { create(:key_stage) }
 
   it_behaves_like 'publishable', [:year_groups]
-  it_behaves_like 'update_notifiable', :key_stage
 
   describe 'associations' do
     it { is_expected.to have_many(:year_groups) }
@@ -47,6 +45,21 @@ RSpec.describe KeyStage, type: :model do
         key_stage = build(:key_stage)
         key_stage.run_callbacks :save
         expect(key_stage.slug).to eq key_stage.title.parameterize
+      end
+    end
+
+    describe '#notify_update' do
+      it 'runs the UpdateNotifier' do
+        notifier_double = instance_double(UpdateNotifier)
+        allow(notifier_double).to receive(:run)
+        allow(UpdateNotifier).to receive(:new) { notifier_double }
+        instance = build(:key_stage)
+        instance.run_callbacks :commit
+        expect(UpdateNotifier)
+          .to have_received(:new)
+          .once
+          .with([instance])
+        expect(notifier_double).to have_received(:run).once
       end
     end
   end
