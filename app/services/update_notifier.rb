@@ -1,6 +1,6 @@
 class UpdateNotifier
-  def initialize(resource)
-    @resource = resource
+  def initialize(resources)
+    @resources = resources
     define_resource_hash_array
   end
 
@@ -13,8 +13,7 @@ class UpdateNotifier
   private
 
     def define_resource_hash_array
-      @notifiable_resources = [resource_hash(@resource)]
-      @notifiable_resources << resource_hash(@resource.year_group.key_stage) if @resource.is_a?(Unit)
+      @notifiable_resources = @resources.map { |res| resource_hash(res) }
     end
 
     def resource_hash(resource)

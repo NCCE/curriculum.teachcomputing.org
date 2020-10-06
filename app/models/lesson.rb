@@ -12,6 +12,8 @@ class Lesson < ApplicationRecord
 
   before_save :set_slug, :set_lesson_no
 
+  after_commit :notify_update
+
   scope :ordered, -> { order(:lesson_no) }
 
   def set_slug
@@ -24,4 +26,10 @@ class Lesson < ApplicationRecord
 
     self.lesson_no = lesson_no
   end
+
+  private
+
+    def notify_update
+      UpdateNotifier.new([unit]).run
+    end
 end
