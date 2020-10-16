@@ -9,8 +9,8 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "libnpx": "^10.2.3",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "5.6.1",
@@ -23,19 +23,16 @@
     "stylelint": "9.6.0",
     "stylelint-config-recommended-scss": "3.2.0",
     "stylelint-order": "1.0.0",
-    "stylelint-scss": "3.3.1"
+    "stylelint-scss": "3.3.1",
+    "libnpx": "^10.2.3"
   },
   "scripts": {
+    "setup": "npx ./scripts/setup.sh",
     "start": "npx ./scripts/docker-start.sh",
     "stop": "npx ./scripts/docker-stop.sh",
-    "setup": "npx ./scripts/setup.sh",
-    "logs": "docker-compose logs -f curriculum",
-    "drun": "docker-compose run --no-deps --rm curriculum bin/rails",
-    "console": "docker-compose run --no-deps --rm curriculum bin/rails console",
-    "test": "docker-compose run --no-deps --rm curriculum rspec",
-    "guard": "docker-compose run --no-deps --rm curriculum bin/guard",
-    "rails": "docker-compose run --rm --no-deps curriculum bin/rails",
-    "rebuild": "bundle install && docker-compose build && yarn start"
+    "logs": "docker-compose logs -f",
+    "exec": "docker-compose run --rm --no-deps curriculum bundle exec",
+    "rebuild": "bundle install && docker-compose build && npm start"
   },
   "lint-staged": {
     "*.js": [
