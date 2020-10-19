@@ -136,7 +136,7 @@ docker-compose run --rm curriculum bin/guard
 Or
 
 ```
-yarn run guard
+yarn run exec guard
 ```
 
 ## Tooling

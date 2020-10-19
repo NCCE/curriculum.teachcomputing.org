@@ -32,6 +32,7 @@
     "stop": "npx ./scripts/docker-stop.sh",
     "logs": "docker-compose logs -f",
     "exec": "docker-compose run --rm --no-deps curriculum bundle exec",
+    "test": "yarn run exec rspec",
     "rebuild": "bundle install && docker-compose build && npm start"
   },
   "lint-staged": {
