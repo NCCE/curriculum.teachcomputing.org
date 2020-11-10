@@ -27,6 +27,7 @@ services:
       - OAUTH_DEBUG
       - ENV_TYPE=development
       - HOSTNAME_ENV
+      - REDIS_URL=redis://redis:6379/0
     stdin_open: true
     tty: true # Allow interactive byebug sessions.
     networks:
