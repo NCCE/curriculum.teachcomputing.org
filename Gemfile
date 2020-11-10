@@ -20,6 +20,7 @@ gem 'sass-rails', '>= 6'
 gem 'sentry-raven', '~> 3.0.0'
 gem 'sidekiq', '~> 6.1', '>= 6.1.2'
 gem 'webpacker', '~> 4.0'
+gem 'actionview', '~> 6.0.3.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
