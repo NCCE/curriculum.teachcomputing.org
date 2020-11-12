@@ -10,12 +10,14 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "turbolinks": "^5.2.0",
-    "webpack": "^4.0.0"
+    "webpack": "^4.0.0",
+    "yargs-parser": "^20.2.4"
   },
   "devDependencies": {
     "eslint": "5.6.1",
     "eslint-config-prettier": "3.1.0",
     "eslint-plugin-prettier": "3.0.0",
+    "libnpx": "^10.2.3",
     "lint-staged": "7.3.0",
     "prettier": "1.14.3",
     "prettier-package-json": "2.0.1",
@@ -23,8 +25,7 @@
     "stylelint": "9.6.0",
     "stylelint-config-recommended-scss": "3.2.0",
     "stylelint-order": "1.0.0",
-    "stylelint-scss": "3.3.1",
-    "libnpx": "^10.2.3"
+    "stylelint-scss": "3.3.1"
   },
   "scripts": {
     "setup": "npx ./scripts/setup.sh",
