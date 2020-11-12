@@ -1290,7 +1290,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionview (~> 6.0.3.4)
   administrate (~> 0.13.0)
   administrate-field-active_storage (~> 0.3.4)
   aws-sdk (~> 3)
