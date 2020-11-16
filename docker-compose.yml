@@ -10,6 +10,32 @@ services:
       - POSTGRES_PASSWORD=${DEV_PASS}
     networks:
       - backend
+    restart: unless-stopped
+    env_file:
+      - .env
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6380:6379"
+    networks:
+      - teachcomputingorg_main
+      - backend
+    env_file:
+      - .env
+  sidekiq:
+    build: .
+    command: bundle exec sidekiq
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379/1
+      - TC_API_URL=http://web:3000
+      - TC_API_SECRET=${DEV_PASS}
+    networks:
+      - teachcomputingorg_main
+      - backend
+    env_file:
+      - .env
   curriculum:
     build: .
     command: ./scripts/docker-entrypoint.sh
@@ -21,23 +47,18 @@ services:
       - "3020:3000"
     depends_on:
       - db
+      - redis
     environment:
       - PROXY_URL=http://host.docker.internal:8888
       - RAILS_DEV_DB_PASS=${DEV_PASS}
-      - OAUTH_DEBUG
       - ENV_TYPE=development
-      - HOSTNAME_ENV
-      - REDIS_URL=redis://redis:6379/0
+      - REDIS_URL=redis://redis:6379/1
     stdin_open: true
     tty: true # Allow interactive byebug sessions.
     networks:
       - teachcomputingorg_main
       - backend
-  sidekiq:
-    build: .
-    command: bundle exec sidekiq
-    networks:
-      - backend
+    restart: unless-stopped
 volumes:
   pg-data:
   node_modules:
