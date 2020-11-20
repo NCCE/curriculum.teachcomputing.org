@@ -1,25 +1,17 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby File.read('.ruby-version').strip
 
-gem 'administrate', '~> 0.13.0'
-gem 'administrate-field-active_storage', '~> 0.3.4'
-gem 'aws-sdk', '~> 3'
+instance_eval File.read('Gemfile-base')
+
+gem 'administrate', '~> 0.14'
+gem 'administrate-field-active_storage', '~> 0.3.6'
 gem 'barnes', '~> 0.0.8'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'ddtrace', '~> 0.18.2'
-gem 'faraday', '~> 1.0', '>= 1.0.1'
-gem 'graphiql-rails', '1.7.0'
-gem 'graphql', '~> 1.10.10'
 gem 'lograge', '~> 0.11.2'
-gem 'pg', '~> 1.1'
-gem 'puma', '~> 4.3'
-gem 'rails', '~> 6.0.3.2'
-gem 'sass-rails', '>= 6'
 gem 'sentry-raven', '~> 3.0.0'
-gem 'sidekiq', '~> 6.1', '>= 6.1.2'
-gem 'webpacker', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
