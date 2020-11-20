@@ -8,10 +8,6 @@ instance_eval File.read('Gemfile-base')
 gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'barnes', '~> 0.0.8'
-gem 'bootsnap', '>= 1.4.2', require: false
-gem 'ddtrace', '~> 0.18.2'
-gem 'lograge', '~> 0.11.2'
-gem 'sentry-raven', '~> 3.0.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
