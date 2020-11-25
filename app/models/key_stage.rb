@@ -3,6 +3,7 @@ class KeyStage < ApplicationRecord
 
   has_many :year_groups, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
+  has_many :curriculum_maps, dependent: :destroy
 
   has_one_attached :teacher_guide
 
@@ -16,6 +17,8 @@ class KeyStage < ApplicationRecord
   scope :ordered, -> { order(:level) }
 
   after_commit :notify_update
+
+  accepts_nested_attributes_for :curriculum_maps, :allow_destroy => true
 
   def set_slug
     self.slug = title.parameterize

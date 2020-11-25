@@ -35,3 +35,8 @@ en:
         success: "%{resource} was successfully published."
       unpublish:
         success: "%{resource} was successfully unpublished."
+  helpers:
+    label:
+      curriculum_map:
+        name: Map name
+        curriculum_map: File

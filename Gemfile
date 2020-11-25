@@ -5,7 +5,8 @@ ruby '2.6.6'
 
 gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
-gem 'aws-sdk', '~> 3'
+gem 'administrate-field-nested_has_many', '~> 1.3.0'
+gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'barnes', '~> 0.0.8'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'ddtrace', '~> 0.18.2'
@@ -38,13 +39,14 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-rspec'
   gem 'simplecov'
+  gem 'ruby-debug-ide'
+  gem 'solargraph'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'debase'
   gem 'listen', '~> 3.2'
-  gem 'ruby-debug-ide'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
