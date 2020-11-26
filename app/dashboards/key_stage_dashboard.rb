@@ -16,7 +16,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
                                            key_stage_id: resource.id }]
       end
     ),
-    curriculum_maps: Field::NestedHasMany.with_options(:skip => :key_stage),
+    curriculum_maps: Field::NestedHasMany.with_options(skip: :key_stage),
     slug: Field::String,
     id: Field::String.with_options(searchable: false),
     level: Field::String,

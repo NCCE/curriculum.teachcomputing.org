@@ -40,12 +40,12 @@ group :development, :test do
   gem 'rubocop-rspec'
   gem 'simplecov'
   gem 'ruby-debug-ide'
-  gem 'solargraph'
+  gem 'debase'
+  gem 'solargraph', '~> 0.39'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'debase'
   gem 'listen', '~> 3.2'
   gem 'spring'
   gem 'spring-commands-rspec'
