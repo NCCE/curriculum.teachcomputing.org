@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class CurriculumMapDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -10,7 +10,7 @@ class CurriculumMapDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     key_stage: Field::BelongsTo,
     name: Field::String,
-    curriculum_map: Field::ActiveStorage.with_options(
+    file: Field::ActiveStorage.with_options(
       show_display_preview: false
     )
   }.freeze
@@ -22,14 +22,14 @@ class CurriculumMapDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     name
-    curriculum_map
+    file
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     name
-    curriculum_map
+    file
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -37,7 +37,7 @@ class CurriculumMapDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
-    curriculum_map
+    file
   ].freeze
 
   # COLLECTION_FILTERS

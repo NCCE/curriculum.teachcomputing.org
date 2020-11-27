@@ -18,7 +18,7 @@ class KeyStage < ApplicationRecord
 
   after_commit :notify_update
 
-  accepts_nested_attributes_for :curriculum_maps, :allow_destroy => true
+  accepts_nested_attributes_for :curriculum_maps, allow_destroy: true
 
   def set_slug
     self.slug = title.parameterize

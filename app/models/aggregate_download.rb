@@ -6,7 +6,14 @@ class AggregateDownload < ApplicationRecord
 
   class << self
     def increment_attachment_download(attachment, user_stem_achiever_contact_no = nil)
-      aggregate_download = find_or_create_by(downloadable: attachment.record, attachment_type: attachment.name)
+      is_downloadable_model = attachment.record.respond_to?(:downloadable_record)
+      record = is_downloadable_model ? attachment.record.downloadable_record : attachment.record
+      type = is_downloadable_model ? attachment.record_type.underscore : attachment.name
+
+      aggregate_download = find_or_create_by(
+        downloadable: record,
+        attachment_type: type
+      )
 
       aggregate_download.with_lock do
         aggregate_download.increment(:count)

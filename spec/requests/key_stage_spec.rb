@@ -25,7 +25,7 @@ RSpec.describe 'KeyStage', type: :request do
                 curriculumMaps {
                   id
                   name
-                  curriculumMap
+                  file
                 }
               }
           }

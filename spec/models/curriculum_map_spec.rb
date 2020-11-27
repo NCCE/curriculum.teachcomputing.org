@@ -13,13 +13,13 @@ RSpec.describe CurriculumMap, type: :model do
     end
 
     it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to validate_presence_of(:curriculum_map) }
+    it { is_expected.to validate_presence_of(:file) }
   end
 
   describe 'attachment' do
     it 'has a curriculum map attached' do
-      expect(curriculum_map.curriculum_map).to be_attached
-      expect(curriculum_map.curriculum_map.name).to eq('curriculum_map')
+      expect(curriculum_map.file).to be_attached
+      expect(curriculum_map.file.name).to eq('file')
     end
   end
 end

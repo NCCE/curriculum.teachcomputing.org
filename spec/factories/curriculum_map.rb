@@ -4,7 +4,7 @@ FactoryBot.define do
     key_stage
 
     after(:build) do |curriculum_map|
-      curriculum_map.curriculum_map.attach(io: File.open("spec/support/test.txt"), filename: 'test.txt')
+      curriculum_map.file.attach(io: File.open("spec/support/test.pdf"), filename: 'test.pdf')
     end
   end
 end

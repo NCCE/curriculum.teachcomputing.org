@@ -9,11 +9,11 @@ module Admin
     end
 
     def valid_action?(name, resource = resource_class)
-      super unless %w[edit show destroy].include?(name.to_s) && resource == 'curriculum_map'
+      super unless %w[edit show destroy].include?(name.to_s) && resource == :curriculum_map.to_s
     end
 
-    def show_action?(action, resource)
-      resource.class.name != 'CurriculumMap'
+    def show_action?(_action, resource)
+      resource.class.name != :CurriculumMap.to_s
     end
   end
 end

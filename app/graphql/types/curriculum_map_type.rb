@@ -3,10 +3,10 @@ module Types
     field :id, ID, null: false
     field :key_stage, Types::KeyStageType, null: false
     field :name, String, null: false
-    field :curriculum_map, String, null: false
+    field :file, String, null: false
 
-    def curriculum_map
-      url_for(object.curriculum_map) if object.curriculum_map.attachment
+    def file
+      url_for(object.file) if object.file.attachment
     end
   end
 end
