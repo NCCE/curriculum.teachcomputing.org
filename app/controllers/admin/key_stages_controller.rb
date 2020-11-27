@@ -13,7 +13,7 @@ module Admin
     end
 
     def show_action?(_action, resource)
-      resource.class.name != :CurriculumMap.to_s
+      resource.class.name != 'CurriculumMap'
     end
   end
 end
