@@ -6,6 +6,7 @@ ruby '2.6.6'
 gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'administrate-field-nested_has_many', '~> 1.3.0'
+gem 'activestorage-validator'
 gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'barnes', '~> 0.0.8'
 gem 'bootsnap', '>= 1.4.2', require: false

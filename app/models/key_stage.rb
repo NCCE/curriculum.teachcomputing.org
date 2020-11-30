@@ -12,13 +12,14 @@ class KeyStage < ApplicationRecord
   validates :ages, :years, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
                                      multiline: true,
                                      message: 'Please use the following format: 3-5' }
+
+  accepts_nested_attributes_for :curriculum_maps, allow_destroy: true
+
   before_save :set_slug
 
   scope :ordered, -> { order(:level) }
 
   after_commit :notify_update
-
-  accepts_nested_attributes_for :curriculum_maps, allow_destroy: true
 
   def set_slug
     self.slug = title.parameterize

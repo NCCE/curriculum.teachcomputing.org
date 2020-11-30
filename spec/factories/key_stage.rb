@@ -13,7 +13,7 @@ FactoryBot.define do
 
     factory :key_stage_with_curriculum_maps do
       after(:create) do |key_stage|
-        create_list(:curriculum_maps, 2, key_stage: key_stage)
+        create_list(:curriculum_map, 2, key_stage: key_stage)
       end
     end
   end
