@@ -37,5 +37,8 @@ en:
         success: "%{resource} was successfully unpublished."
   helpers:
     label:
+      key_stage:
+        curriculum_maps: Curriculum Maps (files must be < 5mb and either; pdf, png or jpg)
       curriculum_map:
         name: Map name
+        file: File
