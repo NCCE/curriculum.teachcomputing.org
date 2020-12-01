@@ -4,3 +4,6 @@
 //= link graphiql/rails/application.css
 //= link graphiql/rails/application.js
 //= link_tree ../images
+//= link administrate-field-nested_has_many/application.css
+//= link administrate-field-nested_has_many/application.js
+//= link application.css

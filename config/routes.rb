@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       post '/unpublish', to: 'lessons#unpublish'
       delete :zipped_contents, action: :destroy_zipped_contents
     end
+    resources :curriculum_maps, except: :index
     root to: 'units#index'
   end
 end

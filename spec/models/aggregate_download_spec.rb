@@ -86,4 +86,29 @@ RSpec.describe AggregateDownload, type: :model do
       end
     end
   end
+
+  describe 'downloadable models' do
+    let(:key_stage_with_curriculum_maps) { create(:key_stage_with_curriculum_maps) }
+    let(:curriculum_map) { key_stage_with_curriculum_maps.curriculum_maps.first }
+
+    let(:increment_download_count) do
+      described_class.increment_attachment_download(curriculum_map.file)
+    end
+
+    it 'creates new aggregate_download record' do
+      expect { increment_download_count }
+        .to change(described_class, :count).by(1)
+    end
+
+    it 'updates aggregate_download count correctly' do
+      download_record = described_class.create(
+        count: 4,
+        downloadable: key_stage_with_curriculum_maps,
+        attachment_type: :curriculum_map.to_s
+      )
+
+      increment_download_count
+      expect(download_record.reload.count).to eq(5)
+    end
+  end
 end

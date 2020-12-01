@@ -3,6 +3,7 @@ class KeyStage < ApplicationRecord
 
   has_many :year_groups, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
+  has_many :curriculum_maps, dependent: :destroy
 
   has_one_attached :teacher_guide
 
@@ -11,6 +12,9 @@ class KeyStage < ApplicationRecord
   validates :ages, :years, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
                                      multiline: true,
                                      message: 'Please use the following format: 3-5' }
+
+  accepts_nested_attributes_for :curriculum_maps, allow_destroy: true
+
   before_save :set_slug
 
   scope :ordered, -> { order(:level) }

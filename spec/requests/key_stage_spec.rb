@@ -22,6 +22,11 @@ RSpec.describe 'KeyStage', type: :request do
                 years
                 teacherGuide
                 description
+                curriculumMaps {
+                  id
+                  name
+                  file
+                }
               }
           }
         GQL
@@ -38,7 +43,8 @@ RSpec.describe 'KeyStage', type: :request do
             ages: published_key_stage.ages,
             years: published_key_stage.years,
             teacherGuide: nil,
-            description: published_key_stage.description
+            description: published_key_stage.description,
+            curriculumMaps: published_key_stage.curriculum_maps
           }]
         }
       }.to_json

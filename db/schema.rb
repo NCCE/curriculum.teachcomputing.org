@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_144707) do
+ActiveRecord::Schema.define(version: 2020_11_18_142108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -52,6 +52,14 @@ ActiveRecord::Schema.define(version: 2020_09_08_144707) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "rateable_id"
     t.string "rateable_type"
+  end
+
+  create_table "curriculum_maps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name"
+    t.uuid "key_stage_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["key_stage_id"], name: "index_curriculum_map_on_key_stage_id"
   end
 
   create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
