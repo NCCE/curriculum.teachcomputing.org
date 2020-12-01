@@ -6,7 +6,7 @@ class UpdateNotifier
 
   def run
     @notifiable_resources.each do |resource|
-      InvalidateCacheWorker.perform_async(resource) unless Rails.env.development?
+      InvalidateCacheWorker.perform_async(resource) unless helper.envVarToBool?('DISABLE_CACHE_INVALIDATION')
     end
   end
 
