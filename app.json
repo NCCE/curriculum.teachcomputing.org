@@ -35,6 +35,14 @@
     "API_KEY": {
       "required": true,
       "value": "nil"
+    },
+    "DD_API_KEY": {
+      "required": true,
+      "value": "nil"
+    },
+    "DD_LOG_LEVEL": {
+      "required": "false",
+      "value": "ERROR"
     }
   },
   "formation": {
@@ -47,7 +55,7 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/DataDog/heroku-buildpack-datadog"
+      "url": "https://github.com/DataDog/heroku-buildpack- "
     },
     {
       "url": "heroku/nodejs"
