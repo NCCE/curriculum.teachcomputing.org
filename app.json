@@ -26,7 +26,7 @@
     },
     "AWS_S3_BUCKET": {
       "required": true,
-      "value": "nil"
+      "value": "ncce-curriculum-staging"
     },
     "AWS_S3_REGION": {
       "required": true,
@@ -43,6 +43,14 @@
     "DD_LOG_LEVEL": {
       "required": "false",
       "value": "ERROR"
+    },
+    "TC_API_URL": {
+      "required": "true",
+      "value": "https://staging.teachcomputing.org"
+    },
+    "TC_API_SECRET": {
+      "required": "true",
+      "value": "nil"
     }
   },
   "formation": {
