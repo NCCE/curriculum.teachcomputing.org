@@ -17,7 +17,7 @@ Setup yarn
 yarn install
 ```
 
-Builds the docker image, sets up environment variables, and adds nicer a local hostname:
+Builds the docker image, sets up environment variables, and adds a nicer local hostname (curriculum.teachcomputing.rpfdev.com):
 
 ```
 yarn run setup
@@ -33,11 +33,13 @@ Start the stack:
 docker-compose up -d
 ```
 
-Or (to poll for the env to start and open a new tab):
+Or (this waits until the stack is ready to use):
 
 ```
 yarn start
 ```
+
+The app is then available at: https://curriculum.teachcomputing.rpfdev.com
 
 Stop the stack:
 
@@ -45,13 +47,11 @@ Stop the stack:
 docker-compose down
 ```
 
-Or (to also gracefully close the tunnel)
+Or:
 
 ```
 yarn stop
 ```
-
-The app is available at: https://curriculum.teachcomputing.rpfdev.com
 
 ### View logs
 
@@ -73,19 +73,8 @@ The database is automatically setup the first time the container is run, and a m
 
 #### Reset the database
 
-Since the setup is run via rails it's easiest to bring the entire stack down.
-
 ```
-docker-compose down -v
-docker-compose up -d
-```
-
-You can also target the db volume with the following, however you'll need to bring the curriculum container down and up again too.
-
-```
-docker-compose rm -sv db
-docker-compose down
-docker-compose up -d
+yarn run reset-db
 ```
 
 #### Run migrations
@@ -93,7 +82,7 @@ docker-compose up -d
 To perform migrations manually (without restarting the container) run:
 
 ```
-docker-compose run --rm curriculum bin/rails db:migrate
+yarn run exec rails db:migrate
 ```
 
 #### Seeding the database
@@ -101,15 +90,25 @@ docker-compose run --rm curriculum bin/rails db:migrate
 To seed manually run:
 
 ```
-docker-compose run curriculum bin/rails db:seed
+yarn run exec rails db:seed
 ```
 
-### Install new Dependencies
+### Install new Dependencies / Updates
 
-Add the dependency to the Gemfile or package.json and run:
+The bundle has now been moved to a separate volume and once the initial build has taken place the bundle directory is mapped to a volume and persisted.
 
+To install a new gem, first update the Gemfile as normal then:
 ```
-docker-compose down
+yarn run bundle-install
+```
+
+To update gems:
+```
+yarn run bundle-update
+```
+
+To reinstall all packages:
+```
 docker-compose build
 ```
 
