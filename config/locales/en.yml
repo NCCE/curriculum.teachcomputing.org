@@ -38,7 +38,7 @@ en:
   helpers:
     label:
       key_stage:
-        curriculum_maps: Curriculum Maps (files must be < 5mb and either; pdf, png or jpg)
+        curriculum_maps: Curriculum Maps
       curriculum_map:
         name: Map name
-        file: File
+        file: File (< 5mb & pdf, doc(x), xls(x), png or jpg)

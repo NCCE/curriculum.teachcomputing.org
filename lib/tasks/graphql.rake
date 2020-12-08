@@ -1,2 +1,2 @@
-require "graphql/rake_task"
-GraphQL::RakeTask.new(schema_name: "CurriculumSchema")
+require 'graphql/rake_task'
+GraphQL::RakeTask.new(schema_name: 'CurriculumSchema')
