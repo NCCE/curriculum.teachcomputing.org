@@ -97,14 +97,9 @@ yarn run exec rails db:seed
 
 The bundle has now been moved to a separate volume and once the initial build has taken place the bundle directory is mapped to a volume and persisted.
 
-To install a new gem, first update the Gemfile as normal then:
+To install/update a new gem, first update the Gemfile and run `bundle install` or `bundle update` locally then:
 ```
 yarn run bundle-install
-```
-
-To update gems:
-```
-yarn run bundle-update
 ```
 
 To reinstall all packages:
