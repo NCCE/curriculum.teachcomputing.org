@@ -3,10 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+gem 'activestorage-validator'
 gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'administrate-field-nested_has_many', '~> 1.3.0'
-gem 'activestorage-validator'
 gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'barnes', '~> 0.0.8'
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -29,6 +29,7 @@ gem 'webpacker', '~> 4.0'
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'debase'
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
   gem 'factory_bot_rails', '~> 5.2.0'
@@ -38,10 +39,10 @@ group :development, :test do
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 4.0.0'
   gem 'rubocop'
+  gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  gem 'simplecov'
   gem 'ruby-debug-ide'
-  gem 'debase'
+  gem 'simplecov'
   gem 'solargraph', '~> 0.39'
 end
 

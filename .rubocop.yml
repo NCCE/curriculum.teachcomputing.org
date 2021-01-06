@@ -45,9 +45,6 @@ Metrics/MethodLength:
 Metrics/ModuleLength:
   Enabled: false
 
-Rails:
-  Enabled: true
-
 RSpec/ExampleLength:
   Enabled: false
 
