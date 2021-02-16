@@ -11,7 +11,7 @@ RSpec.describe InvalidateCacheWorker do
       worker.perform({ 'type' => 'unit', 'identifier' => 'unit-slug' })
       expect(Faraday)
         .to have_received(:delete)
-        .with('https://test-tc-api.com/admin/cache', { identifier: 'unit-slug', resource: 'unit' })
+        .with('https://test-tc-api.com/api/cache', { identifier: 'unit-slug', resource: 'unit' })
     end
 
     context 'when API call fails' do

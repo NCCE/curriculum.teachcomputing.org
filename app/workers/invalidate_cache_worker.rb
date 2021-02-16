@@ -5,7 +5,7 @@ class InvalidateCacheWorker
     token = "Bearer #{ENV['TC_API_SECRET']}"
     params = { resource: resource['type'], identifier: resource['identifier'] }
 
-    url = "#{ENV['TC_API_URL']}/admin/cache"
+    url = "#{ENV['TC_API_URL']}/api/cache"
     response = Faraday.delete url, params do |request|
       request.headers['Accept'] = 'application/json'
       request.headers['Authorization'] = token
