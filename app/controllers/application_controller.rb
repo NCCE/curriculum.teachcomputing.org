@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     end
 
     def render_unauthorized
-      Raven.capture_message('Unauthorized access attempt')
+      Sentry.capture_message('Unauthorized access attempt')
       headers['WWW-Authenticate'] = 'Token realm="Application"'
       render json: 'Bad credentials', status: 401
     end
