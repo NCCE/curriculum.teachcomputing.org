@@ -3,4 +3,4 @@ domain-root: rpfdev.com
 ssl: false
 mappings:
   - port: 3020
-    prefix: curriculum
+    prefix: curriculum.teachcomputing
