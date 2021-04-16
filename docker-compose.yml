@@ -1,5 +1,12 @@
 version: "3.5"
 services:
+  docker-host:
+    image: qoomon/docker-host
+    cap_add: [ 'NET_ADMIN', 'NET_RAW' ]
+    networks:
+      default:
+        aliases:
+          - teachcomputing.rpfdev.com
   db:
     image: postgres
     volumes:
@@ -8,8 +15,6 @@ services:
       - "5433:5432"
     environment:
       - POSTGRES_PASSWORD=${DEV_PASS}
-    networks:
-      - backend
     restart: unless-stopped
     env_file:
       - .env
@@ -17,9 +22,6 @@ services:
     image: "redis:alpine"
     ports:
       - "6380:6379"
-    networks:
-      - teachcomputingorg_main
-      - backend
     restart: unless-stopped
     env_file:
       - .env
@@ -28,13 +30,11 @@ services:
     command: bundle exec sidekiq
     depends_on:
       - redis
+      - docker-host
     environment:
       - REDIS_URL=redis://redis:6379/1
-      - TC_API_URL=http://web:3000
+      - TC_API_URL=http://teachcomputing.rpfdev.com
       - TC_API_SECRET=${DEV_PASS}
-    networks:
-      - teachcomputingorg_main
-      - backend
     restart: unless-stopped
     env_file:
       - .env
@@ -51,6 +51,7 @@ services:
     depends_on:
       - db
       - redis
+      - docker-host
     environment:
       - PROXY_URL=http://host.docker.internal:8888
       - RAILS_DEV_DB_PASS=${DEV_PASS}
@@ -58,9 +59,6 @@ services:
       - DISABLE_CACHE_INVALIDATION=true
     stdin_open: true
     tty: true # Allow interactive byebug sessions.
-    networks:
-      - teachcomputingorg_main
-      - backend
     restart: unless-stopped
     env_file:
       - .env
@@ -68,7 +66,3 @@ volumes:
   bundle:
   pg-data:
   node_modules:
-networks:
-  teachcomputingorg_main:
-    external: true
-  backend:

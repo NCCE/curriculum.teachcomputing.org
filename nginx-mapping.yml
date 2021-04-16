@@ -1,5 +1,6 @@
 name: curriculum.teachcomputing.org
 domain-root: rpfdev.com
+ssl: false
 mappings:
   - port: 3020
     prefix: curriculum.teachcomputing

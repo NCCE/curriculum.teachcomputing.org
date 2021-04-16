@@ -39,7 +39,7 @@ Or (this waits until the stack is ready to use):
 yarn start
 ```
 
-The app is then available at: https://curriculum.teachcomputing.rpfdev.com
+The app is then available at: http://curriculum.teachcomputing.rpfdev.com
 
 Stop the stack:
 
