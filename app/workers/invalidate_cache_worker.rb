@@ -14,6 +14,6 @@ class InvalidateCacheWorker
     return if response.status == 204
 
     msg = "Error making call to clear cache. Error: #{response.status} - #{response.body}; Resource: #{resource}"
-    Raven.capture_message(msg)
+    Sentry.capture_message(msg)
   end
 end
