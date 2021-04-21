@@ -10,7 +10,6 @@ gem 'administrate-field-nested_has_many', '~> 1.3.0'
 gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'barnes', '~> 0.0.8'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'ddtrace', '~> 0.18.2'
 gem 'faraday', '~> 1.0', '>= 1.0.1'
 gem 'graphiql-rails', '1.7.0'
 gem 'graphql', '<= 1.10.10'
