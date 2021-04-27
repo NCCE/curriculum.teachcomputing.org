@@ -23,7 +23,8 @@
     "stylelint": "9.6.0",
     "stylelint-config-recommended-scss": "3.2.0",
     "stylelint-order": "1.0.0",
-    "stylelint-scss": "3.3.1"
+    "stylelint-scss": "3.3.1",
+    "webpack-cli": "^4.6.0"
   },
   "scripts": {
     "setup": "sh ./scripts/setup.sh",
