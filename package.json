@@ -10,7 +10,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "turbolinks": "^5.2.0",
-    "webpack": "^4.0.0"
+    "webpack": "^5.3.0"
   },
   "devDependencies": {
     "eslint": "5.6.1",
