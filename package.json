@@ -10,7 +10,8 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "turbolinks": "^5.2.0",
-    "webpack": "^5.3.0"
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.6.0"
   },
   "devDependencies": {
     "eslint": "5.6.1",
@@ -23,8 +24,7 @@
     "stylelint": "9.6.0",
     "stylelint-config-recommended-scss": "3.2.0",
     "stylelint-order": "1.0.0",
-    "stylelint-scss": "3.3.1",
-    "webpack-cli": "^4.6.0"
+    "stylelint-scss": "3.3.1"
   },
   "scripts": {
     "setup": "sh ./scripts/setup.sh",
