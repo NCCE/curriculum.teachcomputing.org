@@ -8,7 +8,6 @@ default: &default
   cache_path: tmp/cache/webpacker
   check_yarn_integrity: false
   webpack_compile_output: true
-  resolve.fallback.dgram: false
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
