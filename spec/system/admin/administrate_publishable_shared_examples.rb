@@ -7,7 +7,7 @@ RSpec.shared_examples_for 'administrate publishable' do |model|
     visit "/admin/#{model}s/#{instance.id}"
     click_button 'Publish'
 
-    expect(page).to have_text("#{model.to_s.classify} was successfully published.")
+    expect(page).to have_text("#{model.to_s.humanize} was successfully published.")
     expect(instance.reload.published?).to eq(true)
   end
 
@@ -18,7 +18,7 @@ RSpec.shared_examples_for 'administrate publishable' do |model|
     visit "/admin/#{model}s/#{instance.id}"
     click_button 'Unpublish'
 
-    expect(page).to have_text("#{model.to_s.classify} was successfully unpublished.")
+    expect(page).to have_text("#{model.to_s.humanize} was successfully unpublished.")
     expect(instance.reload.published?).to eq(false)
   end
 end
