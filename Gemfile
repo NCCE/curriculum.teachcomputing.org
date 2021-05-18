@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 gem 'activestorage-validator'
-gem 'administrate', '~> 0.13.0'
+gem 'administrate', '~> 0.16.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
 gem 'administrate-field-nested_has_many', '~> 1.3.0'
 gem 'aws-sdk-s3', '~> 1.85', require: false
@@ -17,7 +17,7 @@ gem 'lograge', '~> 0.11.2'
 gem 'mimemagic', '~> 0.3.7'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.3'
-gem 'rails', '~> 6.1.2.1'
+gem 'rails', '~> 6.1.3.2'
 gem 'sass-rails', '>= 6'
 gem 'sentry-rails'
 gem 'sentry-ruby'
