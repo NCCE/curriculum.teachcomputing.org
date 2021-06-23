@@ -1,4 +1,4 @@
-class ActiveStorage::BlobsController < ActiveStorage::BaseController
+class ActiveStorage::Blobs::RedirectController < ActiveStorage::BaseController
   include ActiveStorage::SetBlob
   after_action :track_download
 
