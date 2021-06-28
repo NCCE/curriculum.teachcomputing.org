@@ -4,14 +4,14 @@ task :remove_spam_ratings do
 
   negative_ratings.each do |rating|
     with_lock do
-      rating.aggregate_rating.total_negative -= 1
+      rating.aggregate_rating.decrement!(:total_negative)
     end
     rating.delete
   end
 
   positive_ratings.each do |rating|
     with_lock do
-      rating.aggregate_rating.total_positive -= 1
+      rating.aggregate_rating.decrement!(:total_positive)
     end
     rating.delete
   end
