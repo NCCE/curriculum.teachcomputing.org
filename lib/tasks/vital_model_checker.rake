@@ -1,4 +1,4 @@
-task :vital_model_checker do
+task vital_model_checker: :environment do
   aggregate_download_count = AggregateDownload.where(updated_at: (Time.now - 12.hours)..Time.now).count
 
   Sentry.capture_message('No update to AggregateDownload within the last 12 hours. Please check.') if aggregate_download_count == 0
