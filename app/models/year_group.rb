@@ -18,10 +18,10 @@ class YearGroup < ApplicationRecord
   end
 
   def primary?
-    key_stage.primary?
+    key_stage&.primary?
   end
 
   def secondary?
-    key_stage.secondary?
+    key_stage&.secondary?
   end
 end
