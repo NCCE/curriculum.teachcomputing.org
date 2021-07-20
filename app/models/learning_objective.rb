@@ -8,14 +8,17 @@ class LearningObjective < ApplicationRecord
 
   validate :valid_success_criteria
 
-  def valid_success_criteria
-    return unless lesson.present?
-    if lesson.primary? && !success_criteria.size.positive?
-      errors.add(:success_criteria, 'must be included for learning objectives on primary lessons')
-    end
+  private
 
-    if lesson.secondary? && success_criteria.size != 0
-      errors.add(:success_criteria, 'are not needed on secondary lessons')
+    def valid_success_criteria
+      return unless lesson.present?
+
+      if lesson.primary? && !success_criteria.size.positive?
+        errors.add(:success_criteria, 'must be included for learning objectives on primary lessons')
+      end
+
+      if lesson.secondary? && success_criteria.size != 0
+        errors.add(:success_criteria, 'are not needed on secondary lessons')
+      end
     end
-  end
 end
