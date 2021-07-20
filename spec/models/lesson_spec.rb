@@ -31,8 +31,9 @@ RSpec.describe Lesson, type: :model do
     end
 
     context 'when primary' do
-      it 'is valid if one learning objective present' do
-        lesson = build(:primary_lesson, learning_objectives: [build(:learning_objective)])
+      it 'is valid if one valid learning objective present' do
+        lesson = build(:primary_lesson, learning_objectives: [ build(:primary_learning_objective)])
+
         expect(lesson.valid?).to eq(true)
       end
 
@@ -44,7 +45,7 @@ RSpec.describe Lesson, type: :model do
       it 'adds error message if more than 1 learning objective' do
         lesson = build(:primary_lesson, learning_objectives: build_list(:learning_objective, 2))
         lesson.valid?
-        expect(lesson.errors.messages[:learning_objectives]).to_not be(nil)
+        expect(lesson.errors.messages[:learning_objectives]).not_to be(nil)
       end
     end
   end
