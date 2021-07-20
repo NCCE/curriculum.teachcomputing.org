@@ -11,6 +11,7 @@ RSpec.describe Lesson, type: :model do
   describe 'associations' do
     it { is_expected.to belong_to(:unit) }
     it { is_expected.to have_many(:aggregate_downloads) }
+    it { is_expected.to have_many(:learning_objectives) }
   end
 
   describe 'validations' do
@@ -21,6 +22,31 @@ RSpec.describe Lesson, type: :model do
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
     it { is_expected.to validate_uniqueness_of(:slug).scoped_to(:unit_id) }
+  end
+
+  describe 'validating learning objectives' do
+    it 'does nothing when no learning objectives are present' do
+      lesson = build(:lesson)
+      expect(lesson.valid?).to eq(true)
+    end
+
+    context 'when primary' do
+      it 'is valid if one learning objective present' do
+        lesson = build(:primary_lesson, learning_objectives: [build(:learning_objective)])
+        expect(lesson.valid?).to eq(true)
+      end
+
+      it 'is invalid if more than one learning objective' do
+        lesson = build(:primary_lesson, learning_objectives: build_list(:learning_objective, 2))
+        expect(lesson.valid?).to eq(false)
+      end
+
+      it 'adds error message if more than 1 learning objective' do
+        lesson = build(:primary_lesson, learning_objectives: build_list(:learning_objective, 2))
+        lesson.valid?
+        expect(lesson.errors.messages[:learning_objectives]).to_not be(nil)
+      end
+    end
   end
 
   describe 'callbacks' do
@@ -58,6 +84,30 @@ RSpec.describe Lesson, type: :model do
         expect(UpdateNotifier).to have_received(:new).once.with([instance.unit])
         expect(notifier_double).to have_received(:run).once
       end
+    end
+  end
+
+  describe '#primary?' do
+    it 'returns true when key stage is primary' do
+      lesson = build(:primary_lesson)
+      expect(lesson.primary?).to eq(true)
+    end
+
+    it 'returns false when key stage is secondary' do
+      lesson = build(:secondary_lesson)
+      expect(lesson.primary?).to eq(false)
+    end
+  end
+
+  describe '#secondary?' do
+    it 'returns false when key stage is primary' do
+      lesson = build(:primary_lesson)
+      expect(lesson.secondary?).to eq(false)
+    end
+
+    it 'returns true when key stage is secondary' do
+      lesson = build(:secondary_lesson)
+      expect(lesson.secondary?).to eq(true)
     end
   end
 end

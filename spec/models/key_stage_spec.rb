@@ -65,17 +65,59 @@ RSpec.describe KeyStage, type: :model do
     end
   end
 
-  describe 'methods' do
-    describe '#title' do
-      it 'returns Key Stage and the ks number' do
-        expect(key_stage.title).to eq "Key Stage #{key_stage.level}"
-      end
+  describe '#title' do
+    it 'returns Key Stage and the ks number' do
+      expect(key_stage.title).to eq "Key Stage #{key_stage.level}"
+    end
+  end
+
+  describe '#short_title' do
+    it 'returns KS and the ks number' do
+      expect(key_stage.short_title).to eq "KS#{key_stage.level}"
+    end
+  end
+
+  describe '#primary?' do
+    it 'returns true when level is 1' do
+      ks = build(:key_stage, level: '1')
+      expect(ks.primary?).to eq(true)
     end
 
-    describe '#short_title' do
-      it 'returns KS and the ks number' do
-        expect(key_stage.short_title).to eq "KS#{key_stage.level}"
-      end
+    it 'returns true when level is 2' do
+      ks = build(:key_stage, level: '2')
+      expect(ks.primary?).to eq(true)
+    end
+
+    it 'returns false when level is 3' do
+      ks = build(:key_stage, level: '3')
+      expect(ks.primary?).to eq(false)
+    end
+
+    it 'returns false when level is 4' do
+      ks = build(:key_stage, level: '4')
+      expect(ks.primary?).to eq(false)
+    end
+  end
+
+  describe '#secondary?' do
+    it 'returns false when level is 1' do
+      ks = build(:key_stage, level: '1')
+      expect(ks.secondary?).to eq(false)
+    end
+
+    it 'returns false when level is 2' do
+      ks = build(:key_stage, level: '2')
+      expect(ks.secondary?).to eq(false)
+    end
+
+    it 'returns true when level is 3' do
+      ks = build(:key_stage, level: '3')
+      expect(ks.secondary?).to eq(true)
+    end
+
+    it 'returns true when level is 4' do
+      ks = build(:key_stage, level: '4')
+      expect(ks.secondary?).to eq(true)
     end
   end
 end

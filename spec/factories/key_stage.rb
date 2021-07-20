@@ -16,5 +16,13 @@ FactoryBot.define do
         create_list(:curriculum_map, 2, key_stage: key_stage)
       end
     end
+
+    factory :primary_key_stage do
+      level { '1' }
+    end
+
+    factory :secondary_key_stage do
+      level { '3' }
+    end
   end
 end

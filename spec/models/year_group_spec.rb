@@ -29,4 +29,28 @@ RSpec.describe YearGroup, type: :model do
       end
     end
   end
+
+  describe '#primary?' do
+    it 'returns true if key stage is primary' do
+      year_group = build(:primary_year_group)
+      expect(year_group.primary?).to eq(true)
+    end
+
+    it 'returns false if key stage is secondary' do
+      year_group = build(:secondary_year_group)
+      expect(year_group.primary?).to eq(false)
+    end
+  end
+
+  describe '#secondary?' do
+    it 'returns false if key stage is primary' do
+      year_group = build(:primary_year_group)
+      expect(year_group.secondary?).to eq(false)
+    end
+
+    it 'returns true if key stage is secondary' do
+      year_group = build(:secondary_year_group)
+      expect(year_group.secondary?).to eq(true)
+    end
+  end
 end

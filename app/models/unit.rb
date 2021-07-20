@@ -48,6 +48,14 @@ class Unit < ApplicationRecord
     summative_answers.map { |record| url_for(record) } if summative_answers.attachments
   end
 
+  def primary?
+    year_group.primary?
+  end
+
+  def secondary?
+    year_group.secondary?
+  end
+
   private
 
     def notify_update
