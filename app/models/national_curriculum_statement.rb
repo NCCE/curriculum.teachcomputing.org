@@ -1,0 +1,2 @@
+class NationalCurriculumStatement < ApplicationRecord
+end
