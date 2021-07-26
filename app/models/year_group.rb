@@ -16,4 +16,12 @@ class YearGroup < ApplicationRecord
   def title
     "Y#{year_number}"
   end
+
+  def primary?
+    key_stage&.primary?
+  end
+
+  def secondary?
+    key_stage&.secondary?
+  end
 end
