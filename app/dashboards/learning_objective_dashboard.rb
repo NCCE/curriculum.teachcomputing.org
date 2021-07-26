@@ -12,7 +12,9 @@ class LearningObjectiveDashboard < Administrate::BaseDashboard
     lesson: Field::BelongsTo,
     success_criteria: Field::NestedHasMany,
     id: Field::String,
-    description: Field::Text,
+    description: Field::Text.with_options(
+      searchable: true
+    ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,6 +26,8 @@ class LearningObjectiveDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     description
+    success_criteria
+    taxonomy_tags
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

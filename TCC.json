@@ -1,0 +1,6746 @@
+[
+  {
+    "objective": "Apply skills to position items within a page",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List some of these services and the context in which they are used",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain how a DDoS attack can impact users of online services",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Discuss the features and properties of websites",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To explain how sharing information online lets people in different places work together",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the purpose of CSS and why it is needed in addition to HTML",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Apply knowledge of cybersecurity to GCSE-style questions",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Use search technologies effectively",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the hardware components required to build networks of devices",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Evaluate the advantages and disadvantages of ad hoc networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To evaluate different methods of online communication",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain a number of methods of achieving network security",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define the WWW and describe its main components",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Construct a three-page website to showcase the skills learnt throughout this unit of study",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the social and environmental impacts of social media",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the purpose of DIV tags",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe components (servers, browsers, pages, HTTP and HTTPS protocols, etc.) and how they work together",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Recognise methods of creating a network when mobile or remote working",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To explore how digital devices can be connected",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain how networks can be protected from common security threats",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Evaluate the security of using the cloud for storage and document/data creation",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the features of a network that make it vulnerable to attack",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe ways in which organisations use software to protect against cyberattacks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise how information is transferred over the internet",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List and explain standard internet protocols in the application layer, such as HTTP, HTTPS, FTP, DNS, SMTP, POP, and IMAP",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Experiment with CSS by changing the style of the tags learnt so far in this unit",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Assess the functions and features of cloud computing",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe what is meant by the term ‘accessibility’",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To outline the need for a navigation path",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Insert images stored locally within a folder",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Compare wired to wireless connections and list examples of specific technologies currently used to implement such connections",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define and explain the concept of a networking protocol",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain how data travels between computers across the internet",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To evaluate the consequences of unreliable content",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify how software can be used to protect from cyber attacks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Discuss issues of safety and security from a technological perspective",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify the common features of existing websites and the basics of what makes good web design",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define what virtual networks are, and how they are used to maintain network performance",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Evaluate the potential for cybersecurity careers",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define ‘protocol’ and provide examples of non-networking protocols",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Determine practical actions that can be made to protect oneself online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Demonstrate knowledge of social engineering in role playing and case studies",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify and describe non-automated forms of cyberattack and learn how humans can be the weak points in an organisation",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise the uses and features of information technology",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise that choices are made when using information technology",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List and explain the four different layers associated with the Internet Protocol: link, network/internet, transport, and application",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain why networks are a target for criminals, and what some of the tools available to defend against attacks are",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Plan a multi-page website",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define and describe the internet",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Demonstrate what has been learnt by taking an end-of-unit test",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain what is meant by the ‘digital divide’ and measures to mitigate its effect",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify positive and negative aspects of the use of mobile technology",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To review an existing website and consider its structure",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List and explain standard internet protocols in the transport layer, such as TCP and UDP",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To outline how websites can be shared via the World Wide Web",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Discover different technologies used to access and share information online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define what a computer network is and explain how data is transmitted between computers across networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To identify how to use a search engine",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To identify information technology beyond school",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To describe how content can be added and accessed on the World Wide Web",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List examples of the hardware necessary for connecting devices to networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Summarise key aspects of online safety",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the need for, and the importance of, network security",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To evaluate different ways of working together online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain how devices can be connected to a network either through a wired or wireless connection",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the positive and negative effects of online content",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe different methods of identifying cybersecurity vulnerabilities, such as \npenetration testing\nethical hacking\nnetwork forensics\ncommercial analysis tools\nreview of network and user policies \n",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To explain how information technology benefits us",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To show how to use information technology safely",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Create a multi-page website using open source tools",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the difference between the internet, its services, and the World Wide Web",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the Internet Protocol in the internet layer",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the purpose of HTML and tags when designing a website",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define the terms cybersecurity and network security, explain their importance, and distinguish between the two",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define what networks are",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise the implications of linking to content owned by other people",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe how network data speeds are measured, and the factors affecting network performance",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To describe how networks physically connect to other networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Demonstrate knowledge of social engineering in role play and case studies",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise why the order of results is important, and to whom",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Analyse how search engines select and rank results when searches are made",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise how we communicate using technology",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify the implications of having personal data online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify what happens to data entered online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise how the content of the WWW is created by people",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List, describe, and compare the different types of communication models encountered in networks, such as server–client and peer-to-peer",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Analyse a real cyberattack and identify the network or software weaknesses that enabled it to happen",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the term ‘connectivity’ as the capacity for connected devices (‘Internet of Things’) to collect and share information about me with or without my knowledge (including microphones, cameras, and geolocation)",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe how services are provided over the internet",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe automated forms of cyberattack",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To identify information technology in the home",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the importance of connectivity in modern computing systems",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Discuss the impact of search technologies and the issues that arise by the way they function and the way they are used",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain the definition of ‘cloud storage’ and describe the characteristics of cloud storage",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List, describe, and compare the different types of networks depending on topology, such as ring, star, and bus",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define MAC addresses and their use in networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Judge the security of ad hoc networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Apply knowledge of CSS to DIVs within web pages using classes",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe how internet-connected devices can affect me",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Create a simple web page using basic tags",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Analyse the benefits and problems associated with networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Extend/finish the assessed website",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain how to plan a website by developing a house style and sketched wireframe",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe key words such as ‘protocols’, ‘packets’, and ‘addressing’",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise how networked devices make up the internet",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Analyse an attack on a company and identify what motivated the hackers",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Create hyperlinks between pages stored locally within a folder",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain and describe the advantages and disadvantages of circuit switching and packet switching",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Contemplate the potential harms of being online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Analyse specific examples including Ethernet and Wi-Fi",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe what a search engine is",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To describe how search engines select results",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the box model in CSS",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Write programs that communicate with other devices by sending and receiving messages wirelessly",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Discuss the impact of networking technologies and services",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Design and create pages for a mini website",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To explain how search results are ranked",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define ‘bandwidth’, using the appropriate units for measuring the rate at which data is transmitted, and discuss familiar examples where bandwidth is important",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Analyse a real cyberattack and identify the network or software weaknesses that enabled it to happen",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Describe the impact of cybercrime on businesses and individuals",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To contribute to a shared project online",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Identify strategies to reduce the chance of a brute force attack being successful",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Explain how search engines ‘crawl’ through the World Wide Web and how they select and rank results",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To explain how a computer network can be used to share information",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "To recognise the physical components of a network",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Define what the internet is",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "List and describe the different types of networks depending on node distribution, including personal, local, and wide area networks",
+    "abbreviation": "NW"
+  },
+  {
+    "objective": "Use proportional editing",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Explain what vector graphics are",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Add, move, and delete keyframes to make basic animations",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use a material to add colour to objects",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To describe what makes a good photograph",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Apply skills to position items within a page",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Edit path nodes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To design a digital model by combining 3D objects",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To create music for a purpose",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To consider the impact of the choices made when making and sharing a video",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Discuss the features and properties of websites",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Describe and assess the creative benefits and ethical drawbacks of digital manipulation (Education for a Connected World)",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Describe the purpose of CSS and why it is needed in addition to HTML",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To make careful choices when painting a digital picture",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To review and refine our computer work",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To change the composition of an image",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Describe what CSS is",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Construct a three-page website to showcase the skills learnt throughout this unit of study",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise how text and images convey information",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Compare different render modes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Name associated file formats for types of digital graphics",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To describe what different freehand tools do",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Join multiple objects together using parenting",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Complete a summative assessment",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To decide how photographs can be improved",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Select appropriate images for a given context",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Evaluate design decisions for media artefacts",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Apply the key features of a word processor to format a document",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To make choices when taking a photograph",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Recognise the legislation regarding use of digital graphics",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create media artefacts",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Experiment with CSS by changing the style of the tags learnt so far in this unit",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Identify the resources required for creating digital graphics",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify digital devices that can record video",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To consider how different layouts can suit different purposes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Draw paths",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Recognise different file formats and properties of digital video",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To evaluate my vector drawing",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To compare writing on a computer with writing on paper",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To outline the need for a navigation path",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Plan effective presentations for a given audience",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use loop cut and face editing",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Insert images stored locally within a folder",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use subdivision",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify the need to work consistently and carefully",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Name the different camera angles used in video production",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Modify HTML tags using inline styling to improve the appearance of web pages",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use a digital device to take a photograph",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise video as moving pictures, which can include audio",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create a data capture form",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Utilise the software required for digital video creation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use a computer to write",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise the need to preview pages",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To add and remove text on a computer",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Convert objects to paths",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To create a vector drawing by combining shapes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify that physical objects can be broken down into a collection of 3D shapes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use HTML to structure static web pages",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To evaluate editing choices made:",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To group objects to make them easier to work with",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Apply different colours to different parts of the same model",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Add, delete, and move objects",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise that photos can be changed",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To construct a digital 3D model of a physical object",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To explain that animation is a sequence of drawings or photographs",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To plan an animation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Plan a multi-page website",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Demonstrate what has been learnt by taking an end-of-unit test",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create a 3–10 second animation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To review an existing website and consider its structure",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To capture video using a digital device",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Assess the effectiveness of planning for the visual elements of a project",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To show how music is made from a series of notes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To relate animated movement with a sequence of images",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To describe how music can be used in different ways",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use a computer on my own to paint a picture",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To choose suitable ways to present data",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Scale and rotate objects",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To add content to a desktop publishing publication",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To explain that audio can be changed through editing:",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To describe how content can be added and accessed on the World Wide Web",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Manipulate individual objects (select, move, resize, rotate, duplicate, flip, z-order)",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Plan a digital media artefact from a selected client brief",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create visual media",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Describe the two main types of digital graphics: raster and vector",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify that drawing tools can be used to produce different outcomes",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Provide examples where using vector graphics would be appropriate.",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create a multi-page website using open source tools",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To plan the features of a web page",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise that vector drawings consist of layers",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Improve your own project work based on feedback",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Manipulate groups of objects (select, group/ungroup, align, distribute)",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To make careful choices when changing text",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Describe the purpose of HTML and tags when designing a website",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Combine multiple tools and techniques to create a vector graphic design",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To make good choices when selecting different tools",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Explain how the manipulation of digital images amounts to arithmetic operations on their digital representation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Perform basic image editing tasks using appropriate software and combine them in order to solve more complex problems requiring image manipulation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Organise the content of blog based on credible sources",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Display images within a web page",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise the implications of linking to content owned by other people",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To compare painting a picture on a computer and on paper",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Play, pause, and move through the animation using the timeline",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Set up the camera",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Add and edit set lighting",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use tools to change an image",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Apply appropriate formatting techniques",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To explain that a digital recording is stored as a file:",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To review and improve an animation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use the knife tool",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise that not all images are real",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify that the look of text can be changed on a computer",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use CSS to style static web pages",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Apply HTML tags to construct a web page structure from a provided design",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify that video can be improved through reshooting and editing",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use a digital device to record sound:",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Utilise open source software to create both types of digital graphics",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise that text and layout can be edited",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Construct a blog using appropriate software",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Extend an HTML page to include:\nImages <img>\nHyperlinks <a href>",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use the shape tool and the line tools",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To show that different types of audio can be combined and played together:",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To say how music can make us feel",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To identify that there are patterns in music",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To evaluate how changes can improve an image",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use a computer to create and manipulate three-dimensional (3D) digital objects",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Render out the animation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To choose appropriate page settings",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To compare working digitally with 2D and 3D graphics",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Draw basic shapes (rectangle, ellipse, polygon, star) with different properties (fill and stroke, shape-specific attributes)",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To develop and improve a digital 3D model",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Use edit mode and extrude",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To recognise the features of an effective video",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create a simple web page using basic tags",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Organise the content of the blog based on credible sources",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Extend/finish the assessed website",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To describe how images can be changed for different uses",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Evaluate online sources for use in own work",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Explain how to plan a website by developing a house style and sketched wireframe",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To consider the ownership and use of images (copyright)",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To explain why I chose the tools I used",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create hyperlinks to allow users to navigate between multiple web pages",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create hyperlinks between pages stored locally within a folder",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To use tools to achieve a desired effect",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Perform basic sound editing tasks using appropriate software and combine them in order to solve more complex problems requiring sound manipulation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Assess the benefits of using CSS to style pages instead of in-line formatting",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Visualise a data set",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To explain that digital images can be changed",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To evaluate the impact of adding other media to an animation",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Describe the box model in CSS",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Combine paths by applying operations (union, difference, intersection)",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To create a project from a task description",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Design and create pages for a mini website",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Create useful names for objects",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To consider the benefits of desktop publishing",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "To explain why I used the tools that I chose",
+    "abbreviation": "CM"
+  },
+  {
+    "objective": "Explore alternative approaches to programming solutions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Compute the representation size of a digital image, by multiplying resolution (number of pixels) with colour depth (number of bits used to represent the colour of individual pixels)",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Interrogate and update an existing database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain why and where hexadecimal notation is used",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define the term ‘nibble’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Write to text files",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain what vector graphics are",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Write data from a 1D list to a CSV file",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To create a pictogram",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define the terms ‘correlation’ and ‘outliers’ in relation to data trends",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To select objects by attribute and make comparisons",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Collect data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the dictionary data structure",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Evaluate findings to support arguments for or against a prediction",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe a CSV file",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use a spreadsheet to sort and filter data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe and assess the creative benefits and ethical drawbacks of digital manipulation (Education for a Connected World)",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the record data structure",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use a dictionary with a list to represent records in a database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that objects can be described using data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe a database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recognise how human errors pose security risks to data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement formatting to make the spreadsheet readable and to highlight different specific information",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe colour depth and resolution, and how they impact on image quality",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define key terms such as ‘sample’, ‘sampling frequency/rate’, ‘sample size’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how data is collected on and how it is used",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Convert between different units and multiples of representation size",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To use a digital device to collect data automatically",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To answer questions about groups of objects",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Create a spreadsheet model for a given scenario",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the trade-off between representation size and perceived quality for digital images",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "List examples of representations",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Apply data cleansing techniques to a data set",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To recognise that we can count and compare objects using tally charts",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify that objects can be counted",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Complete a summative assessment",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Apply all of the skills covered in this unit",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Differentiate between the data types: integer, real, Boolean, character, string",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Give examples of the use of representation",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify the data needed to answer questions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define the term ‘byte’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Format cells correctly, e.g. cells representing money should be currency, etc.",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Investigate the stakeholders who use big data and why",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement a LOOKUP function to retrieve data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the need for data cleansing",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Determine the purpose of external data files",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use the functions SUM, COUNTA, MAX, and MIN in a spreadsheet",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Think widely about the uses for and purposes of spreadsheets",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Convert a positive binary integer to decimal",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Create lists and access individual list items",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To describe objects in different ways",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use iteration (for statements) to iterate over list items",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To apply formulas to data, including duplicating",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the use of metadata in sound files",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recall that sound is a wave",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To compare groups of objects",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use conditional formatting in a spreadsheet",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify objects using a branching database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Convert a decimal number to binary and vice versa",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the function of SQL",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To use data collected over a long duration to find information",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To create a spreadsheet to plan an event",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Create a data capture form",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Read from a CSV file",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recall that representations are used to store, communicate, and process information",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Select data from a collection of values",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Calculate file size requirements for sound files",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To create questions with yes/no answers",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify questions which can be answered using data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the right to be forgotten",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Write data from a 2D list to a CSV file",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Convert a decimal number to binary",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain what binary digits (bits) are, in terms of familiar symbols such as digits or letters",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that a data logger collects ‘data points’ from sensors over time",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how bitmaps are used to represent images",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Convert between binary data and black and white bitmaps",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To create a branching database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify that sound can be digitally recorded:",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that tools can be used to select specific data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement and test a macro to carry out a repetitive task",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To count objects with the same properties",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To show how music is made from a series of notes",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use SQL to insert, update, and delete data in a relational database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define the terms ‘big data’ and ‘data analytics’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Calculate representation size for a given digital sound, given its attributes",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the differences between lists and arrays",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To describe how music can be used in different ways",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Append to text files",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Be able to calculate the number of bits needed to store a piece of text",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Discuss the ethics of big data use",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Create appropriate charts in a spreadsheet",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use the functions AVERAGE, COUNTIF, and IF in a spreadsheet",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Append to a CSV file",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To choose suitable ways to present data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Convert decimal numbers to and from hexadecimal",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Discuss ways in which data might be stolen",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the use of metadata in image files",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the need for the Data Protection Act",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe how digital images are composed of individual elements",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To compare paper and computer-based databases",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement an IF function to give the user feedback",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement a dictionary to store information",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Summarise key aspects of online safety",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Provide examples of how symbols are carried on physical media",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Perform common operations on lists or strings",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe a flat file database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define a 2D array and a list",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Perform binary shifts (logical)",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the two main types of digital graphics: raster and vector",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe how colour can be represented as a mixture of red, green, and blue, with a sequence of bits representing each colour’s intensity",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define the terms ‘bit’, ‘nibble’, ‘byte’, ‘megabyte’, ‘gigabyte’, ‘terabyte’, and ‘petabyte’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define key terms such as ‘pixels’, ‘resolution’, and ‘colour depth’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use chr() and ord() to perform ASCII conversions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify that drawing tools can be used to produce different outcomes",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Provide examples where using vector graphics would be appropriate.",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use SQL to retrieve data from more than one table in a relational database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define a list and an array",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use iteration (for loops) to iterate over lists and strings",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To use collected data to answer questions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that we can present information using a computer",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Reflect on how big data and other tools help to target information to specific users",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To identify the object attributes needed to collect relevant data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how the manipulation of digital images amounts to arithmetic operations on their digital representation",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the difference between primary and secondary sources of data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe a relational database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use SQL to retrieve data from a table in a relational database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how ASCII is used to represent characters, and its limitations",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Select criteria and use data set to investigate predictions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Perform basic image editing tasks using appropriate software and combine them in order to solve more complex problems requiring image manipulation",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To use a form to record information",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Cast variables by calling a function that will return a new value of the desired data type",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Work out what range of numbers can be stored in a specific number of bits",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use an appropriate software tool to visualise data sets and look for patterns or trends",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recognise examples of where large data sets are used in daily life",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define database key terms (table, record, field, primary key, foreign key)",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain why it is helpful for a database to be well structured",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use findings to support a recommendation",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use variables to keep track of counts and sums",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the concepts of sampling, sample rate, and sample resolution",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recall that, since hardware is built out of logic circuits, data and instructions alike need to be represented using binary digits",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To label objects",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To apply my knowledge of a database to ask and answer real-world questions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Measure the size or length of a sequence of bits as the number of binary digits that it contains",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Identify the data needed to answer a question defined by the learner",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To outline how grouping and then sorting data allows us to answer questions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement strategies to minimise the risk of data being compromised through human error",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Be able to convert between units of measurement",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Provide examples of the different ways that binary digits are physically represented in digital devices",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that a digital recording is stored as a file:",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use the autofill tool to replicate cell data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain why overflow might occur",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use a dictionary to represent a record in a program",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Be able to convert binary numbers to and from hexadecimal",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Read data from an external text file",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recall that the colour of each picture element is represented using a sequence of binary digits",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Identify what happens to data entered online",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Perform common operations on lists or individual items",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe what a pixel is and how pixels relate to images",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Provide examples of how different representations are appropriate for different tasks",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how visualising data can help identify patterns and trends in order to help us gain insights",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe how natural numbers are represented as sequences of binary digits",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define data science",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain why analogue sound data needs to be converted to discrete values",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe the function of different data types",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the need for Unicode",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the difference between data and information",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Select the most suitable chart to visualise the selected data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define the term ‘bit’",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain data legislation, including an organisation’s obligation to protect and supply data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that formula can be used to produce calculated data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how numbers are represented using hexadecimal",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define a data structure",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Combine key programming language features to develop solutions to meaningful problems",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Analyse data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Solve a problem by implementing steps of the investigative cycle on a data set",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To recognise that objects can be represented as pictures",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Implement conditional formatting techniques",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how binary relates to two-state electrical signals",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe how sounds are represented as sequences of bits",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Demonstrate how to use formulae to perform calculations",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Create an appropriate spreadsheet for a project",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Evaluate what data created online is valuable, and to whom",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the relationship between resolution, colour depth, and file size for images",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Apply cell formatting",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Traverse a list of elements",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that computer programs can be used to compare data visually",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Discuss the impact this might have on different people’s online experiences and the potential disadvantages of living in an online bubble",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use data validation when entering data in order to reduce user error",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recognise the importance of clear titles and labels",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Perform binary addition",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Perform basic sound editing tasks using appropriate software and combine them in order to solve more complex problems requiring sound manipulation",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Demonstrate an understanding of how computers represent data",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To recognise that people can be described by attributes",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Visualise a data set",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Identify columns, rows, cells, and cell references in spreadsheet software",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Describe how an image can be represented as a sequence of bits",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Use basic formulas with cell references to perform calculations in a spreadsheet (+, -, *, /)",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Draw conclusions and report findings",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain how attributes such as sampling frequency and sample size affect characteristics such as representation size and perceived quality, and the trade-offs involved",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Analyse visualisations to identify patterns, trends, and outliers",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To compare the information shown in a pictogram with a branching database",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Identify the steps of the investigative cycle",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the concept of a number base",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recall that bitmap images and pulse code sound are not the only binary representations of images and sound available",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define ‘compression’, and describe why it is necessary",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Recall that characters can be represented as sequences of symbols and list examples of character coding schemes",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain what a character set is",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explain the difference between raster and vector graphics",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "To explain that data gathered over time can be used to answer questions",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Apply all of the spreadsheet skills covered in this unit",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Measure the length of a representation as the number of symbols that it contains",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Define encapsulation and understand how to apply it",
+    "abbreviation": "DI"
+  },
+  {
+    "objective": "Explore alternative approaches to programming solutions",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate my project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To describe what makes a good photograph",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Apply skills to position items within a page",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design a digital model by combining 3D objects",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate findings to support arguments for or against a prediction",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create music for a purpose",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create a Gantt chart",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To consider the impact of the choices made when making and sharing a video",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Describe the purpose of CSS and why it is needed in addition to HTML",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Apply knowledge of cybersecurity to GCSE-style questions",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design a flowchart for a program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate different methods of online communication",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create planning documents for a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Construct a three-page website to showcase the skills learnt throughout this unit of study",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Justify the selection of communication platforms",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design a program which uses selection",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Describe the purpose of DIV tags",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create a program which uses selection",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Compare planning tools available for pre-production",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Complete a summative assessment",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To decide how photographs can be improved",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create pre-production planning materials",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Analyse a project brief",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate design decisions for media artefacts",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate a challenging program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design the program for a challenging project using flowchart or pseudocode",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create media artefacts",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Develop a partially complete application to include additional functionality",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Think widely about the uses for and purposes of spreadsheets",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Experiment with CSS by changing the style of the tags learnt so far in this unit",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To consider how different layouts can suit different purposes",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Self/peer evaluate the produced webpage using a rubric",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Describe what is meant by the term ‘accessibility’",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Explore communication tools",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate my vector drawing",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To outline the need for a navigation path",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create a positive working environment",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate collaborative working",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Plan effective presentations for a given audience",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Insert images stored locally within a folder",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To identify the need to work consistently and carefully",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Modify HTML tags using inline styling to improve the appearance of web pages",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To recognise video as moving pictures, which can include audio",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design a physical computing artifact purposefully, keeping in mind the problem at hand, the needs of the audience involved, and the available resources",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To recognise the need to preview pages",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate formatting techniques to understand why we format documents",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Compare the features of linear and binary search and decide which is most suitable in a given context",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To identify and fix bugs in a program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify how software can be used to protect from cyber attacks",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate editing choices made:",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify the common features of existing websites and the basics of what makes good web design",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Peer assess another pair’s project work",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Critique online services in relation to data privacy",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To plan an animation",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Plan a multi-page website",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Demonstrate what has been learnt by taking an end-of-unit test",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Define the term project management.",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To review an existing website and consider its structure",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design the parts of a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create a program using a given design",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Assess the effectiveness of planning for the visual elements of a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate effective online communication",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Develop documentation for the first stage of a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Showcase the assessed website",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design the layout of the content to make it suitable for the audience",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create and debug a program that I have written",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Follow a design plan",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Compare inclusivity and accessibility within traditional and modern teams",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Select appropriate project management methodologies.",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design a project that uses inputs and outputs on a controllable device",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Solve problems using transferable skills",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To compare paper and computer-based databases",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Interpret the advantages and disadvantages of 24/7/365 availability",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design a physical project that includes selection",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate the constraints of a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To change a given design",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate different ways of working together online",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Plan a digital media artefact from a selected client brief",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create visual media",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Compare a while loop and a for loop",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate my program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Perform final testing of the solution to a challenging problem",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Reflect and react to user feedback",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create a multi-page website using open source tools",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Select components to create a computer system",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To plan the features of a web page",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design and create a program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Apply appropriate constructs to solve a problem",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To choose how to improve a game by using variables",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Improve your own project work based on feedback",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Describe the purpose of HTML and tags when designing a website",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Combine multiple tools and techniques to create a vector graphic design",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Establish user needs when completing a creative project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate the success of the programming project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Select criteria and use data set to investigate predictions",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create a PERT chart",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To decide how my project can be improved",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Interpret algorithms and suggest improvements",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To explain why it is helpful for a database to be well structured",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify why the use of project management is important.",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To recognise the implications of linking to content owned by other people",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To compare painting a picture on a computer and on paper",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate planning tools",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To change the appearance of my project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Test the effectiveness of developed products",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Examine traditional and modern team working",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Implement and customise GUI elements to meet the needs of the user",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify the data needed to answer a question defined by the learner",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Formulate a proposal that identifies essential skills for the modern workplace",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Recall collaboration and communication platforms",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To explain that a digital recording is stored as a file:",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Apply decomposition to break down a large problem into more manageable steps",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Implement a physical computing project, while following, revising, and refining the project plan",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To review and improve an animation",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Use CSS to style static web pages",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design and create a function for an XOR operator",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Examine modern technology tools that assist inclusivity and accessibility",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To use a digital device to record sound:",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Write success criteria for a challenging project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Determine the good habits of a programmer",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create a program using my own design",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design and build a program using pseudocode",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Demonstrate that skills developed in the lessons can be applied to a different scenario",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate how changes can improve an image",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To explain that programming projects can have code and artwork",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Develop objectives into SMART goals",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify the user requirements of a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Apply knowledge of CSS to DIVs within web pages using classes",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Solve a problem by implementing steps of the investigative cycle on a data set",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify objectives relating to a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Independently design and apply programming constructs to solve a problem (subroutine, selection, count-controlled iteration, operators, and variables)",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To develop a design that includes two or more loops which run at the same time",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To develop and improve a digital 3D model",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To recognise the features of an effective video",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Describe the term ‘pre-production’",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Extend/finish the assessed website",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create a project that includes repetition",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To describe how images can be changed for different uses",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create an appropriate spreadsheet for a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Explain how to plan a website by developing a house style and sketched wireframe",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create a controllable system that includes selection",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design a project that includes repetition",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To use my algorithm to create a program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To consider the ownership and use of images (copyright)",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To explain why I chose the tools I used",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To plan a simple program",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To use my design to create a project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create hyperlinks to allow users to navigate between multiple web pages",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create hyperlinks between pages stored locally within a folder",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To develop a program to use inputs and outputs on a controllable device",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Develop testing documentation",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Define ‘iteration’ and ‘interaction’",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate the impact of physical well-being on individuals",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design and create a maze-based challenge",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate the impact of mental well-being on individuals",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate a spreadsheet",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate the overall success of a completed project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To evaluate the impact of adding other media to an animation",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Describe the box model in CSS",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate a computer’s suitability for a given task",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To compare the information shown in a pictogram with a branching database",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To create a project from a task description",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Identify the steps of the investigative cycle",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design and create pages for a mini website",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design a project that builds on a given example",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To develop the use of count-controlled loops in a different programming environment",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Create project products",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Evaluate a completed project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Design and implement a software project",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Decompose the functionality of a physical computing system into simpler features",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To consider the benefits of desktop publishing",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To explain why I used the tools that I chose",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "To design an algorithm",
+    "abbreviation": "DD"
+  },
+  {
+    "objective": "Examine how different types of malware causes problems for computer systems",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write to text files",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the NOT, AND, and OR logical operators, and how they are used to form logical expressions",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write data from a 1D list to a CSV file",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To create a program to run on a controllable device",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe how combinations of logic gates can perform mathematical operations",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Use lists to display output on a physical computing device",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To update a variable with a user input",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Apply knowledge of cybersecurity to GCSE-style questions",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify input and output devices",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Determine that assembly language has a 1:1 relationship with machine code",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Recall that a general-purpose computing system is a device for executing programs",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Compare how humans and computers interpret instructions",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the hardware components required to build networks of devices",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the environmental effects of the use of technology",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Evaluate the advantages and disadvantages of ad hoc networks",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "List the common malware threats",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write programs that use GPIO pins to generate output and receive input",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain that a loop can stop when a condition is met, eg number of times",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Apply knowledge of storage devices to compare the three mediums of storage",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use a digital device to collect data automatically",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain how the fetch-decode-execute cycle works by describing what happens at each stage",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the differences between high- and low-level programming languages",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "List the micro:bit’s input and output devices",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the steps involved in training machines to perform tasks (gathering data, training, testing)",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Recognise methods of creating a network when mobile or remote working",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explore how digital devices can be connected",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Evaluate the security of using the cloud for storage and document/data creation",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Apply all of the skills covered in this unit",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify the data needed to answer questions",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To make choices when taking a photograph",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe ways in which organisations use software to protect against cyberattacks",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Identify examples of artificial intelligence and machine learning in the real world",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explore the role of the operating system and utility software",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Determine the purpose of external data files",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe how data is read from and written to optical and magnetic memory",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write programs that display messages, receive keyboard input, and use simple arithmetic expressions in assignment statements",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Assess the functions and features of cloud computing",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "List the differences, benefits, and drawbacks of using a compiler, or an interpreter",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify digital devices that can record video",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe how hardware is built out of increasingly complex logic circuits",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe how the hardware components used in computing systems work together in order to execute programs",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To recognise how digital devices can change the way we work",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the function of the hardware components used in computing systems",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Compare wired to wireless connections and list examples of specific technologies currently used to implement such connections",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use a digital device to take a photograph",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Design and create a program in assembly language",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Recall that all computing systems, regardless of form, have a similar structure (‘architecture’)",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Apply the knowledge of storage devices to recommend an appropriate device",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Design a physical computing artifact purposefully, keeping in mind the problem at hand, the needs of the audience involved, and the available resources",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Read from a CSV file",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Design a logical circuit, combining logic gates to solve a problem",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Identify how software can be used to protect from cyber attacks",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe what the micro:bit is",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To write a program that includes count-controlled loops",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define an embedded system",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Provide broad definitions of ‘artificial intelligence’ and ‘machine learning’",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify a computer and its main parts",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Demonstrate knowledge of social engineering in role playing and case studies",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Identify and describe non-automated forms of cyberattack and learn how humans can be the weak points in an organisation",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Use a development environment to write, execute, and debug a Python program for the micro:bit",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write data from a 2D list to a CSV file",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To recognise the uses and features of information technology",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To recognise that choices are made when using information technology",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain that a data logger collects ‘data points’ from sensors over time",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify that sound can be digitally recorded:",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain what is meant by the ‘digital divide’ and measures to mitigate its effect",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Use logic gates to construct logic circuits, and associate these with logical operators and expressions",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the role of cache in a computer system",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Identify positive and negative aspects of the use of mobile technology",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Append to text files",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Discover different technologies used to access and share information online",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the role of each part of the CPU as part of the fetch-decode-execute cycle",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify technology",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain why a computer system needs secondary storage",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Append to a CSV file",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Associate the use of artificial intelligence with moral dilemmas",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To control a simple circuit connected to a computer",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To design a project that uses inputs and outputs on a controllable device",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify information technology beyond school",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Discover the logic gates AND, NOT, and OR, including their symbols and truth tables",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To design a physical project that includes selection",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "List examples of the hardware necessary for connecting devices to networks",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Summarise key aspects of online safety",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Provide examples of how symbols are carried on physical media",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the need for, and the importance of, network security",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain how devices can be connected to a network either through a wired or wireless connection",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain how information technology benefits us",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To show how to use information technology safely",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define the term GUI",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Select components to create a computer system",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use collected data to answer questions",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use a keyboard to type",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain how optical and magnetic memory stores data in the form of binary",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Compare embedded and general purpose computer systems",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define the terms cybersecurity and network security, explain their importance, and distinguish between the two",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define what networks are",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explore the factors that impact a CPU’s performance",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Recall that, since hardware is built out of logic circuits, data and instructions alike need to be represented using binary digits",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use a mouse in different ways",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Provide examples of the different ways that binary digits are physically represented in digital devices",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the function of microphones and speakers as components that capture and generate sound",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Analyse how the hardware components used in computing systems work together in order to execute programs",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Implement a physical computing project, while following, revising, and refining the project plan",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define ‘computer misuse’ and the associated offences",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Recall that a program written in a programming language needs to be translated in order to be executed by a machine",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Read data from an external text file",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define what an operating system is, and recall its role in controlling program execution",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe how logic gates are used in carrying out computation",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Analyse a real cyberattack and identify the network or software weaknesses that enabled it to happen",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use a digital device to record sound:",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define the term, motherboard",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe automated forms of cyberattack",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To identify information technology in the home",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write programs that use the micro:bit’s built-in input and output devices",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the basic commands in the LMC’s assembly code: INP, OUT, STA, LDA, ADD, SUB, and BRP",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the basic components of the CPU",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define cache memory",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the definition of ‘cloud storage’ and describe the characteristics of cloud storage",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the roles and purpose of each component of the CPU in computation",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Define ‘downtime’ and explain the associated impact on an organisation",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the limitations of secondary storage",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use an conditional statement to compare a variable to a value",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Judge the security of ad hoc networks",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To create rules for using technology responsibly",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the role of main memory as part of a computer system",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "State how solid-state memory works and describe its characteristics",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To create a controllable system that includes selection",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Construct truth tables for a three-input logic circuit",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To recognise the role of computer systems in our lives",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Analyse an attack on a company and identify what motivated the hackers",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain that selection can control the flow of a program",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To develop a program to use inputs and outputs on a controllable device",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe what a search engine is",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the characteristics of RAM and ROM",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe the role of system software as part of a computer system",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Evaluate a computer’s suitability for a given task",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Write programs that communicate with other devices by sending and receiving messages wirelessly",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "State the different types of secondary storage and describe their functional characteristics",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain the difference between a general-purpose computing system and a purpose-built device",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To use the keyboard to edit text",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Analyse a real cyberattack and identify the network or software weaknesses that enabled it to happen",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Design and implement a software project",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Decompose the functionality of a physical computing system into simpler features",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Explain how search engines ‘crawl’ through the World Wide Web and how they select and rank results",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe how machine learning differs from traditional programming",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain how a computer network can be used to share information",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain that computers can be connected together to form systems",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Create a Boolean expression to describe a logical circuit",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To recognise the physical components of a network",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "To explain how digital devices function",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Describe why translators are necessary",
+    "abbreviation": "CS"
+  },
+  {
+    "objective": "Examine how different types of malware causes problems for computer systems",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss examples of disinformation spread online",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss which rights are believed to be upheld",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain how a DDoS attack can impact users of online services",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To explain how sharing information online lets people in different places work together",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe and assess the creative benefits and ethical drawbacks of digital manipulation (Education for a Connected World)",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Apply knowledge of cybersecurity to GCSE-style questions",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Apply referencing techniques and understand the concept of plagiarism",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To change the composition of an image",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the environmental effects of the use of technology",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain how data is collected on and how it is used",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "List the common malware threats",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the social and environmental impacts of social media",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Justify the selection of communication platforms",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe the steps involved in training machines to perform tasks (gathering data, training, testing)",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the implications of sharing program code",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Identify examples of artificial intelligence and machine learning in the real world",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss ways of identifying fake news and other forms of disinformation",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Investigate the stakeholders who use big data and why",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Define the term ‘fake news’ and discuss the quantity of fake news available online",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Compare UK laws with those in other countries",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe what is meant by the term ‘accessibility’",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explore communication tools",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Create a positive working environment",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate collaborative working",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To recognise how digital devices can change the way we work",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss why policing online spaces can be difficult",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Critique digital content for credibility",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To evaluate the consequences of unreliable content",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the need for the Computer Misuse Act",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the term ‘stakeholder’",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss issues of safety and security from a technological perspective",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Compare security threats against probability and the potential impact to organisations",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Provide broad definitions of ‘artificial intelligence’ and ‘machine learning’",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate the potential for cybersecurity careers",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Debate whether the right to privacy is important, why this might be the case, and if the right to privacy is in tension with any other rights",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Determine practical actions that can be made to protect oneself online",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the right to be forgotten",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To recognise that choices are made when using information technology",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe the UK laws governing online content",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain what is meant by the ‘digital divide’ and measures to mitigate its effect",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss how we decide what content should be illegal",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Identify positive and negative aspects of the use of mobile technology",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Identify situations that would be classified as an offence under the Act",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Define hacking in the context of cyber security",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate effective online communication",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To act out a given word",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain why some content online can be potentially harmful",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss the ethics of big data use",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discover different technologies used to access and share information online",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To identify technology",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Compare inclusivity and accessibility within traditional and modern teams",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Associate the use of artificial intelligence with moral dilemmas",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss ways in which data might be stolen",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To identify information technology beyond school",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the need for the Data Protection Act",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Apply the terms ‘privacy’, ‘legal’, ‘ethical’, ‘environmental’, and ‘cultural’",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Interpret the advantages and disadvantages of 24/7/365 availability",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Summarise key aspects of online safety",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the positive and negative effects of online content",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Apply techniques in order to identify whether or not a source is credible",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Identify why fake news exists and who creates it",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To explain how information technology benefits us",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the ethical issues surrounding the use of AI in society",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Investigate the legal rights to privacy within the UK",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Reflect on how big data and other tools help to target information to specific users",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Organise the content of blog based on credible sources",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Apply referencing techniques that credit authors appropriately",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Recognise examples of where large data sets are used in daily life",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Use findings to support a recommendation",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To recognise the implications of linking to content owned by other people",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Examine traditional and modern team working",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Formulate a proposal that identifies essential skills for the modern workplace",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Recall collaboration and communication platforms",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To recognise why the order of results is important, and to whom",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Define ‘computer misuse’ and the associated offences",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Identify the implications of having personal data online",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Examine modern technology tools that assist inclusivity and accessibility",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To identify information technology in the home",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the Freedom of Information Act",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Define ‘downtime’ and explain the associated impact on an organisation",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain data legislation, including an organisation’s obligation to protect and supply data",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Distinguish the differences between legitimate creative uses and clear infringement of material subject to copyright",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe how internet-connected devices can affect me",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Organise the content of the blog based on credible sources",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Demonstrate the ability to credit the original source of an image",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate online sources for use in own work",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Question how malicious bots can have an impact on societal issues",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate what data created online is valuable, and to whom",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Demonstrate an understanding of licensing issues involving online content by applying appropriate Creative Commons licences",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To recognise the role of computer systems in our lives",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the effects of cyberbullying",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss the impact this might have on different people’s online experiences and the potential disadvantages of living in an online bubble",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Contemplate the potential harms of being online",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate the impact of physical well-being on individuals",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Evaluate the impact of mental well-being on individuals",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Explain the ethical impact of using algorithms to make decisions",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Debate the right to access information in the context of safety concerns online already discussed in this unit",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe cyberbullying",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Draw conclusions and report findings",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Demonstrate how to report illegal online content",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Discuss the impact of networking technologies and services",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Describe the impact of cybercrime on businesses and individuals",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "To consider the benefits of desktop publishing",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Demonstrate knowledge of the five impacts of technology",
+    "abbreviation": "IT"
+  },
+  {
+    "objective": "Use a trace table to detect and correct errors in programs",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify where condition-controlled iteration can be used in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Analyse and create flowcharts using the flowchart symbols",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Make a sequence that includes a variable",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe how combinations of logic gates can perform mathematical operations",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Insert an item into an ordered list of items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define runtime errors in programs",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe the function of an XOR operator",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Design a flowchart for a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define iteration as a group of instructions that are repeatedly executed",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Interpret the code for linear search and binary search",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Compare how humans and computers interpret instructions",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify where selection statements can be used in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Predict the outcome of a sequence and modify it",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define validation checks",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Modify a sequence",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Write programs that use GPIO pins to generate output and receive input",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To find more than one solution to a problem",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Trace code for both sorting algorithms with input data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify when lists can be used in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform a merge sort to order a list containing sample data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe what algorithms and programs are and how they differ",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To identify that accuracy in programming is important",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define a variable as a name that refers to data being stored by the computer",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Design the program for a challenging project using flowchart or pseudocode",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Complete the end of unit assessment",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform a binary search to find the position of an item in a list",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Recognise scenarios where each of these computational thinking techniques are applied",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Create lists and access individual list items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform an insertion sort to order a list containing sample data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use iteration (for statements) to iterate over list items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To describe a series of instructions as a sequence",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe how insertion sort is used for ordering a list of items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify flowchart symbols and describe how to use them (decision)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify when a problem needs to be broken down",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a truth table",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe how binary search is used for finding the position of an item in a list of items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Merge two ordered lists of items into a new ordered list",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Design a logical circuit, combining logic gates to solve a problem",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Compare the features of linear and binary search and decide which is most suitable in a given context",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define the terms decomposition, abstraction and algorithmic thinking",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain what a given command will do",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Trace the values of variables within a sequence",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Apply decomposition, abstraction and algorithmic thinking to help solve a problem",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain how selection directs the flow of a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a development environment to write, execute, and debug a Python program for the micro:bit",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify that selection uses conditions to control the flow of execution",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define decomposition as breaking a problem down into smaller, more manageable subproblems",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Translate a flowchart into a program sequence",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a list",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify how subroutines can be used for decomposition",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify scenarios when a binary search can and cannot be carried out",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a trace table to walkthrough code that uses a while loop",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify why computers often need to search data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Predict the outcome of a simple sequence that includes variables",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Create conditions that use comparison operators (>,<,=)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use iteration (while statements) to control the flow of program execution",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To act out a given word",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use trace tables to investigate functions",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To create and debug a program that I have written",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe the purpose of pseudocode",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify when selection statements should be used in programs",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe how linear search is used for finding the position of an item in a list of items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Discover the logic gates AND, NOT, and OR, including their symbols and truth tables",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Decompose a larger problem into smaller subproblems",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Implement count-controlled iteration in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Interpret the code for bubble sort and insertion sort",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Walk through code that uses nested selection",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform a linear search to find the position of an item in a list",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Determine the need for validation checks",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Compare a while loop and a for loop",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Walk through code that use conditions with Boolean/logical operators (AND, OR)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify factors that could influence the efficiency of a bubble sort implementation",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Locate and correct common syntax errors",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Explain the ethical issues surrounding the use of AI in society",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Design and create a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform a bubble sort to order a list containing sample data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Evaluate which type of iteration is required in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To use logical reasoning to predict the outcome of a program (series of commands)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use subroutines in programs",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Apply appropriate constructs to solve a problem",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Predict the outcome of a simple sequence",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use iteration (for loops) to iterate over lists and strings",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Interpret error messages and define error types and identify them in programs (logic, syntax)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify why computers often need to sort data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Interpret algorithms and suggest improvements",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use variables to keep track of counts and sums",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Walk through code that uses a for loop",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Develop a linear search function in Python",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Trace code for both searching algorithms with input data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Analyse how search engines select and rank results when searches are made",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Apply decomposition to break down a large problem into more manageable steps",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Translate pseudocode into a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify that selection uses conditions to control the flow of a sequence",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform common operations on lists or individual items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe how logic gates are used in carrying out computation",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Design and create a function for an XOR operator",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain what happens when we change the order of instructions",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define a subroutine as a group of instructions that will run when called by the main program or other subroutines",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a trace table to detect and correct errors in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Implement condition-controlled iteration in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Write programs that use the micro:bit’s built-in input and output devices",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify algorithms that are defined as written descriptions, flowcharts and code",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe the difference between algorithms and computer programs",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Design and build a program using pseudocode",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Compare how humans and computers understand instructions (understand and carry out)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain that programming projects can have code and artwork",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe how merge sort is used for ordering a list of items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe the need for lists",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a trace table to walk through code that contains a while loop, a for loop and a list of items",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Perform searching and sorting algorithms on samples of data",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Combine key programming language features to develop solutions to meaningful problems",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Detect and correct errors in a program (debugging)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify flowchart symbols and describe how to use them (start, end, input, output, subroutine)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Describe the need for iteration",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Independently design and apply programming constructs to solve a problem (subroutine, selection, count-controlled iteration, operators, and variables)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Modify a program to include selection",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify where selection statements can be used in a program that include comparison and logical operators",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To use my algorithm to create a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Construct truth tables for a three-input logic circuit",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Traverse a list of elements",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To decompose a program into parts",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To plan a simple program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain what ‘repeat’ means",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define a sequence as instructions performed in order, with each executed in turn",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Create conditions that use logic operators (and/or/not)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Recognise that computers follow the control flow of input/process/output",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define a list as a collection of related elements that are referred to by a single name",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Traverse a list of items, swapping the items that are out of order",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Explain the ethical impact of using algorithms to make decisions",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Walkthrough code that includes selection (if, elif, else)",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain how selection is used in computer programs",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Define a condition as an expression that will be evaluated as either true or false",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Write programs that communicate with other devices by sending and receiving messages wirelessly",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To create a project from a task description",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Determine the need for variables",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To relate that a conditional statement connects a condition to an outcome",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Identify where count-controlled iteration can be used in a program",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To explain that in programming there are infinite loops and count-controlled loops",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Explain how search engines ‘crawl’ through the World Wide Web and how they select and rank results",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Create a Boolean expression to describe a logical circuit",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Analyse and fix errors in a flowchart",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "To design an algorithm",
+    "abbreviation": "AL"
+  },
+  {
+    "objective": "Use a trace table to detect and correct errors in programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a block-based programming language to include sequencing and selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify where condition-controlled iteration can be used in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Interrogate and update an existing database",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write to text files",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Receive input from the keyboard and convert it to a numerical value",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Make a sequence that includes a variable",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To evaluate my project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write data from a 1D list to a CSV file",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Apply skills to position items within a page",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program to run on a controllable device",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use variables in an event-driven programming environment",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the dictionary data structure",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use Boolean variables as flags",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define runtime errors in programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe a CSV file",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use lists to display output on a physical computing device",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain how a sprite moves in an existing project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To update a variable with a user input",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the purpose of CSS and why it is needed in addition to HTML",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the record data structure",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a dictionary with a list to represent records in a database",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To recognise that a sequence of commands can have an order",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Recall that a program is a sequence of instructions that specify operations that are to be performed on data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Import third-party libraries",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design a flowchart for a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define iteration as a group of instructions that are repeatedly executed",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Combine iteration and selection to control the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Obtain input from the keyboard in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write and use expressions that use arithmetic operators (add, subtract, multiply, real division, integer division, MOD, to the power)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Compare how humans and computers interpret instructions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify where selection statements can be used in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Predict the outcome of a sequence and modify it",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define validation checks",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify a sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe what CSS is",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write programs that use GPIO pins to generate output and receive input",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Construct a three-page website to showcase the skills learnt throughout this unit of study",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that a loop can stop when a condition is met, eg number of times",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a new class independently and include suitable methods.",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Import modules into your code",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Trace code for both sorting algorithms with input data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain the differences between high- and low-level programming languages",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify when lists can be used in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design a program which uses selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe a constant",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the purpose of DIV tags",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use the structured approach in programming",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe what algorithms and programs are and how they differ",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program which uses selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To identify that accuracy in programming is important",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a variable as a name that refers to data being stored by the computer",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Differentiate between the data types: integer, real, Boolean, character, string",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain the implications of sharing program code",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify when to use global variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify a program that uses nested selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program in a text-based language",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Evaluate a challenging program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that a sequence of commands has a start",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explore a new programming environment",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define an object class",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design the program for a challenging project using flowchart or pseudocode",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement a LOOKUP function to retrieve data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Determine the purpose of external data files",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To identify the effect of changing a value",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use the functions SUM, COUNTA, MAX, and MIN in a spreadsheet",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform a binary search to find the position of an item in a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Develop a partially complete application to include additional functionality",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a function that returns a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write programs that display messages, receive keyboard input, and use simple arithmetic expressions in assignment statements",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create lists and access individual list items",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Experiment with CSS by changing the style of the tags learnt so far in this unit",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a list in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a block-based programming language to create a sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "List the differences, benefits, and drawbacks of using a compiler, or an interpreter",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To combine forwards and backwards commands to make a sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform an insertion sort to order a list containing sample data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Demonstrate appropriate use of naming conventions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use iteration (for statements) to iterate over list items",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use user input in an event-driven programming environment",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To apply formulas to data, including duplicating",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To combine four direction commands to make sequences",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the tools an IDE provides (editors, error diagnostics, runtime environment, translators)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To adapt a program to a new context",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe how the hardware components used in computing systems work together in order to execute programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use conditional formatting in a spreadsheet",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Insert images stored locally within a folder",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use binary selection (if, else statements) to control the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Generate and use random integers",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe how iteration (while statements) controls the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify flowchart symbols and describe how to use them (decision)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "End of Unit assessment",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the function of SQL",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify HTML tags using inline styling to improve the appearance of web pages",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design and create a program in assembly language",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To show that a series of commands can be joined together",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Distinguish between declaration, initialisation, and assignment of variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify when a problem needs to be broken down",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a truth table",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Read from a CSV file",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain object-oriented programming",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Import custom built functions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use relational operators to form logical expressions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Pass the value of a variable into an object",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define nested selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that a program has a start",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Select data from a collection of values",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use iteration (while loops) to control the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To identify and fix bugs in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a new class that includes a constructor, getter and setter methods.",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Be able to locate information using the language documentation",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use HTML to structure static web pages",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a condition as an expression that can be evaluated to either True or False",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program that uses count-controlled loops to produce a given outcome",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify the common features of existing websites and the basics of what makes good web design",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Trace the values of variables within a sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To write a program that includes count-controlled loops",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe what HTML is",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write and use expressions that use comparison operators (equal to, not equal to, less than, greater than, less than or equal to, greater than or equal to)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program to move a sprite in four directions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain how selection directs the flow of a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a constructor and define attributes of an object",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a development environment to write, execute, and debug a Python program for the micro:bit",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write data from a 2D list to a CSV file",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a program that uses string handling techniques",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify that selection uses conditions to control the flow of execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use the split() method",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use string handling techniques",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To choose a command for a given purpose",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define decomposition as breaking a problem down into smaller, more manageable subproblems",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Translate a flowchart into a program sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create get and set methods to obtain/set information about an object",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create the solution for the battle boats program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Assign expressions to variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Demonstrate what has been learnt by taking an end-of-unit test",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify how subroutines can be used for decomposition",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a trace table to walkthrough code that uses a while loop",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "List the advantages of subroutines",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement and test a macro to carry out a repetitive task",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use guizero to create an event-driven program that uses a GUI",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Predict the outcome of a simple sequence that includes variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a dictionary to produce key-value pairs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design the parts of a project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program using a given design",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use SQL to insert, update, and delete data in a relational database",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create conditions that use comparison operators (>,<,=)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify a program to incorporate a while loop",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define hacking in the context of cyber security",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use iteration (while statements) to control the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the purpose of parameters in subroutines",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the differences between lists and arrays",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the semantics of assignment statements",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use trace tables to investigate functions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create and debug a program that I have written",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Append to text files",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the purpose of pseudocode",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use the functions AVERAGE, COUNTIF, and IF in a spreadsheet",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Append to a CSV file",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify when selection statements should be used in programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To control a simple circuit connected to a computer",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design a project that uses inputs and outputs on a controllable device",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement an IF function to give the user feedback",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Decompose a larger problem into smaller subproblems",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement a dictionary to store information",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design a physical project that includes selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use selection statements in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To change a given design",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform common operations on lists or strings",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement count-controlled iteration in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a 2D array and a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Interpret the code for bubble sort and insertion sort",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Walk through code that uses nested selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use selection (if-elif-else statements) to control the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform a linear search to find the position of an item in a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Determine the need for validation checks",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Compare a while loop and a for loop",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To evaluate my program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that each sprite has its own instructions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify a program that uses a for loop",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Walk through code that use conditions with Boolean/logical operators (AND, OR)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Evaluate arithmetic expressions using rules of operator precedence (BIDMAS)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform final testing of the solution to a challenging problem",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain the difference between a function and a procedure",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use chr() and ord() to perform ASCII conversions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Reflect and react to user feedback",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To define a ‘variable’ as something that is changeable",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use SQL to retrieve data from more than one table in a relational database",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define the term GUI",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "I can identify that each sprite is controlled by the commands I choose",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a new method and add it to a class",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the structured approach to programming",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To modify a count-controlled loop to produce a given outcome",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Locate and correct common syntax errors",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the function of string operators",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain the ethical issues surrounding the use of AI in society",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe iterative testing",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design and create a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform a bubble sort to order a list containing sample data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Evaluate which type of iteration is required in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To use logical reasoning to predict the outcome of a program (series of commands)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use subroutines in programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Apply appropriate constructs to solve a problem",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Predict the outcome of a simple sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a list and an array",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To choose how to improve a game by using variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use iteration (for loops) to iterate over lists and strings",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Interpret error messages and define error types and identify them in programs (logic, syntax)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use variables as counters in iterative programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Evaluate the success of the programming project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use SQL to retrieve data from a table in a relational database",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use functions to return values in programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify an existing class to incorporate methods to interact with another",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Cast variables by calling a function that will return a new value of the desired data type",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Display images within a web page",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To decide how my project can be improved",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use for loops with string operations",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use variables to keep track of counts and sums",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Recall that, since hardware is built out of logic circuits, data and instructions alike need to be represented using binary digits",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Demonstrate how to generate random numbers",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use multi-branch selection (if, elif, else statements) to control the flow of program execution",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write and use expressions that use Boolean/logical operators (AND, OR)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To change the appearance of my project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Walk through code that uses a for loop",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement and customise GUI elements to meet the needs of the user",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Develop a linear search function in Python",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Trace code for both searching algorithms with input data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe scope of variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use meaningful identifiers",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Translate pseudocode into a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain why a variable is used in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement a physical computing project, while following, revising, and refining the project plan",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a dictionary to represent a record in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify that selection uses conditions to control the flow of a sequence",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define superclass, subclass and inheritance",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Recall that a program written in a programming language needs to be translated in order to be executed by a machine",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Append to a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use the in operator to check for a substring",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Read data from an external text file",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use CSS to style static web pages",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform common operations on lists or individual items",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create instances of an object",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design and create a function for an XOR operator",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use iteration to perform validation checks",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Apply HTML tags to construct a web page structure from a provided design",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe how parameters can reduce the need for global variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write success criteria for a challenging project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a subroutine as a group of instructions that will run when called by the main program or other subroutines",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a trace table to detect and correct errors in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement condition-controlled iteration in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe a subroutine",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write programs that use the micro:bit’s built-in input and output devices",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Extend an HTML page to include:\nImages <img>\nHyperlinks <a href>",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain the basic commands in the LMC’s assembly code: INP, OUT, STA, LDA, ADD, SUB, and BRP",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe how subroutines are used for decomposition",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a substring in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the types of testing (erroneous, boundary, normal)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use procedures that accept arguments through parameters",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the difference between algorithms and computer programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Determine the good habits of a programmer",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To modify an infinite loop in a given program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a program using my own design",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design and build a program using pseudocode",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that programming projects can have code and artwork",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Explain the advantages of the structured approach",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the need for lists",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Demonstrate inheritance, deriving a new class (subclass) from an existing one (superclass)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To use an conditional statement to compare a variable to a value",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Output data (e.g. print (my_var))",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform common operations on strings or individual characters",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Perform searching and sorting algorithms on samples of data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that formula can be used to produce calculated data",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a data structure",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Apply knowledge of CSS to DIVs within web pages using classes",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Combine key programming language features to develop solutions to meaningful problems",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To conclude that a loop can be used to repeatedly check whether a condition has been met",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Detect and correct errors in a program (debugging)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify flowchart symbols and describe how to use them (start, end, input, output, subroutine)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe the need for iteration",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a 2D list as part of a programming challenge",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define aggregation and apply it in practice",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a 2D list in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Independently design and apply programming constructs to solve a problem (subroutine, selection, count-controlled iteration, operators, and variables)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To develop a design that includes two or more loops which run at the same time",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use list methods",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write simple Python programs that display messages, assign values to variables, and receive keyboard input",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Modify a program to include selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create a simple web page using basic tags",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Implement conditional formatting techniques",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Extend/finish the assessed website",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Demonstrate how to use formulae to perform calculations",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a project that includes repetition",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify where selection statements can be used in a program that include comparison and logical operators",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a controllable system that includes selection",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design a project that includes repetition",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To use my algorithm to create a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use randomisation to append items to a list",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Traverse a list of elements",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To decompose a program into parts",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain what ‘repeat’ means",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To use my design to create a project",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a sequence as instructions performed in order, with each executed in turn",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create hyperlinks to allow users to navigate between multiple web pages",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create conditions that use logic operators (and/or/not)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Create hyperlinks between pages stored locally within a folder",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that selection can control the flow of a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To develop a program to use inputs and outputs on a controllable device",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Recognise that events can control the flow of a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Recognise that computers follow the control flow of input/process/output",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a list as a collection of related elements that are referred to by a single name",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a for loop",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Assess the benefits of using CSS to style pages instead of in-line formatting",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design and create a maze-based challenge",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Walkthrough code that includes selection (if, elif, else)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To develop my program by adding features",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain how selection is used in computer programs",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use basic formulas with cell references to perform calculations in a spreadsheet (+, -, *, /)",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe how Boolean/logical operators can be used in expressions",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use user input in a block-based programming language",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use simple arithmetic expressions in assignment statements to calculate values",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define a condition as an expression that will be evaluated as either true or false",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Write programs that communicate with other devices by sending and receiving messages wirelessly",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To create a project from a task description",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Design and create pages for a mini website",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To design a project that builds on a given example",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To develop the use of count-controlled loops in a different programming environment",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that a sequence of commands has an outcome",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Determine the need for variables",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To relate that a conditional statement connects a condition to an outcome",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify where count-controlled iteration can be used in a program",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify strategies to reduce the chance of a brute force attack being successful",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "To explain that in programming there are infinite loops and count-controlled loops",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe how machine learning differs from traditional programming",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use variables in a block-based programming language",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Identify and fix common coding errors",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Apply all of the spreadsheet skills covered in this unit",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Describe why translators are necessary",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Define encapsulation and understand how to apply it",
+    "abbreviation": "PG"
+  },
+  {
+    "objective": "Use a block-based programming language to include sequencing and selection",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use proportional editing",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Add, move, and delete keyframes to make basic animations",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use a material to add colour to objects",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create a pictogram",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use variables in an event-driven programming environment",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Edit path nodes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To design a digital model by combining 3D objects",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To select objects by attribute and make comparisons",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Collect data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create music for a purpose",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a Gantt chart",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To consider the impact of the choices made when making and sharing a video",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use a spreadsheet to sort and filter data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain how a sprite moves in an existing project",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To make careful choices when painting a digital picture",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Import third-party libraries",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To review and refine our computer work",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Identify the most effective methods to prevent cyberattacks",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Implement formatting to make the spreadsheet readable and to highlight different specific information",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use search technologies effectively",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To change the composition of an image",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To evaluate different methods of online communication",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a digital device to collect data automatically",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Compare different render modes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Justify the selection of communication platforms",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a spreadsheet model for a given scenario",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To describe what different freehand tools do",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Recognise methods of creating a network when mobile or remote working",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Join multiple objects together using parenting",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Compare planning tools available for pre-production",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Complete a summative assessment",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To decide how photographs can be improved",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Select appropriate images for a given context",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate design decisions for media artefacts",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify the data needed to answer questions",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Apply the key features of a word processor to format a document",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To make choices when taking a photograph",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Format cells correctly, e.g. cells representing money should be currency, etc.",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create a program in a text-based language",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explore a new programming environment",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create media artefacts",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Implement a LOOKUP function to retrieve data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Describe the need for data cleansing",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use the functions SUM, COUNTA, MAX, and MIN in a spreadsheet",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Develop a partially complete application to include additional functionality",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Think widely about the uses for and purposes of spreadsheets",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use a block-based programming language to create a sequence",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Identify the resources required for creating digital graphics",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To consider how different layouts can suit different purposes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Draw paths",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use user input in an event-driven programming environment",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Identify the key features of a word processor",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To apply formulas to data, including duplicating",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Describe the tools an IDE provides (editors, error diagnostics, runtime environment, translators)",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Explore communication tools",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To compare writing on a computer with writing on paper",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use conditional formatting in a spreadsheet",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To outline the need for a navigation path",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a positive working environment",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate collaborative working",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Plan effective presentations for a given audience",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use loop cut and face editing",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use subdivision",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify objects using a branching database",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify the need to work consistently and carefully",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use data collected over a long duration to find information",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create a spreadsheet to plan an event",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Utilise the software required for digital video creation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a computer to write",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise the need to preview pages",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To add and remove text on a computer",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Convert objects to paths",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate formatting techniques to understand why we format documents",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create a vector drawing by combining shapes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify that physical objects can be broken down into a collection of 3D shapes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Be able to locate information using the language documentation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To group objects to make them easier to work with",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Apply different colours to different parts of the same model",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Add, delete, and move objects",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create a program to move a sprite in four directions",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Find personal documents and common applications",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use a development environment to write, execute, and debug a Python program for the micro:bit",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise that photos can be changed",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To construct a digital 3D model of a physical object",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that animation is a sequence of drawings or photographs",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that a data logger collects ‘data points’ from sensors over time",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create a branching database",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a 3–10 second animation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that tools can be used to select specific data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Implement and test a macro to carry out a repetitive task",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use guizero to create an event-driven program that uses a GUI",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use formatting techniques in a spreadsheet",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate effective online communication",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To relate animated movement with a sequence of images",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Check who you are talking to online",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Design the layout of the content to make it suitable for the audience",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create appropriate charts in a spreadsheet",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a computer on my own to paint a picture",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify how to use a search engine",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use the functions AVERAGE, COUNTIF, and IF in a spreadsheet",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To choose suitable ways to present data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Construct an effective email and send it to the correct recipients",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Scale and rotate objects",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To add content to a desktop publishing publication",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Implement an IF function to give the user feedback",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that audio can be changed through editing:",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To evaluate different ways of working together online",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Manipulate individual objects (select, move, resize, rotate, duplicate, flip, z-order)",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Plan a digital media artefact from a selected client brief",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify that drawing tools can be used to produce different outcomes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Select the most appropriate software to use to complete a task",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a multi-page website using open source tools",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise that vector drawings consist of layers",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Manipulate groups of objects (select, group/ungroup, align, distribute)",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To make careful choices when changing text",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Combine multiple tools and techniques to create a vector graphic design",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a keyboard to type",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that we can present information using a computer",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To make good choices when selecting different tools",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Perform basic image editing tasks using appropriate software and combine them in order to solve more complex problems requiring image manipulation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a form to record information",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a PERT chart",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use an appropriate software tool to visualise data sets and look for patterns or trends",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Organise the content of blog based on credible sources",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain why it is helpful for a database to be well structured",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise the implications of linking to content owned by other people",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To compare painting a picture on a computer and on paper",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Play, pause, and move through the animation using the timeline",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a mouse in different ways",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To apply my knowledge of a database to ask and answer real-world questions",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Implement and customise GUI elements to meet the needs of the user",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Set up the camera",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Add and edit set lighting",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use tools to change an image",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Formulate a proposal that identifies essential skills for the modern workplace",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Recall collaboration and communication platforms",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Apply appropriate formatting techniques",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise why the order of results is important, and to whom",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that a digital recording is stored as a file:",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use the autofill tool to replicate cell data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To review and improve an animation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise how we communicate using technology",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use the knife tool",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise that not all images are real",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify that the look of text can be changed on a computer",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To identify that video can be improved through reshooting and editing",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a digital device to record sound:",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Utilise open source software to create both types of digital graphics",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise that text and layout can be edited",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Construct a blog using appropriate software",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Discuss the impact of search technologies and the issues that arise by the way they function and the way they are used",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create a memorable and secure password for an account on the school network",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use the shape tool and the line tools",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Determine the good habits of a programmer",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To show that different types of audio can be combined and played together:",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To evaluate how changes can improve an image",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use a computer to create and manipulate three-dimensional (3D) digital objects",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Select the most suitable chart to visualise the selected data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Render out the animation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that formula can be used to produce calculated data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To choose appropriate page settings",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To create rules for using technology responsibly",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To compare working digitally with 2D and 3D graphics",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Analyse data",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Draw basic shapes (rectangle, ellipse, polygon, star) with different properties (fill and stroke, shape-specific attributes)",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To develop and improve a digital 3D model",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use edit mode and extrude",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise the features of an effective video",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Organise the content of the blog based on credible sources",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise that objects can be represented as pictures",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Implement conditional formatting techniques",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Demonstrate how to use formulae to perform calculations",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To describe how images can be changed for different uses",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create an appropriate spreadsheet for a project",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Apply cell formatting",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain why I chose the tools I used",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that computer programs can be used to compare data visually",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use tools to achieve a desired effect",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use data validation when entering data in order to reduce user error",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Recognise the importance of clear titles and labels",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Recognise a respectful email",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate the impact of physical well-being on individuals",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Perform basic sound editing tasks using appropriate software and combine them in order to solve more complex problems requiring sound manipulation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Assess the benefits of using CSS to style pages instead of in-line formatting",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate the impact of mental well-being on individuals",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To recognise that people can be described by attributes",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To describe how search engines select results",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Describe how to communicate with peers online",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Identify columns, rows, cells, and cell references in spreadsheet software",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Evaluate a spreadsheet",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain that digital images can be changed",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To evaluate the impact of adding other media to an animation",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use basic formulas with cell references to perform calculations in a spreadsheet (+, -, *, /)",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use user input in a block-based programming language",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Combine paths by applying operations (union, difference, intersection)",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To use the keyboard to edit text",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain how search results are ranked",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Create useful names for objects",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To contribute to a shared project online",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To consider the benefits of desktop publishing",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Use variables in a block-based programming language",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Identify and fix common coding errors",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Apply all of the spreadsheet skills covered in this unit",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "To explain why I used the tools that I chose",
+    "abbreviation": "ET"
+  },
+  {
+    "objective": "Examine how different types of malware causes problems for computer systems",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Define online reputation and discuss what it is made up of",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain how a DDoS attack can impact users of online services",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Apply knowledge of cybersecurity to GCSE-style questions",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Identify the most effective methods to prevent cyberattacks",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Identify ways to protect one’s data online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Recognise how human errors pose security risks to data",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Evaluate the advantages and disadvantages of ad hoc networks",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain how data is collected on and how it is used",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "List the common malware threats",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain a number of methods of achieving network security",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss techniques on how to build a positive online reputation",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain how networks can be protected from common security threats",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Evaluate the security of using the cloud for storage and document/data creation",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe the features of a network that make it vulnerable to attack",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe ways in which organisations use software to protect against cyberattacks",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Recognise the legislation regarding use of digital graphics",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss the ways in which one’s online reputation might be under threat and how to defend it",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss why policing online spaces can be difficult",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Define terms ‘phishing’ and ‘malware’",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To evaluate the consequences of unreliable content",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Reflect on online activity from a safety perspective",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain the need for the Computer Misuse Act",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Identify how software can be used to protect from cyber attacks",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss issues of safety and security from a technological perspective",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Compare security threats against probability and the potential impact to organisations",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Evaluate the potential for cybersecurity careers",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Critique online services in relation to data privacy",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Determine practical actions that can be made to protect oneself online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Demonstrate knowledge of social engineering in role playing and case studies",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Identify and describe non-automated forms of cyberattack and learn how humans can be the weak points in an organisation",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To recognise the uses and features of information technology",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To recognise that choices are made when using information technology",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain why networks are a target for criminals, and what some of the tools available to defend against attacks are",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss how we decide what content should be illegal",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To capture video using a digital device",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Define hacking in the context of cyber security",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Check who you are talking to online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss the main safety concerns of being online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss ways in which data might be stolen",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain the need for the Data Protection Act",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Summarise key aspects of online safety",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain the need for, and the importance of, network security",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe different methods of identifying cybersecurity vulnerabilities, such as \npenetration testing\nethical hacking\nnetwork forensics\ncommercial analysis tools\nreview of network and user policies \n",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To show how to use information technology safely",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Remember the rules of the computing lab",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To explain that we can present information using a computer",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Define the terms cybersecurity and network security, explain their importance, and distinguish between the two",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Implement strategies to minimise the risk of data being compromised through human error",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To describe how networks physically connect to other networks",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Demonstrate knowledge of social engineering in role play and case studies",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To recognise that not all images are real",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Identify what happens to data entered online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Analyse a real cyberattack and identify the network or software weaknesses that enabled it to happen",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe automated forms of cyberattack",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss the impact of search technologies and the issues that arise by the way they function and the way they are used",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Create a memorable and secure password for an account on the school network",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Judge the security of ad hoc networks",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To create rules for using technology responsibly",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe how internet-connected devices can affect me",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "To consider the ownership and use of images (copyright)",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Analyse an attack on a company and identify what motivated the hackers",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Explain the effects of cyberbullying",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss the impact this might have on different people’s online experiences and the potential disadvantages of living in an online bubble",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Recognise a respectful email",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Contemplate the potential harms of being online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe how to communicate with peers online",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Debate the right to access information in the context of safety concerns online already discussed in this unit",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe cyberbullying",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Demonstrate how to report illegal online content",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Discuss the impact of networking technologies and services",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Analyse a real cyberattack and identify the network or software weaknesses that enabled it to happen",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Describe the impact of cybercrime on businesses and individuals",
+    "abbreviation": "SS"
+  },
+  {
+    "objective": "Identify strategies to reduce the chance of a brute force attack being successful",
+    "abbreviation": "SS"
+  }
+]

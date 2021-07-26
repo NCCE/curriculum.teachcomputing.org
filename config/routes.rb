@@ -32,7 +32,8 @@ Rails.application.routes.draw do
     end
     resources :curriculum_maps, except: :index
     resources :taxonomy_tags
-    resources :learning_objectives, only: %i[show]
+    resources :learning_objectives, only: %i[index show]
+    resources :success_criteria, only: %i[show]
     root to: 'units#index'
   end
 end
