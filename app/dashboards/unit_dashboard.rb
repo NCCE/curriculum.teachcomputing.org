@@ -51,6 +51,7 @@ class UnitDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
+    national_curriculum_statements: Field::HasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -78,6 +79,7 @@ class UnitDashboard < Administrate::BaseDashboard
     rubrics
     summative_assessments
     summative_answers
+    national_curriculum_statements
     created_at
     updated_at
   ].freeze
@@ -94,6 +96,7 @@ class UnitDashboard < Administrate::BaseDashboard
     rubrics
     summative_assessments
     summative_answers
+    national_curriculum_statements
   ].freeze
 
   # COLLECTION_FILTERS

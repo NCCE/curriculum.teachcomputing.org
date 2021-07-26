@@ -5,6 +5,7 @@ class Unit < ApplicationRecord
 
   has_many :lessons, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
+  has_and_belongs_to_many :national_curriculum_statements
 
   belongs_to :year_group
 

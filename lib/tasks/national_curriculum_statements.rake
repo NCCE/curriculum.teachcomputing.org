@@ -1,9 +1,32 @@
 namespace :national_curriculum_statements do
   desc 'add national curriculum statements to database'
   task populate: :environment do
-
-
+    statements.each do |statement|
+      NationalCurriculumStatement.find_or_create_by(number: statement[:number], statement: statement[:statement])
+    end
   end
+
+  desc 'link national curriculum statements to relevant units'
+  task link: :environment do
+    failed_count = 0
+    failed = []
+    data_hash = JSON.parse(File.read('TCC-nco-mapping.json'))
+
+    data_hash.each do |entry|
+      unit = Unit.find_by(slug: entry['unit_slug'])
+
+      if unit.present?
+        statement = NationalCurriculumStatement.find_by(number: entry['statement_no'])
+        unit.national_curriculum_statements << statement
+      else
+        failed_count += 1
+        puts "Failed linking: #{entry['unit_slug']}, #{entry['statement_no']}"
+      end
+    end
+
+    puts "Total failed: #{failed_count}"
+  end
+
 
   def statements
     [

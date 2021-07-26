@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_16_131823) do
+ActiveRecord::Schema.define(version: 2021_07_26_141815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -115,6 +115,22 @@ ActiveRecord::Schema.define(version: 2021_07_16_131823) do
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
 
+  create_table "national_curriculum_statements", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "number"
+    t.text "statement"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "national_curriculum_statements_units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "national_curriculum_statement_id", null: false
+    t.uuid "unit_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["national_curriculum_statement_id"], name: "index_on_statement_id"
+    t.index ["unit_id"], name: "index_on_unit_id"
+  end
+
   create_table "ratings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "aggregate_rating_id", null: false
     t.boolean "positive", null: false
@@ -176,6 +192,8 @@ ActiveRecord::Schema.define(version: 2021_07_16_131823) do
   add_foreign_key "downloads", "aggregate_downloads"
   add_foreign_key "learning_objectives_taxonomy_tags", "learning_objectives"
   add_foreign_key "learning_objectives_taxonomy_tags", "taxonomy_tags"
+  add_foreign_key "national_curriculum_statements_units", "national_curriculum_statements"
+  add_foreign_key "national_curriculum_statements_units", "units"
   add_foreign_key "ratings", "aggregate_ratings"
   add_foreign_key "success_criteria", "learning_objectives"
 end

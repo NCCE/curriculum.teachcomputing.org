@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     resources :taxonomy_tags
     resources :learning_objectives, only: %i[index show edit]
     resources :success_criteria, only: %i[show]
+    resources :national_curriculum_statements
     root to: 'units#index'
   end
 end
