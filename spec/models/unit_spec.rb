@@ -201,4 +201,28 @@ RSpec.describe Unit, type: :model do
       end
     end
   end
+
+  describe '#primary?' do
+    it 'returns true if key stage is primary' do
+      unit = build(:primary_unit)
+      expect(unit.primary?).to eq(true)
+    end
+
+    it 'returns false if key stage is secondary' do
+      unit = build(:secondary_unit)
+      expect(unit.primary?).to eq(false)
+    end
+  end
+
+  describe '#secondary?' do
+    it 'returns false if key stage is primary' do
+      unit = build(:primary_unit)
+      expect(unit.secondary?).to eq(false)
+    end
+
+    it 'returns true if key stage is secondary' do
+      unit = build(:secondary_unit)
+      expect(unit.secondary?).to eq(true)
+    end
+  end
 end

@@ -33,6 +33,14 @@ class KeyStage < ApplicationRecord
     "Key Stage #{level}"
   end
 
+  def primary?
+    %w[1 2].include?(level)
+  end
+
+  def secondary?
+    %w[3 4].include?(level)
+  end
+
   private
 
     def notify_update

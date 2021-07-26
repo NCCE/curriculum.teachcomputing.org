@@ -23,5 +23,13 @@ FactoryBot.define do
         )
       end
     end
+
+    factory :primary_unit do
+      year_group factory: :primary_year_group
+    end
+
+    factory :secondary_unit do
+      year_group factory: :secondary_year_group
+    end
   end
 end

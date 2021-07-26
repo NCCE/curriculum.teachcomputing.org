@@ -1,6 +1,6 @@
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
-class LessonDashboard < Administrate::BaseDashboard
+class TaxonomyTagDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,25 +8,13 @@ class LessonDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    unit: Field::BelongsTo.with_options(
-      order: 'title ASC'
-    ),
-    zipped_contents: Field::ActiveStorage.with_options(
-      show_display_preview: false,
-      direct_upload: true,
-      destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_lesson_zipped_contents, { attachment_id: attachment.id,
-                                          lesson_id: resource.id }]
-      end
-    ),
-    slug: Field::String,
-    id: Field::String.with_options(searchable: false),
-    title: Field::String,
-    objectives: Field::Text,
+    learning_objectives: Field::HasMany,
+    id: Field::String,
+    strand: Field::String,
+    abbreviation: Field::String,
     description: Field::Text,
-    learning_objectives: Field::NestedHasMany,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime
+    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -35,20 +23,18 @@ class LessonDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    title
-    description
-    unit
+    strand
+    abbreviation
+    learning_objectives
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    title
+    strand
+    abbreviation
     description
-    objectives
-    unit
     learning_objectives
-    zipped_contents
     created_at
     updated_at
   ].freeze
@@ -57,12 +43,10 @@ class LessonDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    title
-    description
-    unit
-    objectives
     learning_objectives
-    zipped_contents
+    strand
+    abbreviation
+    description
   ].freeze
 
   # COLLECTION_FILTERS
@@ -77,10 +61,10 @@ class LessonDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how lessons are displayed
+  # Overwrite this method to customize how taxonomy tags are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(lesson)
-    lesson.title
+  def display_resource(taxonomy_tag)
+    "TaxonomyTag - #{taxonomy_tag.strand}"
   end
 end

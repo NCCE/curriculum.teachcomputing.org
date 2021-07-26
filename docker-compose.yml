@@ -56,12 +56,9 @@ services:
       - PROXY_URL=http://host.docker.internal:8888
       - RAILS_DEV_DB_PASS=${DEV_PASS}
       - REDIS_URL=redis://redis:6379/1
-      - DISABLE_CACHE_INVALIDATION=true
     stdin_open: true
     tty: true # Allow interactive byebug sessions.
     restart: unless-stopped
-    env_file:
-      - .env
 volumes:
   bundle:
   pg-data:

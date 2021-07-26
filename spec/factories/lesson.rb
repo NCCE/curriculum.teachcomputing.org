@@ -10,5 +10,13 @@ FactoryBot.define do
         create(:published_state, stateable: lesson)
       end
     end
+
+    factory :primary_lesson do
+      unit factory: :primary_unit
+    end
+
+    factory :secondary_lesson do
+      unit factory: :secondary_unit
+    end
   end
 end

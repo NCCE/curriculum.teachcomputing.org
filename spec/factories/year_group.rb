@@ -8,5 +8,13 @@ FactoryBot.define do
         create(:published_state, stateable: year_group)
       end
     end
+
+    factory :primary_year_group do
+      key_stage factory: :primary_key_stage
+    end
+
+    factory :secondary_year_group do
+      key_stage factory: :secondary_key_stage
+    end
   end
 end

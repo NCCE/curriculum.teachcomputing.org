@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_17_134927) do
+ActiveRecord::Schema.define(version: 2021_07_16_131823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_134927) do
     t.uuid "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["key_stage_id"], name: "index_curriculum_map_on_key_stage_id"
+    t.index ["key_stage_id"], name: "index_curriculum_maps_on_key_stage_id"
   end
 
   create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -81,6 +81,23 @@ ActiveRecord::Schema.define(version: 2021_05_17_134927) do
     t.string "years"
     t.string "slug"
     t.index ["slug"], name: "index_key_stages_on_slug", unique: true
+  end
+
+  create_table "learning_objectives", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.text "description", null: false
+    t.uuid "lesson_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lesson_id"], name: "index_learning_objectives_on_lesson_id"
+  end
+
+  create_table "learning_objectives_taxonomy_tags", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "taxonomy_tag_id", null: false
+    t.uuid "learning_objective_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_objective_id"], name: "index_on_learning_objective_id"
+    t.index ["taxonomy_tag_id"], name: "index_on_taxonomy_tag_id"
   end
 
   create_table "lessons", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -117,6 +134,22 @@ ActiveRecord::Schema.define(version: 2021_05_17_134927) do
     t.string "stateable_type"
   end
 
+  create_table "success_criteria", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "description", null: false
+    t.uuid "learning_objective_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_objective_id"], name: "index_success_criteria_on_learning_objective_id"
+  end
+
+  create_table "taxonomy_tags", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "strand", null: false
+    t.string "abbreviation", null: false
+    t.text "description", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -141,5 +174,8 @@ ActiveRecord::Schema.define(version: 2021_05_17_134927) do
   end
 
   add_foreign_key "downloads", "aggregate_downloads"
+  add_foreign_key "learning_objectives_taxonomy_tags", "learning_objectives"
+  add_foreign_key "learning_objectives_taxonomy_tags", "taxonomy_tags"
   add_foreign_key "ratings", "aggregate_ratings"
+  add_foreign_key "success_criteria", "learning_objectives"
 end
