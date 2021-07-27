@@ -1,0 +1,738 @@
+[
+  {
+    "unit_slug": "computing-systems-and-networks-technology-around-us",
+    "statement_no": 1.50
+  },
+  {
+    "unit_slug": "creating-media-digital-photography",
+    "statement_no": 1.50
+  },
+  {
+    "unit_slug": "programming-a-moving-a-robot",
+    "statement_no": 1.50
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-it-around-us",
+    "statement_no": 1.50
+  },
+  {
+    "unit_slug": "mobile-app-development",
+    "statement_no": 3.10
+  },
+  {
+    "unit_slug": "introduction-to-python-programming",
+    "statement_no": 3.10
+  },
+  {
+    "unit_slug": "modelling-data-spreadsheets",
+    "statement_no": 3.10
+  },
+  {
+    "unit_slug": "physical-computing",
+    "statement_no": 3.10
+  },
+  {
+    "unit_slug": "python-programming-with-sequences-of-data",
+    "statement_no": 3.10
+  },
+  {
+    "unit_slug": "programming-a-sequence-in-music",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-b-repetition-in-games",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-b-events-and-actions",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-a-repetition-in-shapes",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-a-selection-in-physical-computing",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-b-sensing",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "data-and-information-data-logging",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-sharing-information",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-connecting-computers",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-a-variables-in-games",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "programming-b-selection-in-quizzes",
+    "statement_no": 2.20
+  },
+  {
+    "unit_slug": "media-vector-graphics",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-i",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-ii",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "media-animations",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "mobile-app-development",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "developing-for-the-web",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "using-media-gaining-support-for-a-cause",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "impact-of-technology-collaborating-online-respectfully",
+    "statement_no": 3.80
+  },
+  {
+    "unit_slug": "programming-a-sequence-in-music",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-b-repetition-in-games",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-b-events-and-actions",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-a-repetition-in-shapes",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-a-selection-in-physical-computing",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-b-sensing",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-communication",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-sharing-information",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-a-variables-in-games",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "programming-b-selection-in-quizzes",
+    "statement_no": 2.10
+  },
+  {
+    "unit_slug": "online-safety",
+    "statement_no": 4.30
+  },
+  {
+    "unit_slug": "security",
+    "statement_no": 4.30
+  },
+  {
+    "unit_slug": "computer-systems",
+    "statement_no": 4.30
+  },
+  {
+    "unit_slug": "computing-systems",
+    "statement_no": 3.60
+  },
+  {
+    "unit_slug": "introduction-to-python-programming",
+    "statement_no": 3.60
+  },
+  {
+    "unit_slug": "representations-going-audiovisual",
+    "statement_no": 3.60
+  },
+  {
+    "unit_slug": "representations-from-clay-to-silicon",
+    "statement_no": 3.60
+  },
+  {
+    "unit_slug": "physical-computing",
+    "statement_no": 3.60
+  },
+  {
+    "unit_slug": "python-programming-with-sequences-of-data",
+    "statement_no": 3.60
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-i",
+    "statement_no": 3.30
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-ii",
+    "statement_no": 3.30
+  },
+  {
+    "unit_slug": "mobile-app-development",
+    "statement_no": 3.30
+  },
+  {
+    "unit_slug": "introduction-to-python-programming",
+    "statement_no": 3.30
+  },
+  {
+    "unit_slug": "physical-computing",
+    "statement_no": 3.30
+  },
+  {
+    "unit_slug": "python-programming-with-sequences-of-data",
+    "statement_no": 3.30
+  },
+  {
+    "unit_slug": "programming-a-robot-algorithms",
+    "statement_no": 1.10
+  },
+  {
+    "unit_slug": "programming-b-introduction-to-animation",
+    "statement_no": 1.10
+  },
+  {
+    "unit_slug": "programming-a-moving-a-robot",
+    "statement_no": 1.10
+  },
+  {
+    "unit_slug": "programming-b-an-introduction-to-quizzes",
+    "statement_no": 1.10
+  },
+  {
+    "unit_slug": "creating-media-video-editing",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "creating-media-web-page-creation",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "creating-media-3d-modelling",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-communication",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-sharing-information",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-the-internet",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "creating-media-audio-editing",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "creating-media-animation",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "creating-media-photo-editing",
+    "statement_no": 2.70
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-i",
+    "statement_no": 3.40
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-ii",
+    "statement_no": 3.40
+  },
+  {
+    "unit_slug": "computing-systems",
+    "statement_no": 3.40
+  },
+  {
+    "unit_slug": "data-and-information-flat-file-databases",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "creating-media-video-editing",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "creating-media-web-page-creation",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-communication",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-the-internet",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "creating-media-audio-editing",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "creating-media-desktop-publishing",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "creating-media-photo-editing",
+    "statement_no": 2.50
+  },
+  {
+    "unit_slug": "programming-a-robot-algorithms",
+    "statement_no": 1.30
+  },
+  {
+    "unit_slug": "programming-b-introduction-to-animation",
+    "statement_no": 1.30
+  },
+  {
+    "unit_slug": "programming-a-moving-a-robot",
+    "statement_no": 1.30
+  },
+  {
+    "unit_slug": "programming-b-an-introduction-to-quizzes",
+    "statement_no": 1.30
+  },
+  {
+    "unit_slug": "impact-of-technology-collaborating-online-respectfully",
+    "statement_no": 3.90
+  },
+  {
+    "unit_slug": "cybersecurity",
+    "statement_no": 3.90
+  },
+  {
+    "unit_slug": "data-representations",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "databases-and-sql",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "html",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "algorithms-part-1",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "media",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "spreadsheets",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "impacts-of-technology",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "programming-part-5-strings-and-lists",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "programming-part-2-selection",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "object-oriented-programming",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "networks",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "programming-part-3-iteration",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "it-and-the-world-of-work",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "programming-part-6-dictionaries-and-datafiles",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "it-project-management",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "programming-part-1-sequence",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "algorithms-part-2",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "security",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "computer-systems",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "programming-part-4-subroutines",
+    "statement_no": 4.10
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-technology-around-us",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "creating-media-digital-painting",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "creating-media-making-music",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "programming-a-robot-algorithms",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "programming-b-introduction-to-animation",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "data-and-information-pictograms",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "data-and-information-grouping-data",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "creating-media-digital-photography",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "creating-media-digital-writing",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-it-around-us",
+    "statement_no": 1.40
+  },
+  {
+    "unit_slug": "media-vector-graphics",
+    "statement_no": 3.70
+  },
+  {
+    "unit_slug": "data-science",
+    "statement_no": 3.70
+  },
+  {
+    "unit_slug": "using-media-gaining-support-for-a-cause",
+    "statement_no": 3.70
+  },
+  {
+    "unit_slug": "modelling-data-spreadsheets",
+    "statement_no": 3.70
+  },
+  {
+    "unit_slug": "data-representations",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "html",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "algorithms-part-1",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "spreadsheets",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "programming-part-5-strings-and-lists",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "programming-part-2-selection",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "object-oriented-programming",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "programming-part-3-iteration",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "programming-part-6-dictionaries-and-datafiles",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "it-project-management",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "programming-part-1-sequence",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "algorithms-part-2",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "computer-systems",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "programming-part-4-subroutines",
+    "statement_no": 4.20
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-communication",
+    "statement_no": 2.40
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-sharing-information",
+    "statement_no": 2.40
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-the-internet",
+    "statement_no": 2.40
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-connecting-computers",
+    "statement_no": 2.40
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-technology-around-us",
+    "statement_no": 1.60
+  },
+  {
+    "unit_slug": "data-and-information-pictograms",
+    "statement_no": 1.60
+  },
+  {
+    "unit_slug": "data-and-information-grouping-data",
+    "statement_no": 1.60
+  },
+  {
+    "unit_slug": "creating-media-digital-photography",
+    "statement_no": 1.60
+  },
+  {
+    "unit_slug": "creating-media-digital-writing",
+    "statement_no": 1.60
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-it-around-us",
+    "statement_no": 1.60
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-i",
+    "statement_no": 3.20
+  },
+  {
+    "unit_slug": "programming-essentials-in-scratch-part-ii",
+    "statement_no": 3.20
+  },
+  {
+    "unit_slug": "mobile-app-development",
+    "statement_no": 3.20
+  },
+  {
+    "unit_slug": "introduction-to-python-programming",
+    "statement_no": 3.20
+  },
+  {
+    "unit_slug": "physical-computing",
+    "statement_no": 3.20
+  },
+  {
+    "unit_slug": "python-programming-with-sequences-of-data",
+    "statement_no": 3.20
+  },
+  {
+    "unit_slug": "computing-systems",
+    "statement_no": 3.50
+  },
+  {
+    "unit_slug": "networks-from-semaphores-to-the-internet",
+    "statement_no": 3.50
+  },
+  {
+    "unit_slug": "programming-a-robot-algorithms",
+    "statement_no": 1.20
+  },
+  {
+    "unit_slug": "programming-b-introduction-to-animation",
+    "statement_no": 1.20
+  },
+  {
+    "unit_slug": "programming-a-moving-a-robot",
+    "statement_no": 1.20
+  },
+  {
+    "unit_slug": "programming-b-an-introduction-to-quizzes",
+    "statement_no": 1.20
+  },
+  {
+    "unit_slug": "programming-a-sequence-in-music",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-b-events-and-actions",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-a-repetition-in-shapes",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "data-and-information-flat-file-databases",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-a-selection-in-physical-computing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-b-sensing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-video-editing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-web-page-creation",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "data-and-information-data-logging",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-3d-modelling",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-communication",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-sharing-information",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-the-internet",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "computing-systems-and-networks-connecting-computers",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "data-and-information-branching-databases",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "data-and-information-spreadsheets",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-audio-editing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-desktop-publishing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-animation",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-vector-drawing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-a-variables-in-games",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "creating-media-photo-editing",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-b-selection-in-quizzes",
+    "statement_no": 2.60
+  },
+  {
+    "unit_slug": "programming-a-sequence-in-music",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-b-repetition-in-games",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-b-events-and-actions",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-a-repetition-in-shapes",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-a-selection-in-physical-computing",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-b-sensing",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-a-variables-in-games",
+    "statement_no": 2.30
+  },
+  {
+    "unit_slug": "programming-b-selection-in-quizzes",
+    "statement_no": 2.30
+  }
+]
