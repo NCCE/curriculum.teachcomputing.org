@@ -52,6 +52,7 @@ class UnitDashboard < Administrate::BaseDashboard
     title: Field::String,
     description: Field::Text,
     national_curriculum_statements: Field::HasMany,
+    connected_world_strands: Field::HasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -65,6 +66,8 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     year_group
+    national_curriculum_statements
+    connected_world_strands
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -80,6 +83,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     national_curriculum_statements
+    connected_world_strands
     created_at
     updated_at
   ].freeze
@@ -97,6 +101,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     national_curriculum_statements
+    connected_world_strands
   ].freeze
 
   # COLLECTION_FILTERS

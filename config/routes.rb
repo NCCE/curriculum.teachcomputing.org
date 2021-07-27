@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     resources :learning_objectives, only: %i[index show edit update]
     resources :success_criteria, only: %i[show]
     resources :national_curriculum_statements
+    resources :connected_world_strands
     root to: 'units#index'
   end
 end

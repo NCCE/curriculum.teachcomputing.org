@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_26_141815) do
+ActiveRecord::Schema.define(version: 2021_07_27_100428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -53,6 +53,20 @@ ActiveRecord::Schema.define(version: 2021_07_26_141815) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "rateable_id"
     t.string "rateable_type"
+  end
+
+  create_table "connected_world_strands", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "strand"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "connected_world_strands_units", id: false, force: :cascade do |t|
+    t.uuid "connected_world_strand_id", null: false
+    t.uuid "unit_id", null: false
+    t.index ["connected_world_strand_id"], name: "index_on_strand_id"
+    t.index ["unit_id"], name: "index_strand_on_unit_id"
   end
 
   create_table "curriculum_maps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -189,6 +203,8 @@ ActiveRecord::Schema.define(version: 2021_07_26_141815) do
     t.index ["slug"], name: "index_year_groups_on_slug", unique: true
   end
 
+  add_foreign_key "connected_world_strands_units", "connected_world_strands"
+  add_foreign_key "connected_world_strands_units", "units"
   add_foreign_key "downloads", "aggregate_downloads"
   add_foreign_key "learning_objectives_taxonomy_tags", "learning_objectives"
   add_foreign_key "learning_objectives_taxonomy_tags", "taxonomy_tags"

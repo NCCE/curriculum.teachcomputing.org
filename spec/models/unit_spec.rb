@@ -13,6 +13,7 @@ RSpec.describe Unit, type: :model do
     it { is_expected.to have_many(:lessons) }
     it { is_expected.to have_many(:aggregate_downloads) }
     it { is_expected.to have_and_belong_to_many(:national_curriculum_statements) }
+    it { is_expected.to have_and_belong_to_many(:connected_world_strands) }
   end
 
   describe 'validations' do
