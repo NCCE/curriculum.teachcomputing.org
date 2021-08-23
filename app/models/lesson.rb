@@ -53,5 +53,4 @@ class Lesson < ApplicationRecord
     def notify_update
       UpdateNotifier.new([unit]).run
     end
-
 end
