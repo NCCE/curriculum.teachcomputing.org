@@ -9,7 +9,7 @@ module Types
     field :total_positive, Integer, null: true
     field :total_negative, Integer, null: true
     field :zipped_contents, String, null: true
-    field :learning_objectives, [Types::LearningObjective], null: true
+    field :learning_objectives, [Types::LearningObjectiveType], null: true
 
     def zipped_contents
       url_for(object.zipped_contents) if object.zipped_contents.attachment
