@@ -11,6 +11,16 @@ module Types
     field :description, String, null: false
     field :year_groups, [Types::YearGroupType], null: true, method: :published_year_groups
     field :curriculum_maps, [Types::CurriculumMapType], null: true
+    field :lesson_count, Integer, null: true
+    field :unit_count, Integer, null: true
+
+    def unit_count
+      KeyStage.where(id: object.id).joins(year_groups:  :units).count
+    end
+
+    def lesson_count
+      KeyStage.where(id: object.id).joins(year_groups: [{units: :lessons}]).count
+    end
 
     def teacher_guide
       url_for(object.teacher_guide) if object.teacher_guide.attachment
