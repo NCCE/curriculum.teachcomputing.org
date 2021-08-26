@@ -1,13 +1,13 @@
 module Types
   class QueryType < BaseObject
-    field :year_groups, [Types::YearGroupType], null: true
-    field :key_stages, [Types::KeyStageType], null: true
-    field :lessons, [Types::LessonType], null: true
-    field :units, [Types::UnitType], null: true
+    # Key stages
 
-    field :year_group, Types::YearGroupType, null: true do
-      argument :id, ID, required: false
-      argument :slug, String, required: false
+    field :key_stages, [Types::KeyStageType], null: true do
+      argument :limit, Integer, required: false
+    end
+
+    def key_stages(**args)
+      KeyStage.published.ordered.limit(args[:limit])
     end
 
     field :key_stage, Types::KeyStageType, null: true do
@@ -15,9 +15,37 @@ module Types
       argument :slug, String, required: false
     end
 
-    field :lesson, Types::LessonType, null: true do
+    def key_stage(**args)
+      find_record(KeyStage, args)
+    end
+
+    # Year groups
+
+    field :year_groups, [Types::YearGroupType], null: true do
+      argument :limit, Integer, required: false
+    end
+
+    def year_groups(**args)
+      YearGroup.published.limit(args[:limit])
+    end
+
+    field :year_group, Types::YearGroupType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
+    end
+
+    def year_group(**args)
+      find_record(YearGroup, args)
+    end
+
+    # Units
+
+    field :units, [Types::UnitType], null: true do
+      argument :limit, Integer, required: false
+    end
+
+    def units(**args)
+      Unit.published.ordered.limit(args[:limit])
     end
 
     field :unit, Types::UnitType, null: true do
@@ -25,43 +53,32 @@ module Types
       argument :slug, String, required: false
     end
 
-    # year groups
-    def year_groups
-      YearGroup.published
+    def unit(**args)
+      find_record(Unit, args)
     end
 
-    def year_group(**args)
-      find_record_by_shared_args(YearGroup, args)
+    # Lessons
+
+    field :lessons, [Types::LessonType], null: true do
+      argument :limit, Integer, required: false
     end
 
-    # key stages
-    def key_stages
-      KeyStage.published.ordered
+    def lessons(**args)
+      Lesson.published.ordered.limit(args[:limit])
     end
 
-    def key_stage(**args)
-      find_record_by_shared_args(KeyStage, args)
-    end
-
-    # lesson
-    def lessons
-      Lesson.published.ordered
+    field :lesson, Types::LessonType, null: true do
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     def lesson(**args)
-      find_record_by_shared_args(Lesson, args)
+      find_record(Lesson, args)
     end
 
-    # unit
-    def units
-      Unit.published.ordered
-    end
+    # Shared
 
-    def unit(**args)
-      find_record_by_shared_args(Unit, args)
-    end
-
-    def find_record_by_shared_args(model, args)
+    def find_record(model, args)
       id, slug = args.values_at(:id, :slug)
 
       if id
