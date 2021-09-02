@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_31_101748) do
+ActiveRecord::Schema.define(version: 2021_07_27_100428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 2021_08_31_101748) do
     t.boolean "zip_synced", default: false
     t.datetime "zip_synced_at"
     t.integer "lesson_no", default: 0
+    t.text "objectives"
     t.index ["slug", "unit_id"], name: "index_lessons_on_slug_and_unit_id", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
