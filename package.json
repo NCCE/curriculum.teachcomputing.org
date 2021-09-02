@@ -34,9 +34,11 @@
     "logs": "docker-compose logs -f",
     "curriculum": "docker-compose run --rm --no-deps curriculum",
     "bundle": "docker-compose run --rm --no-deps curriculum bundle",
+    "exec": "docker-compose run --rm --no-deps curriculum bundle exec",
     "bundle-install": "yarn run bundle install && docker-compose restart curriculum && yarn start",
     "bundle-update": "yarn run bundle update && docker-compose restart curriculum && yarn start",
-    "exec": "yarn run bundle exec",
+    "console": "yarn run exec rails c",
+    "shell": "yarn run curriculum sh",
     "test": "yarn run exec rspec"
   },
   "lint-staged": {
