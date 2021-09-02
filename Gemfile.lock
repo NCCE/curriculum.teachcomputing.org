@@ -484,7 +484,7 @@ DEPENDENCIES
   pg (~> 1.1)
   pry-byebug
   puma (~> 4.3)
-  rails (~> 6.1)
+  rails (~> 6.1.4.1)
   reek
   rspec-graphql_matchers
   rspec-mocks
