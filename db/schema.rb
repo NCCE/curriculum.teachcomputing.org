@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_100428) do
     t.uuid "key_stage_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["key_stage_id"], name: "index_curriculum_maps_on_key_stage_id"
+    t.index ["key_stage_id"], name: "index_curriculum_map_on_key_stage_id"
   end
 
   create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -121,10 +121,10 @@ ActiveRecord::Schema.define(version: 2021_07_27_100428) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
-    t.text "objectives"
     t.boolean "zip_synced", default: false
     t.datetime "zip_synced_at"
     t.integer "lesson_no", default: 0
+    t.text "objectives"
     t.index ["slug", "unit_id"], name: "index_lessons_on_slug_and_unit_id", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end

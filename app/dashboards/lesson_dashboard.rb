@@ -22,7 +22,6 @@ class LessonDashboard < Administrate::BaseDashboard
     slug: Field::String,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
-    objectives: Field::Text,
     description: Field::Text,
     learning_objectives: Field::NestedHasMany,
     created_at: Field::DateTime,
@@ -45,7 +44,6 @@ class LessonDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     title
     description
-    objectives
     unit
     learning_objectives
     zipped_contents
@@ -60,7 +58,6 @@ class LessonDashboard < Administrate::BaseDashboard
     title
     description
     unit
-    objectives
     learning_objectives
     zipped_contents
   ].freeze
