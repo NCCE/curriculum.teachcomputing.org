@@ -5,7 +5,7 @@
 ### Dependencies:
 
 - [Homebrew](https://brew.sh/)
-- Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox)
+- Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox) > v4.0 (with support for `docker compose`)
 - Yarn
   - `brew install yarn`
 
@@ -30,7 +30,7 @@ Optionally set a password for postgres by updating the value for `DEV_PASS` in y
 Start the stack:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 Or (this waits until the stack is ready to use):
@@ -44,7 +44,7 @@ The app is then available at: http://curriculum.teachcomputing.rpfdev.com
 Stop the stack:
 
 ```
-docker-compose down
+docker compose down
 ```
 
 Or:
@@ -58,13 +58,13 @@ yarn stop
 View logs (add -f to tail, and/or append a container name such as 'curriculum' to tail only that container):
 
 ```
-docker-compose logs
+docker compose logs
 ```
 
 For example
 
 ```
-docker-compose -f logs curriculum
+docker compose -f logs curriculum
 ```
 
 ### Database
@@ -104,7 +104,7 @@ yarn run bundle-install
 
 To reinstall all packages:
 ```
-docker-compose build
+docker compose build
 ```
 
 ## Testing
@@ -112,7 +112,7 @@ docker-compose build
 Uses [rspec](https://github.com/rspec/rspec)
 
 ```
-docker-compose run --rm curriculum bin/rspec
+docker compose run --rm curriculum bin/rspec
 ```
 
 Or
@@ -124,7 +124,7 @@ yarn test
 To use [guard](https://github.com/guard/guard) to watch the tests:
 
 ```
-docker-compose run --rm curriculum bin/guard
+docker compose run --rm curriculum bin/guard
 ```
 
 Or
@@ -161,15 +161,15 @@ Run `brakeman -i config/brakeman.ignore .` in the project root and follow the on
 
 ### Debugging
 
-`ruby-debug-ide` is enabled and waiting for connections by default on port `1235`. There is a `launch.json` in the repo and if you're using vscode it should be as easy as going to the 'Run' view, selecting 'Debug Attach' and clicking the green Run button. It's important to note that if you attempt to restart or stop the debug process, this will effectively kill the container, and a `docker-compose up -d` will be necessary to continue - however this is rarely necessary in general use since you'll be debugging individual requests.
+`ruby-debug-ide` is enabled and waiting for connections by default on port `1235`. There is a `launch.json` in the repo and if you're using vscode it should be as easy as going to the 'Run' view, selecting 'Debug Attach' and clicking the green Run button. It's important to note that if you attempt to restart or stop the debug process, this will effectively kill the container, and a `docker compose up -d` will be necessary to continue - however this is rarely necessary in general use since you'll be debugging individual requests.
 
-If you prefer to use `byebug` you'll _first_ need to attach to the container which can be done with the command: `docker attach curriculumteachcomputingorg_curriculum_1` (the container name can be checked with `docker-compose ps`, but mostly it'll be the one here), then add your breakpoint and trigger your request. Again ending the session by quitting byebug or hitting `ctrl+c` will kill the container, so you'll need to run `docker-compose up -d` again.
+If you prefer to use `byebug` you'll _first_ need to attach to the container which can be done with the command: `docker attach curriculumteachcomputingorg_curriculum_1` (the container name can be checked with `docker compose ps`, but mostly it'll be the one here), then add your breakpoint and trigger your request. Again ending the session by quitting byebug or hitting `ctrl+c` will kill the container, so you'll need to run `docker compose up -d` again.
 
 ### Troubleshooting
 
 > I've run `npm start` and it's hanging whilst 'Waiting for the stack to become available'
 
-The script doesn't time out so this indicates that it can't resolve to `localhost:3020` and there was a problem bringing up the `curriculum` container. Run `docker-compose logs curriculum` to investigate the cause.
+The script doesn't time out so this indicates that it can't resolve to `localhost:3020` and there was a problem bringing up the `curriculum` container. Run `docker compose logs curriculum` to investigate the cause.
 
 > I can access the site at `localhost:3020` but not at `curriculum.teachcomputing.rpfdev.com`
 
