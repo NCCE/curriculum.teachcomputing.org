@@ -19,7 +19,7 @@ fi
 printf %s "- Build the docker image (y/n)? "
 read -r RESP
 if [ "$RESP" != "${RESP#[Yy]}" ]; then
-  docker-compose build
+  docker compose build
 fi
 
 echo "- Install dev-nginx"
