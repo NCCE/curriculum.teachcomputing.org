@@ -3,8 +3,10 @@ module Admin
     def valid_action?(name, resource = resource_class)
       return false if resource.to_s == 'success_criterion' && name.to_s == 'destroy'
       return false if resource.to_s == 'taxonomy_tag' && %w[destroy edit].include?(name.to_s)
+
       super
     end
+
     # Overwrite any of the RESTful controller actions to implement custom behavior
     # For example, you may want to send an email after a foo is updated.
     #

@@ -4,5 +4,9 @@ module Types
     field :description, String, null: false
     field :lesson, Types::LessonType, null: false
     field :success_criteria, [Types::SuccessCriterionType], null: true
+
+    def success_criteria
+      object.success_criteria.order(order: :asc)
+    end
   end
 end

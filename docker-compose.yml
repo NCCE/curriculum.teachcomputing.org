@@ -10,6 +10,7 @@ services:
   db:
     image: postgres
     volumes:
+      # - .:/app
       - pg-data:/var/lib/postgresql/data
     ports:
       - "5433:5432"
@@ -47,6 +48,7 @@ services:
       - bundle:/usr/local/bundle
     ports:
       - "1236:1234"
+      - "1237:1235"
       - "3020:3000"
     depends_on:
       - db

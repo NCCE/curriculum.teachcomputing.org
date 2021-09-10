@@ -2,13 +2,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Attach",
+      "name": "Rails Debug",
       "type": "Ruby",
       "request": "attach",
       "cwd": "${workspaceRoot}",
       "remoteWorkspaceRoot": "/app",
-      "remoteHost": "127.0.0.1",
-      "remotePort": "1236"
+      "remoteHost": "0.0.0.0",
+      "remotePort": "1236",
+      "showDebuggerOutput": true
+    },
+    {
+      "name": "RSpec Debug",
+      "type": "Ruby",
+      "request": "attach",
+      "cwd": "${workspaceRoot}",
+      "remoteWorkspaceRoot": "/app",
+      "remoteHost": "0.0.0.0",
+      "remotePort": "1237",
+      "showDebuggerOutput": true
     }
   ]
 }

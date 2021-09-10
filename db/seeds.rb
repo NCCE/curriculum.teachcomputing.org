@@ -25,8 +25,45 @@ def add_year_group(key_stage, year_number, i)
     unit.add_negative_rating
   end
 
-  lesson = unit.lessons.create({ title: "Lesson #{i}", description: 'This is a Lesson' })
+  lesson = unit.lessons.create(
+    {
+      title: "Lesson #{i}",
+      description: 'This is a Lessonion'
+    }
+  )
+
   lesson.published!
+
+  if lesson.primary?
+    learning_objectives = lesson.learning_objectives.create(
+      {
+        description: 'I am an objective',
+        order: 1,
+        success_criteria: SuccessCriterion.create(
+          [
+            { description: 'I am a success',
+              order: 1 },
+            {
+              description: 'I am not as much of a success', order: 2
+            }
+          ]
+        )
+      }
+    )
+  else
+    lesson.learning_objectives.create(
+      [
+        {
+          description: 'I am mr objectivator',
+          order: 1
+        },
+        {
+          description: 'I object to mr objectivator',
+          order: 2
+        }
+      ]
+    )
+  end
 
   download_record = AggregateDownload.create(
     count: i,
@@ -50,6 +87,9 @@ if Rails.env.development? || Rails.env.staging?
   AggregateDownload.delete_all
 
   State.delete_all
+
+  LearningObjective.delete_all
+  SuccessCriterion.delete_all
 
   Lesson.delete_all
   Unit.delete_all
