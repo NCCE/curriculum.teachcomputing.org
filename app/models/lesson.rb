@@ -4,7 +4,7 @@ class Lesson < ApplicationRecord
 
   belongs_to :unit
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
-  has_many :learning_objectives, -> { order(order: :asc) }, validate: false
+  has_many :learning_objectives, -> { order(order: :asc) }
 
   has_one_attached :zipped_contents
 

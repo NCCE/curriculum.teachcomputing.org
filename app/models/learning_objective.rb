@@ -1,13 +1,13 @@
 class LearningObjective < ApplicationRecord
   has_and_belongs_to_many :taxonomy_tags
-  has_many :success_criteria, -> { order(order: :asc) }, dependent: :destroy, validate: false
+  has_many :success_criteria, -> { order(order: :asc) }, dependent: :destroy
   belongs_to :lesson
   validates :description, presence: true
   validates :order, numericality: { greater_than: 0 }
 
   accepts_nested_attributes_for :success_criteria, allow_destroy: true
 
-  # validate :valid_success_criteria
+  validate :valid_success_criteria
 
   private
 

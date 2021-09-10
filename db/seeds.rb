@@ -33,26 +33,32 @@ def add_year_group(key_stage, year_number, i)
   )
 
   if lesson.primary?
-    lesson.learning_objectives.create(
+    learning_objective = LearningObjective.new(
       {
         description: 'I am an objective',
         order: 1,
-        success_criteria: SuccessCriterion.create(
-          [
-            {
-              description: 'I am a success',
-              order: 1,
-              learning_objective_id: nil
-            },
-            {
-              description: 'I am not as much of a success',
-              order: 2,
-              learning_objective_id: nil
-            }
-          ]
-        )
+        lesson: lesson
       }
     )
+
+    learning_objective.success_criteria = [
+      SuccessCriterion.new(
+        {
+          description: 'I am a success',
+          order: 1,
+          learning_objective: learning_objective
+        }
+      ),
+      SuccessCriterion.new(
+        {
+          description: 'I am also a success',
+          order: 2,
+          learning_objective: learning_objective
+        }
+      )
+    ]
+
+    learning_objective.save!
   else
     lesson.learning_objectives.create(
       [

@@ -19,7 +19,9 @@ RSpec.describe LearningObjective, type: :model do
       end
 
       it 'is valid if success criteria present' do
-        objective = build(:learning_objective, lesson: lesson, success_criteria: [build(:success_criterion)])
+        objective = build(:learning_objective, lesson: lesson)
+        objective.success_criteria = [build(:success_criterion, learning_objective: objective)]
+
         expect(objective.valid?).to eq(true)
         expect(objective.errors.messages).to eq({})
       end

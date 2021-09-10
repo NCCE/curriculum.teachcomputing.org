@@ -6,6 +6,10 @@ FactoryBot.define do
 
     factory :primary_learning_objective do
       success_criteria { [build(:success_criterion)] }
+
+      before(:create) do |learning_objective|
+        success_criteria { [build(:success_criterion, learning_objective: learning_objective)] }
+      end
     end
   end
 end
