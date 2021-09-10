@@ -7,7 +7,7 @@ class LearningObjective < ApplicationRecord
 
   accepts_nested_attributes_for :success_criteria, allow_destroy: true
 
-  validate :valid_success_criteria
+  # validate :valid_success_criteria
 
   private
 

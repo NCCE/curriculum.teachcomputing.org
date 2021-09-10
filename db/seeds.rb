@@ -32,19 +32,22 @@ def add_year_group(key_stage, year_number, i)
     }
   )
 
-  lesson.published!
-
   if lesson.primary?
-    learning_objectives = lesson.learning_objectives.create(
+    lesson.learning_objectives.create(
       {
         description: 'I am an objective',
         order: 1,
         success_criteria: SuccessCriterion.create(
           [
-            { description: 'I am a success',
-              order: 1 },
             {
-              description: 'I am not as much of a success', order: 2
+              description: 'I am a success',
+              order: 1,
+              learning_objective_id: nil
+            },
+            {
+              description: 'I am not as much of a success',
+              order: 2,
+              learning_objective_id: nil
             }
           ]
         )
@@ -64,6 +67,8 @@ def add_year_group(key_stage, year_number, i)
       ]
     )
   end
+
+  lesson.published!
 
   download_record = AggregateDownload.create(
     count: i,
@@ -88,8 +93,8 @@ if Rails.env.development? || Rails.env.staging?
 
   State.delete_all
 
-  LearningObjective.delete_all
   SuccessCriterion.delete_all
+  LearningObjective.delete_all
 
   Lesson.delete_all
   Unit.delete_all
