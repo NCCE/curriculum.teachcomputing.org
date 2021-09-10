@@ -10,7 +10,6 @@ services:
   db:
     image: postgres
     volumes:
-      # - .:/app
       - pg-data:/var/lib/postgresql/data
     ports:
       - "5433:5432"

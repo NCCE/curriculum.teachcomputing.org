@@ -45,10 +45,10 @@ namespace :learning_objectives do
     lessons = Lesson.all
 
     lessons.each do |lesson|
-      lesson.learning_objectives.each_with_index do | learning_objective, lo_index |
+      lesson.learning_objectives.each_with_index do |learning_objective, lo_index|
         learning_objective.order = lo_index + 1
 
-        learning_objective.success_criteria.each_with_index do | success_criterion, sc_index |
+        learning_objective.success_criteria.each_with_index do |success_criterion, sc_index|
           success_criterion.order = sc_index + 1
         end
 
@@ -67,7 +67,7 @@ namespace :learning_objectives do
     # * I can design the algorithm for my project
     # * I can design the program flow for my project
 
-    objective_string = lesson.objectives&.gsub("\r\n", '')
+    objective_string = lesson.objectives.gsub("\r\n", '')
 
     objective, criteria_string = objective_string.split(':')
     criteria = criteria_string.split('* ').reject { |c| c.blank? }.map(&:strip)
@@ -87,12 +87,10 @@ namespace :learning_objectives do
     # * Use trace tables to investigate functions
     # * Use functions to return values in programs
 
-    objectives_string = lesson.objectives&.gsub("\r\n", '')
+    objectives_string = lesson.objectives.gsub("\r\n", '')
     objectives = objectives_string.split('* ').reject { |c| c.blank? }.map(&:strip)
     objectives.each do |objective|
       LearningObjective.create!(description: objective, lesson: lesson)
     end
   end
-
-
 end
