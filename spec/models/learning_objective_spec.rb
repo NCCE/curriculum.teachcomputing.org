@@ -5,9 +5,9 @@ RSpec.describe LearningObjective, type: :model do
   it { is_expected.to have_many(:success_criteria) }
   it { is_expected.to belong_to(:lesson) }
   it { is_expected.to validate_presence_of(:description) }
+  it { is_expected.to validate_numericality_of(:order).is_greater_than(0) }
 
   describe 'validating success criteria' do
-
     context 'when lesson is primary' do
       let(:lesson) { build(:primary_lesson) }
 
@@ -19,7 +19,9 @@ RSpec.describe LearningObjective, type: :model do
       end
 
       it 'is valid if success criteria present' do
-        objective = build(:learning_objective, lesson: lesson, success_criteria: [build(:success_criterion)])
+        objective = build(:learning_objective, lesson: lesson)
+        objective.success_criteria = [build(:success_criterion, learning_objective: objective)]
+
         expect(objective.valid?).to eq(true)
         expect(objective.errors.messages).to eq({})
       end

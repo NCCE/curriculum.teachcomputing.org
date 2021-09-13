@@ -32,7 +32,11 @@ RSpec.describe Lesson, type: :model do
 
     context 'when primary' do
       it 'is valid if one valid learning objective present' do
-        lesson = build(:primary_lesson, learning_objectives: [ build(:primary_learning_objective)])
+        lesson = build(:primary_lesson)
+        learning_objective = build(:primary_learning_objective, lesson: lesson)
+        success_criterion = build(:success_criterion, learning_objective: learning_objective)
+        lesson.learning_objectives = [build(:primary_learning_objective, lesson: lesson,
+                                                                         success_criteria: [success_criterion])]
 
         expect(lesson.valid?).to eq(true)
       end

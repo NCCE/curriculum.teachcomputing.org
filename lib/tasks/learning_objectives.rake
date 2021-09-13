@@ -40,6 +40,23 @@ namespace :learning_objectives do
     puts "Total failed: #{failed_count}"
   end
 
+  desc 'Populates the order based on the table structure'
+  task set_order: :environment do
+    lessons = Lesson.all
+
+    lessons.each do |lesson|
+      lesson.learning_objectives.each_with_index do |learning_objective, lo_index|
+        learning_objective.order = lo_index + 1
+
+        learning_objective.success_criteria.each_with_index do |success_criterion, sc_index|
+          success_criterion.order = sc_index + 1
+        end
+
+        learning_objective.save!
+      end
+    end
+  end
+
   def add_primary_lesson_objectives(lesson)
     # Primary format is a string which needs to be converted to the objective
     # followed by list that needs to become the success criteria:

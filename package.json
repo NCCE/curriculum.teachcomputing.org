@@ -39,7 +39,8 @@
     "bundle-update": "yarn run bundle update && docker compose restart curriculum && yarn start",
     "console": "yarn run exec rails c",
     "shell": "yarn run curriculum sh",
-    "test": "yarn run exec rspec"
+    "test": "yarn run exec rspec",
+    "test-debug": "yarn run exec rdebug-ide --h 0.0.0.0 --p 1237 -- ./bin/rspec"
   },
   "lint-staged": {
     "*.js": [

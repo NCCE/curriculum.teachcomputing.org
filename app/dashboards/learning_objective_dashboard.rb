@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class LearningObjectiveDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -15,8 +15,9 @@ class LearningObjectiveDashboard < Administrate::BaseDashboard
     description: Field::Text.with_options(
       searchable: true
     ),
+    order: Field::Number,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,6 +26,7 @@ class LearningObjectiveDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
+    order
     description
     success_criteria
     taxonomy_tags
@@ -33,6 +35,7 @@ class LearningObjectiveDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
+    order
     description
     taxonomy_tags
     success_criteria
@@ -42,6 +45,7 @@ class LearningObjectiveDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    order
     description
     taxonomy_tags
     success_criteria
