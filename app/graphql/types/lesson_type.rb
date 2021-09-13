@@ -10,10 +10,6 @@ module Types
     field :zipped_contents, String, null: true
     field :learning_objectives, [Types::LearningObjectiveType], null: true
 
-    def learning_objectives
-      object.learning_objectives.order(order: :asc)
-    end
-
     def zipped_contents
       url_for(object.zipped_contents) if object.zipped_contents.attachment
     end
