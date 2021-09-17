@@ -15,11 +15,11 @@ module Types
     field :unit_count, Integer, null: true
 
     def unit_count
-      KeyStage.where(id: object.id).joins(year_groups:  :units).count
+      KeyStage.where(id: object.id).joins(year_groups: :units).count
     end
 
     def lesson_count
-      KeyStage.where(id: object.id).joins(year_groups: [{units: :lessons}]).count
+      KeyStage.where(id: object.id).joins(year_groups: [{ units: :lessons }]).count
     end
 
     def teacher_guide
