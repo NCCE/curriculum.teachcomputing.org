@@ -7,7 +7,7 @@ module Types
     field :level, String, null: false
     field :ages, String, null: false
     field :years, String, null: false
-    field :teacher_guide, String, null: true
+    field :teacher_guide, Types::TeacherGuideType, null: true
     field :description, String, null: false
     field :year_groups, [Types::YearGroupType], null: true, method: :published_year_groups
     field :curriculum_maps, [Types::CurriculumMapType], null: true
@@ -20,10 +20,6 @@ module Types
 
     def lesson_count
       KeyStage.where(id: object.id).joins(year_groups: [{ units: :lessons }]).count
-    end
-
-    def teacher_guide
-      url_for(object.teacher_guide) if object.teacher_guide.attachment
     end
   end
 end

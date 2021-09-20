@@ -2,8 +2,6 @@ module Types
   class AttachmentType < BaseObject
     include ActionView::Helpers::NumberHelper
 
-    field :id, ID, null: false
-    field :name, String, null: false
     field :file, String, null: false
     field :size, String, null: false
     field :filename, String, null: false
@@ -11,23 +9,23 @@ module Types
     field :updated, String, null: false
 
     def file
-      url_for(object.file) if object.file.attachment
+      url_for(object.attachment) if object.attachment
     end
 
     def size
-      number_to_human_size(object.file.byte_size)
+      number_to_human_size(object.byte_size)
     end
 
     def filename
-      object.file.filename
+      object.filename.to_s
     end
 
     def created
-      object.created_at
+      object.record.created_at
     end
 
     def updated
-      object.updated_at
+      object.record.updated_at
     end
   end
 end
