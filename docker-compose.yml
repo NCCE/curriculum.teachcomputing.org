@@ -34,7 +34,7 @@ services:
     environment:
       - REDIS_URL=redis://redis:6379/1
       - TC_API_URL=http://teachcomputing.rpfdev.com
-      - TC_API_SECRET=${DEV_PASS}
+      - TC_API_SECRET=secret
     restart: unless-stopped
     env_file:
       - .env
