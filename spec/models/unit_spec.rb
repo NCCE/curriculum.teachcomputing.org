@@ -19,6 +19,17 @@ RSpec.describe Unit, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
+    it 'fail if the slug is not unique (to the key stage)' do
+      year_group = create(:primary_year_group)
+      unit = create(:unit, title: 'Unit 1', year_group: year_group)
+      unit2 = build(:unit, title: 'Unit 1', year_group: year_group)
+      expect(unit2.valid?).to eq(false)
+    end
+    it 'pass if the slug is unique (to the key stage)' do
+      unit = create(:primary_unit, title: 'Unit 1')
+      unit2 = build(:secondary_unit, title: 'A random unit name')
+      expect(unit2.valid?).to eq(true)
+    end
   end
 
   describe 'callbacks' do

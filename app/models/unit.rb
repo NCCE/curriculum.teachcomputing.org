@@ -18,13 +18,24 @@ class Unit < ApplicationRecord
   has_many_attached :summative_answers
 
   validates :title, :description, presence: true
-  validates :slug, uniqueness: true
+  validate :valid_title_and_slug
 
   scope :ordered, -> { order(:slug) }
 
   before_save :set_slug
 
   after_commit :notify_update
+
+  def valid_title_and_slug
+    matches = Unit.where(:title => title)
+    matches.each do |match|
+      next if self.eql?(match)
+      if (self.year_group.key_stage.slug == match.year_group.key_stage.slug)
+        errors.add(:unique_error, ": Title is already in use in KeyStage #{match.year_group.key_stage.level}")
+        break
+      end
+    end
+  end
 
   def set_slug
     self.slug = title.parameterize
