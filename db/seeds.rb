@@ -27,8 +27,8 @@ def add_year_group(key_stage, year_number, i)
 
   lesson = unit.lessons.create(
     {
-      title: "Lesson #{i}",
-      description: 'This is a Lessonion'
+      title: "A lesson (Year #{year_number})",
+      description: 'This is a Lesson'
     }
   )
 

@@ -13,7 +13,7 @@ class LessonDashboard < Administrate::BaseDashboard
     ),
     zipped_contents: Field::ActiveStorage.with_options(
       show_display_preview: false,
-      direct_upload: true,
+      direct_upload: true, # This should be disabled for local testing
       destroy_url: proc do |_namespace, resource, attachment|
         [:admin_lesson_zipped_contents, { attachment_id: attachment.id,
                                           lesson_id: resource.id }]
