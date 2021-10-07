@@ -86,7 +86,7 @@ RSpec.describe Lesson, type: :model do
         allow(UpdateNotifier).to receive(:new) { notifier_double }
         instance = build(:lesson)
         instance.run_callbacks :commit
-        expect(UpdateNotifier).to have_received(:new).once.with([instance.unit])
+        expect(UpdateNotifier).to have_received(:new).once.with([instance])
         expect(notifier_double).to have_received(:run).once
       end
     end
