@@ -18,7 +18,7 @@ class Unit < ApplicationRecord
   has_many_attached :summative_answers
 
   validates :title, :description, presence: true
-  validate :valid_title_and_slug
+  validate :check_title_unique_to_key_stage
 
   scope :ordered, -> { order(:slug) }
 
@@ -26,7 +26,7 @@ class Unit < ApplicationRecord
 
   after_commit :notify_update
 
-  def valid_title_and_slug
+  def check_title_unique_to_key_stage
     units = Unit.where.not(id: self.id).where(title: title)
     units.each do |match|
       return errors.add(
