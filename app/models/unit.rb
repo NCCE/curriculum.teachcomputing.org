@@ -27,13 +27,11 @@ class Unit < ApplicationRecord
   after_commit :notify_update
 
   def valid_title_and_slug
-    matches = Unit.where(:title => title)
-    matches.each do |match|
-      next if self.eql?(match)
-      if (self.year_group.key_stage.slug == match.year_group.key_stage.slug)
-        errors.add(:unique_error, ": Title is already in use in KeyStage #{match.year_group.key_stage.level}")
-        break
-      end
+    units = Unit.where.not(id: self.id).where(title: title)
+    units.each do |match|
+      return errors.add(
+        :unique_error, ": Title is already in use in KeyStage #{match.year_group.key_stage.level}"
+      ) if (self.year_group.key_stage.slug == match.year_group.key_stage.slug)
     end
   end
 
