@@ -5,11 +5,14 @@
 
 Rails.application.routes.default_url_options[:host] = 'test-curriculum.rpfdev.com'
 Rails.application.routes.default_url_options[:protocol] = 'https'
+Rails.application.routes.default_url_options[:locale] = I18n.default_locale
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.cache_classes = false
   config.action_view.cache_template_loading = true
+
+  config.action_controller.default_url_options = Rails.application.routes.default_url_options
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
@@ -19,7 +22,7 @@ Rails.application.configure do
   # Configure public file server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
-    'Cache-Control' => "public, max-age=#{1.hour.to_i}"
+    'Cache-Control': "public, max-age=#{1.hour.to_i}"
   }
 
   # Show full error reports and disable caching.

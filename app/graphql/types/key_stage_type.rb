@@ -7,7 +7,7 @@ module Types
     field :level, String, null: false
     field :ages, String, null: false
     field :years, String, null: false
-    field :teacher_guide, Types::TeacherGuideType, null: true
+    field :teacher_guide, Types::AttachmentType, null: true
     field :description, String, null: false
     field :year_groups, [Types::YearGroupType], null: true, method: :published_year_groups
     field :curriculum_maps, [Types::CurriculumMapType], null: true

@@ -24,7 +24,6 @@ RSpec.describe 'Lesson', type: :request do
                 title
                 slug
                 description
-                zippedContents
                 learningObjectives {
                   description
                   successCriteria {
@@ -50,7 +49,6 @@ RSpec.describe 'Lesson', type: :request do
             title: published_lesson.title,
             slug: published_lesson.slug,
             description: published_lesson.description,
-            zippedContents: nil,
             learningObjectives: [
               {
                 description: 'MyString 1',
@@ -98,7 +96,6 @@ RSpec.describe 'Lesson', type: :request do
                 title
                 slug
                 description
-                zippedContents
                 learningObjectives {
                   description
                   successCriteria {
@@ -124,7 +121,6 @@ RSpec.describe 'Lesson', type: :request do
             title: published_lesson.title,
             slug: published_lesson.slug,
             description: published_lesson.description,
-            zippedContents: nil,
             learningObjectives: [
               {
                 description: 'MyString',

@@ -5,14 +5,14 @@ module Types
     field :year_group, Types::YearGroupType, null: false
     field :title, String, null: false
     field :description, String, null: false
-    field :unit_guide, String, null: true, method: :unit_guide_url
+    field :unit_guide, Types::AttachmentType, null: true
     field :lessons, [Types::LessonType], null: true
     field :total_positive, Integer, null: true
     field :total_negative, Integer, null: true
-    field :learning_graphs, [String], null: true, method: :learning_graphs_urls
-    field :rubrics, [String], null: true, method: :rubrics_urls
-    field :summative_assessments, [String], null: true, method: :summative_assessments_urls
-    field :summative_answers, [String], null: true, method: :summative_answers_urls
+    field :learning_graphs, [Types::AttachmentType], null: true
+    field :rubrics, [Types::AttachmentType], null: true
+    field :summative_assessments, [Types::AttachmentType], null: true
+    field :summative_answers, [Types::AttachmentType], null: true
 
     def lessons
       object.lessons.published.ordered

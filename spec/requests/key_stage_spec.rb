@@ -1,13 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'KeyStage', type: :request do
-  let!(:published_key_stage) { create(:published_key_stage) }
-
-  before do
-    create(:key_stage)
-  end
-
   describe 'list Key Stages' do
+    let!(:published_key_stage) { create(:published_key_stage) }
+
     it 'returns published key stages' do
       post '/graphql', params: {
         query: <<~GQL

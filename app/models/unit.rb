@@ -27,36 +27,18 @@ class Unit < ApplicationRecord
   after_commit :notify_update
 
   def check_title_unique_to_key_stage
-    units = Unit.where.not(id: self.id).where(title: title)
+    units = Unit.where.not(id: id).where(title: title)
     units.each do |match|
-      return errors.add(
-        :unique_error, ": Title is already in use in KeyStage #{match.year_group.key_stage.level}"
-      ) if (self.year_group.key_stage.slug == match.year_group.key_stage.slug)
+      if year_group.key_stage.slug == match.year_group.key_stage.slug
+        return errors.add(
+          :unique_error, ": Title is already in use in KeyStage #{match.year_group.key_stage.level}"
+        )
+      end
     end
   end
 
   def set_slug
     self.slug = title.parameterize
-  end
-
-  def unit_guide_url
-    url_for(unit_guide) if unit_guide.attachment
-  end
-
-  def learning_graphs_urls
-    learning_graphs.map { |record| url_for(record) } if learning_graphs.attachments
-  end
-
-  def rubrics_urls
-    rubrics.map { |record| url_for(record) } if rubrics.attachments
-  end
-
-  def summative_assessments_urls
-    summative_assessments.map { |record| url_for(record) } if summative_assessments.attachments
-  end
-
-  def summative_answers_urls
-    summative_answers.map { |record| url_for(record) } if summative_answers.attachments
   end
 
   def primary?
