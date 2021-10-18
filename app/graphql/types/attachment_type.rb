@@ -16,7 +16,7 @@ module Types
     end
 
     def name
-      object.name.titleize
+      object.name.humanize.singularize
     end
 
     def type
