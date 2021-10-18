@@ -2,30 +2,44 @@ module Types
   class AttachmentType < BaseObject
     include ActionView::Helpers::NumberHelper
 
+    field :name, String, null: true
     field :type, String, null: true
     field :file, String, null: true
     field :size, String, null: true
     field :filename, String, null: true
     field :created, String, null: true
 
+    def initialize(object, context)
+      super(object, context)
+
+      @file_object = object
+    end
+
+    def name
+      object.name.titleize
+    end
+
     def type
       filename.split('.').last.upcase if filename
     end
 
     def file
-      url_for(object.attachment) if object.attachment
+      file = @file_object.respond_to?(:attachment) ? @file_object.attachment : @file_object
+      return if file.blank?
+
+      url_for(file)
     end
 
     def size
-      number_to_human_size(object&.byte_size) if object.byte_size
+      number_to_human_size(@file_object&.byte_size) if @file_object.byte_size
     end
 
     def filename
-      object.filename&.to_s
+      @file_object.filename&.to_s
     end
 
     def created
-      object.blob&.created_at
+      @file_object.blob&.created_at
     end
   end
 end

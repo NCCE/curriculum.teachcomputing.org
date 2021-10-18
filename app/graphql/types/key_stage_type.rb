@@ -21,5 +21,9 @@ module Types
     def lesson_count
       KeyStage.where(id: object.id).joins(year_groups: [{ units: :lessons }]).count
     end
+
+    def teacher_guide
+      return object.teacher_guide unless object.teacher_guide.attachment.blank?
+    end
   end
 end

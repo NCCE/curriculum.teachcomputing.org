@@ -8,7 +8,11 @@ module Types
 
     def initialize(object, context)
       super(object, context)
-      @object = object.file
+      @file_object = object.file
+    end
+
+    def name
+      object.name
     end
   end
 end

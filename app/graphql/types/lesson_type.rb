@@ -9,5 +9,9 @@ module Types
     field :total_negative, Integer, null: true
     field :zipped_contents, Types::AttachmentType, null: true
     field :learning_objectives, [Types::LearningObjectiveType], null: true
+
+    def zipped_contents
+      return object.zipped_contents unless object.zipped_contents.blank?
+    end
   end
 end
