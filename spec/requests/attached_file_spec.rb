@@ -30,7 +30,7 @@ RSpec.describe 'KeyStage', type: :request do
         keyStages: [{
           id: key_stage_with_guide.id,
           teacherGuide: {
-            name: 'Teacher Guide',
+            name: 'Teacher guide',
             type: 'PDF',
             filename: 'test.pdf',
             size: '0 Bytes',
