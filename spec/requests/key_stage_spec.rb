@@ -1,13 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'KeyStage', type: :request do
-  let!(:published_key_stage) { create(:published_key_stage) }
-
-  before do
-    create(:key_stage)
-  end
-
   describe 'list Key Stages' do
+    let!(:published_key_stage) { create(:published_key_stage) }
+
     it 'returns published key stages' do
       post '/graphql', params: {
         query: <<~GQL
@@ -20,7 +16,6 @@ RSpec.describe 'KeyStage', type: :request do
                 level
                 ages
                 years
-                teacherGuide
                 description
                 curriculumMaps {
                   id
@@ -42,7 +37,6 @@ RSpec.describe 'KeyStage', type: :request do
             level: published_key_stage.level,
             ages: published_key_stage.ages,
             years: published_key_stage.years,
-            teacherGuide: nil,
             description: published_key_stage.description,
             curriculumMaps: published_key_stage.curriculum_maps
           }]
@@ -71,7 +65,6 @@ RSpec.describe 'KeyStage', type: :request do
                 shortTitle
                 level
                 ages
-                teacherGuide
                 description
                 yearGroups {
                   id
@@ -92,7 +85,6 @@ RSpec.describe 'KeyStage', type: :request do
             shortTitle: published_key_stage.short_title,
             level: published_key_stage.level,
             ages: published_key_stage.ages,
-            teacherGuide: nil,
             description: published_key_stage.description,
             yearGroups: [{
               id: published_year_group.id,

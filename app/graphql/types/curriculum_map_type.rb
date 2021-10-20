@@ -1,12 +1,18 @@
 module Types
-  class CurriculumMapType < BaseObject
-    field :id, ID, null: false
-    field :key_stage, Types::KeyStageType, null: false
-    field :name, String, null: false
-    field :file, String, null: false
+  class CurriculumMapType < AttachmentType
+    include ActionView::Helpers::NumberHelper
 
-    def file
-      url_for(object.file) if object.file.attachment
+    field :id, ID, null: false
+    field :name, String, null: false
+    field :key_stage, Types::KeyStageType, null: false
+
+    def initialize(object, context)
+      super(object, context)
+      @file_object = object.file
+    end
+
+    def name
+      object.name
     end
   end
 end

@@ -67,7 +67,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Allow nicer hostname
-  config.hosts << /([a-z0-9\.])+\.rpfdev\.com/
+  config.hosts << /([a-z0-9.])+\.rpfdev\.com/
   config.hosts << 'curriculum'
   config.force_ssl = false
 end

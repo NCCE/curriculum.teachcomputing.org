@@ -10,7 +10,7 @@ RSpec.describe Types::KeyStageType do
   it { is_expected.to have_field(:level).of_type('String!') }
   it { is_expected.to have_field(:ages).of_type('String!') }
   it { is_expected.to have_field(:years).of_type('String!') }
-  it { is_expected.to have_field(:teacher_guide).of_type('String') }
+  it { is_expected.to have_field(:teacher_guide).of_type('Attachment') }
   it { is_expected.to have_field(:description).of_type('String!') }
   it { is_expected.to have_field(:year_groups).of_type('[YearGroup!]') }
   it { is_expected.to have_field(:lesson_count).of_type('Int') }
