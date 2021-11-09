@@ -1,7 +1,7 @@
 class UpdateNotifier
-  def initialize(resources, identifier = nil)
+  def initialize(resources, identifiers = nil)
     @resources = resources
-    @identifier = identifier
+    @identifiers = identifiers
     define_resource_hash_array
   end
 
@@ -20,6 +20,8 @@ class UpdateNotifier
     end
 
     def resource_hash(resource)
-      { type: resource.class.to_s.underscore.parameterize, identifier: @identifier || resource.slug }
+      type = resource.class.to_s.underscore.parameterize
+      identifier = @identifiers[type.to_sym]
+      { type: type, identifier: identifier || resource.slug }
     end
 end
