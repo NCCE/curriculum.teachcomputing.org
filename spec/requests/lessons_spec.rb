@@ -144,4 +144,47 @@ RSpec.describe 'Lesson', type: :request do
       expect(response.body).to eq(expected_response)
     end
   end
+
+  describe 'where multiple lessons share the same slug but a different unit' do
+    let!(:published_lesson_2) { create(:published_lesson, unit: create(:unit)) }
+
+    before do
+      post '/graphql', params: {
+        query: <<~GQL
+          {
+            lesson(slug: "#{published_lesson.slug}", unitSlug: "#{published_lesson.unit.slug}")
+              {
+                id
+                slug
+                unit {
+                  id
+                  slug
+                }
+              }
+          }
+        GQL
+      }
+    end
+
+    it 'returns the expected lesson' do
+      expect(response).to be_successful
+
+      expected_response = {
+        data: {
+          lesson: {
+            id: published_lesson.id,
+            slug: published_lesson.slug,
+            unit: {
+              id: published_lesson.unit.id,
+              slug: published_lesson.unit.slug
+            }
+          }
+        }
+      }.to_json
+
+      expect(response.body).to eq(expected_response)
+      response_obj = JSON.parse(response.body, object_class: OpenStruct)
+      expect(response_obj.data.lesson.unit.slug).not_to eq(published_lesson_2.unit.slug)
+    end
+  end
 end
