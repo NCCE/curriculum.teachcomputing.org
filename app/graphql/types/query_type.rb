@@ -87,9 +87,8 @@ module Types
       if id
         model.find(id)
       elsif slug
-        unit = Unit.find_by_slug(unit_slug)
-
-        if unit
+        if model.model_name == :lesson.to_s.humanize
+          unit = Unit.find_by_slug(unit_slug)
           model.find_by!(slug: slug, unit: unit)
         else
           model.find_by!(slug: slug)
