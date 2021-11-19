@@ -30,6 +30,7 @@ RSpec.describe Types::QueryType do
     it { is_expected.to be_of_type('Lesson') }
     it { is_expected.to accept_argument(:id).of_type('ID') }
     it { is_expected.to accept_argument(:slug).of_type('String') }
+    it { is_expected.to accept_argument(:unit_slug).of_type('String') }
   end
 
   describe 'unit' do

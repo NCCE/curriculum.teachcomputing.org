@@ -84,9 +84,11 @@ RSpec.describe Lesson, type: :model do
         notifier_double = instance_double(UpdateNotifier)
         allow(notifier_double).to receive(:run)
         allow(UpdateNotifier).to receive(:new) { notifier_double }
-        instance = build(:lesson)
-        instance.run_callbacks :commit
-        expect(UpdateNotifier).to have_received(:new).once.with([instance])
+        unit_instance = build(:unit)
+        lesson_instance = build(:lesson, unit: unit_instance)
+        lesson_instance.run_callbacks :commit
+        # the second param `-` is an overriden cache identifier
+        expect(UpdateNotifier).to have_received(:new).once.with([lesson_instance, unit_instance], lesson: '-')
         expect(notifier_double).to have_received(:run).once
       end
     end

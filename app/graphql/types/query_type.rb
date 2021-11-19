@@ -70,21 +70,29 @@ module Types
     field :lesson, Types::LessonType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
+      argument :unit_slug, String, required: false
     end
 
     def lesson(**args)
+      raise ArgumentError, 'Missing parameter: unitSlug' if args[:slug] && !args[:unit_slug]
+
       find_record(Lesson, args)
     end
 
     # Shared
 
     def find_record(model, args)
-      id, slug = args.values_at(:id, :slug)
+      id, slug, unit_slug = args.values_at(:id, :slug, :unit_slug)
 
       if id
         model.find(id)
       elsif slug
-        model.find_by!(slug: slug)
+        if model.model_name == :lesson.to_s.humanize
+          unit = Unit.find_by_slug(unit_slug)
+          model.find_by!(slug: slug, unit: unit)
+        else
+          model.find_by!(slug: slug)
+        end
       end
     end
   end
