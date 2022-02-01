@@ -8,7 +8,7 @@ services:
         aliases:
           - teachcomputing.rpfdev.com
   db:
-    image: postgres
+    image: postgres:13
     volumes:
       - pg-data:/var/lib/postgresql/data
     ports:

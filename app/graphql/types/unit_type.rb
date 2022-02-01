@@ -13,6 +13,7 @@ module Types
     field :rubrics, [Types::AttachmentType], null: true
     field :summative_assessments, [Types::AttachmentType], null: true
     field :summative_answers, [Types::AttachmentType], null: true
+    field :signpost_url, String, null: true
 
     def lessons
       object.lessons.published.ordered

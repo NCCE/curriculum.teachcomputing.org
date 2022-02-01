@@ -51,6 +51,7 @@ class UnitDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
+    signpost_url: Field::String,
     national_curriculum_statements: Field::HasMany,
     connected_world_strands: Field::HasMany,
     created_at: Field::DateTime,
@@ -84,6 +85,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_answers
     national_curriculum_statements
     connected_world_strands
+    signpost_url
     created_at
     updated_at
   ].freeze
@@ -102,6 +104,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_answers
     national_curriculum_statements
     connected_world_strands
+    signpost_url
   ].freeze
 
   # COLLECTION_FILTERS
