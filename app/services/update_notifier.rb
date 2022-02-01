@@ -22,6 +22,6 @@ class UpdateNotifier
     def resource_hash(resource)
       type = resource.class.to_s.underscore.parameterize
       identifier = @identifiers[type.to_sym] unless @identifiers.nil?
-      { type: type, identifier: identifier || resource.slug }
+      { 'type' => type, 'identifier' => identifier || resource.slug }
     end
 end
