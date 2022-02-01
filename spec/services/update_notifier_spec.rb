@@ -18,7 +18,7 @@ RSpec.describe UpdateNotifier do
         notifier.run
         expect(InvalidateCacheWorker)
           .to have_received(:perform_async)
-          .with({ type: 'unit', identifier: 'unit-slug' }).once
+          .with({ 'type' => 'unit', 'identifier' => 'unit-slug' }).once
       end
     end
 
@@ -34,13 +34,13 @@ RSpec.describe UpdateNotifier do
         notifier.run
         expect(InvalidateCacheWorker)
           .to have_received(:perform_async)
-          .with({ type: 'key_stage', identifier: 'ks-slug' }).once
+          .with({ 'type' => 'key_stage', 'identifier' => 'ks-slug' }).once
         expect(InvalidateCacheWorker)
           .to have_received(:perform_async)
-          .with({ type: 'unit', identifier: 'unit-slug' }).once
+          .with({ 'type' => 'unit', 'identifier' => 'unit-slug' }).once
         expect(InvalidateCacheWorker)
           .to have_received(:perform_async)
-          .with({ type: 'lesson', identifier: 'lesson-slug' }).once
+          .with({ 'type' => 'lesson', 'identifier' => 'lesson-slug' }).once
       end
     end
   end
