@@ -6,10 +6,15 @@
 
 - [Homebrew](https://brew.sh/)
 - Docker (incl. Docker Compose, which already part of Docker for Mac and Docker Toolbox) > v4.0 (with support for `docker compose`)
-- Yarn
-  - `brew install yarn`
+- [asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf)
 
 ### Setup
+
+Setup dependencies
+
+```
+asdf install
+```
 
 Setup yarn
 
