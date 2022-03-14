@@ -5,6 +5,7 @@ module Types
     field :year_group, Types::YearGroupType, null: false
     field :title, String, null: false
     field :description, String, null: false
+    field :isaac_url, String, null: true
     field :unit_guide, Types::AttachmentType, null: true
     field :lessons, [Types::LessonType], null: true
     field :total_positive, Integer, null: true
