@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_06_131320) do
+ActiveRecord::Schema.define(version: 2022_03_14_134711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -192,6 +192,7 @@ ActiveRecord::Schema.define(version: 2021_10_06_131320) do
     t.string "slug"
     t.boolean "unit_documents_synced", default: false
     t.datetime "unit_documents_synced_at"
+    t.string "isaac_url"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 

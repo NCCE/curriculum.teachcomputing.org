@@ -21,6 +21,7 @@ RSpec.describe Unit, type: :request do
                 title
                 slug
                 description
+                isaacUrl
                 unitGuide {
                   filename
                 }
@@ -42,6 +43,7 @@ RSpec.describe Unit, type: :request do
             title: published_unit.title,
             slug: published_unit.slug,
             description: published_unit.description,
+            isaacUrl: published_unit.isaac_url,
             unitGuide: {
               filename: 'test.txt'
             },

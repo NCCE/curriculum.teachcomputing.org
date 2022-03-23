@@ -51,6 +51,7 @@ class UnitDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
+    isaac_url: Field::Text,
     national_curriculum_statements: Field::HasMany,
     connected_world_strands: Field::HasMany,
     created_at: Field::DateTime,
@@ -66,6 +67,7 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     year_group
+    isaac_url
     national_curriculum_statements
     connected_world_strands
   ].freeze
@@ -77,6 +79,7 @@ class UnitDashboard < Administrate::BaseDashboard
     description
     lessons
     year_group
+    isaac_url
     unit_guide
     learning_graphs
     rubrics
@@ -95,6 +98,7 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     year_group
+    isaac_url
     unit_guide
     learning_graphs
     rubrics

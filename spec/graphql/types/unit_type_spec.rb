@@ -7,6 +7,7 @@ RSpec.describe Types::UnitType do
   it { is_expected.to have_field(:year_group).of_type('YearGroup!') }
   it { is_expected.to have_field(:title).of_type('String!') }
   it { is_expected.to have_field(:slug).of_type('String!') }
+  it { is_expected.to have_field(:isaac_url).of_type('String') }
   it { is_expected.to have_field(:description).of_type('String!') }
   it { is_expected.to have_field(:unit_guide).of_type('Attachment') }
   it { is_expected.to have_field(:lessons).of_type('[Lesson!]') }
