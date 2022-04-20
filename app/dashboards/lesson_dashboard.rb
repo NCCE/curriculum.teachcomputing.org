@@ -23,6 +23,7 @@ class LessonDashboard < Administrate::BaseDashboard
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
+    isaac_url: Field::Text,
     learning_objectives: Field::NestedHasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
@@ -36,6 +37,7 @@ class LessonDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     title
     description
+    isaac_url
     unit
   ].freeze
 
@@ -44,6 +46,7 @@ class LessonDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     title
     description
+    isaac_url
     unit
     learning_objectives
     zipped_contents
@@ -57,6 +60,7 @@ class LessonDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
+    isaac_url
     unit
     learning_objectives
     zipped_contents

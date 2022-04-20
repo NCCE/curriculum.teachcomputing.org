@@ -24,6 +24,7 @@ RSpec.describe 'Lesson', type: :request do
                 title
                 slug
                 description
+                isaacUrl
                 learningObjectives {
                   description
                   successCriteria {
@@ -49,6 +50,7 @@ RSpec.describe 'Lesson', type: :request do
             title: published_lesson.title,
             slug: published_lesson.slug,
             description: published_lesson.description,
+            isaacUrl: published_lesson.isaac_url,
             learningObjectives: [
               {
                 description: 'MyString 1',
