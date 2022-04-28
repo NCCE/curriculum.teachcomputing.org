@@ -60,7 +60,7 @@ RSpec.describe 'Query', type: :request do
         expect(response.body).to eq(expected_response)
       end
 
-      it 'returns the expected number of items when a limit is set' do
+      it 'returns the expected number of keyStages when a limit is set' do
         post '/graphql', params: {
           query: <<~GQL
             {
@@ -72,70 +72,8 @@ RSpec.describe 'Query', type: :request do
           GQL
         }
         expect(response).to be_successful
-        expected_response = {
-          data: { keyStages: [{ id: published_key_stages[0].id }, { id: published_key_stages[1].id }] }
-        }.to_json
-        expect(response.body).to eq(expected_response)
-      end
-    end
-
-    context 'with a yearGroup query' do
-      it 'returns the expected number of items when a limit is set' do
-        post '/graphql', params: {
-          query: <<~GQL
-            {
-              yearGroups(limit: 2)
-                {
-                  id
-                }
-            }
-          GQL
-        }
-        expect(response).to be_successful
-        expected_response = {
-          data: { yearGroups: [{ id: published_year_groups[0].id }, { id: published_year_groups[1].id }] }
-        }.to_json
-        expect(response.body).to eq(expected_response)
-      end
-    end
-
-    context 'with a unit query' do
-      it 'returns the expected number of items when a limit is set' do
-        post '/graphql', params: {
-          query: <<~GQL
-            {
-              units(limit: 2)
-                {
-                  id
-                }
-            }
-          GQL
-        }
-        expect(response).to be_successful
-        expected_response = {
-          data: { units: [{ id: published_units[0].id }, { id: published_units[1].id }] }
-        }.to_json
-        expect(response.body).to eq(expected_response)
-      end
-    end
-
-    context 'with a lesson query' do
-      it 'returns the expected number of items when a limit is set' do
-        post '/graphql', params: {
-          query: <<~GQL
-            {
-              lessons(limit: 2)
-                {
-                  id
-                }
-            }
-          GQL
-        }
-        expect(response).to be_successful
-        expected_response = {
-          data: { lessons: [{ id: published_lessons[0].id }, { id: published_lessons[1].id }] }
-        }.to_json
-        expect(response.body).to eq(expected_response)
+        keyStages = JSON.parse(response.body, object_class: OpenStruct).data.keyStages
+        expect(keyStages.length).to eq(2)
       end
     end
   end
