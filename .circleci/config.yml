@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  heroku: circleci/heroku@1.2.6
 jobs:
   build:
     docker:
@@ -57,3 +59,13 @@ jobs:
           name: Run brakeman
           command: |
             bundle exec brakeman -q -i config/brakeman.ignore --no-summary
+workflows:
+  build_and_test:
+    jobs:
+      - build
+  heroku_deploy:
+    jobs:
+      - heroku/deploy-via-git:
+        filters:
+          branches:
+            only: main
