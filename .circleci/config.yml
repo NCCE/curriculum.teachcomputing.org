@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   heroku: circleci/heroku@1.2.6
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/ruby:2.7.2-node-browsers
         environment:
@@ -60,11 +60,15 @@ jobs:
           command: |
             bundle exec brakeman -q -i config/brakeman.ignore --no-summary
 workflows:
-  build_test_deploy:
+  version: 2
+  build_test_and_deploy:
     jobs:
-      - build
+      - test
       - heroku/deploy-via-git:
-        filters:
-          branches:
-            only: main
+          app-name: ncce-curriculum-staging
+          requires:
+            - test
+          filters:
+            branches:
+              only: main
       
