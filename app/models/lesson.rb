@@ -11,11 +11,11 @@ class Lesson < ApplicationRecord
   validates :title, :description, presence: true
   validates :slug, uniqueness: { scope: [:unit_id] }
 
-  before_save :set_slug, :set_lesson_no
+  before_create :set_slug
 
   after_commit :notify_update
 
-  scope :ordered, -> { order(:lesson_no) }
+  scope :ordered, -> { order(:slug) }
 
   accepts_nested_attributes_for :learning_objectives, allow_destroy: true
 
@@ -23,13 +23,6 @@ class Lesson < ApplicationRecord
 
   def set_slug
     self.slug = title.parameterize
-  end
-
-  def set_lesson_no
-    lesson_no = slug[/\d+/].to_i
-    return 0 if lesson_no.nil?
-
-    self.lesson_no = lesson_no
   end
 
   def primary?

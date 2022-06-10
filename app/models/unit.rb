@@ -22,7 +22,7 @@ class Unit < ApplicationRecord
 
   scope :ordered, -> { order(:slug) }
 
-  before_save :set_slug
+  before_create :set_slug
 
   after_commit :notify_update
 

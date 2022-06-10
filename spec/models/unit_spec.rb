@@ -36,10 +36,19 @@ RSpec.describe Unit, type: :model do
 
   describe 'callbacks' do
     describe '#set_slug' do
-      it 'sets the slug once saved' do
+      it 'sets the slug on before_create' do
         unit = build(:unit)
-        unit.run_callbacks :save
+        unit.run_callbacks :create
         expect(unit.slug).to eq unit.title.parameterize
+      end
+    end
+
+    describe '#set_slug' do
+      let(:unit) { create(:unit, title: 'Test') }
+
+      it 'does not set the slug on update' do
+        unit.update(title: 'Test edited')
+        expect(unit.slug).to eq 'test'
       end
     end
 

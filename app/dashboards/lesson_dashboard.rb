@@ -19,7 +19,7 @@ class LessonDashboard < Administrate::BaseDashboard
                                           lesson_id: resource.id }]
       end
     ),
-    slug: Field::String,
+    slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
@@ -59,6 +59,7 @@ class LessonDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
+    slug
     description
     isaac_url
     unit
