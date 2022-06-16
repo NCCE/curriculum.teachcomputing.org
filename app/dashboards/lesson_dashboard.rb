@@ -9,7 +9,9 @@ class LessonDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo.with_options(
-      order: 'title ASC'
+      order: 'title ASC',
+      searchable: true,
+      searchable_fields: ['title']
     ),
     zipped_contents: Field::ActiveStorage.with_options(
       show_display_preview: false,

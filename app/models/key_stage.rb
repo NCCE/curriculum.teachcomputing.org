@@ -15,11 +15,15 @@ class KeyStage < ApplicationRecord
 
   accepts_nested_attributes_for :curriculum_maps, allow_destroy: true
 
-  before_save :set_slug
+  before_save :set_title, :set_slug
 
   scope :ordered, -> { order(:level) }
 
   after_commit :notify_update
+
+  def set_title
+    self.title = "Key Stage #{level}"
+  end
 
   def set_slug
     self.slug = title.parameterize
@@ -27,10 +31,6 @@ class KeyStage < ApplicationRecord
 
   def short_title
     "KS#{level}"
-  end
-
-  def title
-    "Key Stage #{level}"
   end
 
   def primary?

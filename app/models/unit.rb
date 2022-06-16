@@ -9,6 +9,7 @@ class Unit < ApplicationRecord
   has_and_belongs_to_many :connected_world_strands
 
   belongs_to :year_group
+  has_one :key_stage, through: :year_group
 
   has_one_attached :unit_guide
 
