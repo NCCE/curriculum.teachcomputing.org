@@ -9,7 +9,9 @@ class LessonDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo.with_options(
-      order: 'title ASC'
+      order: 'title ASC',
+      searchable: true,
+      searchable_fields: ['title']
     ),
     zipped_contents: Field::ActiveStorage.with_options(
       show_display_preview: false,
@@ -19,7 +21,7 @@ class LessonDashboard < Administrate::BaseDashboard
                                           lesson_id: resource.id }]
       end
     ),
-    slug: Field::String,
+    slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
@@ -59,6 +61,7 @@ class LessonDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
+    slug
     description
     isaac_url
     unit

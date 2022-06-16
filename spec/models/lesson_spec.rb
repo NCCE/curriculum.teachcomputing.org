@@ -55,27 +55,20 @@ RSpec.describe Lesson, type: :model do
   end
 
   describe 'callbacks' do
-    describe '#set_slug' do
-      it 'sets the slug once saved' do
+    describe '#set_slug on create' do
+      it 'sets the slug' do
         lesson = build(:lesson)
-        lesson.run_callbacks :save
+        lesson.run_callbacks :create
         expect(lesson.slug).to eq lesson.title.parameterize
       end
+    end
 
-      context 'when the lesson slug contains a number' do
-        it 'sets the lesson_no once saved' do
-          lesson = build(:lesson, title: 'Lesson 1')
-          lesson.run_callbacks :save
-          expect(lesson.lesson_no).to eq 1
-        end
-      end
+    describe '#set_slug on update' do
+      let(:lesson) { create(:lesson, title: 'Test') }
 
-      context 'when it does not include a number' do
-        it 'sets the lesson_no once saved' do
-          lesson = build(:lesson, title: 'Lesson example name')
-          lesson.run_callbacks :save
-          expect(lesson.lesson_no).to eq 0
-        end
+      it 'does not set the slug' do
+        lesson.update(title: 'Test edited')
+        expect(lesson.slug).to eq 'test'
       end
     end
 

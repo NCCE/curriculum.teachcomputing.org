@@ -12,6 +12,10 @@ class UnitDashboard < Administrate::BaseDashboard
     year_group: Field::BelongsTo.with_options(
       order: 'year_number ASC'
     ),
+    key_stage: Field::HasOne.with_options(
+      searchable: true,
+      searchable_fields: %w[title slug level]
+    ),
     unit_guide: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
@@ -47,7 +51,7 @@ class UnitDashboard < Administrate::BaseDashboard
                                           unit_id: resource.id }]
       end
     ),
-    slug: Field::String,
+    slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
     description: Field::Text,
@@ -67,6 +71,7 @@ class UnitDashboard < Administrate::BaseDashboard
     title
     description
     year_group
+    key_stage
     isaac_url
     national_curriculum_statements
     connected_world_strands
@@ -79,6 +84,7 @@ class UnitDashboard < Administrate::BaseDashboard
     description
     lessons
     year_group
+    key_stage
     isaac_url
     unit_guide
     learning_graphs
@@ -96,6 +102,7 @@ class UnitDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
+    slug
     description
     year_group
     isaac_url

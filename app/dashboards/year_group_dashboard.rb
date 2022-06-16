@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class YearGroupDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -14,7 +14,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
     slug: Field::String,
     year_number: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -40,9 +40,9 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  year_number
-  units
-  key_stage
+    year_number
+    units
+    key_stage
   ].freeze
 
   # COLLECTION_FILTERS
