@@ -39,7 +39,7 @@
     "console": "yarn run exec rails c",
     "shell": "yarn run curriculum sh",
     "test": "yarn run exec rspec",
-    "test-debug": "yarn run exec rdebug-ide --h 0.0.0.0 --p 1237 -- ./bin/rspec"
+    "test-debug": "docker-compose exec curriculum rdebug-ide --h 0.0.0.0 --p 1235 ./bin/rspec"
   },
   "lint-staged": {
     "*.js": [
