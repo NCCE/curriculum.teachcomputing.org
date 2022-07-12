@@ -22,7 +22,7 @@ class RedirectDashboard < Administrate::BaseDashboard
     redirectable: Field::Polymorphic.with_options(
       classes: [Unit.published, Lesson.published]
     ),
-    to: Field::Hidden,
+    to: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -49,7 +49,6 @@ class RedirectDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     from
-    to
   ].freeze
 
   # COLLECTION_FILTERS
