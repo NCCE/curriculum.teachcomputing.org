@@ -12,7 +12,9 @@ class ContextualSelectField < Administrate::Field::Base
   def filter_options(requested_resource)
     context = requested_resource.class.name.to_sym
     proc_or_array = selectable_options&.first&.fetch(context)
-    options = proc_or_array.present? && proc_or_array.is_a?(Proc) ? proc_or_array.call : proc_or_array
+    return unless proc_or_array.present?
+
+    options = proc_or_array.is_a?(Proc) ? proc_or_array.call : proc_or_array
     options.filter { |_, key| key != requested_resource.slug } if skip_current_page_option
   end
 
