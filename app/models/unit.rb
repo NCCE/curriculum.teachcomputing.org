@@ -1,6 +1,7 @@
 class Unit < ApplicationRecord
   include Publishable
   include Rateable
+  include Redirectable
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy
@@ -21,7 +22,9 @@ class Unit < ApplicationRecord
   validates :title, :description, presence: true
   validate :check_title_unique_to_key_stage
 
-  scope :ordered, -> { order(:slug) }
+  accepts_nested_attributes_for :redirects, allow_destroy: true
+
+  scope :ordered, -> { order(:order) }
 
   before_create :set_slug
 

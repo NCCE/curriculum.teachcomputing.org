@@ -1,12 +1,14 @@
 require 'rails_helper'
 require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 require Rails.root.join 'spec/models/concerns/rateable_shared_examples.rb'
+require Rails.root.join 'spec/models/concerns/redirectable_shared_examples.rb'
 
 RSpec.describe Unit, type: :model do
   include Rails.application.routes.url_helpers
 
   it_behaves_like 'publishable', %i[lessons]
   it_behaves_like 'rateable'
+  it_behaves_like 'redirectable', described_class
 
   describe 'associations' do
     it { is_expected.to belong_to(:year_group) }

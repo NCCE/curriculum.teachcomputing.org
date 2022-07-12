@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :curriculum_maps, except: :index
     resources :taxonomy_tags
     resources :learning_objectives, only: %i[index show edit update]
+    resources :redirects, only: %i[index show]
     resources :success_criteria, only: %i[show]
     resources :national_curriculum_statements
     resources :connected_world_strands

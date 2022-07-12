@@ -10,7 +10,8 @@ class CurriculumMap < ApplicationRecord
       'image/png', 'image/jpg', 'image/jpeg',
       'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
       'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    ], size_range: 0..5.megabytes
+    ],
+    size_range: 0..(5.megabytes)
   }
 
   def downloadable_record

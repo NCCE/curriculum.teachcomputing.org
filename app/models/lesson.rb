@@ -1,6 +1,7 @@
 class Lesson < ApplicationRecord
   include Publishable
   include Rateable
+  include Redirectable
 
   belongs_to :unit
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
@@ -15,9 +16,10 @@ class Lesson < ApplicationRecord
 
   after_commit :notify_update
 
-  scope :ordered, -> { order(:slug) }
+  scope :ordered, -> { order(:order) }
 
   accepts_nested_attributes_for :learning_objectives, allow_destroy: true
+  accepts_nested_attributes_for :redirects, allow_destroy: true
 
   validate :valid_learning_objective_count
 
