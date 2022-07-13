@@ -22,7 +22,7 @@ class RedirectDashboard < Administrate::BaseDashboard
     redirectable: Field::Polymorphic.with_options(
       classes: [Unit.published, Lesson.published]
     ),
-    to: Field::String,
+    to: ReadOnlyField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
