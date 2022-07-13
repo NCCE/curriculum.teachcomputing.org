@@ -133,9 +133,9 @@ GEM
     crass (1.0.6)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
-    debase (0.2.4.1)
-      debase-ruby_core_source (>= 0.10.2)
-    debase-ruby_core_source (0.10.14)
+    debase (0.2.5.beta2)
+      debase-ruby_core_source (>= 0.10.12)
+    debase-ruby_core_source (0.10.16)
     diff-lcs (1.5.0)
     docile (1.4.0)
     dotenv (2.7.6)
@@ -481,7 +481,7 @@ DEPENDENCIES
   brakeman
   byebug
   capybara (>= 2.15)
-  debase
+  debase (>= 0.2.5.beta2)
   dotenv-rails
   erb_lint
   factory_bot_rails (~> 5.2.0)
@@ -503,7 +503,7 @@ DEPENDENCIES
   rubocop
   rubocop-rails
   rubocop-rspec
-  ruby-debug-ide
+  ruby-debug-ide (~> 0.7.3)
   sass-rails (>= 6)
   selenium-webdriver
   sentry-rails
@@ -520,7 +520,7 @@ DEPENDENCIES
   webpacker (~> 5.4.3)
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.1.4
