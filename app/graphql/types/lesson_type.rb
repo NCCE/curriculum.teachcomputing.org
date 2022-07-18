@@ -5,6 +5,7 @@ module Types
     field :title, String, null: false
     field :slug, String, null: false
     field :order, Integer, null: true
+    field :range, Integer, null: true
     field :description, String, null: false
     field :isaac_url, String, null: true
     field :total_positive, Integer, null: true

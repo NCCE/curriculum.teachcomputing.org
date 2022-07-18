@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_21_140940) do
+ActiveRecord::Schema.define(version: 2022_07_18_123516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -127,9 +127,9 @@ ActiveRecord::Schema.define(version: 2022_06_21_140940) do
     t.text "objectives"
     t.boolean "zip_synced", default: false
     t.datetime "zip_synced_at"
-    t.integer "lesson_no", default: 0
     t.string "isaac_url"
     t.integer "order"
+    t.integer "range"
     t.index ["slug", "unit_id"], name: "index_lessons_on_slug_and_unit_id", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
