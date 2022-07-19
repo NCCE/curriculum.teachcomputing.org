@@ -23,6 +23,7 @@ class LessonDashboard < Administrate::BaseDashboard
     ),
     redirects: Field::NestedHasMany,
     order: Field::Number,
+    range: Field::Number,
     slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
@@ -40,6 +41,7 @@ class LessonDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     order
+    range
     title
     description
     isaac_url
@@ -51,6 +53,7 @@ class LessonDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     order
+    range
     title
     slug
     description
@@ -68,6 +71,7 @@ class LessonDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     order
+    range
     title
     slug
     description

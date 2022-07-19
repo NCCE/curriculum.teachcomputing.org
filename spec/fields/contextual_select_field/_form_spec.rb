@@ -12,7 +12,7 @@ RSpec.describe 'fields/contextual_select_field/_form', type: :view do
       include_blank_option: false
     )
 
-    allow(select).to receive(:filter_options).and_return([true, false, nil])
+    allow(select).to receive(:filtered_options).and_return([true, false, nil])
 
     render(
       partial: 'fields/contextual_select_field/form',
