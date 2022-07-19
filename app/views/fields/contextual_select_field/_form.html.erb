@@ -1,0 +1,14 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <% if field.filtered_options(@requested_resource).include?(field.data) || field.data.blank? %>
+    <%= f.select(
+      field.attribute,
+      options_for_select(field.filtered_options(@requested_resource), field.data),
+      include_blank: field.include_blank_option
+    ) %>
+  <% else %>
+    <%= f.text_field field.attribute, disabled: true %>
+  <% end %>
+</div>

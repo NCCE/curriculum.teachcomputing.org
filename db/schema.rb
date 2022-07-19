@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_15_161056) do
+ActiveRecord::Schema.define(version: 2022_07_18_123516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -127,8 +127,9 @@ ActiveRecord::Schema.define(version: 2022_06_15_161056) do
     t.text "objectives"
     t.boolean "zip_synced", default: false
     t.datetime "zip_synced_at"
-    t.integer "lesson_no", default: 0
     t.string "isaac_url"
+    t.integer "order"
+    t.integer "range"
     t.index ["slug", "unit_id"], name: "index_lessons_on_slug_and_unit_id", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
   end
@@ -158,6 +159,15 @@ ActiveRecord::Schema.define(version: 2022_06_15_161056) do
     t.text "comment"
     t.index ["aggregate_rating_id"], name: "index_ratings_on_aggregate_rating_id"
     t.index ["user_stem_achiever_contact_no"], name: "index_ratings_on_user_stem_achiever_contact_no"
+  end
+
+  create_table "redirects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "redirectable_type", null: false
+    t.uuid "redirectable_id", null: false
+    t.string "from"
+    t.string "to"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "states", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -195,6 +205,7 @@ ActiveRecord::Schema.define(version: 2022_06_15_161056) do
     t.boolean "unit_documents_synced", default: false
     t.datetime "unit_documents_synced_at"
     t.string "isaac_url"
+    t.integer "order"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 

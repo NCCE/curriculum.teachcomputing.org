@@ -21,6 +21,9 @@ class LessonDashboard < Administrate::BaseDashboard
                                           lesson_id: resource.id }]
       end
     ),
+    redirects: Field::NestedHasMany,
+    order: Field::Number,
+    range: Field::Number,
     slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
     title: Field::String,
@@ -37,29 +40,20 @@ class LessonDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
+    order
+    range
     title
     description
     isaac_url
     unit
+    redirects
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    title
-    description
-    isaac_url
-    unit
-    learning_objectives
-    zipped_contents
-    created_at
-    updated_at
-  ].freeze
-
-  # FORM_ATTRIBUTES
-  # an array of attributes that will be displayed
-  # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = %i[
+    order
+    range
     title
     slug
     description
@@ -67,6 +61,25 @@ class LessonDashboard < Administrate::BaseDashboard
     unit
     learning_objectives
     zipped_contents
+    created_at
+    updated_at
+    redirects
+  ].freeze
+
+  # FORM_ATTRIBUTES
+  # an array of attributes that will be displayed
+  # on the model's form (`new` and `edit`) pages.
+  FORM_ATTRIBUTES = %i[
+    order
+    range
+    title
+    slug
+    description
+    isaac_url
+    unit
+    learning_objectives
+    zipped_contents
+    redirects
   ].freeze
 
   # COLLECTION_FILTERS
