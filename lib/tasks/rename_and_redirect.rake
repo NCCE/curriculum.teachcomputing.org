@@ -128,7 +128,10 @@ namespace :rename_and_redirect do
 
       by_year.each_with_index do |slug, order|
         unit = units.find_by(slug: slug)
-        failed.push(slug) unless unit
+        unless unit
+          failed.push(slug)
+          next
+        end
 
         unit.update(order: (order + 1))
       end
