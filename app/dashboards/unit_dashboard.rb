@@ -61,7 +61,8 @@ class UnitDashboard < Administrate::BaseDashboard
     connected_world_strands: Field::HasMany,
     redirects: Field::NestedHasMany,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime
+    updated_at: Field::DateTime,
+    published?: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -80,6 +81,7 @@ class UnitDashboard < Administrate::BaseDashboard
     national_curriculum_statements
     connected_world_strands
     redirects
+    published?
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -102,6 +104,7 @@ class UnitDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     redirects
+    published?
   ].freeze
 
   # FORM_ATTRIBUTES

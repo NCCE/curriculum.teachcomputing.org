@@ -25,7 +25,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     years: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    'published?': Field::Boolean
+    published?: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES

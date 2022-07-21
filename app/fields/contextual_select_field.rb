@@ -9,8 +9,8 @@ class ContextualSelectField < Administrate::Field::Base
     collection
   end
 
-  def filtered_options(requested_resource)
-    @filtered_options ||= filter_options(requested_resource)
+  def filtered_options(params, requested_resource)
+    @filtered_options ||= filter_options(params, requested_resource)
   end
 
   def skip_current_page_option
@@ -23,13 +23,15 @@ class ContextualSelectField < Administrate::Field::Base
 
   private
 
-    def filter_options(requested_resource)
-      context = requested_resource.class.name.to_sym
-      proc_or_array = selectable_options&.first&.fetch(context)
+    def filter_options(params, requested_resource)
+      type = %r{admin/(\w+)}.match(params[:controller])[1].classify
+      proc_or_array = selectable_options.first.fetch(type.to_sym)
       return unless proc_or_array.present?
 
       options = proc_or_array.is_a?(Proc) ? proc_or_array.call : proc_or_array
-      options.filter { |_, key| key != requested_resource.slug } if skip_current_page_option
+      options.filter { |_, key| key != requested_resource.slug } if skip_current_page_option && requested_resource
+
+      options
     end
 
     def collection
