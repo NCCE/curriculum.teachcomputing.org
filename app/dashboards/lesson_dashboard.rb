@@ -31,7 +31,8 @@ class LessonDashboard < Administrate::BaseDashboard
     isaac_url: Field::Text,
     learning_objectives: Field::NestedHasMany,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime
+    updated_at: Field::DateTime,
+    published?: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -47,6 +48,7 @@ class LessonDashboard < Administrate::BaseDashboard
     isaac_url
     unit
     redirects
+    published?
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -64,6 +66,7 @@ class LessonDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     redirects
+    published?
   ].freeze
 
   # FORM_ATTRIBUTES

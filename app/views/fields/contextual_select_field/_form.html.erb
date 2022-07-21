@@ -2,10 +2,10 @@
   <%= f.label field.attribute %>
 </div>
 <div class="field-unit__field">
-  <% if field.filtered_options(@requested_resource).include?(field.data) || field.data.blank? %>
+  <% if field.filtered_options(params, @requested_resource).include?(field.data) || field.data.blank? %>
     <%= f.select(
       field.attribute,
-      options_for_select(field.filtered_options(@requested_resource), field.data),
+      options_for_select(field.filtered_options(params, @requested_resource), field.data),
       include_blank: field.include_blank_option
     ) %>
   <% else %>
