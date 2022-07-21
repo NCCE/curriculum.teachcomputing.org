@@ -1,6 +1,7 @@
 namespace :rename_and_redirect do
   desc 'Removes the lesson number from lesson titles, store it and creates a redirect'
   task lessons: :environment do
+    failed = []
     lessons = Lesson.all
 
     lessons.each do |lesson|
@@ -8,12 +9,19 @@ namespace :rename_and_redirect do
 
       # matches 'Lesson 31 and 32 A lessonium' 'Lesson 1 A lessonium'
       matches = /Lesson\s(\d+)\s(?:and\s(\d+)\s)?(.+)/.match(lesson.title)
+      unless matches.present?
+        failed.push(lesson.title)
+        next
+      end
+
       lesson.update(order: matches[1], range: matches[2] || nil, title: matches[3], slug: matches[3].parameterize)
 
       # Create a redirect and skip validation
       redirect = Redirect.new(from: from, redirectable: lesson, to: lesson.slug)
       redirect.save(validate: false)
     end
+
+    puts 'Unable to process:', failed unless failed.blank?
   end
 
   desc 'Adds ordering to units'
