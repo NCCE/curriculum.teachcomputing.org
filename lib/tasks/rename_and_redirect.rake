@@ -10,7 +10,7 @@ namespace :rename_and_redirect do
       # matches 'Lesson 31 and 32 A lessonium' 'Lesson 1 A lessonium'
       matches = /Lesson\s(\d+)\s(?:and\s(\d+)\s)?(.+)/.match(lesson.title)
       unless matches.present?
-        failed.push(lesson.title)
+        failed.push("#{lesson.title} (#{lesson.slug})")
         next
       end
 
