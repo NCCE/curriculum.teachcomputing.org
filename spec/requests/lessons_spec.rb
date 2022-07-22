@@ -191,59 +191,6 @@ RSpec.describe 'Lesson', type: :request do
     end
   end
 
-  describe 'where a redirect has been defined for a lesson' do
-    let!(:unpublished_lesson) { create(:lesson, unit: create(:unit)) }
-    let!(:published_lesson_2) do
-      create(:published_lesson, unit: create(:unit), state: create(:published_state))
-    end
-    let!(:redirect) { create(:redirect, from: unpublished_lesson.slug, redirectable: published_lesson_2) }
-
-    before do
-      post '/graphql', params: {
-        query: <<~GQL
-          {
-            lesson(slug: "#{published_lesson_2.slug}", unitSlug: "#{published_lesson_2.unit.slug}")
-              {
-                id
-                slug
-                unit {
-                  id
-                  slug
-                }
-                redirects {
-                  from
-                  to
-                }
-              }
-          }
-        GQL
-      }
-    end
-
-    it 'returns the redirect' do
-      expect(response).to be_successful
-
-      expected_response = {
-        data: {
-          lesson: {
-            id: published_lesson_2.id,
-            slug: published_lesson_2.slug,
-            unit: {
-              id: published_lesson_2.unit.id,
-              slug: published_lesson_2.unit.slug
-            },
-            redirects: [{
-              from: redirect.from,
-              to: redirect.to
-            }]
-          }
-        }
-      }.to_json
-
-      expect(response.body).to eq(expected_response)
-    end
-  end
-
   describe 'when ordering' do
     let!(:lesson_2) { create(:published_lesson, order: 1, title: 'Lesson 2') }
     let!(:lesson_3) { create(:published_lesson, order: 3, title: 'Lesson 3') }

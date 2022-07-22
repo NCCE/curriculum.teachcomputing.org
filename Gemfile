@@ -6,6 +6,7 @@ ruby '2.7.2'
 gem 'activestorage-validator'
 gem 'administrate', '~> 0.17.0'
 gem 'administrate-field-active_storage', '~> 0.3.4'
+gem 'administrate-field-hidden', '~> 0.1.0'
 gem 'administrate-field-nested_has_many', '~> 1.3.0'
 gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'barnes', '~> 0.0.8'
