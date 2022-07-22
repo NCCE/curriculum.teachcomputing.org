@@ -79,6 +79,28 @@ module Types
       find_record(Lesson, args)
     end
 
+    # Redirects
+
+    field :redirects, [Types::RedirectType], null: true do
+      argument :limit, Integer, required: false
+    end
+
+    def redirects(**_args)
+      Redirect.all
+    end
+
+    field :redirect, Types::RedirectType, null: true do
+      argument :from, String, required: false
+      argument :to, String, required: false
+    end
+
+    def redirect(**args)
+      from, to = args.values_at(:from, :to)
+      return Redirect.find_by!(from: from) if from
+      return Redirect.find_by!(to: to) if to
+      return Redirect.find_by!(from: from, to: to) if from && to
+    end
+
     # Shared
 
     def find_record(model, args)
