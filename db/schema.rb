@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_18_123516) do
+ActiveRecord::Schema.define(version: 2022_07_22_093302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -168,6 +168,7 @@ ActiveRecord::Schema.define(version: 2022_07_18_123516) do
     t.string "to"
     t.string "redirectable_type"
     t.uuid "redirectable_id"
+    t.string "from_context"
   end
 
   create_table "states", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

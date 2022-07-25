@@ -91,14 +91,15 @@ module Types
 
     field :redirect, Types::RedirectType, null: true do
       argument :from, String, required: false
+      argument :from_context, String, required: false
       argument :to, String, required: false
     end
 
     def redirect(**args)
-      from, to = args.values_at(:from, :to)
-      return Redirect.find_by!(from: from) if from
+      from, from_context, to = args.values_at(:from, :from_context, :to)
+      return Redirect.find_by!(from: from, from_context: from_context) if from && from_context
       return Redirect.find_by!(to: to) if to
-      return Redirect.find_by!(from: from, to: to) if from && to
+      return Redirect.find_by!(from: from, from_context: from_context, to: to) if from && from_context && to
     end
 
     # Shared

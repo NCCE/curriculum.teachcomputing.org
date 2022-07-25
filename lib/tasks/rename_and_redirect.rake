@@ -17,7 +17,8 @@ namespace :rename_and_redirect do
       lesson.update(order: matches[1], range: matches[2] || nil, title: matches[3], slug: matches[3].parameterize)
 
       # Create a redirect and skip validation
-      redirect = Redirect.new(from: from, redirectable: lesson, to: lesson.slug)
+      unit = Unit.find(lesson.unit_id)
+      redirect = Redirect.new(from: "#{unit.slug},#{from}", redirectable: lesson, to: lesson.slug)
       redirect.save(validate: false)
     end
 
