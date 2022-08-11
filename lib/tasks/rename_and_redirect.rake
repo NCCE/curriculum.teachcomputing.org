@@ -7,8 +7,8 @@ namespace :rename_and_redirect do
     lessons.each do |lesson|
       from = lesson.slug
 
-      # matches 'Lesson 31 and 32 A lessonium' 'Lesson 1 A lessonium'
-      matches = /Lesson\s(\d+)\s(?:and\s(\d+)\s)?(.+)/.match(lesson.title)
+      # matches 'Lesson 31 and 32 A lessonium', 'Lesson 1 A lessonium', 'Lesson 1 to 5 Some lessons', 'lesson 4 The fourth lesson'
+      matches = /Lesson\s(\d+)\s(?:(?:and|to)\s(\d+)\s)?(.+)/i.match(lesson.title)
       unless matches.present?
         failed.push("#{lesson.title} (#{lesson.slug})")
         next
@@ -105,30 +105,30 @@ namespace :rename_and_redirect do
         physical-computing
       ],
       ygcse: [
-        'algorithms-part-1',
-        'algorithms-part-2',
-        'computer-systems',
-        'data-representations',
         'programming-part-1-sequence',
+        'computer-systems',
         'programming-part-2-selection',
         'programming-part-3-iteration',
         'programming-part-4-subroutines',
+        'algorithms-part-1',
         'programming-part-5-strings-and-lists',
+        'data-representations',
+        'algorithms-part-2',
+        'programming-part-6-dictionaries-and-datafiles',
+        'impacts-of-technology',
+        'networks',
         'cyber-security',
         'databases-and-sql',
         'html',
-        'impacts-of-technology',
-        'networks',
-        'physical-computing-project',
-        'programming-part-6-dictionaries-and-datafiles'
+        'object-oriented-programming'
       ],
       'ynon-gcse': %w[
         online-safety
         it-and-the-world-of-work
         media
+        physical-computing-project
         spreadsheets
         it-project-management
-        object-oriented-programming
       ]
     }
 
