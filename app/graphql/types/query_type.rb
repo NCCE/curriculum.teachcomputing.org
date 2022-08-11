@@ -110,9 +110,14 @@ module Types
       if id
         model.find(id)
       elsif slug
-        if model.model_name == :lesson.to_s.humanize
-          unit = Unit.find_by_slug(unit_slug)
-          model.find_by!(slug: slug, unit: unit)
+        case model.model_name
+        when 'Lesson'
+          lesson = Lesson.published.find { |l| l.slug == slug && l.unit.slug == unit_slug }
+          raise ActiveRecord::RecordNotFound if lesson.blank?
+
+          lesson
+        when 'Unit'
+          Unit.published.find_by!(slug: slug)
         else
           model.find_by!(slug: slug)
         end
