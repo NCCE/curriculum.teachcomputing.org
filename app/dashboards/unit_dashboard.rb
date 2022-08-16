@@ -92,7 +92,6 @@ class UnitDashboard < Administrate::BaseDashboard
     description
     lessons
     year_group
-    key_stage
     isaac_url
     unit_guide
     learning_graphs

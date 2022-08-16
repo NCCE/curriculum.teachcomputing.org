@@ -14,8 +14,12 @@ module Types
     field :learning_objectives, [Types::LearningObjectiveType], null: true
     field :redirects, [Types::RedirectType], null: true
 
+    def learning_objectives
+      object.learning_objectives.ordered
+    end
+
     def zipped_contents
-      return object.zipped_contents unless object.zipped_contents.blank?
+      object.zipped_contents unless object.zipped_contents.blank?
     end
   end
 end
