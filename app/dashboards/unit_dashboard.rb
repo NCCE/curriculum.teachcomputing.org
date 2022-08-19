@@ -103,7 +103,6 @@ class UnitDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     redirects
-    published?
   ].freeze
 
   # FORM_ATTRIBUTES
