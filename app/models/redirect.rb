@@ -8,7 +8,7 @@ class Redirect < ApplicationRecord
   validate :to_is_published
 
   def internal?
-    from_as_object(slugs[:from], slugs[:from_context]).blank?
+    from_as_object.blank?
   end
 
   private
@@ -38,7 +38,7 @@ class Redirect < ApplicationRecord
       errors.add(:to, :published, message: 'must be published') unless redirectable.published?
     end
 
-    def from_as_object(from, from_context)
+    def from_as_object
       if redirectable_type == 'Lesson'
         unit = Unit.find_by_slug(from_context)
         Lesson.find_by(slug: from, unit_id: unit.id) unless unit.blank?
@@ -51,9 +51,9 @@ class Redirect < ApplicationRecord
 
     def check_not_internal_redirect
       # TODO: this prevents the save but won't display any validation
-      if internal?
-        errors.add(:base, 'You may not delete system redirects')
-        raise ActiveRecord::RecordInvalid, self
-      end
+      return unless internal?
+
+      errors.add(:base, 'You may not delete system redirects')
+      raise ActiveRecord::RecordInvalid, self
     end
 end

@@ -56,6 +56,14 @@ class Unit < ApplicationRecord
   private
 
     def notify_update
-      UpdateNotifier.new([self, year_group.key_stage]).run
+      notifiables = [self, year_group, year_group.key_stage]
+      identifiers = { unit: "#{year_group.key_stage.slug}-#{slug}" }
+
+      unless redirects.blank?
+        notifiables.push(redirects.first)
+        identifiers[:redirect] = redirects.map { |redirect| "#{redirect.from_context}-#{redirect.from}" }
+      end
+
+      UpdateNotifier.new(notifiables, identifiers).run
     end
 end

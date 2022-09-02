@@ -51,6 +51,7 @@ module Types
     field :unit, Types::UnitType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
+      argument :key_stage_slug, String, required: false
     end
 
     def unit(**args)
@@ -105,7 +106,7 @@ module Types
     # Shared
 
     def find_record(model, args)
-      id, slug, unit_slug = args.values_at(:id, :slug, :unit_slug)
+      id, slug, unit_slug, key_stage_slug = args.values_at(:id, :slug, :unit_slug, :key_stage_slug)
 
       if id
         model.find(id)
@@ -117,7 +118,10 @@ module Types
 
           lesson
         when 'Unit'
-          Unit.published.find_by!(slug: slug)
+          key_stage = KeyStage.find_by(slug: key_stage_slug)
+          year_groups = YearGroup.where(key_stage_id: key_stage.id)
+
+          Unit.published.find_by(slug: slug, year_group: year_groups.pluck(:id))
         else
           model.find_by!(slug: slug)
         end
