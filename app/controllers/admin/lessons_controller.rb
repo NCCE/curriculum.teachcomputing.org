@@ -2,6 +2,14 @@ module Admin
   class LessonsController < Admin::ApplicationController
     include ::PublishableController
 
+    def default_sorting_attribute
+      :order
+    end
+
+    def default_sorting_direction
+      :asc
+    end
+
     def destroy_zipped_contents
       requested_resource = Lesson.find(params[:lesson_id])
       requested_resource.zipped_contents.purge

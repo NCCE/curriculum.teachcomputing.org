@@ -3,11 +3,11 @@ class Redirect < ApplicationRecord
 
   before_save :set_to_from_redirectable
   before_save :set_from_and_context
-  before_destroy :check_not_internal_redirect
 
   validate :to_is_published
 
   def internal?
+    # we assume a redirect added with a 'to' field with no record, is internal
     from_as_object.blank?
   end
 
@@ -47,13 +47,5 @@ class Redirect < ApplicationRecord
         year_groups = YearGroup.where(key_stage_id: key_stage.id)&.pluck(:id) unless key_stage.blank?
         Unit.find_by(slug: from, year_group_id: year_groups)
       end
-    end
-
-    def check_not_internal_redirect
-      # TODO: this prevents the save but won't display any validation
-      return unless internal?
-
-      errors.add(:base, 'You may not delete system redirects')
-      raise ActiveRecord::RecordInvalid, self
     end
 end

@@ -25,7 +25,7 @@ Rails.application.routes.draw do
       delete :summative_assessments, action: :destroy_summative_assessment
       delete :summative_answers, action: :destroy_summative_answer
     end
-    resources :lessons do
+    resources :lessons, only: %i[create new show edit index update] do
       post '/publish', to: 'lessons#publish'
       post '/unpublish', to: 'lessons#unpublish'
       delete :zipped_contents, action: :destroy_zipped_contents

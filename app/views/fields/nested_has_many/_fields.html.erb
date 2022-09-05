@@ -1,0 +1,10 @@
+<div class="nested-fields">
+  <% field.nested_fields_for_builder(f).each do |attribute| -%>
+    <div class="field-unit field-unit--<%= attribute.html_class %> <%= f.object.respond_to?('internal?') && f.object.internal? ? 'no-bottom-margin' : '' %>">
+      <%= render_field attribute, f: f %>
+    </div>
+  <% end -%>
+  <% unless f.object.respond_to?('internal?') && f.object.internal? %>
+    <%= link_to_remove_association I18n.t("administrate.fields.nested_has_many.remove", resource: field.associated_class_name.titleize), f %>
+  <% end %>
+</div>

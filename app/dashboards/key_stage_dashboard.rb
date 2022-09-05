@@ -8,7 +8,10 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    year_groups: Field::HasMany,
+    year_groups: Field::HasMany.with_options(
+      sort_by: 'year_number',
+      direction: :asc
+    ),
     teacher_guide: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|

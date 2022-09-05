@@ -29,7 +29,10 @@ class LessonDashboard < Administrate::BaseDashboard
     title: Field::String,
     description: Field::Text,
     isaac_url: Field::Text,
-    learning_objectives: Field::NestedHasMany,
+    learning_objectives: Field::NestedHasMany.with_options(
+      sort_by: 'order',
+      direction: :asc
+    ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     published?: Field::Boolean
@@ -42,11 +45,7 @@ class LessonDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     order
-    range
     title
-    description
-    isaac_url
-    unit
     redirects
     published?
   ].freeze

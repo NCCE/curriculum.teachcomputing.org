@@ -45,14 +45,6 @@ class Lesson < ApplicationRecord
   private
 
     def notify_update
-      notifiables = [self, unit]
-      identifiers = { lesson: "#{unit.slug}-#{slug}" }
-
-      unless redirects.blank?
-        notifiables.push(redirects.first)
-        identifiers[:redirect] = redirects.map { |redirect| "#{redirect.from_context}-#{redirect.from}" }
-      end
-
-      UpdateNotifier.new(notifiables, identifiers).run
+      UpdateNotifier.new([self, unit], { lesson: "#{unit.slug}-#{slug}" }).run
     end
 end
