@@ -31,6 +31,10 @@ services:
     depends_on:
       - redis
       - docker-host
+      - curriculum
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
     environment:
       - REDIS_URL=redis://redis:6379/1
       - TC_API_URL=http://teachcomputing.rpfdev.com
