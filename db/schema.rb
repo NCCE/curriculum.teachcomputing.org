@@ -162,12 +162,12 @@ ActiveRecord::Schema.define(version: 2022_07_22_093302) do
   end
 
   create_table "redirects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "redirectable_type", null: false
-    t.uuid "redirectable_id", null: false
-    t.string "from"
-    t.string "to"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "from"
+    t.string "to"
+    t.string "redirectable_type"
+    t.uuid "redirectable_id"
     t.string "from_context"
   end
 
