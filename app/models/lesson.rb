@@ -37,10 +37,9 @@ class Lesson < ApplicationRecord
 
   def valid_learning_objective_count
     return unless learning_objectives.present?
+    return unless primary? && learning_objectives.size > 1
 
-    if primary? && learning_objectives.size > 1
-      errors.add(:learning_objectives, 'only one learning objective allowed for primary lessons')
-    end
+    errors.add(:learning_objectives, 'only one learning objective allowed for primary lessons')
   end
 
   private

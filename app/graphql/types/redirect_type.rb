@@ -7,6 +7,8 @@ module Types
     field :to_context, [String], null: false
 
     def to_context
+      return unless object.present?
+
       type = object.redirectable_type
       redirectable = type.constantize.find(object.redirectable_id)
 

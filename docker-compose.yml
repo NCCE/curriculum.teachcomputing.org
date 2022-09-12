@@ -31,7 +31,6 @@ services:
     depends_on:
       - redis
       - docker-host
-      - curriculum
     volumes:
       - .:/app
       - bundle:/usr/local/bundle
@@ -56,6 +55,7 @@ services:
     depends_on:
       - db
       - redis
+      - sidekiq
       - docker-host
     environment:
       - PROXY_URL=http://host.docker.internal:8888

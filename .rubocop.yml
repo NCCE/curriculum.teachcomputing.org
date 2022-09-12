@@ -60,3 +60,6 @@ Style/FrozenStringLiteralComment:
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
+
+Metrics/AbcSize:
+  Enabled: false

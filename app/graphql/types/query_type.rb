@@ -51,6 +51,7 @@ module Types
     field :unit, Types::UnitType, null: true do
       argument :id, ID, required: false
       argument :slug, String, required: false
+      argument :key_stage_slug, String, required: false
     end
 
     def unit(**args)
@@ -86,7 +87,7 @@ module Types
     end
 
     def redirects(**_args)
-      Redirect.all
+      Redirect.all || []
     end
 
     field :redirect, Types::RedirectType, null: true do
@@ -97,31 +98,39 @@ module Types
 
     def redirect(**args)
       from, from_context, to = args.values_at(:from, :from_context, :to)
-      return Redirect.find_by!(from: from, from_context: from_context) if from && from_context
-      return Redirect.find_by!(to: to) if to
-      return Redirect.find_by!(from: from, from_context: from_context, to: to) if from && from_context && to
+      find_redirect(from, from_context, to) || nil
+    end
+
+    def find_redirect(from, from_context, to)
+      return Redirect.find_by(from: from, from_context: from_context) if from && from_context
+      return Redirect.find_by(to: to) if to
+      return Redirect.find_by(from: from, from_context: from_context, to: to) if from && from_context && to
     end
 
     # Shared
 
     def find_record(model, args)
-      id, slug, unit_slug = args.values_at(:id, :slug, :unit_slug)
+      id, slug, unit_slug, key_stage_slug = args.values_at(:id, :slug, :unit_slug, :key_stage_slug)
 
       if id
-        model.find(id)
+        record = model.find(id)
       elsif slug
         case model.model_name
         when 'Lesson'
-          lesson = Lesson.published.find { |l| l.slug == slug && l.unit.slug == unit_slug }
-          raise ActiveRecord::RecordNotFound if lesson.blank?
-
-          lesson
+          record = Lesson.published.find { |l| l.slug == slug && l.unit.slug == unit_slug }
         when 'Unit'
-          Unit.published.find_by!(slug: slug)
+          key_stage = KeyStage.find_by(slug: key_stage_slug)
+          year_groups = YearGroup.where(key_stage_id: key_stage.id)
+
+          record = Unit.published.find_by(slug: slug, year_group: year_groups.pluck(:id))
         else
-          model.find_by!(slug: slug)
+          record = model.find_by!(slug: slug)
         end
       end
+
+      raise ActiveRecord::RecordNotFound if record.blank?
+
+      record
     end
   end
 end

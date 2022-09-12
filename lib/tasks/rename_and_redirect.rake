@@ -1,5 +1,5 @@
 namespace :rename_and_redirect do
-  desc 'Removes the lesson number from lesson titles, store it and creates a redirect'
+  desc 'Removes the lesson number from lesson titles, stores it and creates a redirect'
   task lessons: :environment do
     failed = []
     lessons = Lesson.all

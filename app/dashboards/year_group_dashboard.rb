@@ -8,7 +8,11 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    units: Field::HasMany,
+    units: Field::HasMany.with_options(
+      sort_by: 'order',
+      direction: :asc,
+      limit: 6
+    ),
     key_stage: Field::BelongsTo,
     id: Field::String.with_options(searchable: false),
     slug: Field::String,

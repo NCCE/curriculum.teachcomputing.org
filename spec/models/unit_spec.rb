@@ -64,7 +64,7 @@ RSpec.describe Unit, type: :model do
         expect(UpdateNotifier)
           .to have_received(:new)
           .once
-          .with([instance, instance.year_group.key_stage])
+          .with([instance, instance.year_group, instance.year_group.key_stage], { unit: '-' })
         expect(notifier_double).to have_received(:run).once
       end
     end

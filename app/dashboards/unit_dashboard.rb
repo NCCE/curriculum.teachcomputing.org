@@ -8,7 +8,11 @@ class UnitDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    lessons: Field::HasMany,
+    lessons: Field::HasMany.with_options(
+      sort_by: 'order',
+      direction: :asc,
+      limit: 6
+    ),
     year_group: Field::BelongsTo.with_options(
       order: 'year_number ASC'
     ),
@@ -51,9 +55,9 @@ class UnitDashboard < Administrate::BaseDashboard
                                           unit_id: resource.id }]
       end
     ),
+    order: Field::Number,
     slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
-    order: Field::Number,
     title: Field::String,
     description: Field::Text,
     isaac_url: Field::Text,
@@ -74,14 +78,9 @@ class UnitDashboard < Administrate::BaseDashboard
     order
     title
     slug
-    description
     year_group
     key_stage
-    isaac_url
-    national_curriculum_statements
-    connected_world_strands
     redirects
-    published?
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -89,6 +88,7 @@ class UnitDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     order
     title
+    slug
     description
     lessons
     year_group
