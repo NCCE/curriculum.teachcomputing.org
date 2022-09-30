@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_22_093302) do
+ActiveRecord::Schema.define(version: 2022_09_30_161830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -157,17 +157,18 @@ ActiveRecord::Schema.define(version: 2022_07_22_093302) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "user_stem_achiever_contact_no"
     t.text "comment"
+    t.string "choices", default: [], array: true
     t.index ["aggregate_rating_id"], name: "index_ratings_on_aggregate_rating_id"
     t.index ["user_stem_achiever_contact_no"], name: "index_ratings_on_user_stem_achiever_contact_no"
   end
 
   create_table "redirects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "redirectable_type", null: false
+    t.uuid "redirectable_id", null: false
     t.string "from"
     t.string "to"
-    t.string "redirectable_type"
-    t.uuid "redirectable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "from_context"
   end
 
