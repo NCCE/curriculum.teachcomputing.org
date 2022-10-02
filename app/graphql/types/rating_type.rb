@@ -4,5 +4,6 @@ module Types
     field :positive, Boolean, null: false
     field :user_stem_achiever_contact_no, ID, null: true
     field :comment, String, null: true
+    field :choices, [String], null: true
   end
 end

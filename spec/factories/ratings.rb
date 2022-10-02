@@ -4,6 +4,7 @@ FactoryBot.define do
     positive { false }
     user_stem_achiever_contact_no { nil }
     comment { nil }
+    choices { nil }
 
     factory :rating_with_comment do
       after(:build) do |rating|
