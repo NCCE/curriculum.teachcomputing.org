@@ -1,0 +1,14 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <% if field.filtered_options(params, @requested_resource).any? { |option| option.include?("#{f.object.from_context},#{field.data}") } || field.data.blank? %>
+    <%= f.select(
+      field.attribute,
+      options_for_select(field.filtered_options(params, @requested_resource), "#{f.object.from_context},#{field.data}"),
+      include_blank: field.include_blank_option
+    ) %>
+  <% else %>
+    <%= f.text_field field.attribute, disabled: true %>
+  <% end %>
+</div>

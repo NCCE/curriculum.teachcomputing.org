@@ -1,21 +1,5 @@
 module Admin
-  class LessonsController < Admin::ApplicationController
-    include ::PublishableController
-
-    def default_sorting_attribute
-      :order
-    end
-
-    def default_sorting_direction
-      :asc
-    end
-
-    def destroy_zipped_contents
-      requested_resource = Lesson.find(params[:lesson_id])
-      requested_resource.zipped_contents.purge
-      redirect_back(fallback_location: requested_resource)
-    end
-
+  class RedirectsController < Admin::ApplicationController
     # Overwrite any of the RESTful controller actions to implement custom behavior
     # For example, you may want to send an email after a foo is updated.
     #

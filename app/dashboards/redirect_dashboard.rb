@@ -1,22 +1,28 @@
 require 'administrate/base_dashboard'
 
-class YearGroupDashboard < Administrate::BaseDashboard
+class RedirectDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
   # Each different type represents an Administrate::Field object,
   # which determines how the attribute is displayed
-  # on pages throughout the dashboard.
+  # on pages throughout the dashboard
+
+  def self.transform_to_option_data(collection, type)
+    collection.collect { |r| [r.title, "#{type == 'lesson' ? r.unit.slug : r.year_group.key_stage.slug},#{r.slug}"] }
+  end
+
   ATTRIBUTE_TYPES = {
-    units: Field::HasMany.with_options(
-      sort_by: 'order',
-      direction: :asc,
-      limit: 6
+    from: ContextualSelectField.with_options(
+      collections: [
+        Lesson: -> { transform_to_option_data(Lesson.unpublished, 'lesson') },
+        Unit: -> { transform_to_option_data(Unit.unpublished, 'unit') }
+      ]
     ),
-    key_stage: Field::BelongsTo,
-    id: Field::String.with_options(searchable: false),
-    slug: Field::String,
-    year_number: Field::String,
+    redirectable: Field::Polymorphic.with_options(
+      classes: [Unit.published, Lesson.published]
+    ),
+    to: ReadOnlyField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -27,26 +33,22 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    year_number
-    units
-    key_stage
+    from
+    to
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    units
-    key_stage
-    year_number
+    from
+    to
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    year_number
-    units
-    key_stage
+    from
   ].freeze
 
   # COLLECTION_FILTERS
@@ -61,10 +63,9 @@ class YearGroupDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how year groups are displayed
+  # Overwrite this method to customize how redirects are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(year_group)
-    "Year: #{year_group.year_number}"
-  end
+  # def display_resource
+  # end
 end

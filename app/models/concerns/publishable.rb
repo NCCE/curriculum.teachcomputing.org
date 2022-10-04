@@ -7,6 +7,7 @@ module Publishable
     before_validation :create_state, on: :create
 
     scope :published, -> { joins(:state).where('states.state = ?', State.states[:published]) }
+    scope :unpublished, -> { joins(:state).where('states.state = ?', State.states[:unpublished]) }
 
     delegate :published?, :published!, :unpublished!, to: :state
   end

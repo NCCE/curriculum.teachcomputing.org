@@ -2,6 +2,7 @@ module Types
   class UnitType < BaseObject
     field :id, ID, null: false
     field :slug, String, null: false
+    field :order, Integer, null: true
     field :year_group, Types::YearGroupType, null: false
     field :title, String, null: false
     field :description, String, null: false
@@ -14,6 +15,7 @@ module Types
     field :rubrics, [Types::AttachmentType], null: true
     field :summative_assessments, [Types::AttachmentType], null: true
     field :summative_answers, [Types::AttachmentType], null: true
+    field :redirects, [Types::RedirectType], null: true
 
     def lessons
       object.lessons.published.ordered

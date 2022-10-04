@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       post '/publish', to: 'year_groups#publish'
       post '/unpublish', to: 'year_groups#unpublish'
     end
-    resources :units, only: %i[new show edit index update] do
+    resources :units, only: %i[create new show edit index update] do
       post '/publish', to: 'units#publish'
       post '/unpublish', to: 'units#unpublish'
       delete :unit_guide, action: :destroy_unit_guide
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
       delete :summative_assessments, action: :destroy_summative_assessment
       delete :summative_answers, action: :destroy_summative_answer
     end
-    resources :lessons, only: %i[new show edit index update] do
+    resources :lessons, only: %i[create new show edit index update] do
       post '/publish', to: 'lessons#publish'
       post '/unpublish', to: 'lessons#unpublish'
       delete :zipped_contents, action: :destroy_zipped_contents
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :curriculum_maps, except: :index
     resources :taxonomy_tags
     resources :learning_objectives, only: %i[index show edit update]
+    resources :redirects, only: %i[show update]
     resources :success_criteria, only: %i[show]
     resources :national_curriculum_statements
     resources :connected_world_strands

@@ -31,6 +31,9 @@ services:
     depends_on:
       - redis
       - docker-host
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
     environment:
       - REDIS_URL=redis://redis:6379/1
       - TC_API_URL=http://teachcomputing.rpfdev.com
@@ -52,6 +55,7 @@ services:
     depends_on:
       - db
       - redis
+      - sidekiq
       - docker-host
     environment:
       - PROXY_URL=http://host.docker.internal:8888

@@ -2,6 +2,14 @@ module Admin
   class UnitsController < Admin::ApplicationController
     include ::PublishableController
 
+    def default_sorting_attribute
+      :order
+    end
+
+    def default_sorting_direction
+      :asc
+    end
+
     def destroy_unit_guide
       requested_resource = Unit.find(params[:unit_id])
       requested_resource.unit_guide.purge

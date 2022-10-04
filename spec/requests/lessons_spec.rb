@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Lesson', type: :request do
-  let!(:published_lesson) { create(:published_lesson) }
-
   describe 'for a primary lesson' do
+    let!(:published_lesson) { create(:published_lesson) }
     let!(:primary_learning_objectives) do
       [
         create(:learning_objective, lesson: published_lesson, order: 2, description: 'MyString 2'),
@@ -70,6 +69,7 @@ RSpec.describe 'Lesson', type: :request do
   end
 
   describe 'for a secondary lesson' do
+    let!(:published_lesson) { create(:published_lesson) }
     let!(:secondary_learning_objective) do
       create(:learning_objective, lesson: published_lesson)
     end
@@ -148,6 +148,7 @@ RSpec.describe 'Lesson', type: :request do
   end
 
   describe 'where multiple lessons share the same slug but a different unit' do
+    let!(:published_lesson) { create(:published_lesson) }
     let!(:published_lesson_2) { create(:published_lesson, unit: create(:unit)) }
 
     before do
@@ -187,6 +188,51 @@ RSpec.describe 'Lesson', type: :request do
       expect(response.body).to eq(expected_response)
       response_obj = JSON.parse(response.body, object_class: OpenStruct)
       expect(response_obj.data.lesson.unit.slug).not_to eq(published_lesson_2.unit.slug)
+    end
+  end
+
+  describe 'when ordering' do
+    let!(:lesson_2) { create(:published_lesson, order: 1, title: 'Lesson 2') }
+    let!(:lesson_3) { create(:published_lesson, order: 3, title: 'Lesson 3') }
+    let!(:lesson_1) { create(:published_lesson, order: 2, title: 'Lesson 1') }
+
+    before do
+      post '/graphql', params: {
+        query: <<~GQL
+          {
+            lessons
+              {
+                slug
+                order
+              }
+          }
+        GQL
+      }
+    end
+
+    it 'returns lessons in the defined order' do
+      expect(response).to be_successful
+
+      expected_response = {
+        data: {
+          lessons: [
+            {
+              slug: lesson_2.slug,
+              order: 1
+            },
+            {
+              slug: lesson_1.slug,
+              order: 2
+            },
+            {
+              slug: lesson_3.slug,
+              order: 3
+            }
+          ]
+        }
+      }.to_json
+
+      expect(response.body).to eq(expected_response)
     end
   end
 end

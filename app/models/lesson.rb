@@ -1,10 +1,11 @@
 class Lesson < ApplicationRecord
   include Publishable
   include Rateable
+  include Redirectable
 
   belongs_to :unit
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
-  has_many :learning_objectives, -> { order(order: :asc) }
+  has_many :learning_objectives
 
   has_one_attached :zipped_contents
 
@@ -15,9 +16,10 @@ class Lesson < ApplicationRecord
 
   after_commit :notify_update
 
-  scope :ordered, -> { order(:slug) }
+  scope :ordered, -> { order(:order) }
 
   accepts_nested_attributes_for :learning_objectives, allow_destroy: true
+  accepts_nested_attributes_for :redirects, allow_destroy: true
 
   validate :valid_learning_objective_count
 
@@ -35,10 +37,9 @@ class Lesson < ApplicationRecord
 
   def valid_learning_objective_count
     return unless learning_objectives.present?
+    return unless primary? && learning_objectives.size > 1
 
-    if primary? && learning_objectives.size > 1
-      errors.add(:learning_objectives, 'only one learning objective allowed for primary lessons')
-    end
+    errors.add(:learning_objectives, 'only one learning objective allowed for primary lessons')
   end
 
   private

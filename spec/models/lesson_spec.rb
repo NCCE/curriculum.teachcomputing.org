@@ -1,12 +1,14 @@
 require 'rails_helper'
 require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
 require Rails.root.join 'spec/models/concerns/rateable_shared_examples.rb'
+require Rails.root.join 'spec/models/concerns/redirectable_shared_examples.rb'
 
 RSpec.describe Lesson, type: :model do
   let(:lesson) { create(:lesson) }
 
   it_behaves_like 'publishable'
   it_behaves_like 'rateable'
+  it_behaves_like 'redirectable', described_class
 
   describe 'associations' do
     it { is_expected.to belong_to(:unit) }

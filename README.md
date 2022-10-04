@@ -10,22 +10,10 @@
 
 ### Setup
 
-Setup dependencies
+Build the docker image, set up environment variables, and add a nicer local hostname (curriculum.teachcomputing.rpfdev.com):
 
 ```
-asdf install
-```
-
-Setup yarn
-
-```
-yarn install
-```
-
-Builds the docker image, sets up environment variables, and adds a nicer local hostname (curriculum.teachcomputing.rpfdev.com):
-
-```
-yarn run setup
+sh setup.sh
 ```
 
 Optionally set a password for postgres by updating the value for `DEV_PASS` in your `.env` file.
@@ -35,13 +23,7 @@ Optionally set a password for postgres by updating the value for `DEV_PASS` in y
 Start the stack:
 
 ```
-docker compose up -d
-```
-
-Or (this waits until the stack is ready to use):
-
-```
-yarn start
+docker compose up (-d to detach from shell, see the next section for viewing the logs)
 ```
 
 The app is then available at: http://curriculum.teachcomputing.rpfdev.com
@@ -50,12 +32,6 @@ Stop the stack:
 
 ```
 docker compose down
-```
-
-Or:
-
-```
-yarn stop
 ```
 
 ### View logs
@@ -95,7 +71,7 @@ yarn run exec rails db:migrate
 To seed manually run:
 
 ```
-yarn run exec rails db:seed
+docker compose run --rm --no-deps curriculum rails db:seed
 ```
 
 ### Install new Dependencies / Updates
@@ -105,13 +81,13 @@ The bundle has now been moved to a separate volume and once the initial build ha
 To install/update a new gem, first update the Gemfile and run `docker-compose run web bundle install` or `docker-compose run web bundle update`, then:
 
 ```
-yarn run bundle-install
+docker compose run --rm --no-deps curriculum bundle install
 ```
 
 To reinstall all packages:
 
 ```
-docker compose build
+docker compose build (--no-cache to force it build from scratch)
 ```
 
 ## Testing
@@ -119,22 +95,10 @@ docker compose build
 Uses [rspec](https://github.com/rspec/rspec)
 
 ```
-docker compose run --rm curriculum bin/rspec
-```
-
-Or
-
-```
 yarn test
 ```
 
 To use [guard](https://github.com/guard/guard) to watch the tests:
-
-```
-docker compose run --rm curriculum bin/guard
-```
-
-Or
 
 ```
 yarn run exec guard
