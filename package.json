@@ -19,8 +19,8 @@
     "prettier": "1.14.3",
     "prettier-package-json": "2.0.1",
     "stylelint": "13.13",
-    "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.19"
