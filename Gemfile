@@ -15,6 +15,9 @@ gem 'graphiql-rails', '1.7.0'
 gem 'graphql', '<= 1.10.10'
 gem 'lograge', '~> 0.11.2'
 gem 'mimemagic', '~> 0.3.7'
+gem 'net-imap'
+gem 'net-pop'
+gem 'net-smtp'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.3'
 gem 'rails', '~> 6.1.4.1'
@@ -23,6 +26,7 @@ gem 'sentry-rails'
 gem 'sentry-ruby'
 gem 'sidekiq', '~> 6.4'
 gem 'webpacker', '~> 5.4.3'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
