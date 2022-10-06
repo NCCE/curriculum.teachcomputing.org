@@ -3,7 +3,7 @@ FactoryBot.define do
     aggregate_rating
     positive { false }
     user_stem_achiever_contact_no { nil }
-    comment { nil }
+    comment { 'This is a commment' }
     choices { nil }
 
     factory :rating_with_comment do

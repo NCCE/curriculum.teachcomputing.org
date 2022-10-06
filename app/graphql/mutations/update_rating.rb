@@ -8,8 +8,12 @@ module Mutations
 
     def resolve(id:, comment: nil, choices: nil)
       rating = Rating.find(id)
-      rating.comment = comment
-      rating.choices = choices
+      unless comment == nil
+        rating.comment = comment
+      end
+      unless choices == nil
+        rating.choices = choices
+      end
       rating.save
       rating
     end
