@@ -1,6 +1,7 @@
 {
   "name": "ncce-project",
   "engines": {
+    "node": "18.x",
     "yarn": "3.2.x"
   },
   "private": true,
