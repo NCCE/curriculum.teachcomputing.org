@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Update rating', type: :request do
   let(:expected_rating) { create(:rating) }
   let(:user_stem_achiever_contact_no) { SecureRandom.uuid }
-  let(:comment) { 'This is a updated commment' }
+  let(:comment) { 'This is a commment' }
   let(:choices) { "['first choice', 'second choice', 'third choice']"}
   let(:query) do
     { query: <<~GQL
@@ -11,7 +11,6 @@ RSpec.describe 'Update rating', type: :request do
         updateRating(
           id: "#{expected_rating.id}"
           comment: "#{comment}"
-          choices: "#{choices}"
         )
         {
           id
@@ -36,12 +35,30 @@ RSpec.describe 'Update rating', type: :request do
           choices
         }
       }
+      GQL
+    }
+  end
+
+  let(:query_3) do
+    { query: <<~GQL
+      mutation {
+        updateRating(
+          id: "#{expected_rating.id}"
+          comment: "#{comment}"
+          choices: "#{choices}"
+        )
+        {
+          id
+          comment
+          choices
+        }
+      }
     GQL
     }
   end
 
   it 'updates just a comment' do
-    expect(expected_rating.comment).to eq('This is a commment')
+    expect(expected_rating.comment).to eq(nil)
     expect(expected_rating.choices).to eq(nil)
     post '/graphql', params: query
     expect(response).to be_successful
@@ -49,8 +66,8 @@ RSpec.describe 'Update rating', type: :request do
       data: {
         updateRating: {
           id: expected_rating.id,
-          comment: 'This is a updated commment',
-          choices: [choices]
+          comment: 'This is a commment',
+          choices: nil
         }
       }
     }.to_json)
@@ -58,8 +75,24 @@ RSpec.describe 'Update rating', type: :request do
 
   it 'updates just choices' do
     expect(expected_rating.choices).to eq(nil)
-    expect(expected_rating.comment).to eq('This is a commment')
+    expect(expected_rating.comment).to eq(nil)
     post '/graphql', params: query_2
+    expect(response).to be_successful
+    expect(response.body).to eq({
+      data: {
+        updateRating: {
+          id: expected_rating.id,
+          comment: nil,
+          choices: [choices]
+        }
+      }
+    }.to_json)
+  end
+
+  it 'updates both choices and comment' do
+    expect(expected_rating.choices).to eq(nil)
+    expect(expected_rating.comment).to eq(nil)
+    post '/graphql', params: query_3
     expect(response).to be_successful
     expect(response.body).to eq({
       data: {
