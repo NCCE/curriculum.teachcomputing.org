@@ -35,6 +35,7 @@ gem 'webpacker', '~> 5.4.3'
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'climate_control'
   gem 'debase', '>=0.2.5.beta2'
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
