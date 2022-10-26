@@ -10,6 +10,7 @@ gem 'administrate-field-nested_has_many', '~> 1.3.0'
 gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'barnes', '~> 0.0.8'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'cloudflare-rails', '~> 1.1'
 gem 'faraday', '~> 1.0', '>= 1.0.1'
 gem 'graphiql-rails', '1.7.0'
 gem 'graphql', '<= 1.10.10'
@@ -20,6 +21,7 @@ gem 'net-pop'
 gem 'net-smtp'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.3'
+gem 'rack-attack', '~> 5.4.2'
 gem 'rails', '~> 6.1.4.1'
 gem 'sass-rails', '>= 6'
 gem 'sentry-rails'
@@ -34,6 +36,7 @@ gem 'webpacker', '~> 5.4.3'
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'climate_control'
   gem 'debase', '>=0.2.5.beta2'
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
