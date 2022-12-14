@@ -9,5 +9,5 @@ task vital_model_checker: :environment do
 
   ratings_count = Rating.where(updated_at: (Time.now - 7.days)..Time.now).count
 
-  Sentry.capture_message('No Ratings recorded within the last 24 hours. Please check.') if ratings_count == 0
+  Sentry.capture_message('No Ratings recorded within the last 7 days. Please check.') if ratings_count == 0
 end
