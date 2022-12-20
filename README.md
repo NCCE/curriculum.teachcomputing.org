@@ -13,7 +13,7 @@
 Build the docker image, set up environment variables, and add a nicer local hostname (curriculum.teachcomputing.rpfdev.com):
 
 ```
-sh setup.sh
+sh scripts/setup.sh
 ```
 
 Optionally set a password for postgres by updating the value for `DEV_PASS` in your `.env` file.
@@ -78,7 +78,7 @@ docker compose run --rm --no-deps curriculum rails db:seed
 
 The bundle has now been moved to a separate volume and once the initial build has taken place the bundle directory is mapped to a volume and persisted.
 
-To install/update a new gem, first update the Gemfile and run `docker-compose run web bundle install` or `docker-compose run web bundle update`, then:
+To install/update a new gem, first update the Gemfile and run `docker-compose run curriculum bundle install` or `docker-compose run curriculum bundle update`, then:
 
 ```
 docker compose run --rm --no-deps curriculum bundle install
@@ -137,10 +137,6 @@ Run `brakeman -i config/brakeman.ignore .` in the project root and follow the on
 If you prefer to use `byebug` you'll _first_ need to attach to the container which can be done with the command: `docker attach curriculumteachcomputingorg_curriculum_1` (the container name can be checked with `docker compose ps`, but mostly it'll be the one here), then add your breakpoint and trigger your request. Again ending the session by quitting byebug or hitting `ctrl+c` will kill the container, so you'll need to run `docker compose up -d` again.
 
 ### Troubleshooting
-
-> I've run `npm start` and it's hanging whilst 'Waiting for the stack to become available'
-
-The script doesn't time out so this indicates that it can't resolve to `localhost:3020` and there was a problem bringing up the `curriculum` container. Run `docker compose logs curriculum` to investigate the cause.
 
 > I can access the site at `localhost:3020` but not at `curriculum.teachcomputing.rpfdev.com`
 
