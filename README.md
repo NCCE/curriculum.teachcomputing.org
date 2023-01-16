@@ -28,7 +28,7 @@ docker compose up (-d to detach from shell, see the next section for viewing the
 
 NOTE: The first run can take some time as `bundle install` will be run for the first time, tailing the logs with `docker compose logs -f` is recommended.
 
-The app is then available at: http://curriculum.teachcomputing.rpfdev.com
+The app is then available at: http://curriculum.teachcomputing.rpfdev.com ( and http://localhost:3020 )
 
 Stop the stack:
 
@@ -68,7 +68,7 @@ To perform migrations manually (without restarting the container) run:
 yarn run exec rails db:migrate
 ```
 
-#### Seeding the database
+#### Seeding the database
 
 To seed manually run:
 
@@ -144,7 +144,7 @@ docker-compose run curriculum bundle exec erd
 
 ### Debugging
 
-`ruby-debug-ide` is enabled and waiting for connections by default on port `1235`. There is a `launch.json` in the repo and if you're using vscode it should be as easy as going to the 'Run' view, selecting 'Debug Attach' and clicking the green Run button. It's important to note that if you attempt to restart or stop the debug process, this will effectively kill the container, and a `docker compose up -d` will be necessary to continue - however this is rarely necessary in general use since you'll be debugging individual requests.
+`ruby-debug-ide` is enabled and waiting for connections by default on port `1236`. There is a `launch.json` in the repo and if you're using vscode it should be as easy as going to the 'Run' view, selecting 'Debug Attach' and clicking the green Run button. It's important to note that if you attempt to restart or stop the debug process, this will effectively kill the container, and a `docker compose up -d` will be necessary to continue - however this is rarely necessary in general use since you'll be debugging individual requests.
 
 If you prefer to use `byebug` you'll _first_ need to attach to the container which can be done with the command: `docker attach curriculumteachcomputingorg_curriculum_1` (the container name can be checked with `docker compose ps`, but mostly it'll be the one here), then add your breakpoint and trigger your request. Again ending the session by quitting byebug or hitting `ctrl+c` will kill the container, so you'll need to run `docker compose up -d` again.
 
