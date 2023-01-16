@@ -26,6 +26,8 @@ Start the stack:
 docker compose up (-d to detach from shell, see the next section for viewing the logs)
 ```
 
+NOTE: The first run can take some time as `bundle install` will be run for the first time, tailing the logs with `docker compose logs -f` is recommended.
+
 The app is then available at: http://curriculum.teachcomputing.rpfdev.com
 
 Stop the stack:
