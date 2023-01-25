@@ -43,6 +43,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 5.2.0'
   gem 'guard-rspec', '~> 4.7.3', require: false
   gem 'pry-byebug'
+  gem 'rails-erd'
   gem 'reek'
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 4.0.0'

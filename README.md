@@ -132,6 +132,16 @@ We are ignoring some of the warnings using the method described in the [Brakeman
 
 Run `brakeman -i config/brakeman.ignore .` in the project root and follow the onscreen prompts, outlined in the above doc, to use the tool and check the output for warnings, etc.
 
+### ERD generation
+
+`erd.pdf` will be [generated automatically whenever new migrations are run](https://github.com/voormedia/rails-erd#auto-generation).
+
+To generate `erd.pdf` manually:
+
+```
+docker-compose run curriculum bundle exec erd
+```
+
 ### Debugging
 
 `ruby-debug-ide` is enabled and waiting for connections by default on port `1235`. There is a `launch.json` in the repo and if you're using vscode it should be as easy as going to the 'Run' view, selecting 'Debug Attach' and clicking the green Run button. It's important to note that if you attempt to restart or stop the debug process, this will effectively kill the container, and a `docker compose up -d` will be necessary to continue - however this is rarely necessary in general use since you'll be debugging individual requests.
