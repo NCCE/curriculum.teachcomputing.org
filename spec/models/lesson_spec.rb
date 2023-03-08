@@ -83,7 +83,7 @@ RSpec.describe Lesson, type: :model do
         lesson_instance = build(:lesson, unit: unit_instance)
         lesson_instance.run_callbacks :commit
         # the second param `-` is an overriden cache identifier
-        expect(UpdateNotifier).to have_received(:new).once.with([lesson_instance, unit_instance], lesson: '-')
+        expect(UpdateNotifier).to have_received(:new).once.with([lesson_instance, unit_instance], unit: '-', lesson: '-')
         expect(notifier_double).to have_received(:run).once
       end
     end

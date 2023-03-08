@@ -45,6 +45,12 @@ class Lesson < ApplicationRecord
   private
 
     def notify_update
-      UpdateNotifier.new([self, unit], { lesson: "#{unit.slug}-#{slug}" }).run
+      UpdateNotifier.new(
+        [self, unit],
+        {
+          unit: "#{unit.year_group.key_stage.slug}-#{unit.slug}",
+          lesson: "#{unit.slug}-#{slug}"
+        }
+      ).run
     end
 end
