@@ -1,5 +1,7 @@
 # Curriculum
 
+Testing changes to Heroku/GH integration.
+
 ## Development
 
 ### Dependencies:
