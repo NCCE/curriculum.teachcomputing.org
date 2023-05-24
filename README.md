@@ -23,7 +23,7 @@ Optionally set a password for postgres by updating the value for `DEV_PASS` in y
 Start the stack:
 
 ```
-docker compose up (-d to detach from shell, see the next section for viewing the logs)
+yarn run start
 ```
 
 NOTE: The first run can take some time as `bundle install` will be run for the first time, tailing the logs with `docker compose logs -f` is recommended.
@@ -33,7 +33,7 @@ The app is then available at: http://curriculum.teachcomputing.rpfdev.com ( and 
 Stop the stack:
 
 ```
-docker compose down
+yarn run stop
 ```
 
 ### View logs
@@ -80,10 +80,10 @@ docker compose run --rm --no-deps curriculum rails db:seed
 
 The bundle has now been moved to a separate volume and once the initial build has taken place the bundle directory is mapped to a volume and persisted.
 
-To install/update a new gem, first update the Gemfile and run `docker-compose run curriculum bundle install` or `docker-compose run curriculum bundle update`, then:
+To install/update a new gem, first update the Gemfile then run:
 
 ```
-docker compose run --rm --no-deps curriculum bundle install
+yarn run bundle-install
 ```
 
 To reinstall all packages:
