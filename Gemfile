@@ -33,7 +33,7 @@ gem 'rack-attack', '~> 5.4.2'
 if next?
   gem 'rails', '~> 7.0.4.3'
 else
-  gem 'rails', '~> 6.1.4.1'
+  gem 'rails', '~> 6.1.7.4'
 end
 gem 'sass-rails', '>= 6'
 gem 'sentry-rails'
