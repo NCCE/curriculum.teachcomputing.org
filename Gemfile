@@ -28,7 +28,7 @@ gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
 gem 'pg', '~> 1.1'
-gem 'puma', '~> 4.3'
+gem 'puma', '~> 5.6'
 gem 'rack-attack', '~> 5.4.2'
 if next?
   gem 'rails', '~> 7.0.4.3'

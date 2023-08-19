@@ -298,7 +298,7 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.13.0)
     public_suffix (4.0.6)
-    puma (4.3.12)
+    puma (5.6.7)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
@@ -532,7 +532,7 @@ DEPENDENCIES
   next_rails (~> 1.2)
   pg (~> 1.1)
   pry-byebug
-  puma (~> 4.3)
+  puma (~> 5.6)
   rack-attack (~> 5.4.2)
   rails (~> 6.1.7.4)
   rails-erd
