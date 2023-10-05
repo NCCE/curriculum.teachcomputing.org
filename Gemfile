@@ -38,7 +38,7 @@ end
 gem 'sass-rails', '>= 6'
 gem 'sentry-rails'
 gem 'sentry-ruby'
-gem 'sidekiq', '~> 6.4'
+gem 'sidekiq', '~> 6.5'
 gem 'webpacker', '~> 5.4.3'
 
 
