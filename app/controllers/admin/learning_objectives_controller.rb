@@ -1,6 +1,6 @@
 module Admin
   class LearningObjectivesController < Admin::ApplicationController
-    def valid_action?(name, resource = resource_class)
+    def existing_action?(resource, name)
       return false if resource.to_s == 'success_criterion' && name.to_s == 'destroy'
       return false if resource.to_s == 'taxonomy_tag' && %w[destroy edit].include?(name.to_s)
 

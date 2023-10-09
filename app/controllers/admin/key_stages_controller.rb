@@ -8,11 +8,11 @@ module Admin
       redirect_back(fallback_location: requested_resource)
     end
 
-    def valid_action?(name, resource = resource_class)
+    def existing_action?(resource, name)
       super unless %w[edit show destroy].include?(name.to_s) && resource == :curriculum_map.to_s
     end
 
-    def show_action?(_action, resource)
+    def authorized_action?(resource, _action)
       resource.class.name != 'CurriculumMap'
     end
   end

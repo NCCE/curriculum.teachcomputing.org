@@ -44,7 +44,7 @@ module Admin
       redirect_back(fallback_location: requested_resource)
     end
 
-    def valid_action?(name, resource = resource_class)
+    def existing_action?(resource, name)
       return false if resource.to_s == 'national_curriculum_statement' && name.to_s == 'destroy'
       return false if resource.to_s == 'connected_world_strand' && name.to_s == 'destroy'
 

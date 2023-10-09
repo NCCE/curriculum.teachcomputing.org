@@ -8,28 +8,28 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.2'
 
 gem 'activestorage-validator'
-gem 'administrate', '~> 0.17.0'
-gem 'administrate-field-active_storage', '~> 0.3.4'
-gem 'administrate-field-nested_has_many', '~> 1.3.0'
-gem 'aws-sdk-s3', '~> 1.85', require: false
-gem 'barnes', '~> 0.0.8'
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'administrate'
+gem 'administrate-field-active_storage'
+gem 'administrate-field-nested_has_many'
+gem 'aws-sdk-s3', require: false
+gem 'barnes'
+gem 'bootsnap', require: false
 if next?
   gem 'cloudflare-rails', '~> 2.4'
 else
   gem 'cloudflare-rails', '~> 1.1'
 end
-gem 'faraday', '~> 1.0', '>= 1.0.1'
-gem 'graphiql-rails', '1.7.0'
-gem 'graphql', '<= 1.10.10'
-gem 'lograge', '~> 0.11.2'
-gem 'mimemagic', '~> 0.3.7'
+gem 'faraday'
+gem 'graphiql-rails', '= 1.7.0'
+gem 'graphql', '~> 1.3'
+gem 'lograge'
+gem 'mimemagic'
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
-gem 'pg', '~> 1.1'
-gem 'puma', '~> 4.3'
-gem 'rack-attack', '~> 5.4.2'
+gem 'pg'
+gem 'puma'
+gem 'rack-attack'
 if next?
   gem 'rails', '~> 7.0.4.3'
 else
@@ -38,8 +38,8 @@ end
 gem 'sass-rails', '>= 6'
 gem 'sentry-rails'
 gem 'sentry-ruby'
-gem 'sidekiq', '~> 6.4'
-gem 'webpacker', '~> 5.4.3'
+gem 'sidekiq'
+gem 'webpacker'
 
 
 # Use Active Storage variant
