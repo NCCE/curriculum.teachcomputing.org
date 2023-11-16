@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_30_161830) do
+ActiveRecord::Schema.define(version: 2023_11_15_141945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -207,6 +207,7 @@ ActiveRecord::Schema.define(version: 2022_09_30_161830) do
     t.datetime "unit_documents_synced_at"
     t.string "isaac_url"
     t.integer "order"
+    t.boolean "display_i_belong_flag", default: false
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 

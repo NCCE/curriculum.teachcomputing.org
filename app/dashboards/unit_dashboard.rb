@@ -66,7 +66,8 @@ class UnitDashboard < Administrate::BaseDashboard
     redirects: Field::NestedHasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    published?: Field::Boolean
+    published?: Field::Boolean,
+    display_i_belong_flag: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -100,6 +101,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_answers
     national_curriculum_statements
     connected_world_strands
+    display_i_belong_flag
     created_at
     updated_at
     redirects
@@ -122,6 +124,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_answers
     national_curriculum_statements
     connected_world_strands
+    display_i_belong_flag
     redirects
   ].freeze
 
@@ -144,8 +147,8 @@ class UnitDashboard < Administrate::BaseDashboard
     unit.title
   end
 
-  def permitted_attributes
-    super + [learning_graphs: [],
+  def permitted_attributes(...)
+    super(...) + [learning_graphs: [],
              rubrics: [],
              summative_assessments: [],
              summative_answers: []]
