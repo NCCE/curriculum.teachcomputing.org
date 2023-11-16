@@ -6,6 +6,7 @@ services:
     networks:
       default:
         aliases:
+          - teachcomputing.test
           - teachcomputing.rpfdev.com
   db:
     image: postgres:12.9
