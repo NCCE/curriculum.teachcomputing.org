@@ -55,6 +55,7 @@ class UnitDashboard < Administrate::BaseDashboard
                                           unit_id: resource.id }]
       end
     ),
+    digital_summative_assessment: Field::Text,
     order: Field::Number,
     slug: ReadOnlyField,
     id: Field::String.with_options(searchable: false),
@@ -99,6 +100,7 @@ class UnitDashboard < Administrate::BaseDashboard
     rubrics
     summative_assessments
     summative_answers
+    digital_summative_assessment
     national_curriculum_statements
     connected_world_strands
     display_i_belong_flag
@@ -122,6 +124,7 @@ class UnitDashboard < Administrate::BaseDashboard
     rubrics
     summative_assessments
     summative_answers
+    digital_summative_assessment
     national_curriculum_statements
     connected_world_strands
     display_i_belong_flag
