@@ -208,7 +208,7 @@ ActiveRecord::Schema.define(version: 2023_12_18_131357) do
     t.string "isaac_url"
     t.integer "order"
     t.boolean "display_i_belong_flag", default: false
-    t.string "digital_summative_assessment"
+    t.string "digital_summative_assessment_url"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
