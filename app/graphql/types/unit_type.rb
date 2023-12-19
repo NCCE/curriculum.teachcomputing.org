@@ -15,6 +15,7 @@ module Types
     field :rubrics, [Types::AttachmentType], null: true
     field :summative_assessments, [Types::AttachmentType], null: true
     field :summative_answers, [Types::AttachmentType], null: true
+    field :digital_summative_assessment_url, String, null: true
     field :redirects, [Types::RedirectType], null: true
     field :display_i_belong_flag, Boolean, null: false
 
