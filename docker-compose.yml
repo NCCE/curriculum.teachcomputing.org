@@ -9,7 +9,7 @@ services:
           - teachcomputing.test
           - teachcomputing.rpfdev.com
   db:
-    image: postgres:12.9
+    image: postgres:15
     volumes:
       - pg-data:/var/lib/postgresql/data
     ports:
