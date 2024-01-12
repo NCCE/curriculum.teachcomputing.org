@@ -7,16 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 def add_year_group(key_stage, year_number, i)
-  year_group = key_stage.year_groups.create({ year_number: year_number.to_s })
+  year_group = key_stage.year_groups.create({year_number: year_number.to_s})
   year_group.published!
 
-  unit = year_group.units.create({ title: "Unit #{year_number}", description: 'This is a Unit' })
+  unit = year_group.units.create({title: "Unit #{year_number}", description: "This is a Unit"})
   unit.published!
 
   download_record = AggregateDownload.create(
     count: i,
     downloadable: unit,
-    attachment_type: 'zipped_contents'
+    attachment_type: "zipped_contents"
   )
 
   i.times do
@@ -28,14 +28,14 @@ def add_year_group(key_stage, year_number, i)
   lesson = unit.lessons.create(
     {
       title: "A lesson (Year #{year_number})",
-      description: 'This is a Lesson'
+      description: "This is a Lesson"
     }
   )
 
   if lesson.primary?
     learning_objective = LearningObjective.new(
       {
-        description: 'I am an objective',
+        description: "I am an objective",
         order: 1,
         lesson: lesson
       }
@@ -44,14 +44,14 @@ def add_year_group(key_stage, year_number, i)
     learning_objective.success_criteria = [
       SuccessCriterion.new(
         {
-          description: 'I am a success',
+          description: "I am a success",
           order: 1,
           learning_objective: learning_objective
         }
       ),
       SuccessCriterion.new(
         {
-          description: 'I am also a success',
+          description: "I am also a success",
           order: 2,
           learning_objective: learning_objective
         }
@@ -63,11 +63,11 @@ def add_year_group(key_stage, year_number, i)
     lesson.learning_objectives.create(
       [
         {
-          description: 'I am mr objectivator',
+          description: "I am mr objectivator",
           order: 1
         },
         {
-          description: 'I object to mr objectivator',
+          description: "I object to mr objectivator",
           order: 2
         }
       ]
@@ -79,7 +79,7 @@ def add_year_group(key_stage, year_number, i)
   download_record = AggregateDownload.create(
     count: i,
     downloadable: lesson,
-    attachment_type: 'zipped_contents'
+    attachment_type: "zipped_contents"
   )
 
   i.times do
@@ -90,7 +90,7 @@ def add_year_group(key_stage, year_number, i)
 end
 
 if Rails.env.development? || Rails.env.staging?
-  puts 'Clearing existing records'
+  puts "Clearing existing records"
   Rating.delete_all
   AggregateRating.delete_all
 
@@ -109,11 +109,11 @@ if Rails.env.development? || Rails.env.staging?
 
   4.times do |j|
     i = j + 1
-    puts '*' * 50
+    puts "*" * 50
     puts "Creating KeyStage #{i}"
     key_stage = KeyStage.create(
       {
-        description: 'This is a KeyStage',
+        description: "This is a KeyStage",
         ages: "#{i}-#{i + 2}",
         years: "#{i}-#{i + 2}",
         level: i.to_s
@@ -124,13 +124,13 @@ if Rails.env.development? || Rails.env.staging?
     download_record = AggregateDownload.create(
       count: i,
       downloadable: key_stage,
-      attachment_type: 'zipped_contents'
+      attachment_type: "zipped_contents"
     )
     i.times do
       download_record.downloads.create
     end
 
-    puts 'Adding YearGroup'
+    puts "Adding YearGroup"
     case i
     when 1
       (1..2).each do |yn|

@@ -41,7 +41,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   dsl.watch_spec_files_for(ruby.lib_files)
 
   # Rails files
-  rails = dsl.rails(view_extensions: %w(erb haml slim))
+  rails = dsl.rails(view_extensions: %w[erb haml slim])
   dsl.watch_spec_files_for(rails.app_files)
   dsl.watch_spec_files_for(rails.views)
 
@@ -49,17 +49,17 @@ guard :rspec, cmd: "bundle exec rspec" do
     [
       rspec.spec.call("routing/#{m[1]}_routing"),
       rspec.spec.call("controllers/#{m[1]}_controller"),
-      "#{rspec.spec_dir}/requests/#{m[1]}",
+      "#{rspec.spec_dir}/requests/#{m[1]}"
     ]
   end
 
   # Rails config changes
-  watch(rails.spec_helper)     { rspec.spec_dir }
+  watch(rails.spec_helper) { rspec.spec_dir }
   # watch(rails.routes)          { "#{rspec.spec_dir}/routing" }
-  watch(rails.app_controller)  { "#{rspec.spec_dir}/controllers" }
+  watch(rails.app_controller) { "#{rspec.spec_dir}/controllers" }
 
   # Capybara features specs
-  watch(rails.view_dirs) { |m| rspec.spec.call("#{m[0].sub('app/', '').sub('.erb', '')}") }
+  watch(rails.view_dirs) { |m| rspec.spec.call(m[0].sub("app/", "").sub(".erb", "").to_s) }
   # watch(rails.layouts) do |m|
   #   puts "rails.layouts #{m.inspect}"
   #   rspec.spec.call("views/layouts//#{m[1]}")
@@ -71,9 +71,9 @@ guard :rspec, cmd: "bundle exec rspec" do
   #   Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   # end
 
-   # FactoryBot factories
+  # FactoryBot factories
   begin
-    require 'active_support/inflector'
+    require "active_support/inflector"
     watch(%r{^spec/factories/(.+)\.rb$}) do |m|
       ["app/models/#{m[1].singularize}.rb", "spec/models/#{m[1].singularize}_spec.rb"]
     end

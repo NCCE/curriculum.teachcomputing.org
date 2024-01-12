@@ -1,4 +1,4 @@
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
 class KeyStageDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -9,14 +9,14 @@ class KeyStageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     year_groups: Field::HasMany.with_options(
-      sort_by: 'year_number',
+      sort_by: "year_number",
       direction: :asc
     ),
     teacher_guide: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_key_stage_teacher_guide, { attachment_id: attachment.id,
-                                           key_stage_id: resource.id }]
+        [:admin_key_stage_teacher_guide, {attachment_id: attachment.id,
+                                          key_stage_id: resource.id}]
       end
     ),
     curriculum_maps: Field::NestedHasMany.with_options(skip: :key_stage),

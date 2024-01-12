@@ -1,15 +1,15 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Unit, type: :request do
   before do
     create(:unit)
   end
 
-  describe 'list Units' do
+  describe "list Units" do
     let!(:published_unit) { create(:published_unit) }
 
-    it 'returns units' do
-      post '/graphql', params: {
+    it "returns units" do
+      post "/graphql", params: {
         query: <<~GQL
           {
             units
@@ -45,7 +45,7 @@ RSpec.describe Unit, type: :request do
             description: published_unit.description,
             isaacUrl: published_unit.isaac_url,
             unitGuide: {
-              filename: 'test.txt'
+              filename: "test.txt"
             },
             totalPositive: 0,
             totalNegative: 0
@@ -56,13 +56,13 @@ RSpec.describe Unit, type: :request do
       expect(response.body).to eq(expected_response)
     end
 
-    it 'only returns published lessons' do
+    it "only returns published lessons" do
       published_lesson = create(:published_lesson,
-                                title: 'Published Lesson',
-                                unit: published_unit)
+        title: "Published Lesson",
+        unit: published_unit)
       create(:lesson, unit: published_unit)
 
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             units
@@ -96,13 +96,13 @@ RSpec.describe Unit, type: :request do
     end
   end
 
-  describe 'when ordering' do
-    let!(:unit_2) { create(:published_unit, order: 1, title: 'Unit 2') }
-    let!(:unit_3) { create(:published_unit, order: 3, title: 'Unit 3') }
-    let!(:unit_1) { create(:published_unit, order: 2, title: 'Unit 1') }
+  describe "when ordering" do
+    let!(:unit_2) { create(:published_unit, order: 1, title: "Unit 2") }
+    let!(:unit_3) { create(:published_unit, order: 3, title: "Unit 3") }
+    let!(:unit_1) { create(:published_unit, order: 2, title: "Unit 1") }
 
     before do
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             units
@@ -115,7 +115,7 @@ RSpec.describe Unit, type: :request do
       }
     end
 
-    it 'returns units in the defined order' do
+    it "returns units in the defined order" do
       expect(response).to be_successful
 
       expected_response = {

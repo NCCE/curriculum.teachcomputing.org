@@ -13,6 +13,6 @@ class CurriculumSchema < GraphQL::Schema
   use GraphQL::Execution::Errors
 
   rescue_from(ActiveRecord::RecordNotFound) do |err, obj, args, ctx, field|
-    raise GraphQL::ExecutionError.new("#{field.type.unwrap.graphql_name} not found", extensions: { 'code' => :not_found })
+    raise GraphQL::ExecutionError.new("#{field.type.unwrap.graphql_name} not found", extensions: {"code" => :not_found})
   end
 end

@@ -7,7 +7,7 @@ class UpdateNotifier
 
   def run
     @notifiable_resources.each do |resource|
-      unless ActiveRecord::Type::Boolean.new.cast(ENV['DISABLE_CACHE_INVALIDATION'])
+      unless ActiveRecord::Type::Boolean.new.cast(ENV["DISABLE_CACHE_INVALIDATION"])
         InvalidateCacheWorker.perform_async(resource)
       end
     end
@@ -15,13 +15,13 @@ class UpdateNotifier
 
   private
 
-    def define_resource_hash_array
-      @notifiable_resources = @resources.map { |res| resource_hash(res) }
-    end
+  def define_resource_hash_array
+    @notifiable_resources = @resources.map { |res| resource_hash(res) }
+  end
 
-    def resource_hash(resource)
-      type = resource.class.to_s.underscore.parameterize
-      identifier = @identifiers[type.to_sym] unless @identifiers.nil?
-      { 'type' => type, 'identifier' => identifier || resource.slug }
-    end
+  def resource_hash(resource)
+    type = resource.class.to_s.underscore.parameterize
+    identifier = @identifiers[type.to_sym] unless @identifiers.nil?
+    {"type" => type, "identifier" => identifier || resource.slug}
+  end
 end

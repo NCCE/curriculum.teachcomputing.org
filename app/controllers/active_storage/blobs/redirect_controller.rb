@@ -9,9 +9,9 @@ class ActiveStorage::Blobs::RedirectController < ActiveStorage::BaseController
 
   private
 
-    def track_download
-      attachment = @blob.attachments.first
-      user_stem_achiever_contact_no = params[:user_stem_achiever_contact_no]
-      AggregateDownload.increment_attachment_download(attachment, user_stem_achiever_contact_no)
-    end
+  def track_download
+    attachment = @blob.attachments.first
+    user_stem_achiever_contact_no = params[:user_stem_achiever_contact_no]
+    AggregateDownload.increment_attachment_download(attachment, user_stem_achiever_contact_no)
+  end
 end

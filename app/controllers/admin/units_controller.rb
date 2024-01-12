@@ -45,8 +45,8 @@ module Admin
     end
 
     def valid_action?(name, resource = resource_class)
-      return false if resource.to_s == 'national_curriculum_statement' && name.to_s == 'destroy'
-      return false if resource.to_s == 'connected_world_strand' && name.to_s == 'destroy'
+      return false if resource.to_s == "national_curriculum_statement" && name.to_s == "destroy"
+      return false if resource.to_s == "connected_world_strand" && name.to_s == "destroy"
 
       super
     end

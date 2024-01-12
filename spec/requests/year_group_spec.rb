@@ -1,15 +1,15 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'YearGroup', type: :request do
+RSpec.describe "YearGroup", type: :request do
   let!(:published_year_group) { create(:published_year_group) }
 
   before do
     create(:year_group)
   end
 
-  describe 'list Year Groups' do
-    it 'returns published year groups' do
-      post '/graphql', params: {
+  describe "list Year Groups" do
+    it "returns published year groups" do
+      post "/graphql", params: {
         query: <<~GQL
           {
             yearGroups
@@ -45,11 +45,11 @@ RSpec.describe 'YearGroup', type: :request do
       expect(response.body).to eq(expected_response)
     end
 
-    it 'only returns published units' do
-      published_unit = create(:published_unit, title: 'Published Unit',
-                                               year_group: published_year_group)
+    it "only returns published units" do
+      published_unit = create(:published_unit, title: "Published Unit",
+        year_group: published_year_group)
       create(:unit, year_group: published_year_group)
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             yearGroups

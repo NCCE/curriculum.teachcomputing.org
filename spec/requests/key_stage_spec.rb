@@ -1,11 +1,11 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'KeyStage', type: :request do
-  describe 'list Key Stages' do
+RSpec.describe "KeyStage", type: :request do
+  describe "list Key Stages" do
     let!(:published_key_stage) { create(:published_key_stage) }
 
-    it 'returns published key stages' do
-      post '/graphql', params: {
+    it "returns published key stages" do
+      post "/graphql", params: {
         query: <<~GQL
           {
             keyStages
@@ -46,15 +46,15 @@ RSpec.describe 'KeyStage', type: :request do
       expect(response.body).to eq(expected_response)
     end
 
-    it 'only returns published year groups' do
+    it "only returns published year groups" do
       published_year_group = create(
         :published_year_group,
         key_stage: published_key_stage,
-        year_number: '999'
+        year_number: "999"
       )
       create(:year_group, key_stage: published_key_stage)
 
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             keyStages

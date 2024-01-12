@@ -1,4 +1,4 @@
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
 class UnitDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -9,12 +9,12 @@ class UnitDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     lessons: Field::HasMany.with_options(
-      sort_by: 'order',
+      sort_by: "order",
       direction: :asc,
       limit: 6
     ),
     year_group: Field::BelongsTo.with_options(
-      order: 'year_number ASC'
+      order: "year_number ASC"
     ),
     key_stage: Field::HasOne.with_options(
       searchable: true,
@@ -23,36 +23,36 @@ class UnitDashboard < Administrate::BaseDashboard
     unit_guide: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_unit_unit_guide, { attachment_id: attachment.id,
-                                   unit_id: resource.id }]
+        [:admin_unit_unit_guide, {attachment_id: attachment.id,
+                                  unit_id: resource.id}]
       end
     ),
     learning_graphs: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_unit_learning_graphs, { attachment_id: attachment.id,
-                                        unit_id: resource.id }]
+        [:admin_unit_learning_graphs, {attachment_id: attachment.id,
+                                       unit_id: resource.id}]
       end
     ),
     rubrics: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_unit_rubrics, { attachment_id: attachment.id,
-                                unit_id: resource.id }]
+        [:admin_unit_rubrics, {attachment_id: attachment.id,
+                               unit_id: resource.id}]
       end
     ),
     summative_assessments: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_unit_summative_assessments, { attachment_id: attachment.id,
-                                              unit_id: resource.id }]
+        [:admin_unit_summative_assessments, {attachment_id: attachment.id,
+                                             unit_id: resource.id}]
       end
     ),
     summative_answers: Field::ActiveStorage.with_options(
       show_display_preview: false,
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_unit_summative_answers, { attachment_id: attachment.id,
-                                          unit_id: resource.id }]
+        [:admin_unit_summative_answers, {attachment_id: attachment.id,
+                                         unit_id: resource.id}]
       end
     ),
     digital_summative_assessment_url: Field::Text,
@@ -152,8 +152,8 @@ class UnitDashboard < Administrate::BaseDashboard
 
   def permitted_attributes(...)
     super(...) + [learning_graphs: [],
-             rubrics: [],
-             summative_assessments: [],
-             summative_answers: []]
+                  rubrics: [],
+                  summative_assessments: [],
+                  summative_answers: []]
   end
 end

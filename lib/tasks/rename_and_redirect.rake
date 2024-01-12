@@ -1,5 +1,5 @@
 namespace :rename_and_redirect do
-  desc 'Removes the lesson number from lesson titles, stores it and creates a redirect'
+  desc "Removes the lesson number from lesson titles, stores it and creates a redirect"
   task lessons: :environment do
     failed = []
     lessons = Lesson.all
@@ -22,10 +22,10 @@ namespace :rename_and_redirect do
       redirect.save(validate: false)
     end
 
-    puts 'Unable to process:', failed unless failed.blank?
+    puts "Unable to process:", failed unless failed.blank?
   end
 
-  desc 'Adds ordering to units'
+  desc "Adds ordering to units"
   task units: :environment do
     failed = []
 
@@ -33,60 +33,60 @@ namespace :rename_and_redirect do
 
     ordering = {
       y1: [
-        'computing-systems-and-networks-technology-around-us',
-        'creating-media-digital-painting',
-        'programming-a-moving-a-robot',
-        'data-and-information-grouping-data',
-        'creating-media-digital-writing',
-        'programming-b-introduction-to-animation'
+        "computing-systems-and-networks-technology-around-us",
+        "creating-media-digital-painting",
+        "programming-a-moving-a-robot",
+        "data-and-information-grouping-data",
+        "creating-media-digital-writing",
+        "programming-b-introduction-to-animation"
       ],
       y2: [
-        'computing-systems-and-networks-it-around-us',
-        'creating-media-digital-photography',
-        'programming-a-robot-algorithms',
-        'data-and-information-pictograms',
-        'creating-media-making-music',
-        'programming-b-an-introduction-to-quizzes'
+        "computing-systems-and-networks-it-around-us",
+        "creating-media-digital-photography",
+        "programming-a-robot-algorithms",
+        "data-and-information-pictograms",
+        "creating-media-making-music",
+        "programming-b-an-introduction-to-quizzes"
       ],
       y3: [
-        'computing-systems-and-networks-connecting-computers',
-        'creating-media-animation',
-        'programming-a-sequence-in-music',
-        'data-and-information-branching-databases',
-        'creating-media-desktop-publishing',
-        'programming-b-events-and-actions'
+        "computing-systems-and-networks-connecting-computers",
+        "creating-media-animation",
+        "programming-a-sequence-in-music",
+        "data-and-information-branching-databases",
+        "creating-media-desktop-publishing",
+        "programming-b-events-and-actions"
       ],
       y4: [
-        'computing-systems-and-networks-the-internet',
-        'creating-media-audio-editing',
-        'programming-a-repetition-in-shapes',
-        'data-and-information-data-logging',
-        'creating-media-photo-editing',
-        'programming-b-repetition-in-games'
+        "computing-systems-and-networks-the-internet",
+        "creating-media-audio-editing",
+        "programming-a-repetition-in-shapes",
+        "data-and-information-data-logging",
+        "creating-media-photo-editing",
+        "programming-b-repetition-in-games"
       ],
       y5: [
-        'computing-systems-and-networks-sharing-information',
-        'creating-media-video-editing',
-        'programming-a-selection-in-physical-computing',
-        'data-and-information-flat-file-databases',
-        'creating-media-vector-drawing',
-        'programming-b-selection-in-quizzes'
+        "computing-systems-and-networks-sharing-information",
+        "creating-media-video-editing",
+        "programming-a-selection-in-physical-computing",
+        "data-and-information-flat-file-databases",
+        "creating-media-vector-drawing",
+        "programming-b-selection-in-quizzes"
       ],
       y6: [
-        'computing-systems-and-networks-communication',
-        'creating-media-web-page-creation',
-        'programming-a-variables-in-games',
-        'data-and-information-spreadsheets',
-        'creating-media-3d-modelling',
-        'programming-b-sensing'
+        "computing-systems-and-networks-communication",
+        "creating-media-web-page-creation",
+        "programming-a-variables-in-games",
+        "data-and-information-spreadsheets",
+        "creating-media-3d-modelling",
+        "programming-b-sensing"
       ],
       y7: [
-        'impact-of-technology-collaborating-online-respectfully',
-        'networks-from-semaphores-to-the-internet',
-        'using-media-gaining-support-for-a-cause',
-        'programming-essentials-in-scratch-part-i',
-        'programming-essentials-in-scratch-part-ii',
-        'modelling-data-spreadsheets'
+        "impact-of-technology-collaborating-online-respectfully",
+        "networks-from-semaphores-to-the-internet",
+        "using-media-gaining-support-for-a-cause",
+        "programming-essentials-in-scratch-part-i",
+        "programming-essentials-in-scratch-part-ii",
+        "modelling-data-spreadsheets"
       ],
       y8: %w[
         media-vector-graphics
@@ -105,24 +105,24 @@ namespace :rename_and_redirect do
         physical-computing
       ],
       ygcse: [
-        'programming-part-1-sequence',
-        'computer-systems',
-        'programming-part-2-selection',
-        'programming-part-3-iteration',
-        'programming-part-4-subroutines',
-        'algorithms-part-1',
-        'programming-part-5-strings-and-lists',
-        'data-representations',
-        'algorithms-part-2',
-        'programming-part-6-dictionaries-and-datafiles',
-        'impacts-of-technology',
-        'networks',
-        'cyber-security',
-        'databases-and-sql',
-        'html',
-        'object-oriented-programming'
+        "programming-part-1-sequence",
+        "computer-systems",
+        "programming-part-2-selection",
+        "programming-part-3-iteration",
+        "programming-part-4-subroutines",
+        "algorithms-part-1",
+        "programming-part-5-strings-and-lists",
+        "data-representations",
+        "algorithms-part-2",
+        "programming-part-6-dictionaries-and-datafiles",
+        "impacts-of-technology",
+        "networks",
+        "cyber-security",
+        "databases-and-sql",
+        "html",
+        "object-oriented-programming"
       ],
-      'ynon-gcse': %w[
+      "ynon-gcse": %w[
         online-safety
         it-and-the-world-of-work
         media
@@ -146,6 +146,6 @@ namespace :rename_and_redirect do
       end
     end
 
-    puts 'Unable to process:', failed unless failed.blank?
+    puts "Unable to process:", failed unless failed.blank?
   end
 end

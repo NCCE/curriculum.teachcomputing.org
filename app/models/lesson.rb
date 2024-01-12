@@ -10,7 +10,7 @@ class Lesson < ApplicationRecord
   has_one_attached :zipped_contents
 
   validates :title, :description, presence: true
-  validates :slug, uniqueness: { scope: [:unit_id] }
+  validates :slug, uniqueness: {scope: [:unit_id]}
 
   before_create :set_slug
 
@@ -39,18 +39,18 @@ class Lesson < ApplicationRecord
     return unless learning_objectives.present?
     return unless primary? && learning_objectives.size > 1
 
-    errors.add(:learning_objectives, 'only one learning objective allowed for primary lessons')
+    errors.add(:learning_objectives, "only one learning objective allowed for primary lessons")
   end
 
   private
 
-    def notify_update
-      UpdateNotifier.new(
-        [self, unit],
-        {
-          unit: "#{unit.year_group.key_stage.slug}-#{unit.slug}",
-          lesson: "#{unit.slug}-#{slug}"
-        }
-      ).run
-    end
+  def notify_update
+    UpdateNotifier.new(
+      [self, unit],
+      {
+        unit: "#{unit.year_group.key_stage.slug}-#{unit.slug}",
+        lesson: "#{unit.slug}-#{slug}"
+      }
+    ).run
+  end
 end

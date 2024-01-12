@@ -20,7 +20,7 @@ module Types
     end
 
     def type
-      filename.split('.').last.upcase if filename
+      filename.split(".").last.upcase if filename
     end
 
     def file

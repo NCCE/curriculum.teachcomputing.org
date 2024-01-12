@@ -18,11 +18,11 @@ FactoryBot.define do
         key_stage.teacher_guide.attach(
           io: File.open(
             Rails.root.join(
-              'spec', 'support', 'test.pdf'
+              "spec", "support", "test.pdf"
             )
           ),
-          filename: 'test.pdf',
-          content_type: 'application/pdf'
+          filename: "test.pdf",
+          content_type: "application/pdf"
         )
         create(:published_state, stateable: key_stage)
       end
@@ -35,11 +35,11 @@ FactoryBot.define do
     end
 
     factory :primary_key_stage do
-      level { '1' }
+      level { "1" }
     end
 
     factory :secondary_key_stage do
-      level { '3' }
+      level { "3" }
     end
   end
 end

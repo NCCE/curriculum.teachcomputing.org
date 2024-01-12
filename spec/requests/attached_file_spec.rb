@@ -1,10 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'KeyStage', type: :request do
+RSpec.describe "KeyStage", type: :request do
   let!(:key_stage_with_guide) { create(:key_stage_with_guide) }
 
-  it 'returns a teacher guide' do
-    post '/graphql', params: {
+  it "returns a teacher guide" do
+    post "/graphql", params: {
       query: <<~GQL
         {
           keyStages
@@ -30,10 +30,10 @@ RSpec.describe 'KeyStage', type: :request do
         keyStages: [{
           id: key_stage_with_guide.id,
           teacherGuide: {
-            name: 'Teacher guide',
-            type: 'PDF',
-            filename: 'test.pdf',
-            size: '0 Bytes',
+            name: "Teacher guide",
+            type: "PDF",
+            filename: "test.pdf",
+            size: "0 Bytes",
             file: url_for(teacher_guide.attachment)
           }
         }]

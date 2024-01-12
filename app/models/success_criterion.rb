@@ -3,5 +3,5 @@ class SuccessCriterion < ApplicationRecord
 
   scope :ordered, -> { order(:order) }
 
-  validates :order, numericality: { greater_than: 0 }
+  validates :order, numericality: {greater_than: 0}
 end

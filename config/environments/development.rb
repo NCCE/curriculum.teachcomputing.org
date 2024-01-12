@@ -1,7 +1,7 @@
-dev_nginx = YAML.load_file(Rails.root.join('nginx-mapping.yml'))
+YAML.load_file(Rails.root.join("nginx-mapping.yml"))
 
-Rails.application.routes.default_url_options[:host] = 'curriculum.teachcomputing.rpfdev.com'
-Rails.application.routes.default_url_options[:protocol] = 'http'
+Rails.application.routes.default_url_options[:host] = "curriculum.teachcomputing.rpfdev.com"
+Rails.application.routes.default_url_options[:protocol] = "http"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -18,13 +18,13 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join('tmp', 'caching-dev.txt').exist?
+  if Rails.root.join("tmp", "caching-dev.txt").exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -40,7 +40,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: 'curriculum.teachcomputing.rpfdev.com' }
+  config.action_mailer.default_url_options = {host: "curriculum.teachcomputing.rpfdev.com"}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -68,7 +68,7 @@ Rails.application.configure do
 
   # Allow nicer hostname
   config.hosts << /([a-z0-9.])+\.rpfdev\.com/
-  config.hosts << 'curriculum'
-  config.hosts << 'curriculum.teachcomputing.test'
+  config.hosts << "curriculum"
+  config.hosts << "curriculum.teachcomputing.test"
   config.force_ssl = false
 end

@@ -12,7 +12,7 @@ module Types
       type = object.redirectable_type
       redirectable = type.constantize.find(object.redirectable_id)
 
-      type == 'Unit' ? [redirectable.key_stage.slug] : [redirectable.unit.key_stage.slug, redirectable.unit.slug]
+      (type == "Unit") ? [redirectable.key_stage.slug] : [redirectable.unit.key_stage.slug, redirectable.unit.slug]
     end
   end
 end

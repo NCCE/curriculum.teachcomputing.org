@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Query', type: :request do
+RSpec.describe "Query", type: :request do
   let!(:published_key_stages) { create_list(:published_key_stage, 3) }
   let!(:published_year_groups) { create_list(:published_year_group, 3) }
   let!(:published_units) { create_list(:published_unit, 3) }
@@ -10,10 +10,10 @@ RSpec.describe 'Query', type: :request do
     create(:key_stage)
   end
 
-  describe 'parameter handling' do
-    context 'with a keyStage query' do
-      it 'returns the expected value when an id is passed' do
-        post '/graphql', params: {
+  describe "parameter handling" do
+    context "with a keyStage query" do
+      it "returns the expected value when an id is passed" do
+        post "/graphql", params: {
           query: <<~GQL
             {
               keyStage(id: "#{published_key_stages[0].id}")
@@ -36,8 +36,8 @@ RSpec.describe 'Query', type: :request do
         expect(response.body).to eq(expected_response)
       end
 
-      it 'returns the expected value when a slug is passed' do
-        post '/graphql', params: {
+      it "returns the expected value when a slug is passed" do
+        post "/graphql", params: {
           query: <<~GQL
             {
               keyStage(slug: "#{published_key_stages[0].slug}")
@@ -60,8 +60,8 @@ RSpec.describe 'Query', type: :request do
         expect(response.body).to eq(expected_response)
       end
 
-      it 'returns the expected number of keyStages when a limit is set' do
-        post '/graphql', params: {
+      it "returns the expected number of keyStages when a limit is set" do
+        post "/graphql", params: {
           query: <<~GQL
             {
               keyStages(limit: 2)
@@ -72,16 +72,16 @@ RSpec.describe 'Query', type: :request do
           GQL
         }
         expect(response).to be_successful
-        keyStages = JSON.parse(response.body, object_class: OpenStruct).data.keyStages
-        expect(keyStages.length).to eq(2)
+        key_stages = JSON.parse(response.body, object_class: OpenStruct).data.keyStages
+        expect(key_stages.length).to eq(2)
       end
     end
   end
 
-  describe 'when a record is not found' do
-    context 'with a keyStage query' do
-      it 'null is returned and an error is added to the response' do
-        post '/graphql', params: {
+  describe "when a record is not found" do
+    context "with a keyStage query" do
+      it "null is returned and an error is added to the response" do
+        post "/graphql", params: {
           query: <<~GQL
             {
               keyStage(slug: "nonsense") {
@@ -97,7 +97,7 @@ RSpec.describe 'Query', type: :request do
           },
           errors: [
             {
-              message: 'KeyStage not found',
+              message: "KeyStage not found",
               locations: [
                 {
                   line: 2,
@@ -105,7 +105,7 @@ RSpec.describe 'Query', type: :request do
                 }
               ],
               path: [
-                'keyStage'
+                "keyStage"
               ],
               extensions: {
                 code: :not_found

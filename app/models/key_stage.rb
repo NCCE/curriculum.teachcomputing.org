@@ -9,9 +9,9 @@ class KeyStage < ApplicationRecord
 
   validates :description, :level, presence: true
   validates :ages, :level, :years, :slug, uniqueness: true
-  validates :ages, :years, format: { with: /\A^[0-9]+(-[0-9]+)$\z/,
-                                     multiline: true,
-                                     message: 'Please use the following format: 3-5' }
+  validates :ages, :years, format: {with: /\A^[0-9]+(-[0-9]+)$\z/,
+                                    multiline: true,
+                                    message: "Please use the following format: 3-5"}
 
   accepts_nested_attributes_for :curriculum_maps, allow_destroy: true
 
@@ -43,7 +43,7 @@ class KeyStage < ApplicationRecord
 
   private
 
-    def notify_update
-      UpdateNotifier.new([self]).run
-    end
+  def notify_update
+    UpdateNotifier.new([self]).run
+  end
 end

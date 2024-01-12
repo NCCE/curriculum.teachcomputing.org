@@ -1,17 +1,17 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Lesson', type: :request do
-  describe 'for a primary lesson' do
+RSpec.describe "Lesson", type: :request do
+  describe "for a primary lesson" do
     let!(:published_lesson) { create(:published_lesson) }
     let!(:primary_learning_objectives) do
       [
-        create(:learning_objective, lesson: published_lesson, order: 2, description: 'MyString 2'),
-        create(:learning_objective, lesson: published_lesson, order: 1, description: 'MyString 1')
+        create(:learning_objective, lesson: published_lesson, order: 2, description: "MyString 2"),
+        create(:learning_objective, lesson: published_lesson, order: 1, description: "MyString 1")
       ]
     end
 
     before do
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             lessons
@@ -36,7 +36,7 @@ RSpec.describe 'Lesson', type: :request do
       }
     end
 
-    it 'returns lessons with the expected learning objectives' do
+    it "returns lessons with the expected learning objectives" do
       expect(response).to be_successful
 
       expected_response = {
@@ -52,11 +52,11 @@ RSpec.describe 'Lesson', type: :request do
             isaacUrl: published_lesson.isaac_url,
             learningObjectives: [
               {
-                description: 'MyString 1',
+                description: "MyString 1",
                 successCriteria: []
               },
               {
-                description: 'MyString 2',
+                description: "MyString 2",
                 successCriteria: []
               }
             ]
@@ -68,7 +68,7 @@ RSpec.describe 'Lesson', type: :request do
     end
   end
 
-  describe 'for a secondary lesson' do
+  describe "for a secondary lesson" do
     let!(:published_lesson) { create(:published_lesson) }
     let!(:secondary_learning_objective) do
       create(:learning_objective, lesson: published_lesson)
@@ -76,17 +76,17 @@ RSpec.describe 'Lesson', type: :request do
 
     let!(:secondary_success_criteria) do
       [
-        create(:success_criterion, description: 'MyString 3', order: '2',
-                                   learning_objective: secondary_learning_objective),
-        create(:success_criterion, description: 'MyString 1', order: '3',
-                                   learning_objective: secondary_learning_objective),
-        create(:success_criterion, description: 'MyString 2', order: '1',
-                                   learning_objective: secondary_learning_objective)
+        create(:success_criterion, description: "MyString 3", order: "2",
+          learning_objective: secondary_learning_objective),
+        create(:success_criterion, description: "MyString 1", order: "3",
+          learning_objective: secondary_learning_objective),
+        create(:success_criterion, description: "MyString 2", order: "1",
+          learning_objective: secondary_learning_objective)
       ]
     end
 
     before do
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             lessons
@@ -110,7 +110,7 @@ RSpec.describe 'Lesson', type: :request do
       }
     end
 
-    it 'returns lessons with the expected success criteria' do
+    it "returns lessons with the expected success criteria" do
       expect(response).to be_successful
 
       expected_response = {
@@ -125,16 +125,16 @@ RSpec.describe 'Lesson', type: :request do
             description: published_lesson.description,
             learningObjectives: [
               {
-                description: 'MyString',
+                description: "MyString",
                 successCriteria: [
                   {
-                    description: 'MyString 2'
+                    description: "MyString 2"
                   },
                   {
-                    description: 'MyString 3'
+                    description: "MyString 3"
                   },
                   {
-                    description: 'MyString 1'
+                    description: "MyString 1"
                   }
                 ]
               }
@@ -147,12 +147,12 @@ RSpec.describe 'Lesson', type: :request do
     end
   end
 
-  describe 'where multiple lessons share the same slug but a different unit' do
+  describe "where multiple lessons share the same slug but a different unit" do
     let!(:published_lesson) { create(:published_lesson) }
     let!(:published_lesson_2) { create(:published_lesson, unit: create(:unit)) }
 
     before do
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             lesson(slug: "#{published_lesson.slug}", unitSlug: "#{published_lesson.unit.slug}")
@@ -169,7 +169,7 @@ RSpec.describe 'Lesson', type: :request do
       }
     end
 
-    it 'returns the expected lesson' do
+    it "returns the expected lesson" do
       expect(response).to be_successful
 
       expected_response = {
@@ -191,13 +191,13 @@ RSpec.describe 'Lesson', type: :request do
     end
   end
 
-  describe 'when ordering' do
-    let!(:lesson_2) { create(:published_lesson, order: 1, title: 'Lesson 2') }
-    let!(:lesson_3) { create(:published_lesson, order: 3, title: 'Lesson 3') }
-    let!(:lesson_1) { create(:published_lesson, order: 2, title: 'Lesson 1') }
+  describe "when ordering" do
+    let!(:lesson_2) { create(:published_lesson, order: 1, title: "Lesson 2") }
+    let!(:lesson_3) { create(:published_lesson, order: 3, title: "Lesson 3") }
+    let!(:lesson_1) { create(:published_lesson, order: 2, title: "Lesson 1") }
 
     before do
-      post '/graphql', params: {
+      post "/graphql", params: {
         query: <<~GQL
           {
             lessons
@@ -210,7 +210,7 @@ RSpec.describe 'Lesson', type: :request do
       }
     end
 
-    it 'returns lessons in the defined order' do
+    it "returns lessons in the defined order" do
       expect(response).to be_successful
 
       expected_response = {

@@ -55,7 +55,7 @@ class Unit < ApplicationRecord
 
   private
 
-    def notify_update
-      UpdateNotifier.new([self, year_group, year_group.key_stage], { unit: "#{year_group.key_stage.slug}-#{slug}" }).run
-    end
+  def notify_update
+    UpdateNotifier.new([self, year_group, year_group.key_stage], {unit: "#{year_group.key_stage.slug}-#{slug}"}).run
+  end
 end

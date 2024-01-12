@@ -8,9 +8,8 @@ class CreateConnectedWorldStrands < ActiveRecord::Migration[6.1]
     end
 
     create_table :connected_world_strands_units, id: false do |t|
-      t.references :connected_world_strand, null: false, foreign_key: true, type: :uuid, index: { name: 'index_on_strand_id' }
-      t.references :unit, null: false, foreign_key: true, type: :uuid, index: { name: 'index_strand_on_unit_id' }
-
+      t.references :connected_world_strand, null: false, foreign_key: true, type: :uuid, index: {name: "index_on_strand_id"}
+      t.references :unit, null: false, foreign_key: true, type: :uuid, index: {name: "index_strand_on_unit_id"}
     end
   end
 end

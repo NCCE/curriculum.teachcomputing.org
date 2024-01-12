@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :learning_objective do
-    description { 'MyString' }
+    description { "MyString" }
     order { 1 }
     lesson { nil }
 
