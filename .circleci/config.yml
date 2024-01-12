@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
- standardrb:
+  standardrb:
     docker:
       - image: "cimg/ruby:3.1.2"
     steps:
