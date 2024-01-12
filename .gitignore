@@ -39,7 +39,6 @@ yarn-debug.log*
 .yarn-integrity
 
 .env
-.vscode
 
 /coverage/*
 /spec/examples.txt
