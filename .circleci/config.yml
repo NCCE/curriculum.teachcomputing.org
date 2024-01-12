@@ -1,5 +1,16 @@
 version: 2.1
 jobs:
+
+ standardrb:
+    docker:
+      - image: "cimg/ruby:3.1.2"
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run:
+          name: Inspecting code with standardrb
+          command: bundle exec standardrb
+
   test:
     docker:
       - image: cimg/ruby:3.1.2-node
@@ -61,6 +72,15 @@ jobs:
 
 workflows:
   version: 2
+
+  standardrb:
+    jobs:
+      - standardrb:
+          filters:
+            branches:
+              ignore:
+                - main
+
   build_and_test:
     jobs:
       - test
