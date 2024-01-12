@@ -14,5 +14,6 @@
     "dbaeumer.vscode-eslint",
     "hashicorp.terraform",
     "editorconfig.editorconfig",
+    "humao.rest-client",
   ]
 }

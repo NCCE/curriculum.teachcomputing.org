@@ -23,9 +23,7 @@
 		"vscode": {
 		  "extensions": [
 			"ms-azuretools.vscode-docker",
-			"rebornix.ruby",
 			"github.vscode-pull-request-github",
-			"humao.rest-client",
 			"mikestead.dotenv",
 			"wingrunr21.vscode-ruby",
 			"fooo.ruby-spec-runner",
