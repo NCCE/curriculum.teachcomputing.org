@@ -31,7 +31,8 @@
 			"ms-vscode.remote-repositories",
 			"github.remotehub",
 			"mtxr.sqltools",
-			"mtxr.sqltools-driver-pg"
+			"mtxr.sqltools-driver-pg",
+			"testdouble.vscode-standard-ruby"
 		  ],
 		  "settings": {
 			"terminal.integrated.defaultProfile.linux": "bash",
