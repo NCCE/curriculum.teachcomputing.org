@@ -18,7 +18,7 @@ FactoryBot.define do
         key_stage.teacher_guide.attach(
           io: File.open(
             Rails.root.join(
-              "spec", "support", "test.pdf"
+              "spec/support/test.pdf"
             )
           ),
           filename: "test.pdf",

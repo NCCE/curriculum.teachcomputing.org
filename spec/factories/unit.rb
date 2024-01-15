@@ -13,7 +13,7 @@ FactoryBot.define do
         unit.unit_guide.attach(
           io: File.open(
             Rails.root.join(
-              "spec", "support", "test.txt"
+              "spec/support/test.txt"
             )
           ),
           filename: "test.txt",
@@ -27,7 +27,7 @@ FactoryBot.define do
         unit.unit_guide.attach(
           io: File.open(
             Rails.root.join(
-              "spec", "support", "test.txt"
+              "spec/support/test.txt"
             )
           ),
           filename: "test.txt",
