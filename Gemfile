@@ -80,10 +80,11 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 2.15"
-  gem "rspec-graphql_matchers"
-  gem "selenium-webdriver"
-  gem "shoulda-matchers", "~> 3.1"
+  gem 'capybara', '>= 2.15'
+  gem 'rails-controller-testing'
+  gem 'rspec-graphql_matchers'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 3.1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
 end
