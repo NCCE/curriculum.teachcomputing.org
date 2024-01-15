@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "Curriculum",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "curriculum",
+	"workspaceFolder": "/app",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "cat /etc/os-release",
+
+	"mounts": [
+		"source=vscode_extensions,target=/root/.vscode-server/extensions,type=volume"
+	],
+	// Configure tool-specific properties.
+	// "customizations": {},
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"ms-azuretools.vscode-docker",
+			"github.vscode-pull-request-github",
+			"mikestead.dotenv",
+			"wingrunr21.vscode-ruby",
+			"fooo.ruby-spec-runner",
+			"shanehofstetter.rails-i18n",
+			"ms-vscode.remote-repositories",
+			"github.remotehub",
+			"mtxr.sqltools",
+			"mtxr.sqltools-driver-pg"
+		  ],
+		  "settings": {
+			"terminal.integrated.defaultProfile.linux": "bash",
+			"ruby.lint": {
+			  "rubocop": true
+			},
+			"ruby-spec-runner.rspecCommand": "rdebug-ide --skip_wait_for_start --host 0.0.0.0 --port 1235 -- bin/rspec"
+		  }
+		}
+	  },
+	  "shutdownAction": "stopCompose"
+
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+}

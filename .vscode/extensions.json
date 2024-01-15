@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "ninoseki.vscode-gem-lens",
+    "aliariff.auto-add-brackets",
+    "yzhang.markdown-all-in-one",
+    "eamodio.gitlens",
+    "humao.rest-client",
+    "castwide.solargraph",
+    "kumar-harsh.graphql-for-vscode",
+    "circleci.circleci",
+    "pkosta2005.heroku-command",
+    "ivangabriele.vscode-heroku",
+    "dzannotti.vscode-babel-coloring",
+    "dbaeumer.vscode-eslint",
+    "hashicorp.terraform",
+    "editorconfig.editorconfig",
+    "humao.rest-client",
+  ]
+}
