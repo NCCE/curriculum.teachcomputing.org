@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :lesson do
     sequence(:title) { |n| "Lesson #{n}" }
-    description { 'In this lesson you will learn X and Y' }
+    description { "In this lesson you will learn X and Y" }
     unit
 
     factory :published_lesson do

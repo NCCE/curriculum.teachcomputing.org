@@ -4,7 +4,7 @@ module Mutations
     argument :description, String, required: true
     argument :year_number, String, required: true
 
-		field :year_group, Types::YearGroupType, null: false
+    field :year_group, Types::YearGroupType, null: false
 
     # return type from the mutation
     type Types::YearGroupType
@@ -13,7 +13,7 @@ module Mutations
       YearGroup.create!(
         description: description,
         year_number: year_number,
-				key_stage: key_stage
+        key_stage: key_stage
       )
     end
   end

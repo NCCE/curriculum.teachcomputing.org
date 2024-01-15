@@ -1,4 +1,4 @@
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
 class LessonDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -9,16 +9,16 @@ class LessonDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     unit: Field::BelongsTo.with_options(
-      order: 'title ASC',
+      order: "title ASC",
       searchable: true,
-      searchable_fields: ['title']
+      searchable_fields: ["title"]
     ),
     zipped_contents: Field::ActiveStorage.with_options(
       show_display_preview: false,
       direct_upload: true, # This should be disabled for local testing
       destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_lesson_zipped_contents, { attachment_id: attachment.id,
-                                          lesson_id: resource.id }]
+        [:admin_lesson_zipped_contents, {attachment_id: attachment.id,
+                                         lesson_id: resource.id}]
       end
     ),
     redirects: Field::NestedHasMany,
@@ -30,7 +30,7 @@ class LessonDashboard < Administrate::BaseDashboard
     description: Field::Text,
     isaac_url: Field::Text,
     learning_objectives: Field::NestedHasMany.with_options(
-      sort_by: 'order',
+      sort_by: "order",
       direction: :asc
     ),
     created_at: Field::DateTime,

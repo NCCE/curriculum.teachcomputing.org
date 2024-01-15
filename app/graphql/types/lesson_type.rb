@@ -19,7 +19,7 @@ module Types
     end
 
     def zipped_contents
-      object.zipped_contents unless object.zipped_contents.blank?
+      object.zipped_contents.presence
     end
   end
 end

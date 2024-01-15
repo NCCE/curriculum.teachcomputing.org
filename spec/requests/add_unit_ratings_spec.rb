@@ -1,10 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Add Unit Rating', type: :request do
+RSpec.describe "Add Unit Rating", type: :request do
   let(:published_unit) { create(:published_unit) }
   let(:user_stem_achiever_contact_no) { SecureRandom.uuid }
 
-  describe 'add positive rating' do
+  describe "add positive rating" do
     let(:query) do
       {
         query: <<~GQL
@@ -22,21 +22,21 @@ RSpec.describe 'Add Unit Rating', type: :request do
       }
     end
 
-    it 'returns a rating' do
-      post '/graphql', params: query
+    it "returns a rating" do
+      post "/graphql", params: query
       expect(response).to be_successful
       rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveUnitRating
       expect(rating.id).to be_truthy
       expect(rating.comment).to be_nil
     end
 
-    it 'calls add_positive_rating method with the stem achiever number' do
+    it "calls add_positive_rating method with the stem achiever number" do
       expect_any_instance_of(Unit)
         .to receive(:add_positive_rating).with(user_stem_achiever_contact_no)
-      post '/graphql', params: query
+      post "/graphql", params: query
     end
 
-    context 'when no achiever contact number' do
+    context "when no achiever contact number" do
       let(:query) do
         {
           query: <<~GQL
@@ -52,8 +52,8 @@ RSpec.describe 'Add Unit Rating', type: :request do
         }
       end
 
-      it 'returns a rating' do
-        post '/graphql', params: query
+      it "returns a rating" do
+        post "/graphql", params: query
         expect(response).to be_successful
         rating = JSON.parse(response.body, object_class: OpenStruct).data.addPositiveUnitRating
         expect(rating.id).to be_truthy
@@ -61,7 +61,7 @@ RSpec.describe 'Add Unit Rating', type: :request do
     end
   end
 
-  describe 'add negative rating' do
+  describe "add negative rating" do
     let(:query) do
       {
         query: <<~GQL
@@ -79,21 +79,21 @@ RSpec.describe 'Add Unit Rating', type: :request do
       }
     end
 
-    it 'returns a rating' do
-      post '/graphql', params: query
+    it "returns a rating" do
+      post "/graphql", params: query
       expect(response).to be_successful
       rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeUnitRating
       expect(rating.id).to be_truthy
       expect(rating.comment).to be_nil
     end
 
-    it 'calls add_negative_rating method with the stem achiever number' do
+    it "calls add_negative_rating method with the stem achiever number" do
       expect_any_instance_of(Unit)
         .to receive(:add_negative_rating).with(user_stem_achiever_contact_no)
-      post '/graphql', params: query
+      post "/graphql", params: query
     end
 
-    context 'when no achiever number sent' do
+    context "when no achiever number sent" do
       let(:query) do
         {
           query: <<~GQL
@@ -109,8 +109,8 @@ RSpec.describe 'Add Unit Rating', type: :request do
         }
       end
 
-      it 'returns a rating' do
-        post '/graphql', params: query
+      it "returns a rating" do
+        post "/graphql", params: query
         expect(response).to be_successful
         rating = JSON.parse(response.body, object_class: OpenStruct).data.addNegativeUnitRating
         expect(rating.id).to be_truthy

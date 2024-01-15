@@ -1,0 +1,86 @@
+# Auto generated files with errors to ignore.
+# Remove from this list as you refactor files.
+---
+ignore:
+- app/controllers/application_controller.rb:
+  - Rails/EnvironmentVariableAccess
+- app/fields/contextual_select_field.rb:
+  - Rails/Blank
+- app/graphql/mutations/update_rating.rb:
+  - Rails/SaveBang
+- app/graphql/types/query_type.rb:
+  - Rails/PluckId
+- app/graphql/types/redirect_type.rb:
+  - Rails/Blank
+- app/models/aggregate_download.rb:
+  - Rails/SaveBang
+- app/models/aggregate_rating.rb:
+  - Rails/SaveBang
+- app/models/concerns/publishable.rb:
+  - Rails/WhereEquals
+  - Rails/Blank
+- app/models/concerns/rateable.rb:
+  - Rails/Blank
+- app/models/connected_world_strand.rb:
+  - Rails/HasAndBelongsToMany
+- app/models/key_stage.rb:
+  - Rails/UniqueValidationWithoutIndex
+- app/models/learning_objective.rb:
+  - Rails/HasAndBelongsToMany
+  - Rails/Blank
+- app/models/lesson.rb:
+  - Rails/HasManyOrHasOneDependent
+  - Rails/Blank
+- app/models/national_curriculum_statement.rb:
+  - Rails/HasAndBelongsToMany
+- app/models/redirect.rb:
+  - Rails/DynamicFindBy
+  - Rails/PluckId
+- app/models/taxonomy_tag.rb:
+  - Rails/HasAndBelongsToMany
+- app/models/unit.rb:
+  - Rails/HasAndBelongsToMany
+- app/services/update_notifier.rb:
+  - Rails/EnvironmentVariableAccess
+- app/workers/invalidate_cache_worker.rb:
+  - Rails/EnvironmentVariableAccess
+- db/migrate/20200625131914_remove_title_from_year_group_and_add_year_number.rb:
+  - Rails/BulkChangeTable
+- db/migrate/20200626104159_remove_title_from_key_stages_and_add_ks_number.rb:
+  - Rails/BulkChangeTable
+- db/migrate/20200716090905_remove_assessment_model.rb:
+  - Rails/ReversibleMigration
+- db/migrate/20200716160240_synced_flag_to_unit_and_lesson_model.rb:
+  - Rails/BulkChangeTable
+- db/migrate/20200730082524_make_aggregate_ratings_polymorphic.rb:
+  - Rails/BulkChangeTable
+- db/migrate/20200803081814_make_state_polymorphic.rb:
+  - Rails/BulkChangeTable
+- db/migrate/20220718123516_remove_lesson_no_from_lesson.rb:
+  - Rails/ReversibleMigration
+- db/seeds.rb:
+  - Rails/SaveBang
+  - Rails/Output
+- lib/tasks/learning_objectives.rake:
+  - Rails/CompactBlank
+- lib/tasks/rename_and_redirect.rake:
+  - Rails/Blank
+  - Rails/SaveBang
+- lib/tasks/vital_model_checker.rake:
+  - Rails/TimeZone
+- spec/factories/key_stage.rb:
+  - Rails/RootPathnameMethods
+- spec/factories/unit.rb:
+  - Rails/RootPathnameMethods
+- spec/models/aggregate_download_spec.rb:
+  - Rails/SaveBang
+- spec/models/concerns/publishable_shared_examples.rb:
+  - Rails/SaveBang
+- spec/models/lesson_spec.rb:
+  - Rails/SaveBang
+- spec/models/unit_spec.rb:
+  - Rails/SaveBang
+- spec/rails_helper.rb:
+  - Style/RedundantInterpolation
+- spec/system/admin/administrate_publishable_shared_examples.rb:
+  - Rails/SaveBang

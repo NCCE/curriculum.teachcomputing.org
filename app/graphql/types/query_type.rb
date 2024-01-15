@@ -75,7 +75,7 @@ module Types
     end
 
     def lesson(**args)
-      raise ArgumentError, 'Missing parameter: unitSlug' if args[:slug] && !args[:unit_slug]
+      raise ArgumentError, "Missing parameter: unitSlug" if args[:slug] && !args[:unit_slug]
 
       find_record(Lesson, args)
     end
@@ -104,7 +104,7 @@ module Types
     def find_redirect(from, from_context, to)
       return Redirect.find_by(from: from, from_context: from_context) if from && from_context
       return Redirect.find_by(to: to) if to
-      return Redirect.find_by(from: from, from_context: from_context, to: to) if from && from_context && to
+      Redirect.find_by(from: from, from_context: from_context, to: to) if from && from_context && to
     end
 
     # Shared
@@ -116,9 +116,9 @@ module Types
         record = model.find(id)
       elsif slug
         case model.model_name
-        when 'Lesson'
+        when "Lesson"
           record = Lesson.published.find { |l| l.slug == slug && l.unit.slug == unit_slug }
-        when 'Unit'
+        when "Unit"
           key_stage = KeyStage.find_by(slug: key_stage_slug)
           year_groups = YearGroup.where(key_stage_id: key_stage.id)
 

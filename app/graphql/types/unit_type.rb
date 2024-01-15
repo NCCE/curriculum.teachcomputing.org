@@ -24,7 +24,7 @@ module Types
     end
 
     def unit_guide
-      return object.unit_guide unless object.unit_guide.attachment.blank?
+      object.unit_guide unless object.unit_guide.attachment.blank?
     end
   end
 end

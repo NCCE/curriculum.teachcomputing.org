@@ -1,18 +1,18 @@
-require 'rails_helper'
-require Rails.root.join 'spec/models/concerns/publishable_shared_examples.rb'
+require "rails_helper"
+require Rails.root.join "spec/models/concerns/publishable_shared_examples.rb"
 
 RSpec.describe KeyStage, type: :model do
   let(:key_stage) { create(:key_stage) }
 
-  it_behaves_like 'publishable', [:year_groups]
+  it_behaves_like "publishable", [:year_groups]
 
-  describe 'associations' do
+  describe "associations" do
     it { is_expected.to have_many(:year_groups) }
     it { is_expected.to have_many(:aggregate_downloads) }
     it { is_expected.to have_many(:curriculum_maps) }
   end
 
-  describe 'validations' do
+  describe "validations" do
     before do
       key_stage
     end
@@ -21,36 +21,36 @@ RSpec.describe KeyStage, type: :model do
     it { is_expected.to validate_presence_of(:level) }
     it { is_expected.to validate_uniqueness_of(:level).case_insensitive }
 
-    it 'restricts the format for the ages field' do
+    it "restricts the format for the ages field" do
       expect(key_stage.valid?).to eq true
 
-      key_stage.ages = '1-B'
+      key_stage.ages = "1-B"
       key_stage.valid?
 
-      expect(key_stage.errors[:ages]).to include('Please use the following format: 3-5')
+      expect(key_stage.errors[:ages]).to include("Please use the following format: 3-5")
     end
 
-    it 'restricts the format for the years field' do
+    it "restricts the format for the years field" do
       expect(key_stage.valid?).to eq true
 
-      key_stage.years = '1-B'
+      key_stage.years = "1-B"
       key_stage.valid?
 
-      expect(key_stage.errors[:years]).to include('Please use the following format: 3-5')
+      expect(key_stage.errors[:years]).to include("Please use the following format: 3-5")
     end
   end
 
-  describe 'callbacks' do
-    describe '#set_slug' do
-      it 'sets the slug once saved' do
+  describe "callbacks" do
+    describe "#set_slug" do
+      it "sets the slug once saved" do
         key_stage = build(:key_stage)
         key_stage.run_callbacks :save
         expect(key_stage.slug).to eq key_stage.title.parameterize
       end
     end
 
-    describe '#notify_update' do
-      it 'runs the UpdateNotifier' do
+    describe "#notify_update" do
+      it "runs the UpdateNotifier" do
         notifier_double = instance_double(UpdateNotifier)
         allow(notifier_double).to receive(:run)
         allow(UpdateNotifier).to receive(:new) { notifier_double }
@@ -65,58 +65,58 @@ RSpec.describe KeyStage, type: :model do
     end
   end
 
-  describe '#title' do
-    it 'returns Key Stage and the ks number' do
+  describe "#title" do
+    it "returns Key Stage and the ks number" do
       expect(key_stage.title).to eq "Key Stage #{key_stage.level}"
     end
   end
 
-  describe '#short_title' do
-    it 'returns KS and the ks number' do
+  describe "#short_title" do
+    it "returns KS and the ks number" do
       expect(key_stage.short_title).to eq "KS#{key_stage.level}"
     end
   end
 
-  describe '#primary?' do
-    it 'returns true when level is 1' do
-      ks = build(:key_stage, level: '1')
+  describe "#primary?" do
+    it "returns true when level is 1" do
+      ks = build(:key_stage, level: "1")
       expect(ks.primary?).to eq(true)
     end
 
-    it 'returns true when level is 2' do
-      ks = build(:key_stage, level: '2')
+    it "returns true when level is 2" do
+      ks = build(:key_stage, level: "2")
       expect(ks.primary?).to eq(true)
     end
 
-    it 'returns false when level is 3' do
-      ks = build(:key_stage, level: '3')
+    it "returns false when level is 3" do
+      ks = build(:key_stage, level: "3")
       expect(ks.primary?).to eq(false)
     end
 
-    it 'returns false when level is 4' do
-      ks = build(:key_stage, level: '4')
+    it "returns false when level is 4" do
+      ks = build(:key_stage, level: "4")
       expect(ks.primary?).to eq(false)
     end
   end
 
-  describe '#secondary?' do
-    it 'returns false when level is 1' do
-      ks = build(:key_stage, level: '1')
+  describe "#secondary?" do
+    it "returns false when level is 1" do
+      ks = build(:key_stage, level: "1")
       expect(ks.secondary?).to eq(false)
     end
 
-    it 'returns false when level is 2' do
-      ks = build(:key_stage, level: '2')
+    it "returns false when level is 2" do
+      ks = build(:key_stage, level: "2")
       expect(ks.secondary?).to eq(false)
     end
 
-    it 'returns true when level is 3' do
-      ks = build(:key_stage, level: '3')
+    it "returns true when level is 3" do
+      ks = build(:key_stage, level: "3")
       expect(ks.secondary?).to eq(true)
     end
 
-    it 'returns true when level is 4' do
-      ks = build(:key_stage, level: '4')
+    it "returns true when level is 4" do
+      ks = build(:key_stage, level: "4")
       expect(ks.secondary?).to eq(true)
     end
   end

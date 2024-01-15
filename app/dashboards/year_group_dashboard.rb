@@ -1,4 +1,4 @@
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
 class YearGroupDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -9,7 +9,7 @@ class YearGroupDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     units: Field::HasMany.with_options(
-      sort_by: 'order',
+      sort_by: "order",
       direction: :asc,
       limit: 6
     ),

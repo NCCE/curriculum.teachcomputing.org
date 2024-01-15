@@ -1,4 +1,4 @@
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
 class RedirectDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -9,14 +9,14 @@ class RedirectDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard
 
   def self.transform_to_option_data(collection, type)
-    collection.collect { |r| [r.title, "#{type == 'lesson' ? r.unit.slug : r.year_group.key_stage.slug},#{r.slug}"] }
+    collection.collect { |r| [r.title, "#{(type == "lesson") ? r.unit.slug : r.year_group.key_stage.slug},#{r.slug}"] }
   end
 
   ATTRIBUTE_TYPES = {
     from: ContextualSelectField.with_options(
       collections: [
-        Lesson: -> { transform_to_option_data(Lesson.unpublished, 'lesson') },
-        Unit: -> { transform_to_option_data(Unit.unpublished, 'unit') }
+        Lesson: -> { transform_to_option_data(Lesson.unpublished, "lesson") },
+        Unit: -> { transform_to_option_data(Unit.unpublished, "unit") }
       ]
     ),
     redirectable: Field::Polymorphic.with_options(
