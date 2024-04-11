@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       post "/publish", to: "key_stages#publish"
       post "/unpublish", to: "key_stages#unpublish"
       delete :teacher_guide, action: :destroy_teacher_guide
+      delete :journey_progress_pdf, action: :destroy_journey_progress_pdf
+      delete :journey_progress_icon, action: :destroy_journey_progress_icon
     end
     resources :year_groups, only: %i[show index] do
       post "/publish", to: "year_groups#publish"

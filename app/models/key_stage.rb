@@ -6,6 +6,8 @@ class KeyStage < ApplicationRecord
   has_many :curriculum_maps, dependent: :destroy
 
   has_one_attached :teacher_guide
+  has_one_attached :journey_progress_pdf
+  has_one_attached :journey_progress_icon
 
   validates :description, :level, presence: true
   validates :ages, :level, :years, :slug, uniqueness: true
