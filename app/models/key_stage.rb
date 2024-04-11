@@ -1,13 +1,14 @@
 class KeyStage < ApplicationRecord
   include Publishable
+  include FileAttachable
 
   has_many :year_groups, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
   has_many :curriculum_maps, dependent: :destroy
 
   has_one_attached :teacher_guide
-  has_one_attached :journey_progress_pdf
-  has_one_attached :journey_progress_icon
+  has_file_attached :journey_progress_pdf
+  has_file_attached :journey_progress_icon
 
   validates :description, :level, presence: true
   validates :ages, :level, :years, :slug, uniqueness: true

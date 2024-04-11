@@ -19,20 +19,10 @@ class KeyStageDashboard < Administrate::BaseDashboard
                                           key_stage_id: resource.id}]
       end
     ),
-    journey_progress_pdf: Field::ActiveStorage.with_options(
-      show_display_preview: false,
-      destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_key_stage_journey_progress_pdf, {attachment_id: attachment.id,
-                                          key_stage_id: resource.id}]
-      end
-    ),
-    journey_progress_icon: Field::ActiveStorage.with_options(
-      show_display_preview: false,
-      destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_key_stage_journey_progress_icon, {attachment_id: attachment.id,
-                                          key_stage_id: resource.id}]
-      end
-    ),
+    journey_progress_pdf: Field::HasOne,
+    journey_progress_icon: Field::HasOne,
+    journey_progress_pdf_attachment: Field::HasOne,
+    journey_progress_icon_attachment: Field::HasOne,
     curriculum_maps: Field::NestedHasMany.with_options(skip: :key_stage),
     slug: Field::String,
     id: Field::String.with_options(searchable: false),
@@ -63,8 +53,8 @@ class KeyStageDashboard < Administrate::BaseDashboard
     level
     description
     teacher_guide
-    journey_progress_pdf
-    journey_progress_icon
+    journey_progress_pdf_attachment
+    journey_progress_icon_attachment
     ages
     years
     published?
@@ -80,8 +70,8 @@ class KeyStageDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     description
     teacher_guide
-    journey_progress_pdf
-    journey_progress_icon
+    journey_progress_pdf_attachment
+    journey_progress_icon_attachment
     curriculum_maps
   ].freeze
 
