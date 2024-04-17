@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     resources :success_criteria, only: %i[show]
     resources :national_curriculum_statements
     resources :connected_world_strands
+    resources :file_attachments, only: %i[show]
+    resources :file_uploads
     root to: "units#index"
   end
 end

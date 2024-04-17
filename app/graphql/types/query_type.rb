@@ -80,6 +80,17 @@ module Types
       find_record(Lesson, args)
     end
 
+    # File uploads
+
+    field :file_upload, Types::FileUploadType, null: true do
+      argument :id, ID, required: false
+      argument :slug, String, required: false
+    end
+
+    def file_upload(**args)
+      find_record(FileUpload, args)
+    end
+
     # Redirects
 
     field :redirects, [Types::RedirectType], null: true do

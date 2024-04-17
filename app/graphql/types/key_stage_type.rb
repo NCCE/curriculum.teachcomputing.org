@@ -10,6 +10,8 @@ module Types
     field :teacher_guide, Types::AttachmentType, null: true
     field :description, String, null: false
     field :year_groups, [Types::YearGroupType], null: true, method: :published_year_groups
+    field :journey_progress_icon, Types::FileUploadType, null: true
+    field :journey_progress_pdf, Types::FileUploadType, null: true
     field :curriculum_maps, [Types::CurriculumMapType], null: true
     field :lesson_count, Integer, null: true
     field :unit_count, Integer, null: true

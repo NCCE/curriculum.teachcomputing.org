@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_18_131357) do
+ActiveRecord::Schema.define(version: 2024_04_11_143922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -84,6 +84,26 @@ ActiveRecord::Schema.define(version: 2023_12_18_131357) do
     t.uuid "user_stem_achiever_contact_no"
     t.index ["aggregate_download_id"], name: "index_downloads_on_aggregate_download_id"
     t.index ["user_stem_achiever_contact_no"], name: "index_downloads_on_user_stem_achiever_contact_no"
+  end
+
+  create_table "file_attachments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "context", null: false
+    t.string "attachable_type", null: false
+    t.uuid "attachable_id", null: false
+    t.uuid "file_upload_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["attachable_type", "attachable_id", "file_upload_id"], name: "index_unique_attachable_and_file_upload", unique: true
+    t.index ["attachable_type", "attachable_id"], name: "index_file_attachments_on_attachable"
+    t.index ["file_upload_id"], name: "index_file_attachments_on_file_upload_id"
+  end
+
+  create_table "file_uploads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name", null: false
+    t.string "slug", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_file_uploads_on_slug", unique: true
   end
 
   create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -225,6 +245,7 @@ ActiveRecord::Schema.define(version: 2023_12_18_131357) do
   add_foreign_key "connected_world_strands_units", "connected_world_strands"
   add_foreign_key "connected_world_strands_units", "units"
   add_foreign_key "downloads", "aggregate_downloads"
+  add_foreign_key "file_attachments", "file_uploads"
   add_foreign_key "learning_objectives_taxonomy_tags", "learning_objectives"
   add_foreign_key "learning_objectives_taxonomy_tags", "taxonomy_tags"
   add_foreign_key "national_curriculum_statements_units", "national_curriculum_statements"
