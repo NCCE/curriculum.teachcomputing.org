@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class LessonDashboard < Administrate::BaseDashboard
+class VideoDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,35 +8,16 @@ class LessonDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    unit: Field::BelongsTo.with_options(
-      order: "title ASC",
-      searchable: true,
-      searchable_fields: ["title"]
-    ),
-    video: Field::BelongsTo,
-    zipped_contents: Field::ActiveStorage.with_options(
-      show_display_preview: false,
-      direct_upload: true, # This should be disabled for local testing
-      destroy_url: proc do |_namespace, resource, attachment|
-        [:admin_lesson_zipped_contents, {attachment_id: attachment.id,
-                                         lesson_id: resource.id}]
-      end
-    ),
-    redirects: Field::NestedHasMany,
-    order: Field::Number,
-    range: Field::Number,
-    slug: ReadOnlyField,
-    id: Field::String.with_options(searchable: false),
+    units: Field::HasMany,
+    lessons: Field::HasMany,
+    id: Field::String,
     title: Field::String,
+    name: Field::String,
+    job_title: Field::String,
     description: Field::Text,
-    isaac_url: Field::Text,
-    learning_objectives: Field::NestedHasMany.with_options(
-      sort_by: "order",
-      direction: :asc
-    ),
+    video_url: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    published?: Field::Boolean
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -45,45 +26,36 @@ class LessonDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    order
+    units
+    lessons
+    id
     title
-    redirects
-    published?
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    order
-    range
+    units
+    lessons
+    id
     title
-    slug
+    name
+    job_title
     description
-    isaac_url
-    unit
-    video
-    learning_objectives
-    zipped_contents
+    video_url
     created_at
     updated_at
-    redirects
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    order
-    range
     title
-    slug
+    name
+    job_title
     description
-    isaac_url
-    unit
-    video
-    learning_objectives
-    zipped_contents
-    redirects
+    video_url
   ].freeze
 
   # COLLECTION_FILTERS
@@ -98,10 +70,10 @@ class LessonDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how lessons are displayed
+  # Overwrite this method to customize how videos are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(lesson)
-    lesson.title
+  def display_resource(video)
+    video.title
   end
 end
