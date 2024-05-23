@@ -53,3 +53,8 @@ schema.json
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+
+# Ignore devlopment environment changes
+.irb_history
+.irbrc
+.vscode/settings.json
