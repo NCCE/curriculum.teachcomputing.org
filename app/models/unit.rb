@@ -9,7 +9,7 @@ class Unit < ApplicationRecord
   has_and_belongs_to_many :national_curriculum_statements
   has_and_belongs_to_many :connected_world_strands
 
-  belongs_to :video
+  belongs_to :video, optional: true
   belongs_to :year_group
   has_one :key_stage, through: :year_group
 

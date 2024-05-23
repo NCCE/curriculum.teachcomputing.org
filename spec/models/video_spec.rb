@@ -14,9 +14,7 @@ RSpec.describe Video, type: :model do
   describe "nullify association" do
     it "should nullify links when video is deleted" do
       video = create(:video)
-      unit = build(:unit, title: "Unit 1")
-      unit.video = video
-      unit.save!
+      unit = create(:unit, title: "Unit 1", video:)
       video.destroy!
       unit.reload
       expect(unit.video).to be nil
