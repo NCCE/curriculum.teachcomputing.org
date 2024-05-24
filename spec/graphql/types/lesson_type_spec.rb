@@ -13,4 +13,5 @@ RSpec.describe Types::LessonType do
   it { is_expected.to have_field(:total_negative).of_type("Int") }
   it { is_expected.to have_field(:zipped_contents).of_type("Attachment") }
   it { is_expected.to have_field(:learning_objectives).of_type("[LearningObjective!]") }
+  it { is_expected.to have_field(:video).of_type("Video") }
 end

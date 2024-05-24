@@ -18,6 +18,7 @@ module Types
     field :digital_summative_assessment_url, String, null: true
     field :redirects, [Types::RedirectType], null: true
     field :display_i_belong_flag, Boolean, null: false
+    field :video, Types::VideoType, null: true
 
     def lessons
       object.lessons.published.ordered
