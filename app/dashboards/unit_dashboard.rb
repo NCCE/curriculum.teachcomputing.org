@@ -16,6 +16,7 @@ class UnitDashboard < Administrate::BaseDashboard
     year_group: Field::BelongsTo.with_options(
       order: "year_number ASC"
     ),
+    video: Field::BelongsTo,
     key_stage: Field::HasOne.with_options(
       searchable: true,
       searchable_fields: %w[title slug level]
@@ -101,6 +102,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     digital_summative_assessment_url
+    video
     national_curriculum_statements
     connected_world_strands
     display_i_belong_flag
@@ -125,6 +127,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     digital_summative_assessment_url
+    video
     national_curriculum_statements
     connected_world_strands
     display_i_belong_flag

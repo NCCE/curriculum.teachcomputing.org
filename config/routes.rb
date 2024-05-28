@@ -39,6 +39,7 @@ Rails.application.routes.draw do
     resources :connected_world_strands
     resources :file_attachments, only: %i[show]
     resources :file_uploads
+    resources :videos
     root to: "units#index"
   end
 end

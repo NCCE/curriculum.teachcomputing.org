@@ -17,4 +17,5 @@ RSpec.describe Types::UnitType do
   it { is_expected.to have_field(:rubrics).of_type("[Attachment!]") }
   it { is_expected.to have_field(:summative_assessments).of_type("[Attachment!]") }
   it { is_expected.to have_field(:summative_answers).of_type("[Attachment!]") }
+  it { is_expected.to have_field(:video).of_type("Video") }
 end

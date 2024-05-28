@@ -13,6 +13,7 @@ module Types
     field :zipped_contents, Types::AttachmentType, null: true
     field :learning_objectives, [Types::LearningObjectiveType], null: true
     field :redirects, [Types::RedirectType], null: true
+    field :video, Types::VideoType, null: true
 
     def learning_objectives
       object.learning_objectives.ordered
