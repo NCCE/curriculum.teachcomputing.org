@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_11_143922) do
+ActiveRecord::Schema.define(version: 2024_05_22_114902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -149,8 +149,10 @@ ActiveRecord::Schema.define(version: 2024_04_11_143922) do
     t.string "isaac_url"
     t.integer "order"
     t.integer "range"
+    t.uuid "video_id"
     t.index ["slug", "unit_id"], name: "index_lessons_on_slug_and_unit_id", unique: true
     t.index ["unit_id"], name: "index_lessons_on_unit_id"
+    t.index ["video_id"], name: "index_lessons_on_video_id"
   end
 
   create_table "national_curriculum_statements", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -229,7 +231,19 @@ ActiveRecord::Schema.define(version: 2024_04_11_143922) do
     t.integer "order"
     t.boolean "display_i_belong_flag", default: false
     t.string "digital_summative_assessment_url"
+    t.uuid "video_id"
+    t.index ["video_id"], name: "index_units_on_video_id"
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
+  end
+
+  create_table "videos", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "title", null: false
+    t.string "name"
+    t.string "job_title"
+    t.text "description"
+    t.string "video_url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "year_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -248,8 +262,10 @@ ActiveRecord::Schema.define(version: 2024_04_11_143922) do
   add_foreign_key "file_attachments", "file_uploads"
   add_foreign_key "learning_objectives_taxonomy_tags", "learning_objectives"
   add_foreign_key "learning_objectives_taxonomy_tags", "taxonomy_tags"
+  add_foreign_key "lessons", "videos"
   add_foreign_key "national_curriculum_statements_units", "national_curriculum_statements"
   add_foreign_key "national_curriculum_statements_units", "units"
   add_foreign_key "ratings", "aggregate_ratings"
   add_foreign_key "success_criteria", "learning_objectives"
+  add_foreign_key "units", "videos"
 end

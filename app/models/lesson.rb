@@ -3,6 +3,7 @@ class Lesson < ApplicationRecord
   include Rateable
   include Redirectable
 
+  belongs_to :video, optional: true
   belongs_to :unit
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
   has_many :learning_objectives
