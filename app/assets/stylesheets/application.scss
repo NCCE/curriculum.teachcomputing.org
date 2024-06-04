@@ -18,6 +18,14 @@
   padding: 1.5em;
 }
 
+.field-unit--nested-custom-label {
+  float: left;
+  margin-left: 1rem;
+  text-align: right;
+  width: calc(15% - 1rem);
+  margin-bottom: 1rem;
+}
+
 .no-bottom-margin {
   margin-bottom: 0
 }
