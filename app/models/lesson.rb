@@ -43,6 +43,19 @@ class Lesson < ApplicationRecord
     errors.add(:learning_objectives, "only one learning objective allowed for primary lessons")
   end
 
+  def page_url
+    base_url = case Rails.env
+    when "development"
+      "http://teachcomputing.rpfdev.com"
+    when "staging"
+      "https://staging.teachcomputing.org"
+    when "production"
+      "https://teachcomputing.org"
+    end
+
+    "#{base_url}/curriculum/#{unit.key_stage.slug}/#{unit.slug}/#{slug}"
+  end
+
   private
 
   def notify_update

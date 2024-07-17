@@ -54,6 +54,19 @@ class Unit < ApplicationRecord
     year_group&.secondary?
   end
 
+  def page_url
+    base_url = case Rails.env
+    when "development"
+      "http://teachcomputing.rpfdev.com"
+    when "staging"
+      "https://staging.teachcomputing.org"
+    when "production"
+      "https://teachcomputing.org"
+    end
+
+    "#{base_url}/curriculum/#{key_stage.slug}/#{slug}"
+  end
+
   private
 
   def notify_update

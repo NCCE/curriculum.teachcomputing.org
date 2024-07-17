@@ -44,6 +44,19 @@ class KeyStage < ApplicationRecord
     %w[3 4].include?(level)
   end
 
+  def page_url
+    base_url = case Rails.env
+    when "development"
+      "http://teachcomputing.rpfdev.com"
+    when "staging"
+      "https://staging.teachcomputing.org"
+    when "production"
+      "https://teachcomputing.org"
+    end
+
+    "#{base_url}/curriculum/#{slug}"
+  end
+
   private
 
   def notify_update

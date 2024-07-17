@@ -30,6 +30,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     description: Field::Text,
     ages: Field::String,
     years: Field::String,
+    page_url: PageLinkField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     published?: Field::Boolean
@@ -62,6 +63,7 @@ class KeyStageDashboard < Administrate::BaseDashboard
     updated_at
     year_groups
     curriculum_maps
+    page_url
   ].freeze
 
   # FORM_ATTRIBUTES
