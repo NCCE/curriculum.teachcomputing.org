@@ -150,7 +150,11 @@ class UnitDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(unit)
-    unit.title + " - " + unit.key_stage.title
+    if unit.key_stage
+      unit.title + " - " + unit.key_stage.title
+    else
+      unit.title
+    end
   end
 
   def permitted_attributes(...)
