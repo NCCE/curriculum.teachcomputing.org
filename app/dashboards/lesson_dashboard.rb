@@ -1,5 +1,4 @@
 require "administrate/base_dashboard"
-require "page_link_field"
 
 class LessonDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
