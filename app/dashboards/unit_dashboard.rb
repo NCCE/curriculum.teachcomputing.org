@@ -150,6 +150,7 @@ class UnitDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(unit)
+    return "#{unit.title} - #{unit.key_stage.title}" if unit.key_stage
     unit.title
   end
 
