@@ -2,6 +2,7 @@ class Lesson < ApplicationRecord
   include Publishable
   include Rateable
   include Redirectable
+  include HasDisplayLink
 
   belongs_to :video, optional: true
   belongs_to :unit
@@ -44,15 +45,6 @@ class Lesson < ApplicationRecord
   end
 
   def page_url
-    base_url = case Rails.env
-    when "development"
-      "http://teachcomputing.rpfdev.com"
-    when "staging"
-      "https://staging.teachcomputing.org"
-    when "production"
-      "https://teachcomputing.org"
-    end
-
     "#{base_url}/curriculum/#{unit.key_stage.slug}/#{unit.slug}/#{slug}"
   end
 

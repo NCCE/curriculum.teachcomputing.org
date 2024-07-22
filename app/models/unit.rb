@@ -2,6 +2,7 @@ class Unit < ApplicationRecord
   include Publishable
   include Rateable
   include Redirectable
+  include HasDisplayLink
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy
@@ -55,15 +56,6 @@ class Unit < ApplicationRecord
   end
 
   def page_url
-    base_url = case Rails.env
-    when "development"
-      "http://teachcomputing.rpfdev.com"
-    when "staging"
-      "https://staging.teachcomputing.org"
-    when "production"
-      "https://teachcomputing.org"
-    end
-
     "#{base_url}/curriculum/#{key_stage.slug}/#{slug}"
   end
 
