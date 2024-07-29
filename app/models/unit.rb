@@ -2,6 +2,7 @@ class Unit < ApplicationRecord
   include Publishable
   include Rateable
   include Redirectable
+  include HasDisplayLink
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy
@@ -52,6 +53,10 @@ class Unit < ApplicationRecord
 
   def secondary?
     year_group&.secondary?
+  end
+
+  def page_url
+    "#{base_url}/curriculum/#{key_stage.slug}/#{slug}"
   end
 
   private

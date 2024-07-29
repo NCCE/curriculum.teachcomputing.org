@@ -69,7 +69,8 @@ class UnitDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     published?: Field::Boolean,
-    display_i_belong_flag: Field::Boolean
+    display_i_belong_flag: Field::Boolean,
+    page_url: PageLinkField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -109,6 +110,7 @@ class UnitDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     redirects
+    page_url
   ].freeze
 
   # FORM_ATTRIBUTES

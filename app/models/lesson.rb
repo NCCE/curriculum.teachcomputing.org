@@ -2,6 +2,7 @@ class Lesson < ApplicationRecord
   include Publishable
   include Rateable
   include Redirectable
+  include HasDisplayLink
 
   belongs_to :video, optional: true
   belongs_to :unit
@@ -41,6 +42,10 @@ class Lesson < ApplicationRecord
     return unless primary? && learning_objectives.size > 1
 
     errors.add(:learning_objectives, "only one learning objective allowed for primary lessons")
+  end
+
+  def page_url
+    "#{base_url}/curriculum/#{unit.key_stage.slug}/#{unit.slug}/#{slug}"
   end
 
   private

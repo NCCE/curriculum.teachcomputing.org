@@ -1,6 +1,7 @@
 class KeyStage < ApplicationRecord
   include Publishable
   include FileAttachable
+  include HasDisplayLink
 
   has_many :year_groups, dependent: :destroy
   has_many :aggregate_downloads, as: :downloadable, dependent: :destroy
@@ -42,6 +43,10 @@ class KeyStage < ApplicationRecord
 
   def secondary?
     %w[3 4].include?(level)
+  end
+
+  def page_url
+    "#{base_url}/curriculum/#{slug}"
   end
 
   private

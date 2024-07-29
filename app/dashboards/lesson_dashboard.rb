@@ -34,6 +34,7 @@ class LessonDashboard < Administrate::BaseDashboard
       sort_by: "order",
       direction: :asc
     ),
+    page_url: PageLinkField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     published?: Field::Boolean
@@ -67,6 +68,7 @@ class LessonDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     redirects
+    page_url
   ].freeze
 
   # FORM_ATTRIBUTES
