@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_06_25_104812) do
+ActiveRecord::Schema.define(version: 2024_10_21_102938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -236,6 +236,15 @@ ActiveRecord::Schema.define(version: 2024_06_25_104812) do
     t.index ["year_group_id"], name: "index_units_on_year_group_id"
   end
 
+  create_table "url_links", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "label"
+    t.string "url"
+    t.uuid "unit_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["unit_id"], name: "index_url_links_on_unit_id"
+  end
+
   create_table "videos", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title", null: false
     t.string "name", null: false
@@ -268,4 +277,5 @@ ActiveRecord::Schema.define(version: 2024_06_25_104812) do
   add_foreign_key "ratings", "aggregate_ratings"
   add_foreign_key "success_criteria", "learning_objectives"
   add_foreign_key "units", "videos"
+  add_foreign_key "url_links", "units"
 end
