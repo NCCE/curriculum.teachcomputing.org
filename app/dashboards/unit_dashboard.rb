@@ -8,6 +8,11 @@ class UnitDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    url_links: Field::HasMany.with_options(
+      sort_by: "order",
+      direction: :asc,
+      limit: 2
+    ),
     lessons: Field::HasMany.with_options(
       sort_by: "order",
       direction: :asc,
@@ -112,6 +117,7 @@ class UnitDashboard < Administrate::BaseDashboard
     updated_at
     redirects
     page_url
+    url_links
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -135,6 +141,7 @@ class UnitDashboard < Administrate::BaseDashboard
     connected_world_strands
     display_i_belong_flag
     redirects
+    url_links
   ].freeze
 
   # COLLECTION_FILTERS
