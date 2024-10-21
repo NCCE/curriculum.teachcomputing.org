@@ -11,7 +11,7 @@ class UnitDashboard < Administrate::BaseDashboard
     url_links: Field::HasMany.with_options(
       sort_by: "order",
       direction: :asc,
-      limit: 2
+      limit: 6
     ),
     lessons: Field::HasMany.with_options(
       sort_by: "order",
@@ -109,6 +109,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     digital_summative_assessment_url
+    url_links
     video
     national_curriculum_statements
     connected_world_strands
@@ -117,7 +118,6 @@ class UnitDashboard < Administrate::BaseDashboard
     updated_at
     redirects
     page_url
-    url_links
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -136,12 +136,12 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     digital_summative_assessment_url
+    url_links
     video
     national_curriculum_statements
     connected_world_strands
     display_i_belong_flag
     redirects
-    url_links
   ].freeze
 
   # COLLECTION_FILTERS
