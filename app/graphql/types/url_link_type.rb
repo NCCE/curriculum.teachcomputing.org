@@ -2,6 +2,6 @@ module Types
   class UrlLinkType < BaseObject
     field :id, ID, null: false
     field :label, String, null: false
-    field :url, String, null: true
+    field :url, String, null: false
   end
 end
