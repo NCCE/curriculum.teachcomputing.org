@@ -19,7 +19,7 @@ module Types
     field :redirects, [Types::RedirectType], null: true
     field :display_i_belong_flag, Boolean, null: false
     field :video, Types::VideoType, null: true
-    field :url_link, Types::UrlLink, null: true
+    field :url_link, Types::UrlLinkType, null: true
 
     def lessons
       object.lessons.published.ordered
