@@ -12,6 +12,7 @@ class UrlLinkDashboard < Administrate::BaseDashboard
     id: Field::String,
     label: Field::String,
     url: Field::String,
+    type_descriptor: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -25,6 +26,7 @@ class UrlLinkDashboard < Administrate::BaseDashboard
     unit
     label
     url
+    type_descriptor
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -34,6 +36,7 @@ class UrlLinkDashboard < Administrate::BaseDashboard
     id
     label
     url
+    type_descriptor
     created_at
     updated_at
   ].freeze
@@ -45,6 +48,7 @@ class UrlLinkDashboard < Administrate::BaseDashboard
     unit
     label
     url
+    type_descriptor
   ].freeze
 
   # COLLECTION_FILTERS
