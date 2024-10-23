@@ -85,6 +85,7 @@ class UnitDashboard < Administrate::BaseDashboard
     year_group
     key_stage
     redirects
+    published?
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

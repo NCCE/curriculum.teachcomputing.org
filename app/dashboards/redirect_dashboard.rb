@@ -9,7 +9,7 @@ class RedirectDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard
 
   def self.transform_to_option_data(collection, type)
-    collection.collect { |r| [r.title, "#{(type == "lesson") ? r.unit.slug : r.year_group.key_stage.slug},#{r.slug}"] }
+    collection.collect { |r| ["#{r.title} - #{r.slug}", "#{(type == "lesson") ? r.unit.slug : r.year_group.key_stage.slug},#{r.slug}"] }
   end
 
   ATTRIBUTE_TYPES = {
@@ -66,6 +66,4 @@ class RedirectDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how redirects are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource
-  # end
 end
