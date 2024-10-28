@@ -8,6 +8,11 @@ class UnitDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    url_links: Field::HasMany.with_options(
+      sort_by: "order",
+      direction: :asc,
+      limit: 6
+    ),
     lessons: Field::HasMany.with_options(
       sort_by: "order",
       direction: :asc,
@@ -104,6 +109,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     digital_summative_assessment_url
+    url_links
     video
     national_curriculum_statements
     connected_world_strands
@@ -130,6 +136,7 @@ class UnitDashboard < Administrate::BaseDashboard
     summative_assessments
     summative_answers
     digital_summative_assessment_url
+    url_links
     video
     national_curriculum_statements
     connected_world_strands

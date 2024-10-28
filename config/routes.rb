@@ -40,6 +40,7 @@ Rails.application.routes.draw do
     resources :file_attachments, only: %i[show]
     resources :file_uploads
     resources :videos
+    resources :url_links
     root to: "units#index"
   end
 end
