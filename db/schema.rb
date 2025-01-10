@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_21_102938) do
-
+ActiveRecord::Schema[7.0].define(version: 2025_01_09_134130) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -21,7 +20,7 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.uuid "record_id", null: false
     t.string "record_type", null: false
     t.uuid "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
@@ -31,10 +30,16 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "content_type"
     t.text "metadata"
     t.bigint "byte_size", null: false
-    t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.string "checksum"
+    t.datetime "created_at", precision: nil, null: false
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
   create_table "aggregate_downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -42,15 +47,15 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "downloadable_type", null: false
     t.integer "count", default: 0, null: false
     t.string "attachment_type", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "aggregate_ratings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.integer "total_positive", default: 0, null: false
     t.integer "total_negative", default: 0, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.uuid "rateable_id"
     t.string "rateable_type"
   end
@@ -58,8 +63,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "connected_world_strands", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "strand"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "connected_world_strands_units", id: false, force: :cascade do |t|
@@ -72,15 +77,15 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "curriculum_maps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
     t.uuid "key_stage_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["key_stage_id"], name: "index_curriculum_maps_on_key_stage_id"
   end
 
   create_table "downloads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "aggregate_download_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.uuid "user_stem_achiever_contact_no"
     t.index ["aggregate_download_id"], name: "index_downloads_on_aggregate_download_id"
     t.index ["user_stem_achiever_contact_no"], name: "index_downloads_on_user_stem_achiever_contact_no"
@@ -91,8 +96,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "attachable_type", null: false
     t.uuid "attachable_id", null: false
     t.uuid "file_upload_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["attachable_type", "attachable_id", "file_upload_id"], name: "index_unique_attachable_and_file_upload", unique: true
     t.index ["attachable_type", "attachable_id"], name: "index_file_attachments_on_attachable"
     t.index ["file_upload_id"], name: "index_file_attachments_on_file_upload_id"
@@ -101,15 +106,15 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "file_uploads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", null: false
     t.string "slug", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_file_uploads_on_slug", unique: true
   end
 
   create_table "key_stages", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "level"
     t.string "ages"
     t.string "years"
@@ -121,8 +126,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "learning_objectives", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.text "description", null: false
     t.uuid "lesson_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "order"
     t.index ["lesson_id"], name: "index_learning_objectives_on_lesson_id"
   end
@@ -130,8 +135,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "learning_objectives_taxonomy_tags", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "taxonomy_tag_id", null: false
     t.uuid "learning_objective_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["learning_objective_id"], name: "index_on_learning_objective_id"
     t.index ["taxonomy_tag_id"], name: "index_on_taxonomy_tag_id"
   end
@@ -140,12 +145,12 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "title"
     t.text "description"
     t.uuid "unit_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
     t.text "objectives"
     t.boolean "zip_synced", default: false
-    t.datetime "zip_synced_at"
+    t.datetime "zip_synced_at", precision: nil
     t.string "isaac_url"
     t.integer "order"
     t.integer "range"
@@ -158,15 +163,15 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "national_curriculum_statements", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "number"
     t.text "statement"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "national_curriculum_statements_units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "national_curriculum_statement_id", null: false
     t.uuid "unit_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["national_curriculum_statement_id"], name: "index_on_statement_id"
     t.index ["unit_id"], name: "index_on_unit_id"
   end
@@ -174,8 +179,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "ratings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "aggregate_rating_id", null: false
     t.boolean "positive", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.uuid "user_stem_achiever_contact_no"
     t.text "comment"
     t.string "choices", default: [], array: true
@@ -188,15 +193,15 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.uuid "redirectable_id", null: false
     t.string "from"
     t.string "to"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "from_context"
   end
 
   create_table "states", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.integer "state", default: 0, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.uuid "stateable_id"
     t.string "stateable_type"
   end
@@ -204,8 +209,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
   create_table "success_criteria", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "description", null: false
     t.uuid "learning_objective_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "order"
     t.index ["learning_objective_id"], name: "index_success_criteria_on_learning_objective_id"
   end
@@ -214,19 +219,19 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "strand", null: false
     t.string "abbreviation", null: false
     t.text "description", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "units", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.uuid "year_group_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
     t.boolean "unit_documents_synced", default: false
-    t.datetime "unit_documents_synced_at"
+    t.datetime "unit_documents_synced_at", precision: nil
     t.string "isaac_url"
     t.integer "order"
     t.boolean "display_i_belong_flag", default: false
@@ -241,8 +246,8 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "url", null: false
     t.string "type_descriptor"
     t.uuid "unit_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["unit_id"], name: "index_url_links_on_unit_id"
   end
 
@@ -252,20 +257,21 @@ ActiveRecord::Schema.define(version: 2024_10_21_102938) do
     t.string "job_title", null: false
     t.text "description", null: false
     t.string "video_url", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "year_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "key_stage_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "year_number"
     t.string "slug"
     t.index ["key_stage_id"], name: "index_year_groups_on_key_stage_id"
     t.index ["slug"], name: "index_year_groups_on_slug", unique: true
   end
 
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "connected_world_strands_units", "connected_world_strands"
   add_foreign_key "connected_world_strands_units", "units"
   add_foreign_key "downloads", "aggregate_downloads"

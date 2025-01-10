@@ -5,7 +5,7 @@ end
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.3.6"
 
 gem "activestorage-validator"
 gem "administrate", "~> 0.17.0"
@@ -14,14 +14,10 @@ gem "administrate-field-nested_has_many", "~> 1.3.0"
 gem "aws-sdk-s3", "~> 1.85", require: false
 gem "barnes", "~> 0.0.8"
 gem "bootsnap", ">= 1.4.2", require: false
-if next?
-  gem "cloudflare-rails", "~> 2.4"
-else
-  gem "cloudflare-rails", "~> 1.1"
-end
+gem "cloudflare-rails", "~> 2.4"
 gem "faraday", "~> 1.0", ">= 1.0.1"
-gem "graphiql-rails", "1.7.0"
-gem "graphql", "<= 1.10.10"
+gem "graphiql-rails", "1.7.0" # Locked at version due to hsla errors
+gem "graphql"
 gem "lograge", "~> 0.11.2"
 gem "mimemagic", "~> 0.3.7"
 gem "net-imap"
@@ -30,11 +26,7 @@ gem "net-smtp"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.6"
 gem "rack-attack", "~> 5.4.2"
-if next?
-  gem "rails", "~> 7.0.4.3"
-else
-  gem "rails", "~> 6.1.7.4"
-end
+gem "rails", "~> 7.0.8.7"
 gem "sass-rails", ">= 6"
 gem "sentry-rails"
 gem "sentry-ruby"
@@ -72,7 +64,7 @@ group :development do
   gem "listen", "~> 3.2"
   gem "spring"
   gem "spring-commands-rspec"
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "spring-watcher-listen"
   gem "standard"
   gem "standard-rails"
   gem "web-console", ">= 3.3.0"

@@ -1,8 +1,10 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require "spec_helper"
 require "simplecov"
+require "dotenv"
 SimpleCov.start "rails"
 ENV["RAILS_ENV"] ||= "test"
+Dotenv.overload(".env.test")
 require File.expand_path("../config/environment", __dir__)
 
 # Prevent database truncation if the environment is production
