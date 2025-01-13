@@ -1413,14 +1413,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^7.1.0":
+"@rails/actioncable@npm:^7.2.0":
   version: 7.2.201
   resolution: "@rails/actioncable@npm:7.2.201"
   checksum: fcb794c8b70b83c0f748d2111a373b847204f4a0b8d78bc7936b8d800fa9fe9462009cdf9e7e971a7f21f1b2fe18157b9017332b55bd1fd3d06432d3039fce14
   languageName: node
   linkType: hard
 
-"@rails/activestorage@npm:^7.1.0":
+"@rails/activestorage@npm:^7.2.0":
   version: 7.2.201
   resolution: "@rails/activestorage@npm:7.2.201"
   dependencies:
@@ -7495,8 +7495,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ncce-project@workspace:."
   dependencies:
-    "@rails/actioncable": ^7.1.0
-    "@rails/activestorage": ^7.1.0
+    "@rails/actioncable": ^7.2.0
+    "@rails/activestorage": ^7.2.0
     "@rails/ujs": ^7.1.0
     "@rails/webpacker": 5.4.3
     eslint: 5.6.1

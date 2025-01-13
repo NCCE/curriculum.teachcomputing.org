@@ -26,7 +26,7 @@ gem "net-smtp"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.6"
 gem "rack-attack", "~> 5.4.2"
-gem "rails", "~> 7.1.5.1"
+gem "rails", "~> 7.2.2.1"
 gem "sass-rails", ">= 6"
 gem "sentry-rails"
 gem "sentry-ruby"
@@ -62,11 +62,12 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem "debase"
+  gem "debase-ruby_core_source"
   gem "listen", "~> 3.2"
   gem "ruby-debug-ide"
-  gem "spring"
-  gem "spring-commands-rspec"
-  gem "spring-watcher-listen"
+  # gem "spring"
+  # gem "spring-commands-rspec"
+  # gem "spring-watcher-listen"
   gem "web-console", ">= 3.3.0"
 end
 
