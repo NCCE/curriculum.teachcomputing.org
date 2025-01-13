@@ -36,27 +36,14 @@ jobs:
           POSTGRES_PASSWORD: ""
     steps:
       - checkout
+      - run:
+          name: Set bundle without development
+          command: bundle config set without "development"
+      - ruby/install-deps
 
       - run:
-          name: Which bundler?
-          command: bundle -v
-
-      - restore_cache:
-          keys:
-            - ncce-bundle-v2.1-{{ checksum "Gemfile.lock" }}
-
-      - run:
-          name: Bundle Install
-          command: bundle config set without "development" || bundle check || bundle install
-
-      - save_cache:
-          key: ncce-bundle-v2.1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-
-      - run:
-          name: Npm Install
-          command: npm install
+          name: Yarn Install
+          command: yarn install
 
       - run:
           name: Wait for DB
