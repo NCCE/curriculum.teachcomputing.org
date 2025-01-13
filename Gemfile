@@ -41,6 +41,7 @@ group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "climate_control"
   gem "debase", require: false
+  gem "debase-ruby_core_source"
   gem "dotenv-rails"
   gem "erb_lint", require: false
   gem "factory_bot_rails", "~> 5.2.0"

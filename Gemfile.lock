@@ -591,6 +591,7 @@ DEPENDENCIES
   climate_control
   cloudflare-rails (~> 2.4)
   debase
+  debase-ruby_core_source
   dotenv-rails
   erb_lint
   factory_bot_rails (~> 5.2.0)
