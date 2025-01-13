@@ -14,7 +14,7 @@ gem "administrate-field-nested_has_many", "~> 1.3.0"
 gem "aws-sdk-s3", "~> 1.85", require: false
 gem "barnes", "~> 0.0.8"
 gem "bootsnap", ">= 1.4.2", require: false
-gem "cloudflare-rails", "~> 2.4"
+gem "cloudflare-rails"
 gem "faraday", "~> 1.0", ">= 1.0.1"
 gem "graphiql-rails", "1.7.0" # Locked at version due to hsla errors
 gem "graphql"
@@ -26,7 +26,7 @@ gem "net-smtp"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.6"
 gem "rack-attack", "~> 5.4.2"
-gem "rails", "~> 7.0.8.7"
+gem "rails", "~> 7.1.5.1"
 gem "sass-rails", ">= 6"
 gem "sentry-rails"
 gem "sentry-ruby"
@@ -42,14 +42,14 @@ group :development, :test do
   gem "climate_control"
   gem "dotenv-rails"
   gem "erb_lint", require: false
-  gem "factory_bot_rails", "~> 5.2.0"
+  gem "factory_bot_rails"
   gem "guard-rspec", "~> 4.7.3", require: false
   gem "pry-byebug"
   gem "rails-erd"
   gem "next_rails", "~> 1.2" # toolkit to upgrade Rails
   gem "reek"
   gem "rspec-mocks"
-  gem "rspec-rails", "~> 4.0.0"
+  gem "rspec-rails"
   gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-rspec"

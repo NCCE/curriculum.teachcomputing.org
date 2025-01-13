@@ -13,8 +13,7 @@ fi
 
 echo "-Installing the bundle (this may take a little while if the volume is empty)"
 bundle config set force_ruby_platform true
-#bundle install
-bundle update
+bundle install
 
 echo "- Configuring databases:"
 bundle exec rake db:prepare
