@@ -54,6 +54,8 @@ group :development, :test do
   gem "rubocop-rails"
   gem "rubocop-rspec"
   gem "simplecov"
+  gem "standard"
+  gem "standard-rails"
   gem "solargraph", "~> 0.39"
 end
 
@@ -65,8 +67,6 @@ group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen"
-  gem "standard"
-  gem "standard-rails"
   gem "web-console", ">= 3.3.0"
 end
 
