@@ -40,7 +40,7 @@ group :development, :test do
   gem "brakeman"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "climate_control"
-  gem "debase", "~> 0.2.5.beta2", require: false
+  gem "debase", require: false
   gem "dotenv-rails"
   gem "erb_lint", require: false
   gem "factory_bot_rails", "~> 5.2.0"
@@ -54,7 +54,7 @@ group :development, :test do
   gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-  gem "ruby-debug-ide", "~> 0.7.3"
+  gem "ruby-debug-ide"
   gem "simplecov"
   gem "solargraph", "~> 0.39"
 end
