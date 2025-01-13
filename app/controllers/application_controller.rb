@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate
-    return true if Rails.env.development? || Rails.env.test?
+    return true if Rails.env.local?
 
     authenticate_token || render_unauthorized
   end

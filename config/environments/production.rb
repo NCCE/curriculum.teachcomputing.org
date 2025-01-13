@@ -65,8 +65,8 @@ Rails.application.configure do
 
   # Log to STDOUT by default
   if ENV["RAILS_LOG_TO_STDOUT"].present?
-    config.logger = ActiveSupport::Logger.new(STDOUT)
-      .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
+    config.logger = ActiveSupport::Logger.new($stdout)
+      .tap { |logger| logger.formatter = ::Logger::Formatter.new }
       .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
   end
 
