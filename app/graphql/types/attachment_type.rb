@@ -10,7 +10,7 @@ module Types
     field :created, String, null: true
 
     def initialize(object, context)
-      super(object, context)
+      super
 
       @file_object = object
     end

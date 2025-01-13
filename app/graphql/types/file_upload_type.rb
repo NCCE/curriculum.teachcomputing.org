@@ -5,7 +5,7 @@ module Types
     field :file_attachments, [Types::FileAttachmentType], null: true
 
     def initialize(object, context)
-      super(object, context)
+      super
       @file_object = object.file
     end
   end

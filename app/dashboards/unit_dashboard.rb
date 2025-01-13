@@ -165,9 +165,9 @@ class UnitDashboard < Administrate::BaseDashboard
   end
 
   def permitted_attributes(...)
-    super(...) + [learning_graphs: [],
-                  rubrics: [],
-                  summative_assessments: [],
-                  summative_answers: []]
+    super + [learning_graphs: [],
+             rubrics: [],
+             summative_assessments: [],
+             summative_answers: []]
   end
 end
