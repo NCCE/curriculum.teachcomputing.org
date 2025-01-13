@@ -589,7 +589,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   climate_control
   cloudflare-rails (~> 2.4)
-  debase (>= 0.2.5.beta2)
+  debase (~> 0.2.5.beta2)
   dotenv-rails
   erb_lint
   factory_bot_rails (~> 5.2.0)
