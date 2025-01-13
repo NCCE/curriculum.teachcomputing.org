@@ -40,8 +40,6 @@ group :development, :test do
   gem "brakeman"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "climate_control"
-  gem "debase", require: false
-  gem "debase-ruby_core_source"
   gem "dotenv-rails"
   gem "erb_lint", require: false
   gem "factory_bot_rails", "~> 5.2.0"
@@ -55,14 +53,15 @@ group :development, :test do
   gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-  gem "ruby-debug-ide"
   gem "simplecov"
   gem "solargraph", "~> 0.39"
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem "debase"
   gem "listen", "~> 3.2"
+  gem "ruby-debug-ide"
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen"

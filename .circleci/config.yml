@@ -44,7 +44,7 @@ jobs:
 
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: bundle check || bundle install --without development
 
       - save_cache:
           key: ncce-bundle-v2-{{ checksum "Gemfile.lock" }}
