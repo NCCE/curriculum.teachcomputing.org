@@ -9,6 +9,9 @@ jobs:
       - image: "cimg/ruby:3.3.6"
     steps:
       - checkout
+      - run:
+          name: Set bundle without development
+          command: bundle config set without "development"
       - ruby/install-deps
       - run:
           name: Inspecting code with standardrb
@@ -44,7 +47,7 @@ jobs:
 
       - run:
           name: Bundle Install
-          command: bundle check || bundle install --without development
+          command: bundle config set without "development" || bundle check || bundle install
 
       - save_cache:
           key: ncce-bundle-v2-{{ checksum "Gemfile.lock" }}
