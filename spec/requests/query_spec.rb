@@ -92,9 +92,6 @@ RSpec.describe "Query", type: :request do
         }
         expect(response).to be_successful
         expected_response = {
-          data: {
-            keyStage: nil
-          },
           errors: [
             {
               message: "KeyStage not found",
@@ -111,9 +108,14 @@ RSpec.describe "Query", type: :request do
                 code: :not_found
               }
             }
-          ]
-        }.to_json
-        expect(response.body).to eq(expected_response)
+          ],
+          data: {
+            keyStage: nil
+          }
+        }.as_json
+        actual_response = JSON.parse(response.body)
+
+        expect(actual_response).to eq(expected_response)
       end
     end
   end

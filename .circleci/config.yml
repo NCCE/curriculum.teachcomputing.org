@@ -6,9 +6,12 @@ orbs:
 jobs:
   standardrb:
     docker:
-      - image: "cimg/ruby:3.1.2"
+      - image: "cimg/ruby:3.3.6"
     steps:
       - checkout
+      - run:
+          name: Set bundle without development
+          command: bundle config set without "development"
       - ruby/install-deps
       - run:
           name: Inspecting code with standardrb
@@ -16,7 +19,7 @@ jobs:
 
   test:
     docker:
-      - image: cimg/ruby:3.1.2-node
+      - image: cimg/ruby:3.3.6-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -26,34 +29,21 @@ jobs:
           PGHOST: 127.0.0.1
           PGUSER: ncce_test
           RAILS_ENV: test
-      - image: circleci/postgres:12-alpine
+      - image: cimg/postgres:15.5
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: ncce_test
           POSTGRES_PASSWORD: ""
     steps:
       - checkout
+      - run:
+          name: Set bundle without development
+          command: bundle config set without "development"
+      - ruby/install-deps
 
       - run:
-          name: Which bundler?
-          command: bundle -v
-
-      - restore_cache:
-          keys:
-            - ncce-bundle-v2-{{ checksum "Gemfile.lock" }}
-
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      - save_cache:
-          key: ncce-bundle-v2-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-
-      - run:
-          name: Npm Install
-          command: npm install
+          name: Yarn Install
+          command: yarn install
 
       - run:
           name: Wait for DB
@@ -72,6 +62,9 @@ jobs:
           name: Run brakeman
           command: |
             bundle exec brakeman -q -i config/brakeman.ignore --no-summary
+            
+      - store_artifacts:
+          path: coverage
 
 workflows:
   version: 2

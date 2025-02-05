@@ -22,5 +22,5 @@ echo "- Installing node packages with yarn"
 yarn install
 
 echo "- Starting rails:"
-rdebug-ide --skip_wait_for_start -h $HOST -p $DEBUG_PORT --dispatcher-port $DISPATCHER_PORT -- ./bin/rails s -b $HOST -p $PORT
+bundle exec rdebug-ide --skip_wait_for_start -h $HOST -p $DEBUG_PORT --dispatcher-port $DISPATCHER_PORT -- ./bin/rails s -b $HOST -p $PORT
 # ./bin/rails s -b $HOST -p $PORT

@@ -2,20 +2,10 @@
 # Remove from this list as you refactor files.
 ---
 ignore:
-- app/controllers/application_controller.rb:
-  - Rails/EnvironmentVariableAccess
 - app/fields/contextual_select_field.rb:
   - Rails/Blank
-- app/graphql/mutations/update_rating.rb:
-  - Rails/SaveBang
-- app/graphql/types/query_type.rb:
-  - Rails/PluckId
 - app/graphql/types/redirect_type.rb:
   - Rails/Blank
-- app/models/aggregate_download.rb:
-  - Rails/SaveBang
-- app/models/aggregate_rating.rb:
-  - Rails/SaveBang
 - app/models/concerns/publishable.rb:
   - Rails/WhereEquals
   - Rails/Blank

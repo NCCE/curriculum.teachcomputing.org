@@ -7,7 +7,7 @@ module Types
     field :key_stage, Types::KeyStageType, null: false
 
     def initialize(object, context)
-      super(object, context)
+      super
       @file_object = object.file
     end
 

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Authenticate requests", type: :request do
   before do
     # Ensure we go into the actual auth check
-    allow(Rails.env).to receive(:test?).and_return(false)
+    allow(Rails.env).to receive(:local?).and_return(false)
   end
 
   context "when no auth token" do

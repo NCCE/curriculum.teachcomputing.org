@@ -1413,26 +1413,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^6.0.0":
-  version: 6.1.7
-  resolution: "@rails/actioncable@npm:6.1.7"
-  checksum: b9651d9991d6e5fffdadd64e392b8157463b63da48bc1b061541f23907b9c7d73d5d73ee1982c65c3e7d2879fe918bd7b2c776baba4fb21c8ca3c8da2dbec374
+"@rails/actioncable@npm:^7.2.0":
+  version: 7.2.201
+  resolution: "@rails/actioncable@npm:7.2.201"
+  checksum: fcb794c8b70b83c0f748d2111a373b847204f4a0b8d78bc7936b8d800fa9fe9462009cdf9e7e971a7f21f1b2fe18157b9017332b55bd1fd3d06432d3039fce14
   languageName: node
   linkType: hard
 
-"@rails/activestorage@npm:^6.0.0":
-  version: 6.1.7
-  resolution: "@rails/activestorage@npm:6.1.7"
+"@rails/activestorage@npm:^7.2.0":
+  version: 7.2.201
+  resolution: "@rails/activestorage@npm:7.2.201"
   dependencies:
-    spark-md5: ^3.0.0
-  checksum: 7a47df6c1e031adb237184c3fb5b474f6df7c3e0a8fdc5a6d953c67dad326a80b23900bbb0ba42b5ad53b26c83e9c949dc28523f6e150529d41092ff16e8c4ee
+    spark-md5: ^3.0.1
+  checksum: ce7a7332cd63f4600a41b9b33b8c46ad2470594a8885690fb411dce7492e0f568efb9f7c47a7c3a5c6eed4f61e31009f11864e800cfc5eceaf8eef4a37e59451
   languageName: node
   linkType: hard
 
-"@rails/ujs@npm:^6.0.0":
-  version: 6.1.7
-  resolution: "@rails/ujs@npm:6.1.7"
-  checksum: a597bdaee400f73d4a2b3b2de13433399166273b56e0655da1a4d3cd9e2406224c6506bfc205565e64a02068003647aa51c767bbc5a31d1bdfdc32048a86c618
+"@rails/ujs@npm:^7.1.0":
+  version: 7.1.501
+  resolution: "@rails/ujs@npm:7.1.501"
+  checksum: 8d009970360eed8451afb639bc0e27663dc467161fd73ea0472e4e05be626ea5eb92c41a8643a342287acba2f464d3009312365b5691087db5bf6d7ee2dac37e
   languageName: node
   linkType: hard
 
@@ -7495,9 +7495,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ncce-project@workspace:."
   dependencies:
-    "@rails/actioncable": ^6.0.0
-    "@rails/activestorage": ^6.0.0
-    "@rails/ujs": ^6.0.0
+    "@rails/actioncable": ^7.2.0
+    "@rails/activestorage": ^7.2.0
+    "@rails/ujs": ^7.1.0
     "@rails/webpacker": 5.4.3
     eslint: 5.6.1
     eslint-config-prettier: 3.1.0
@@ -10488,7 +10488,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"spark-md5@npm:^3.0.0":
+"spark-md5@npm:^3.0.1":
   version: 3.0.2
   resolution: "spark-md5@npm:3.0.2"
   checksum: 5feebff0bfabcecf56ba03af3e38fdb068272ed41fbf0a94ff9ef65b9bb9cb1dd69be3684db6542e62497b1eac3ae324c07ac4dcb606465dc36ca048177077bf
