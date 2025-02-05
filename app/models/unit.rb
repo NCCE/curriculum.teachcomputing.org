@@ -3,6 +3,7 @@ class Unit < ApplicationRecord
   include Rateable
   include Redirectable
   include HasDisplayLink
+  include AppendToHasManyAttached
   include Rails.application.routes.url_helpers
 
   has_many :lessons, dependent: :destroy
@@ -17,10 +18,10 @@ class Unit < ApplicationRecord
 
   has_one_attached :unit_guide
 
-  has_many_attached :learning_graphs
-  has_many_attached :rubrics
-  has_many_attached :summative_assessments
-  has_many_attached :summative_answers
+  has_many_attached_with_append :learning_graphs
+  has_many_attached_with_append :rubrics
+  has_many_attached_with_append :summative_assessments
+  has_many_attached_with_append :summative_answers
 
   validates :title, :description, presence: true
   validate :check_title_unique_to_key_stage
