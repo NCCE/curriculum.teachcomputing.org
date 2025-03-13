@@ -238,9 +238,10 @@ GEM
     graphiql-rails (1.7.0)
       railties
       sprockets-rails
-    graphql (2.4.8)
+    graphql (2.4.13)
       base64
       fiber-storage
+      logger
     guard (2.19.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
