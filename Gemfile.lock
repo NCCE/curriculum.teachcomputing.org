@@ -564,7 +564,7 @@ GEM
       rubocop-rails (~> 2.26.0)
     statsd-ruby (1.5.0)
     stringio (3.1.2)
-    thor (1.3.2)
+    thor (1.4.0)
     tilt (2.5.0)
     timeout (0.4.3)
     tzinfo (2.0.6)
