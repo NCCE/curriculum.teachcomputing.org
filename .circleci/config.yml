@@ -6,7 +6,7 @@ orbs:
 jobs:
   standardrb:
     docker:
-      - image: "cimg/ruby:3.3.6"
+      - image: "cimg/ruby:3.3.11"
     steps:
       - checkout
       - run:
@@ -19,7 +19,7 @@ jobs:
 
   test:
     docker:
-      - image: cimg/ruby:3.3.6-node
+      - image: cimg/ruby:3.3.11-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
