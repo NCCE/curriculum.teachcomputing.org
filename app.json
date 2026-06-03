@@ -1,5 +1,6 @@
 {
   "name": "ncce_curriculum",
+  "stack": "heroku-26",
   "scripts": {
     "postdeploy": "bin/rails db:migrate && bin/rails db:seed"
   },
