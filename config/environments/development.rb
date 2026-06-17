@@ -48,9 +48,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = {host: "curriculum.teachcomputing.rpfdev.com"}
 
-  # Print deprecation notices to the Rails logger.
-  config.active_support.deprecation = :log
-
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
 
