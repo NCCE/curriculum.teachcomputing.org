@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   standardrb:
+    resource_class: large
     docker:
       - image: "cimg/ruby:3.3.11"
     steps:
